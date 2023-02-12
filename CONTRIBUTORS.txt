@@ -8,8 +8,6 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-- Rafael Corchuelo (corchu@us.es)
-
 - Juan Jesús Campos Garrdio (juacamgar2@alum.us.es)
 - Alejandro Campano Galán (alecamgal1@alum.us.es)
 - Alejandro García Sánchez-Hermosilla (alegarsan11@alum.us.es)
