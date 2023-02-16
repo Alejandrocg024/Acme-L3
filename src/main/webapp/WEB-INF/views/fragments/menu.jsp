@@ -21,8 +21,9 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-S1" action="https://www.realbetisbalompie.es/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-S2" action="https://twitter.com/Panzerouso/status/1625027885617520640?t=VRyNWYk8sts6sFgxl5PbdQ&s=08"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-S3" action="https://www.informatica.us.es/"/>
-      		<acme:menu-suboption code="master.menu.anonymous.favourite-link-S4" action="https://www.coolors.co/"/>
+      <acme:menu-suboption code="master.menu.anonymous.favourite-link-S4" action="https://www.coolors.co/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-S5" action="https://www.cadizcf.com/"/>
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
