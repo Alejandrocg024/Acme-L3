@@ -8,8 +8,58 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-10/02/2023 Primera versión del proyecto
+En español:
 
-14/02/2023 Configuración terminada
+Acme-L3-D01 (17/02/2023)
 
-17/02/2023	Versión final para entregar
+	Se han añadido todos los requisitos relacionados con el primer entregable del proyecto.
+	
+	NUEVAS CARACTERÍSTICAS:
+	 - Se ha subido el proyecto a un repositorio en GitHub y se ha personalizado con los datos del grupo
+	   de proyecto. Link al repositorio: https://github.com/Alejandrocg024/Acme-L3-D01
+	 - Se han creado un nuevo logo, un nuevo banner y un nuevo favicon para personalizar la apariencia de
+	   la página.
+	 - Se ha elaborado un informe sobre el análisis.
+	 - Se ha elaborado un informe sobre la planificación.
+	 - Se ha elaborado un charting report.
+	 - Se ha elaborado un informe sobre la configuración.
+	 - Se ha elaborado un informe sobre la arquitectura WIS.
+	 - Se ha elaborado un informe sobre el testeo de un sistema con arquitectura WIS.
+	 (*) Todos estos informes mencionados se encuentran disponibles en la carpeta /reports/Group.
+	 - Individualmente, cada miembro del grupo ha implementado un nuevo botón en el menú de anónimo el cual
+	   redirige al usuario a la página principal del sitio web elegido por cada estudiante.
+	 - Individualmente, cada miembro ha elaborado un informe sobre el análisis relacionado con cada uno de
+	   los requisitos que tenían que abordar individualmente.
+	 - Individualmente, cada miembro ha elaborado un informe sobre la planificación relacionado con cada uno
+	   de los requisitos que tenían que abordar individualmente.
+	 (*) Todos estos informes individuales se encuentran disponibles en las carpetas /reports/Student #X,
+	 donde X denota el número de estudiante.
+	 
+	 
+In English:
+
+Acme-L3-D01 (17/02/2023)
+
+	All the requirements related with the first deliverable of the project have been completed and uploaded 
+	to the repository.
+	
+	NEW FEATURES:
+	 - The project has been uploaded to a GitHub repository and it has been customised with the group's data. 
+	   Link to the repository: https://github.com/Alejandrocg024/Acme-L3-D01
+	 - A brand new logo, a brand new banner and a brand new favicon have been created in order to customise 
+	   the appearance of the site.
+	 - An analysis report has been produced.
+	 - A planning report has been produced.
+	 - A charting report has been produced.
+	 - A report about the development configuration has been produced.
+	 - A report about the architecture of a WIS has been produced.
+	 - A report about testing a WIS has been produced.
+	 (*) All of these reports can be found in the folder /reports/Group.
+	 - Individually, each member of the group has implemented a brand new button in the anonymous menu which
+	   redirects the users to the main page of a website.
+	 - Individually, each member of the group has produced an analysis report related to their personal tasks
+	   they had to complete.
+	 - Individually, each member of the group has produced a planning report related to their personal tasks
+	   they had to complete.
+	 (*) All of these individual reports can be found in the folder /reports/Student #X, where X means the
+	 number of the student.
