@@ -9,3 +9,7 @@
 # they accept any liabilities with respect to them.
 
 10/02/2023 Primera versión del proyecto
+
+14/02/2023 Configuración terminada
+
+17/02/2023	Versión final para entregar
