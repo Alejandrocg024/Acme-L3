@@ -24,25 +24,25 @@ public class Note extends AbstractEntity {
 	protected Date				instantiationMoment;
 
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	protected String			title;
 
 
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	protected String author(final String username, final String name, final String surname) {
 		return username + " - " + surname + ", " + name;
 	}
 
 
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	protected String	message;
 
 	@Email
 	protected String	email;
 
 	@URL
-	protected String	link;
+	protected String	furtherInformation;
 
 }
