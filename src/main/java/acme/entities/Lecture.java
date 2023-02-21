@@ -1,34 +1,43 @@
 
-package acme.roles;
+package acme.entities;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
-import acme.framework.data.AbstractRole;
+import acme.datatypes.LectureType;
+import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Lecturer extends AbstractRole {
+public class Lecture extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			almaMater;
+	protected String			title;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			resume;
+	protected String			abstractt;
+
+	@NotNull
+	@Range(min = 1)
+	protected Integer			estimatedLearningTime;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			listOfQualifications;
+	protected String			body;
+
+	protected LectureType		indication;
 
 	@URL
 	protected String			furtherInformation;
