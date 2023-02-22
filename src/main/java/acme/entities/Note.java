@@ -4,6 +4,7 @@ package acme.entities;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
@@ -27,22 +28,25 @@ public class Note extends AbstractEntity {
 	@Length(max = 75)
 	protected String			title;
 
-
 	@NotBlank
 	@Length(max = 75)
-	protected String author(final String username, final String name, final String surname) {
-		return username + " - " + surname + ", " + name;
-	}
-
+	protected String			author;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String	message;
+	protected String			message;
 
 	@Email
-	protected String	email;
+	protected String			email;
 
 	@URL
-	protected String	furtherInformation;
+	protected String			furtherInformation;
+
+
+	@Transient
+	protected void parseAuthor(final String username, final String name, final String surname) {
+		final String res = username + " - " + surname + ", " + name;
+		this.author = res;
+	}
 
 }
