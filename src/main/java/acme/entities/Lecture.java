@@ -29,7 +29,6 @@ public class Lecture extends AbstractEntity {
 	@Length(max = 100)
 	protected String			sumary;
 
-	//@Min(0.01)
 	@Digits(integer = 3, fraction = 2)
 	protected double			estimatedLearningTime;
 
