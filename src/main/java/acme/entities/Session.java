@@ -8,11 +8,11 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.datatypes.SessionType;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,32 +20,29 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Banner extends AbstractEntity {
+public class Session extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	@NotNull
-	@Temporal(value = TemporalType.TIMESTAMP)
-	@PastOrPresent
-	protected Date				instantiationMoment;
-
-	@NotNull
-	@Temporal(value = TemporalType.TIMESTAMP)
-	protected Date				displayPeriodBegin;
-
-	@NotNull
-	@Temporal(value = TemporalType.TIMESTAMP)
-	protected Date				displayPreriodFinish;
-
-	@URL
 	@NotBlank
-	protected String			photoLink;
-
 	@Length(max = 75)
+	protected String			title;
+
 	@NotBlank
-	protected String			slogan;
+	@Length(max = 75)
+	protected String			abstractelement;
+
+	@NotNull
+	protected SessionType		typesession;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				startTimePeriod;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				endTimePeriod;
 
 	@URL
-	@NotBlank
-	protected String			webDocument;
+	protected String			link;
 }
