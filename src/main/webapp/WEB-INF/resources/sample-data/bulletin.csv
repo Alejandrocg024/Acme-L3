@@ -1,0 +1,10 @@
+key,instantiation_moment,title,message,critical,link
+bulletin-01,2020/1/1 11:20,Titulo,Este es el primer bulletin,true,null
+bulletin-02,2020/1/1 11:20,Titulo,Este es el primer bulletin,true,https://github.com/Alejandrocg024/Acme-L3-D02
+bulletin-04,2020/1/1 00:00,Titulo,Este es el primer bulletin,true,https://github.com/Alejandrocg024/Acme-L3-D02
+bulletin-03,2020/1/1 23:59,Titulo,Este es el primer bulletin,true,https://github.com/Alejandrocg024/Acme-L3-D02
+bulletin-05,2020/1/1 10:00,Titulo,Este es el primer bulletin,false,null
+bulletin-06,2020/1/1 10:00,|@#~€¬áéíóú,|@#~€¬áéíóú,false,null
+bulletin-07,2020/1/1 10:00,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maximo,false,null
+bulletin-08,2020/1/1 10:00,თხა,თხა,false,null
+bulletin-09,2020/1/1 10:00,коза,коза,false,null
