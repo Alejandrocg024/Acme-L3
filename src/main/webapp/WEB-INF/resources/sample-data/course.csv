@@ -1,7 +1,7 @@
 key,code,title,summary,course_type,retail_price,further_informatino,key:lecturer
-course-01,AAA999,Course,Curso de francés,Nature.BALANCED,EUR 15.0,null,lecturer-01
-course-02,AAA999,Course,Curso de francés,Nature.BALANCED,EUR 15.0,https://github.com/Alejandrocg024/Acme-L3-D02,lecturer-01
-course-03,AAA999,Course,Curso de francés,Nature.BALANCED,EUR 99.0,null,lecturer-01
-course-04,A999,Course,Curso de francés,Nature.BALANCED,EUR 15.0,null,lecturer-01
-course-05,AAA999,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Curso de francés,Nature.BALANCED,EUR 15.0,null,lecturer-01
-course-01,AAA999,Course,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxim,Nature.BALANCED,EUR 15.0,null,lecturer-01
+course-01,AAA999,Course,Curso de francï¿½s,BALANCED,EUR 15.0,null,lecturer-01
+course-02,AA999,Course,Curso de francï¿½s,BALANCED,EUR 15.0,https://github.com/Alejandrocg024/Acme-L3-D02,lecturer-01
+course-03,AAA991,Course,Curso de francï¿½s,BALANCED,EUR 99.0,null,lecturer-01
+course-04,A999,Course,Curso de francï¿½s,BALANCED,EUR 15.0,null,lecturer-01
+course-05,AAA993,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Curso de francï¿½s,BALANCED,EUR 15.0,null,lecturer-01
+course-06,AAA995,Course,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxim,BALANCED,EUR 15.0,null,lecturer-01

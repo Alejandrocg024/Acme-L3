@@ -1,10 +1,10 @@
 key,title,sumary,estimated_learning_time,body,lecture_type,further_information
-lecture-01,Lecture1,Primera lecture,2.0,En esta lecci�n aprendereis mucho,Nature.BALANCED,null
-lecture-02,Lecture1,Primera lecture,99.0,En esta lecci�n aprendereis mucho,Nature.BALANCED,null
-lecture-03,Lecture1,Primera lecture,99.0,En esta lecci�n aprendereis mucho,Nature.BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
-lecture-04,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Primera lecture,99.0,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxim,Nature.BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
-lecture-05,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Primera lecture,99.0,En esta lecci�n aprendereis mucho,Nature.BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
-lecture-06,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxim,99.0,En esta lecci�n aprendereis mucho,Nature.BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
-lecture-07,|@#~€¬áéíóú,|@#~€¬áéíóú,99.0,|@#~€¬áéíóú,Nature.BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
-lecture-08,???,???,99.0,???,Nature.BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
-lecture-09,????,????,99.0,????,Nature.BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
+lecture-01,Lecture1,Primera lecture,2.0,En esta lecci�n aprendereis mucho,BALANCED,null
+lecture-02,Lecture1,Primera lecture,99.0,En esta lecci�n aprendereis mucho,BALANCED,null
+lecture-03,Lecture1,Primera lecture,99.0,En esta lecci�n aprendereis mucho,BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
+lecture-04,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Primera lecture,99.0,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxim,BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
+lecture-05,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Primera lecture,99.0,En esta lecci�n aprendereis mucho,BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
+lecture-06,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxim,99.0,En esta lecci�n aprendereis mucho,BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
+lecture-07,|@#~€¬áéíóú,|@#~€¬áéíóú,99.0,|@#~€¬áéíóú,BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
+lecture-08,???,???,99.0,???,BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
+lecture-09,????,????,99.0,????,BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
