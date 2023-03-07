@@ -1,0 +1,11 @@
+key,instantiation_moment,heading,summary,start_time_period,end_time_period,price,link
+offer-01,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-02,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,https://github.com/Alejandrocg024/Acme-L3-D02/
+offer-03,2020/01/01 00:00,Offer,Esto es una offer,2020/01/01 00:00,2020/01/02 00:00,EUR 10.0,null
+offer-04,2020/01/01 23:59,Offer,Esto es una offer,2020/01/01 23:59,2020/01/02 23:59,EUR 10.0,null
+offer-05,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 99.0,null
+offer-10,2020/01/01 10:00,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 99.0,null
+offer-06,2020/01/01 10:00,Offer,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxim,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-07,2020/01/01 10:00,|@#~€¬áéíóú,|@#~€¬áéíóú,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-08,2020/01/01 10:00,თხა,თხა,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-09,2020/01/01 10:00,коза,коза,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
