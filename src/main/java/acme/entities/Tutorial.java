@@ -2,6 +2,7 @@
 package acme.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -9,7 +10,12 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.framework.data.AbstractEntity;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+@Entity
 public class Tutorial extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
