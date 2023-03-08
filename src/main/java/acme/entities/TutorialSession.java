@@ -32,10 +32,10 @@ public class TutorialSession extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			abstractelement;
+	protected String			abstractElement;
 
 	@NotNull
-	protected Nature			typesession;
+	protected Nature			typeSession;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
