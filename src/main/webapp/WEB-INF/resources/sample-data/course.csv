@@ -1,4 +1,4 @@
-key,code,title,summary,course_type,retail_price,further_informatino,key:lecturer
+key,code,title,summary,course_type,retail_price,further_information,key:lecturer
 course-01,AAA999,Course,Curso de franc�s,BALANCED,EUR 15.0,null,lecturer-01
 course-02,AA999,Course,Curso de franc�s,BALANCED,EUR 15.0,https://github.com/Alejandrocg024/Acme-L3-D02,lecturer-01
 course-03,AAA991,Course,Curso de franc�s,BALANCED,EUR 99.0,null,lecturer-01

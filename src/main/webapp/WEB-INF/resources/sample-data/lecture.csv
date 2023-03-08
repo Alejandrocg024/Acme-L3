@@ -1,4 +1,4 @@
-key,title,sumary,estimated_learning_time,body,lecture_type,further_information
+key,title,summary,estimated_learning_time,body,lecture_type,further_information
 lecture-01,Lecture1,Primera lecture,2.0,En esta lecci�n aprendereis mucho,BALANCED,null
 lecture-02,Lecture1,Primera lecture,99.0,En esta lecci�n aprendereis mucho,BALANCED,null
 lecture-03,Lecture1,Primera lecture,99.0,En esta lecci�n aprendereis mucho,BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02/
