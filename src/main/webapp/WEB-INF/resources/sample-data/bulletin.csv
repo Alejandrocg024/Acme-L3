@@ -1,10 +1,21 @@
-key,instantiation_moment,title,message,critical,link
+key,instantiation_moment,title,message,critical,further_information
 bulletin-01,2020/1/1 11:20,Titulo,Este es el primer bulletin,true,null
-bulletin-02,2020/1/1 11:20,Titulo,Este es el primer bulletin,true,https://github.com/Alejandrocg024/Acme-L3-D02
-bulletin-04,2020/1/1 00:00,Titulo,Este es el primer bulletin,true,https://github.com/Alejandrocg024/Acme-L3-D02
-bulletin-03,2020/1/1 23:59,Titulo,Este es el primer bulletin,true,https://github.com/Alejandrocg024/Acme-L3-D02
-bulletin-05,2020/1/1 10:00,Titulo,Este es el primer bulletin,false,null
-bulletin-06,2020/1/1 10:00,|@#~€¬áéíóú,|@#~€¬áéíóú,false,null
-bulletin-07,2020/1/1 10:00,Este mensaje tiene setenta y cuatro caracteres usado para validar mensaje,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maximo,false,null
-bulletin-08,2020/1/1 10:00,თხა,თხა,false,null
-bulletin-09,2020/1/1 10:00,коза,коза,false,null
+bulletin-02,2020/1/1 11:59,Titulo,Este es el primer bulletin,true,null
+bulletin-03,2020/1/1 12:00,Titulo,Este es el primer bulletin,true,null
+bulletin-04,2020/1/1 00:00,Titulo,Este es el primer bulletin,true,null
+bulletin-05,2020/1/1 23:59,Titulo,Este es el primer bulletin,true,null
+bulletin-06,2022/7/30 00:00,Titulo,Este es el primer bulletin,true,null
+bulletin-07,2020/1/1 11:20,T,Este es el primer bulletin,true,null
+bulletin-08,2020/1/1 11:20,Ti,Este es el primer bulletin,true,null
+bulletin-09,2020/1/1 11:20,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75,Este es el primer bulletin,true,null
+bulletin-10,2020/1/1 11:20,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes,Este es el primer bulletin,true,null
+bulletin-11,2020/1/1 11:20,თხა,Este es el primer bulletin,true,null
+bulletin-12,2020/1/1 11:20,коза,Este es el primer bulletin,true,null
+bulletin-13,2020/1/1 11:20,Titulo,E,true,null
+bulletin-14,2020/1/1 11:20,Titulo,Es,true,null
+bulletin-15,2020/1/1 11:20,Titulo,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres,true,null
+bulletin-16,2020/1/1 11:20,Titulo,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima,true,null
+bulletin-17,2020/1/1 11:20,Titulo,თხა,true,null
+bulletin-18,2020/1/1 11:20,Titulo,коза,true,null
+bulletin-19,2020/1/1 11:20,Titulo,Este es el primer bulletin,false,null
+bulletin-20,2020/1/1 11:20,Titulo,Este es el primer bulletin,true,https://github.com/Alejandrocg024/Acme-L3-D02
