@@ -31,6 +31,6 @@ public class Student extends AbstractRole {
 	protected String			weakFeatures;
 
 	@URL
-	protected String			link;
+	protected String			furtherInformationLink;
 
 }
