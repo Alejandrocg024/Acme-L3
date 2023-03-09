@@ -5,7 +5,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
-import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -26,7 +25,7 @@ public class Practicum extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}[0-9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}[0-9]{3}$")
 	protected String			code;
 
 	@NotBlank
@@ -35,14 +34,16 @@ public class Practicum extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			abstractInfo;
+	protected String			summary;
 
 	@NotBlank
 	@Length(max = 100)
 	protected String			goals;
 
-	@Digits(integer = 3, fraction = 2)
-	protected Double			estimatedTotalTime;
+	/*
+	 * @Digits(integer = 3, fraction = 2)
+	 * protected Double estimatedTotalTime;
+	 */
 
 	@NotNull
 	@Valid
