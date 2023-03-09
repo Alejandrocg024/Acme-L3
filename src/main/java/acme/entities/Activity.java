@@ -32,7 +32,7 @@ public class Activity extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			abstractInfo;
+	protected String			summary;
 
 	@NotNull
 	protected Nature			typeSession;
