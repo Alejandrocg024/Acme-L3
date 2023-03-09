@@ -4,7 +4,6 @@ package acme.forms;
 import java.util.Map;
 
 import acme.datatypes.Statistic;
-import acme.framework.data.AbstractEntity;
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,11 +12,11 @@ import lombok.Setter;
 @Setter
 public class AdministratorDashboard extends AbstractForm {
 
-	protected static final long		serialVersionUID	= 1L;
+	protected static final long	serialVersionUID	= 1L;
 
-	Map<AbstractEntity, Integer>	numOfPrincipalsByRole;
-	Double							linkAndEmailPeepsRatio;
-	Map<Boolean, Double>			ratioOfBulletinsByCriticality;
-	Statistic						metricsOfCurrentsOffers;
-	Statistic						metricsOfNotesInLast10Weeks;
+	Map<String, Integer>		numOfPrincipalsByRole;
+	Double						linkAndEmailPeepsRatio;
+	Map<Boolean, Double>		ratioOfBulletinsByCriticality;
+	Statistic					metricsOfCurrentsOffers;
+	Statistic					metricsOfNotesInLast10Weeks;
 }
