@@ -47,7 +47,7 @@ public class Course extends AbstractEntity {
 	protected Money				retailPrice;
 
 	@URL
-	protected String			furtherInformatino;
+	protected String			furtherInformation;
 
 	@ManyToOne(optional = false)
 	@NotNull

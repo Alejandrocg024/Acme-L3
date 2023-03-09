@@ -12,44 +12,43 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.framework.data.AbstractEntity;
-import acme.roles.Auditor;
+import acme.roles.Student;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Audit extends AbstractEntity {
+public class Enrolment extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	@Column(unique = true)
 	@NotBlank
+	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{1,3}[0-9]{3}$")
 	protected String			code;
 
 	@NotBlank
-	@Length(max = 100)
-	protected String			conclusion;
+	@Length(max = 75)
+	protected String			motivation;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			strongPoints;
+	protected String			goals;
 
-	@NotBlank
-	@Length(max = 100)
-	protected String			weakPoints;
+	/*
+	 * @Digits(integer = 3, fraction = 2)
+	 * protected Double workTime;
+	 */
 
-	protected boolean			draftMode;
-
-	@ManyToOne(optional = false)
 	@NotNull
 	@Valid
+	@ManyToOne(optional = false)
+	protected Student			student;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
 	protected Course			course;
-
-	@ManyToOne(optional = false)
-	@NotNull
-	@Valid
-	protected Auditor			auditor;
 
 }
