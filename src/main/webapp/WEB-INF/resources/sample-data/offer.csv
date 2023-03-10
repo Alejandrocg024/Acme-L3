@@ -11,12 +11,16 @@ offer-09,2020/01/01 10:00,El mensaje tiene setenta y cuatro caracteres valida ca
 offer-10,2020/01/01 10:00,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-11,2020/01/01 10:00,თხა,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-12,2020/01/01 10:00,коза,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-33,2020/01/01 10:00,<script>alert("hi!")</script>,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-34,2020/01/01 10:00,<h1>Hola Mundo!</h1>,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-13,2020/01/01 10:00,Offer,E,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-14,2020/01/01 10:00,Offer,Es,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-15,2020/01/01 10:00,Offer,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-16,2020/01/01 10:00,Offer,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-17,2020/01/01 10:00,Offer,თხა,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-18,2020/01/01 10:00,Offer,коза,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-35,2020/01/01 10:00,Offer,<script>alert("hi!")</script>,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-36,2020/01/01 10:00,Offer,<h1>Hola Mundo!</h1>,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-19,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 23:59,2020/01/02 11:00,EUR 10.0,null
 offer-20,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 00:00,2020/01/02 11:00,EUR 10.0,null
 offer-21,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 12:00,2020/01/02 11:00,EUR 10.0,null

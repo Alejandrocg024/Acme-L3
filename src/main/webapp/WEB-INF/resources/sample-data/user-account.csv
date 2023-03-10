@@ -2,7 +2,7 @@ key,enabled,identity,password,username
 user-account-administrator-03,true,"UserIdentity{name: 'Admin', surname: 'Acme', email: 'admin@acme.com'}",administrator1,administrator1
 user-account-administrator-04,true,"UserIdentity{name: 'Admin', surname: 'Acme', email: 'admin@acme.com'}",administrator2,administrator2
 user-account-lecturer-01,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer1,lecturer1
-user-account-lecturer-02,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer2,lecturer2
+user-account-lecturer-02,true,"UserIdentity{name: 'kvra', surname: 'Dona', email: 'lecturer1@acme.com'}",lecturer2,lecturer2
 user-account-lecturer-03,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer3,lecturer3
 user-account-lecturer-04,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer4,lecturer4
 user-account-lecturer-05,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer5,lecturer5
@@ -20,3 +20,10 @@ user-account-lecturer-16,true,"UserIdentity{name: 'Guaje', surname: 'Begines', e
 user-account-lecturer-17,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer17,lecturer17
 user-account-lecturer-18,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer18,lecturer18
 user-account-lecturer-19,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer19,lecturer19
+user-account-lecturer-20,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer20,lecturer20
+user-account-lecturer-21,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer21,lecturer21
+user-account-lecturer-22,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer22,lecturer22
+user-account-lecturer-23,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer23,lecturer23
+user-account-lecturer-24,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer24,lecturer24
+user-account-lecturer-25,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer25,lecturer25
+user-account-lecturer-26,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer26,lecturer26

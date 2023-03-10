@@ -11,11 +11,15 @@ bulletin-09,2020/1/1 11:20,El mensaje tiene setenta y cuatro caracteres valida c
 bulletin-10,2020/1/1 11:20,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes,Este es el primer bulletin,true,null
 bulletin-11,2020/1/1 11:20,თხა,Este es el primer bulletin,true,null
 bulletin-12,2020/1/1 11:20,коза,Este es el primer bulletin,true,null
+bulletin-21,2020/1/1 11:20,<script>alert("hi!")</script>,Este es el primer bulletin,true,null
+bulletin-22,2020/1/1 11:20,<h1>Hola Mundo!</h1>,Este es el primer bulletin,true,null
 bulletin-13,2020/1/1 11:20,Titulo,E,true,null
 bulletin-14,2020/1/1 11:20,Titulo,Es,true,null
 bulletin-15,2020/1/1 11:20,Titulo,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres,true,null
 bulletin-16,2020/1/1 11:20,Titulo,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima,true,null
 bulletin-17,2020/1/1 11:20,Titulo,თხა,true,null
 bulletin-18,2020/1/1 11:20,Titulo,коза,true,null
+bulletin-23,2020/1/1 11:20,Titulo,<script>alert("hi!")</script>,true,null
+bulletin-24,2020/1/1 11:20,Titulo,<h1>Hola Mundo!</h1>,true,null
 bulletin-19,2020/1/1 11:20,Titulo,Este es el primer bulletin,false,null
 bulletin-20,2020/1/1 11:20,Titulo,Este es el primer bulletin,true,https://github.com/Alejandrocg024/Acme-L3-D02
