@@ -1,4 +1,4 @@
-key,code,conclusion,strong_points,weak_points,drafMode,key:course,key:auditor
+key,code,conclusion,strong_points,weak_points,draft_mode,key:course,key:auditor
 audit-01,AAA999,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-01
 audit-02,AA999,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-01
 audit-03,A999,Auditoría finalizada,"Completa, clara, sencilla","General,poca información",false,course-01,auditor-01

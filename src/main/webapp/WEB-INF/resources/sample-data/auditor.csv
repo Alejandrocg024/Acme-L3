@@ -1,4 +1,4 @@
-key,firm,professional_id,certifications,furtherInformationLink,key:userAccount
+key,firm,professional_id,certifications,further_information_link,key:userAccount
 auditor-01,Auditor numero 1,066PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-auditor-01
 auditor-02,A,066PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-auditor-01
 auditor-03,Au,066PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-auditor-01

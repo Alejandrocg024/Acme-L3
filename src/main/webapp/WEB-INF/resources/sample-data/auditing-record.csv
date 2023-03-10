@@ -1,4 +1,4 @@
-key,subject,assessment,startPeriod,endPeriod,mark,furtherInformationLink,key:audit
+key,subject,assessment,start_period,end_period,mark,further_information_link,key:audit
 auditing-record-01,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
 auditing-record-02,Este mensaje tiene setenta y cinco caracteres usados para validar mensaje.,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
 auditing-record-03,Este mensaje tiene setenta y cinco caracteres usados para validar mensaje,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
