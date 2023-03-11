@@ -8,12 +8,16 @@ course-06,AAA993,El mensaje tiene setenta y cuatro caracteres valida cadenas de 
 course-07,AAA994,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes,Curso de Lengua,EUR 15.0,null,false,lecturer-01
 course-08,AAA995,თხა,Curso de Lengua,EUR 15.0,null,false,lecturer-01
 course-09,AAA996,коза,Curso de Lengua,EUR 15.0,null,false,lecturer-01
+course-23,ZAA999,<script>alert("hi!")</script>,Curso de Lengua,EUR 15.0,null,false,lecturer-01
+course-24,ZAA909,<h1>Hola Mundo!</h1>,Curso de Lengua,EUR 15.0,null,false,lecturer-01
 course-10,AAA997,Course,C,EUR 15.0,null,false,lecturer-01
 course-11,AAA998,Course,Cu,EUR 15.0,null,false,lecturer-01
 course-12,AAA990,Course,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres,EUR 15.0,null,false,lecturer-01
 course-13,AAA919,Course,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxim,EUR 15.0,null,false,lecturer-01
 course-14,AAA929,Course,თხა,EUR 15.0,null,false,lecturer-01
 course-15,AAA939,Course,коза,EUR 15.0,null,false,lecturer-01
+course-26,AAA729,Course,<script>alert("hi!")</script>,EUR 15.0,null,false,lecturer-01
+course-25,AZA999,Course,<h1>Hola Mundo!</h1>,EUR 15.0,null,false,lecturer-01
 course-16,AAA949,Course,Curso de Lengua,USD 15.0,null,false,lecturer-01
 course-17,AAA959,Course,Curso de Lengua,GBP 15.0,null,false,lecturer-01
 course-18,AAA969,Course,Curso de Lengua,"EUR 150,000.0",null,false,lecturer-01
