@@ -1,0 +1,32 @@
+key,subject,assessment,start_period,end_period,mark,further_information_link,key:audit
+auditing-record-01,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-02,Este mensaje tiene setenta y cinco caracteres usados para validar mensaje.,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-03,Este mensaje tiene setenta y cinco caracteres usados para validar mensaje,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-04,A,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-05,Es,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-06,коза,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-07,თხა,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-08,<script>alert("hi!")</script>,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-09,<h1>Hola Mundo!</h1>,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-10,Subject número 1,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maximo,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-11,Subject número 1,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxim,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-12,Subject número 1,A,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-13,Subject número 1,Es,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-14,Subject número 1,коза,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-15,Subject número 1,თხა,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-16,Subject número 1,<script>alert("hi!")</script>,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-17,Subject número 1,<h1>Hola Mundo!</h1>,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-18,Subject número 1,Assessment número 1,2020/01/01 00:00,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-19,Subject número 1,Assessment número 1,2020/01/01 23:59,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-20,Subject número 1,Assessment número 1,2020/01/01 12:00,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-21,Subject número 1,Assessment número 1,2020/01/01 11:59,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-22,Subject número 1,Assessment número 1,2022/07/30 00:00,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-23,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 00:00,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-24,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 23:59,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-25,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 12:00,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-26,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:59,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-27,Subject número 1,Assessment número 1,2020/01/01 11:20,2022/07/30 00:00,A,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-28,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,Aplus,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-29,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,Fmin,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-30,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,F,https://github.com/Alejandrocg024/Acme-L3-D02,audit-01
+auditing-record-31,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,null,audit-01
