@@ -23,3 +23,4 @@ bulletin-23,2020/1/1 11:20,Titulo,<script>alert("hi!")</script>,true,null
 bulletin-24,2020/1/1 11:20,Titulo,<h1>Hola Mundo!</h1>,true,null
 bulletin-19,2020/1/1 11:20,Titulo,Este es el primer bulletin,false,null
 bulletin-20,2020/1/1 11:20,Titulo,Este es el primer bulletin,true,https://github.com/Alejandrocg024/Acme-L3-D02
+bulletin-25,2020/1/1 11:20,Titulo,Este es el primer bulletin,true,ftp://user:pass@acme.org
