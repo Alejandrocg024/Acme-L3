@@ -27,6 +27,7 @@ user-account-lecturer-23,true,"UserIdentity{name: 'Guaje', surname: 'Begines', e
 user-account-lecturer-24,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer24,lecturer24
 user-account-lecturer-25,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer25,lecturer25
 user-account-lecturer-26,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer26,lecturer26
+user-account-lecturer-27,true,"UserIdentity{name: 'Guaje', surname: 'Begines', email: 'lecturer1@acme.com'}",lecturer27,lecturer27
 user-account-auditor-01,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email: 'auditor1@acme.com'}",auditor1,auditor1
 user-account-auditor-02,true,"UserIdentity{name: 'Javier', surname: 'Varo', email: 'auditor1@acme.com'}",auditor2,auditor2
 user-account-auditor-03,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email: 'auditor1@acme.com'}",auditor3,auditor3

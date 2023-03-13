@@ -22,5 +22,6 @@ course-16,AAA949,Course,Curso de Lengua,USD 15.0,null,false,lecturer-01
 course-17,AAA959,Course,Curso de Lengua,GBP 15.0,null,false,lecturer-01
 course-18,AAA969,Course,Curso de Lengua,"EUR 150,000.0",null,false,lecturer-01
 course-20,AAA979,Course,Curso de Lengua,EUR 15.0,https://github.com/Alejandrocg024/Acme-L3-D02,false,lecturer-01
+course-27,AAE799,Course,Curso de Lengua,EUR 15.0,ftp://user:pass@acme.org,false,lecturer-01
 course-21,AAA989,Course,Curso de Lengua,EUR 15.0,null,true,lecturer-01
-course-22,AAA921,Course,Curso de Lengua,EUR 15.0,null,false,lecturer-02
+course-22,AAA721,Course,Curso de Lengua,EUR 15.0,null,false,lecturer-02

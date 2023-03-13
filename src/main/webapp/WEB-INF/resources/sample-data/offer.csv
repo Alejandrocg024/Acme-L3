@@ -35,3 +35,4 @@ offer-29,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11
 offer-30,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,GBP 10.0,null
 offer-31,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,"EUR 150,000.0",null
 offer-32,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,https://github.com/Alejandrocg024/Acme-L3-D02
+offer-37,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,ftp://user:pass@acme.org

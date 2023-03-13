@@ -25,3 +25,4 @@ lecturer-18, José, Uno de los mejores profesores del mundo, თხა,null,user
 lecturer-25, José, Uno de los mejores profesores del mundo, <script>alert("hi!")</script>,null,user-account-lecturer-25
 lecturer-26, José, Uno de los mejores profesores del mundo, <h1>Hola Mundo!</h1>,null,user-account-lecturer-26
 lecturer-19, José, Uno de los mejores profesores del mundo, "B2Ingles, B2Italiano",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-lecturer-19
+lecturer-27, José, Uno de los mejores profesores del mundo, "B2Ingles, B2Italiano",ftp://user:pass@acme.org,user-account-lecturer-27
