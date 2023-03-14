@@ -24,4 +24,6 @@ auditor-22,Auditor numero 1,066PMG,თხა,https://github.com/Alejandrocg024/A
 auditor-23,Auditor numero 1,066PMG,коза,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-auditor-01
 auditor-24,Auditor numero 1,066PMG,<script>alert("hi!")</script>,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-auditor-01
 auditor-25,Auditor numero 1,066PMG,<h1>Hola Mundo!</h1>,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-auditor-01
-auditor-26,Auditor numero 1,066PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",null,user-account-auditor-01
+auditor-26,Auditor numero 1,066PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",ftp://user:pass@acme.org,user-account-auditor-01
+auditor-27,Auditor numero 1,066PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",null,user-account-auditor-01
+auditor-28,Auditor numero 1,066PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-auditor-02
