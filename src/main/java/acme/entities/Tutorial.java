@@ -40,6 +40,8 @@ public class Tutorial extends AbstractEntity {
 	@Length(max = 100)
 	protected String			goal;
 
+	protected boolean			draftMode;
+
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
