@@ -6,12 +6,16 @@ lecture-04,El mensaje tiene setenta y cuatro caracteres valida cadenas de longit
 lecture-05,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes,Primera lecture,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-06,коза,Primera lecture,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-07,თხა,Primera lecture,2.0,En esta lecture aprendereis mucho,BALANCED,null
+lecture-26,<script>alert("hi!")</script>,Primera lecture,2.0,En esta lecture aprendereis mucho,BALANCED,null
+lecture-27,<h1>Hola Mundo!</h1>,Primera lecture,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-08,Lecture1,P,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-09,Lecture1,Pr,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-10,Lecture1,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-11,Lecture1,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-12,Lecture1,коза,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-13,Lecture1,თხა,2.0,En esta lecture aprendereis mucho,BALANCED,null
+lecture-28,Lecture1,<script>alert("hi!")</script>,2.0,En esta lecture aprendereis mucho,BALANCED,null
+lecture-29,Lecture1,<h1>Hola Mundo!</h1>,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-14,Lecture1,Primera lecture,1.01,En esta lecture aprendereis mucho,BALANCED,null
 lecture-15,Lecture1,Primera lecture,0.99,En esta lecture aprendereis mucho,BALANCED,null
 lecture-16,Lecture1,Primera lecture,99.00,En esta lecture aprendereis mucho,BALANCED,null
@@ -21,6 +25,8 @@ lecture-19,Lecture1,Primera lecture,2.0,Este mensaje tiene noventa y nueve carac
 lecture-20,Lecture1,Primera lecture,2.0,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima,BALANCED,null
 lecture-21,Lecture1,Primera lecture,2.0,коза,BALANCED,null
 lecture-22,Lecture1,Primera lecture,2.0,თხა,BALANCED,null
+lecture-30,Lecture1,Primera lecture,2.0,<script>alert("hi!")</script>,BALANCED,null
+lecture-31,Lecture1,Primera lecture,2.0,<h1>Hola Mundo!</h1>,BALANCED,null
 lecture-23,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,HANDS_ON,null
 lecture-24,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null
 lecture-25,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,BALANCED,https://github.com/Alejandrocg024/Acme-L3-D02
