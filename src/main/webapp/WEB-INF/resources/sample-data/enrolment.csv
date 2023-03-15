@@ -1,0 +1,29 @@
+key,code,motivation,goals,draft_mode,key:student,key:course
+enrolment-01,AAA999,Learning new things,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-02,ABC123,Learning new things,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-03,XYZ789,Learning new things,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-04,AB111,Learning new things,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-05,Z999,Learning new things,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-06,A100,E,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-07,A101,Es,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-08,A102,Este mensaje tiene setenta y cuatro caracteres se usa para validar mensaje,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-09,A103,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-10,A104,!@#$%&/()=?¿,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-11,A105,у меня желтый трактор,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-12,A106,我有一輛黃色拖拉機,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-13,A107,console.log("Hola!"),"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-14,A108,<script>alert("hi!")</script>,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-15,A109,<h1>Hola Mundo!</h1>,"Discover, Learn, Enjoy",false,student-01,course-01
+enrolment-16,A110,Learning new things,E,false,student-01,course-01
+enrolment-17,A111,Learning new things,Es,false,student-01,course-01
+enrolment-18,A112,Learning new things,Este mensaje tiene cien caracteres usado para validar cadenas con cien de longitud maximo y motivate,false,student-01,course-01
+enrolment-19,A113,Learning new things,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maximo,false,student-01,course-01
+enrolment-20,A114,Learning new things,!@#$%&/()=?¿,false,student-01,course-01
+enrolment-21,A115,Learning new things,у меня желтый трактор,false,student-01,course-01
+enrolment-22,A116,Learning new things,我有一輛黃色拖拉機,false,student-01,course-01
+enrolment-23,A117,Learning new things,console.log("Hola!"),false,student-01,course-01
+enrolment-24,A118,Learning new things,<script>alert("hi!")</script>,false,student-01,course-01
+enrolment-25,A119,Learning new things,<h1>Hola Mundo!</h1>,false,student-01,course-01
+enrolment-26,A120,Learning new things,"Discover, Learn, Enjoy",true,student-01,course-01
+enrolment-27,A121,Learning new things,"Discover, Learn, Enjoy",false,student-02,course-01
+enrolment-28,A122,Learning new things,"Discover, Learn, Enjoy",false,student-01,course-02
