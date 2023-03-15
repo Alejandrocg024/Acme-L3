@@ -1,0 +1,27 @@
+key,code,title,sumary,goal,draftMode,key:course,key:assistant
+tutorial-01,AA920,Tutorial de prueba,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-02,AA952,T,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-01,assistant-02
+tutorial-03,AA922,Tu,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-04,AAA954,Tutorial de prueba,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-01,assistant-02
+tutorial-05,AA924,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-06,AA956,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-01,assistant-02
+tutorial-07,AA926,თხა,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-08,AA958,коза,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-01,assistant-02
+tutorial-09,AA928,"<script>alert(""hi!"")</script>",Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-10,A941,<h1>Hola Mundo!</h1>,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-01,assistant-02
+tutorial-11,A938,Tutorial de prueba,R,"Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-12,A943,Tutorial de prueba,Re,"Aprender ,concentrarse",false,course-01,assistant-02
+tutorial-13,A940,Tutorial de prueba,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,"Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-14,A945,Tutorial de prueba,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,"Aprender ,concentrarse",false,course-01,assistant-02
+tutorial-15,A942,Tutorial de prueba,თხა,"Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-16,A947,Tutorial de prueba,коза,"Aprender ,concentrarse",false,course-01,assistant-02
+tutorial-17,A944,Tutorial de prueba,"<script>alert(""hi!"")</script>","Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-18,A749,Tutorial de prueba,<h1>Hola Mundo!</h1>,"Aprender ,concentrarse",false,course-01,assistant-02
+tutorial-19,A946,Tutorial de prueba,Realizado primer tutorial de prueba,A,false,course-02,assistant-01
+tutorial-20,A951,Tutorial de prueba,Realizado primer tutorial de prueba,Ap,false,course-01,assistant-02
+tutorial-21,A948,Tutorial de prueba,Realizado primer tutorial de prueba,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,false,course-02,assistant-01
+tutorial-22,A953,Tutorial de prueba,Realizado primer tutorial de prueba,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,true,course-01,assistant-02
+tutorial-23,A950,Tutorial de prueba,Realizado primer tutorial de prueba,თხა,false,course-02,assistant-01
+tutorial-24,A955,Tutorial de prueba,Realizado primer tutorial de prueba,коза,false,course-01,assistant-02
+tutorial-25,A952,Tutorial de prueba,Realizado primer tutorial de prueba,"<script>alert(""hi!"")</script>",false,course-02,assistant-01
+tutorial-26,A957,Tutorial de prueba,Realizado primer tutorial de prueba,<h1>Hola Mundo!</h1>,false,course-01,assistant-02
