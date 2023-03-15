@@ -31,8 +31,8 @@ public class TutorialSession extends AbstractEntity {
 	protected String			title;
 
 	@NotBlank
-	@Length(max = 75)
-	protected String			sumary;
+	@Length(max = 100)
+	protected String			summary;
 
 	@NotNull
 	protected Nature			typeSession;
