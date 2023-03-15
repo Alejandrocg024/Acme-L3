@@ -31,6 +31,6 @@ public class Company extends AbstractRole {
 	protected String			summary;
 
 	@URL
-	protected String			link;
+	protected String			furtherInformationLink;
 
 }
