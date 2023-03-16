@@ -35,7 +35,7 @@ public class TutorialSession extends AbstractEntity {
 	protected String			abstract$;
 
 	@NotNull
-	protected Nature			typeSession;
+	protected Nature			nature;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
