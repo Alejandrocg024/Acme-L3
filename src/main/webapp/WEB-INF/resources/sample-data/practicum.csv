@@ -1,4 +1,4 @@
-key,code,title,summary,goals,draft_mode,key:company,key:course
+key,code,title,abstract$,goals,draft_mode,key:company,key:course
 practicum-01,AAA999,Practicum,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
 practicum-02,AA999,Practicum,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
 practicum-03,A999,Practicum,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
