@@ -1,4 +1,4 @@
-key,code,title,summary,goal,draftMode,key:course,key:assistant
+key,code,title,abstract$,goal,draftMode,key:course,key:assistant
 tutorial-01,AA920,Tutorial de prueba,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-02,assistant-01
 tutorial-02,AA952,T,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-01,assistant-02
 tutorial-03,AA922,Tu,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,course-02,assistant-01
