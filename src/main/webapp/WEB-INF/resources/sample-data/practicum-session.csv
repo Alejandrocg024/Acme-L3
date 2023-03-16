@@ -1,4 +1,4 @@
-key,title,summary,start_period,end_period,further_information_link,key:practicum
+key,title,abstract$,start_period,end_period,further_information_link,key:practicum
 practicum-session-01,Sesión de práctica,Esto es una sesión de práctica profesional.,2021/08/21 17:00,2021/09/12 17:00,https://github.com/Alejandrocg024/Acme-L3-D02,practicum-01
 practicum-session-02,S,Esto es una sesión de práctica profesional.,2021/08/21 17:00,2021/09/12 17:00,https://github.com/Alejandrocg024/Acme-L3-D02,practicum-01
 practicum-session-03,Se,Esto es una sesión de práctica profesional.,2021/08/21 17:00,2021/09/12 17:00,https://github.com/Alejandrocg024/Acme-L3-D02,practicum-01
