@@ -12,19 +12,18 @@ company-10,Empresa,1,Esto es una empresa de ejemplo.,https://github.com/Alejandr
 company-11,Empresa,12,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-11
 company-12,Empresa,1234567890123456789012345,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-12
 company-13,Empresa,123456789012345678901234,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-13
-company-14,Empresa,DE12345678901,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-14
-company-15,Empresa,DE-12345678901,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-15
-company-16,Empresa,增值稅代碼,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-16
-company-17,Empresa,κώδικα ΦΠΑ,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-17
-company-18,Empresa,<h1>Hola Mundo!</h1>,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-18
-company-19,Empresa,12345678901,E,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-19
-company-20,Empresa,12345678901,Es,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-20
-company-21,Empresa,12345678901,Nos encontramos ahora con un resumen de exactamente cien caracteres para esta empresa concretamente.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-21
-company-22,Empresa,12345678901,Aquí podemos ver que tenemos un resumen de exactamente noventa y nueve caracteres para esta empresa,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-22
-company-23,Empresa,12345678901,公司簡介,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-23
-company-24,Empresa,12345678901,Επισκόπηση της εταιρείας,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-24
-company-25,Empresa,12345678901,<script>alert("hi!")</script>,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-25
-company-26,Empresa,12345678901,<h1>Hola Mundo!</h1>,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-26
-company-27,Empresa,12345678901,Esto es una empresa de ejemplo.,null,user-account-company-27
-company-28,Empresa,12345678901,Esto es una empresa de ejemplo.,ftp://user:pass@acme.org,user-account-company-28
-company-29,Empresa,12345678901,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02/a?b,user-account-company-29
+company-14,Empresa,增值稅代碼,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-14
+company-15,Empresa,κώδικα ΦΠΑ,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-15
+company-16,Empresa,<h1>Hola Mundo!</h1>,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-16
+company-17,Empresa,console.log("Hola!"),Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-17
+company-18,Empresa,12345678901,E,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-18
+company-19,Empresa,12345678901,Es,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-19
+company-20,Empresa,12345678901,Nos encontramos ahora con un resumen de exactamente cien caracteres para esta empresa concretamente.,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-20
+company-21,Empresa,12345678901,Aquí podemos ver que tenemos un resumen de exactamente noventa y nueve caracteres para esta empresa,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-21
+company-22,Empresa,12345678901,公司簡介,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-22
+company-23,Empresa,12345678901,Επισκόπηση της εταιρείας,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-23
+company-24,Empresa,12345678901,<script>alert("hi!")</script>,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-24
+company-25,Empresa,12345678901,<h1>Hola Mundo!</h1>,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-company-25
+company-26,Empresa,12345678901,Esto es una empresa de ejemplo.,null,user-account-company-26
+company-27,Empresa,12345678901,Esto es una empresa de ejemplo.,ftp://user:pass@acme.org,user-account-company-27
+company-28,Empresa,12345678901,Esto es una empresa de ejemplo.,https://github.com/Alejandrocg024/Acme-L3-D02/a?b,user-account-company-28
