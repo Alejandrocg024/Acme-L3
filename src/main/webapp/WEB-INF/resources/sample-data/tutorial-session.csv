@@ -1,4 +1,4 @@
-key,title,summary,type_session,start_period,end_period,further_information_link,key:tutorial
+key,title,abstract$,type_session,start_period,end_period,further_information_link,key:tutorial
 tutorial-session-01,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-01
 tutorial-session-02,S,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-02
 tutorial-session-03,Se,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,https://github.com/Alejandrocg024/Acme-L3-D02,tutorial-01
