@@ -26,4 +26,3 @@ auditor-24,Auditor numero 1,081PMG,<script>alert("hi!")</script>,https://github.
 auditor-25,Auditor numero 1,082PMG,<h1>Hola Mundo!</h1>,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-auditor-25
 auditor-26,Auditor numero 1,083PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",ftp://user:pass@acme.org,user-account-auditor-26
 auditor-27,Auditor numero 1,084PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",null,user-account-auditor-27
-auditor-28,Auditor numero 1,085PMG,"ISO 45001, ISO 9001, ISO 14001, SGE 21",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-auditor-28
