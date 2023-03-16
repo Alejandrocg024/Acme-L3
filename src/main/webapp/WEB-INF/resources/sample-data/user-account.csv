@@ -109,3 +109,5 @@ user-account-assistant-23,true,"UserIdentity{name: 'Alejandro', surname: 'Garcia
 user-account-assistant-24,true,"UserIdentity{name: 'Alejandro', surname: 'Garcia', email: 'assistant1@acme.com'}",assistant24,assistant24
 user-account-assistant-25,true,"UserIdentity{name: 'Alejandro', surname: 'Garcia', email: 'assistant1@acme.com'}",assistant25,assistant25
 user-account-assistant-26,true,"UserIdentity{name: 'Alejandro', surname: 'Garcia', email: 'assistant1@acme.com'}",assistant26,assistant26
+user-account-student-01,true,"UserIdentity{name: 'Alejandro', surname: 'Campano', email: 'student1@acme.com'}",student1,student1
+user-account-student-02,true,"UserIdentity{name: 'Carlos', surname: 'Baquero', email: 'student2@acme.com'}",student2,student2
