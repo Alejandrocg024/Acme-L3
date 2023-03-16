@@ -1,4 +1,4 @@
-key,instantiation_moment,heading,summary,start_period,end_period,price,further_information
+key,instantiation_moment,heading,summary,start_period,end_period,price,further_information_link
 offer-01,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-02,2020/01/01 23:59,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-03,2020/01/01 00:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null

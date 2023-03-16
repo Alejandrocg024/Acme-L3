@@ -14,8 +14,8 @@ public class AdministratorDashboard extends AbstractForm {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	Map<String, Integer>		numOfPrincipalsByRole;
-	Double						linkAndEmailPeepsRatio;
+	Map<String, Integer>		principalsByRole;
+	Double						peepsRatioWithLinkAndEmail;
 	Map<Boolean, Double>		ratioOfBulletinsByCriticality;
 	Statistic					currentsOffersStats;
 	Statistic					notesInLast10WeeksStats;

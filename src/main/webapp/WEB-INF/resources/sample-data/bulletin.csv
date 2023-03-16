@@ -1,4 +1,4 @@
-key,instantiation_moment,title,message,critical,further_information
+key,instantiation_moment,title,message,critical,further_information_link
 bulletin-01,2020/1/1 11:20,Titulo,Este es el primer bulletin,true,null
 bulletin-02,2020/1/1 11:59,Titulo,Este es el primer bulletin,true,null
 bulletin-03,2020/1/1 12:00,Titulo,Este es el primer bulletin,true,null

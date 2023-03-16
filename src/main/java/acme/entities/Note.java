@@ -47,6 +47,6 @@ public class Note extends AbstractEntity {
 	protected String			email;
 
 	@URL
-	protected String			furtherInformation;
+	protected String			furtherInformationLink;
 
 }

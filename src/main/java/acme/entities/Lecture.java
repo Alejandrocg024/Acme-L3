@@ -37,8 +37,8 @@ public class Lecture extends AbstractEntity {
 	protected String			body;
 
 	@NotNull
-	protected Nature			lectureType;
+	protected Nature			nature;
 
 	@URL
-	protected String			furtherInformation;
+	protected String			furtherInformationLink;
 }
