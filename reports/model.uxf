@@ -207,8 +207,8 @@ bg=green</panel_attributes>
 TutorialSession
 --
 + title: String {NotBlank, Length(max = 75)}
-+ summary: String {NotBlank, Length(max = 100)}
-+ typeSession: Nature {NotNull}
++ abstract$: String {NotBlank, Length(max = 100)}
++ nature: Nature {NotNull}
 + startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + furtherInformationLink: String {URL}
@@ -431,7 +431,7 @@ Tutorial
 --
 + code: String {Unique, NotBlank, Pattern("^[A-Z]{1,3}\\d{3}$")}
 + title: String {NotBlank, Length(max = 75)}
-+ summary: String {NotBlank, Length(max = 100)}
++ abstract$: String {NotBlank, Length(max = 100)}
 + goal: String {NotBlank, Length(max = 100)}
 + draftMode: boolean
 + / estimatedTotalTime: Double
@@ -667,7 +667,6 @@ Enrolment
 + code: String {Unique, NotBlank, Pattern("^[A-Z]{1,3}\\d{3}$")}
 + motivation: String {NotBlank, Length(max = 75)}
 + goals: String {NotBlank, Length(max = 100)}
-+ draftMode: boolean
 + / workTime: Double
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -712,8 +711,8 @@ made by ^</panel_attributes>
 Activity
 --
 + title: String {NotBlank, Length(max = 75)}
-+ summary: String {NotBlank, Length(max = 100)}
-+ typeSession: Nature {NotNull}
++ abstract$: String {NotBlank, Length(max = 100)}
++ nature: Nature {NotNull}
 + startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + furtherInformationLink: String {URL}
