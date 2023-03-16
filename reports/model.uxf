@@ -392,7 +392,7 @@ Practicum
 --
 + code: String {Unique, NotBlank, Pattern("^[A-Z]{1,3}\\d{3}$")}
 + title: String {NotBlank, Length(max = 75)}
-+ summary: String {NotBlank, Length(max = 100)}
++ abstract$: String {NotBlank, Length(max = 100)}
 + goals: String {NotBlank, Length(max = 100)}
 + draftMode: boolean
 + / estimatedTotalTime: Double
@@ -411,7 +411,7 @@ bg=green</panel_attributes>
 PracticumSession
 --
 + title: String {NotBlank, Length(max = 75)}
-+ summary: String {NotBlank, Length(max = 100)}
++ abstract$: String {NotBlank, Length(max = 100)}
 + startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + furtherInformationLink: String {URL}
