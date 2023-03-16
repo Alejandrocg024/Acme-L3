@@ -1,0 +1,28 @@
+key,title,abstract$,nature,start_period,end_period,further_information_link,key:tutorial
+tutorial-session-01,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-01
+tutorial-session-02,S,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-02
+tutorial-session-03,Se,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,https://github.com/Alejandrocg024/Acme-L3-D02,tutorial-01
+tutorial-session-04,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-02
+tutorial-session-05,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,https://github.com/Alejandrocg024/Acme-L3-D02,tutorial-01
+tutorial-session-06,коза,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-02
+tutorial-session-07,თხა,Primera sesion del tutorial,THEORETICAL,2020/1/1 11:20,2020/1/1 11:22,https://github.com/Alejandrocg024/Acme-L3-D02,tutorial-01
+tutorial-session-08,"<script>alert(""hi!"")</script>",Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-02
+tutorial-session-09,<h1>Hola Mundo!</h1>,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/1/1 11:22,https://github.com/Alejandrocg024/Acme-L3-D02,tutorial-01
+tutorial-session-10,Sesion numero 1,P,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-02
+tutorial-session-11,Sesion numero 1,Pr,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-01
+tutorial-session-12,Sesion numero 1,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-02
+tutorial-session-13,Sesion numero 1,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-01
+tutorial-session-14,Sesion numero 1,коза,BALANCED,2020/1/1 11:20,2020/1/1 11:22,https://github.com/Alejandrocg024/Acme-L3-D02,tutorial-02
+tutorial-session-15,Sesion numero 1,თხა,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-01
+tutorial-session-16,Sesion numero 1,"<script>alert(""hi!"")</script>",BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-02
+tutorial-session-17,Sesion numero 1,<h1>Hola Mundo!</h1>,BALANCED,2020/1/1 11:20,2020/1/1 11:22,null,tutorial-01
+tutorial-session-18,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/01/01 00:00,2020/1/1 11:22,null,tutorial-02
+tutorial-session-19,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/01/01 23:59,2020/1/1 11:22,null,tutorial-01
+tutorial-session-20,Sesion numero 1,Primera sesion del tutorial,THEORETICAL,2020/01/01 12:00,2020/1/1 11:22,null,tutorial-02
+tutorial-session-21,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/01/01 11:59,2020/1/1 11:22,null,tutorial-01
+tutorial-session-22,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/07/30 00:00,2020/1/1 11:22,null,tutorial-02
+tutorial-session-23,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/01/10 00:00,null,tutorial-01
+tutorial-session-24,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/01/10 23:59,ftp://user:pass@acme.org,tutorial-02
+tutorial-session-25,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/01/10 12:00,https://github.com/Alejandrocg024/Acme-L3-D02,tutorial-01
+tutorial-session-27,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2022/07/30 00:00,null,tutorial-02
+tutorial-session-26,Sesion numero 1,Primera sesion del tutorial,BALANCED,2020/1/1 11:20,2020/01/10 11:59,ftp://user:pass@acme.org,tutorial-02

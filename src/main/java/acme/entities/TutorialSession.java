@@ -31,11 +31,11 @@ public class TutorialSession extends AbstractEntity {
 	protected String			title;
 
 	@NotBlank
-	@Length(max = 75)
-	protected String			sumary;
+	@Length(max = 100)
+	protected String			abstract$;
 
 	@NotNull
-	protected Nature			typeSession;
+	protected Nature			nature;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)

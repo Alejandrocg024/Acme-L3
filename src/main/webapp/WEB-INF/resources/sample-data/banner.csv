@@ -1,27 +1,29 @@
-key,instantiation_moment,display_period_begin,display_period_finish,photo_link,slogan,web_document
-banner-01,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-02,2020/01/01 00:00,2020/01/01 11:00,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-03,2020/01/01 23:59,2020/01/01 11:00,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-04,2020/01/01 11:59,2020/01/01 11:00,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-05,2020/01/01 12:00,2020/01/01 11:00,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-07,2022/07/30 00:00,2020/01/01 11:00,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-08,2020/01/01 11:00,2020/01/01 00:00,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-09,2020/01/01 11:00,2020/01/01 23:59,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-10,2020/01/01 11:00,2020/01/01 11:59,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-11,2020/01/01 11:00,2020/01/01 12:00,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-12,2020/01/01 11:00,2022/07/30 00:00,2020/01/01 11:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-13,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 00:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-14,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 23:59,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-15,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:59,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-16,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 12:00,null,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-17,2020/01/01 11:00,2020/01/01 11:00,2022/07/30 00:00,https://github.com/Alejandrocg024/Acme-L3-D02,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-18,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,S,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-19,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,Sl,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-20,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-21,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-22,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,თხა,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-23,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,коза,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-25,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,<script>alert("hi!")</script>,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-26,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,<h1>Hola Mundo!</h1>,https://github.com/Alejandrocg024/Acme-L3-D02
-banner-24,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,Slogan,null
-banner-27,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,null,Slogan,ftp://user:pass@acme.org
+key,instantiation_moment,display_period_begin,display_period_finish,picture_link,slogan,web_link
+banner-01,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-02,2020/01/01 00:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-03,2020/01/01 23:59,2020/01/01 11:00,2020/01/02 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-28,2020/01/01 11:00,2020/01/01 11:00,2020/01/08 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-29,2020/01/01 11:00,2020/01/01 11:00,2020/01/08 10:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-04,2020/01/01 11:59,2020/01/01 11:00,2020/01/03 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-05,2020/01/01 12:00,2020/01/01 11:00,2020/01/03 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-07,2022/07/30 00:00,2020/01/01 11:00,2020/01/03 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-08,2020/01/01 11:00,2020/01/01 00:00,2020/01/03 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-09,2020/01/01 11:00,2020/01/01 23:59,2020/01/03 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-10,2020/01/01 11:00,2020/01/01 11:59,2020/01/03 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-11,2020/01/01 11:00,2020/01/01 12:00,2020/01/03 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-12,2020/01/01 11:00,2022/07/30 00:00,2020/07/28 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-13,2020/01/01 11:00,2020/01/01 11:00,2020/01/03 00:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-14,2020/01/01 11:00,2020/01/01 11:00,2020/01/03 23:59,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-15,2020/01/01 11:00,2020/01/01 11:00,2020/01/03 11:59,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-16,2020/01/01 11:00,2020/01/01 11:00,2020/01/03 12:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-17,2020/01/01 11:00,2022/07/28 11:00,2022/07/30 00:00,https://github.com/Alejandrocg024/Acme-L3-D02,Slogan,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-18,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,S,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-19,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Sl,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-20,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-21,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-22,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,თხა,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-23,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,коза,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-25,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,<script>alert("hi!")</script>,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-26,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,<h1>Hola Mundo!</h1>,https://github.com/Alejandrocg024/Acme-L3-D02
+banner-24,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,https://github.com/Alejandrocg024/Acme-L3-D0
+banner-27,2020/01/01 11:00,2020/01/01 11:00,2020/01/01 11:00,https://github.com/Alejandrocg024/Acme-L3-D0,Slogan,ftp://user:pass@acme.org

@@ -16,6 +16,6 @@ public class AssistantDashboard extends AbstractForm {
 	private static final long	serialVersionUID	= 1L;
 
 	Map<Nature, Integer>		numOfTutorialsByType;
-	Statistic					metricsOfSessions;
-	Statistic					metricsOfTutorials;
+	Statistic					timeOfSessionsStats;
+	Statistic					timeOfTutorialsStats;
 }

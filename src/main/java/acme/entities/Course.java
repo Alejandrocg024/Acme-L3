@@ -36,7 +36,7 @@ public class Course extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			summary;
+	protected String			abstract$;
 
 	//Los cursos puramente teoricos deben ser rechazados
 	//@NotNull

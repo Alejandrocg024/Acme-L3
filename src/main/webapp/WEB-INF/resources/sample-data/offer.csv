@@ -1,4 +1,4 @@
-key,instantiation_moment,heading,summary,start_period,end_period,price,further_information
+key,instantiation_moment,heading,summary,start_period,end_period,price,further_information_link
 offer-01,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-02,2020/01/01 23:59,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-03,2020/01/01 00:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
@@ -21,16 +21,19 @@ offer-17,2020/01/01 10:00,Offer,თხა,2020/01/01 11:00,2020/01/02 11:00,EUR 
 offer-18,2020/01/01 10:00,Offer,коза,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-35,2020/01/01 10:00,Offer,<script>alert("hi!")</script>,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-36,2020/01/01 10:00,Offer,<h1>Hola Mundo!</h1>,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
-offer-19,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 23:59,2020/01/02 11:00,EUR 10.0,null
-offer-20,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 00:00,2020/01/02 11:00,EUR 10.0,null
-offer-21,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 12:00,2020/01/02 11:00,EUR 10.0,null
-offer-22,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:59,2020/01/02 11:00,EUR 10.0,null
-offer-23,2020/01/01 10:00,Offer,Esto es una offer,2022/07/30 00:00,2020/01/02 11:00,EUR 10.0,null
-offer-24,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/01 23:59,EUR 10.0,null
-offer-25,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/01 00:00,EUR 10.0,null
-offer-26,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/01 12:00,EUR 10.0,null
-offer-27,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/01 11:59,EUR 10.0,null
-offer-28,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2022/07/30 00:00,EUR 10.0,null
+offer-19,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 23:59,2020/01/03 11:00,EUR 10.0,null
+offer-20,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 00:00,2020/01/03 11:00,EUR 10.0,null
+offer-21,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 12:00,2020/01/03 11:00,EUR 10.0,null
+offer-22,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:59,2020/01/03 11:00,EUR 10.0,null
+offer-23,2020/01/01 10:00,Offer,Esto es una offer,2022/07/30 00:00,2022/07/29 11:00,EUR 10.0,null
+offer-24,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/03 23:59,EUR 10.0,null
+offer-38,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-39,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/08 10:59,EUR 10.0,null
+offer-40,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/08 10:00,EUR 10.0,null
+offer-25,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/03 00:00,EUR 10.0,null
+offer-26,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/03 12:00,EUR 10.0,null
+offer-27,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/03 11:59,EUR 10.0,null
+offer-28,2020/01/01 10:00,Offer,Esto es una offer,2022/07/28 11:00,2022/07/30 00:00,EUR 10.0,null
 offer-29,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,USD 10.0,null
 offer-30,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,GBP 10.0,null
 offer-31,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,"EUR 150,000.0",null

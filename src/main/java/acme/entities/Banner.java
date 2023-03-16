@@ -38,12 +38,14 @@ public class Banner extends AbstractEntity {
 	protected Date				displayPeriodFinish;
 
 	@URL
-	protected String			photoLink;
+	@NotBlank
+	protected String			pictureLink;
 
 	@Length(max = 75)
 	@NotBlank
 	protected String			slogan;
 
 	@URL
-	protected String			webDocument;
+	@NotBlank
+	protected String			webLink;
 }

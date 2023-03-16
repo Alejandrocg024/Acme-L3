@@ -16,7 +16,7 @@ public class LecturerDashboard extends AbstractForm {
 	protected static final long	serialVersionUID	= 1L;
 
 	Map<Nature, Integer>		numOfLecturesByType;
-	Statistic					metricsOfLectures;
-	Statistic					metricsOfCourses;
+	Statistic					lecturesStats;
+	Statistic					coursesStats;
 
 }

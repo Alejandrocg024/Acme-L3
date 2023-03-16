@@ -1,4 +1,4 @@
-key,title,summary,estimated_learning_time,body,lecture_type,further_information
+key,title,summary,estimated_learning_time,body,nature,further_information_link
 lecture-01,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-02,L,Primera lecture,2.0,En esta lecture aprendereis mucho,BALANCED,null
 lecture-03,Le,Primera lecture,2.0,En esta lecture aprendereis mucho,BALANCED,null
