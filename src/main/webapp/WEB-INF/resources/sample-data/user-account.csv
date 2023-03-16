@@ -54,6 +54,8 @@ user-account-auditor-23,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email
 user-account-auditor-24,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email: 'auditor1@acme.com'}",auditor24,auditor24
 user-account-auditor-25,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email: 'auditor1@acme.com'}",auditor25,auditor25
 user-account-auditor-26,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email: 'auditor1@acme.com'}",auditor26,auditor26
+user-account-auditor-27,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email: 'auditor1@acme.com'}",auditor27,auditor27
+user-account-auditor-28,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email: 'auditor1@acme.com'}",auditor28,auditor28
 user-account-company-01,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company1,company1
 user-account-company-02,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company2,company2
 user-account-company-03,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company3,company3
