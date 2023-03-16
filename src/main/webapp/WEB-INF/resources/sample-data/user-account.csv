@@ -57,7 +57,7 @@ user-account-auditor-26,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email
 user-account-auditor-27,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email: 'auditor1@acme.com'}",auditor27,auditor27
 user-account-auditor-28,true,"UserIdentity{name: 'Pablo', surname: 'Mera', email: 'auditor1@acme.com'}",auditor28,auditor28
 user-account-company-01,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company1,company1
-user-account-company-02,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company2,company2
+user-account-company-02,true,"UserIdentity{name: 'Javier', surname: 'Conesa', email: 'company1@acme.com'}",company2,company2
 user-account-company-03,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company3,company3
 user-account-company-04,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company4,company4
 user-account-company-05,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company5,company5
@@ -84,7 +84,6 @@ user-account-company-25,true,"UserIdentity{name: 'David', surname: 'Cortabarra',
 user-account-company-26,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company26,company26
 user-account-company-27,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company27,company27
 user-account-company-28,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company28,company28
-user-account-company-29,true,"UserIdentity{name: 'David', surname: 'Cortabarra', email: 'company1@acme.com'}",company29,company29
 user-account-assistant-01,true,"UserIdentity{name: 'Alejandro', surname: 'Garcia', email: 'assistant1@acme.com'}",assistant1,assistant1
 user-account-assistant-02,true,"UserIdentity{name: 'Pedro', surname: 'Escalante', email: 'assistant1@acme.com'}",assistant2,assistant2
 user-account-assistant-03,true,"UserIdentity{name: 'Alejandro', surname: 'Garcia', email: 'assistant1@acme.com'}",assistant3,assistant3
