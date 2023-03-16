@@ -55,9 +55,9 @@ Banner
 + instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
 + startPeriod: Date {NotNull, Temporal{TIMESTAMP}}
 + endPeriod: Date {NotNull, Temporal{TIMESTAMP}}
-+ photoLink: String {URL, NotBlank}
++ pictureLink: String {URL, NotBlank}
 + slogan: String {NotBlank, Length(max = 75)}
-+ webDocument: String {URL, NotBlank}
++ webLink: String {URL, NotBlank}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -282,8 +282,8 @@ bg=yellow</panel_attributes>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 AdministratorDashboard
 --
-+ numOfPrincipalsByRole: Map&lt;String, Integer&gt;
-+ linkAndEmailPeepsRatio: Double
++ principalsByRole: Map&lt;String, Integer&gt;
++ peepsRatioWithLinkAndEmail: Double
 + ratioOfBulletinsByCriticality: Map&lt;Boolean, Double&gt;
 + currentsOffersStats: Statistic
 + notesInLast10WeeksStats: Statistic
