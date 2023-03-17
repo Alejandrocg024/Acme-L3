@@ -35,6 +35,51 @@ Acme-L3-D01 (17/02/2023)
 	 (*) Todos estos informes individuales se encuentran disponibles en las carpetas /reports/Student #X,
 	 donde X denota el número de estudiante.
 	 
+
+Acme-L3-D02 (17/03/2023)
+
+	Se han añadido todos los requisitos relcionados con el segundo entregable del proyecto.
+	
+	NUEVAS CARACTERÍSTICAS:
+	 - Se han creado las siguientes entidades relacionadas con los requisitos grupales, las cuales
+	   se pueden encontrar en la carpeta /src/main/java/acme/entities:
+	    • SystemConfiguration
+	    • Peep
+	    • Bulletin
+	    • Offer
+	    • Note
+	    • Banner
+	 - Se ha creado el dashboard relacionado con uno de los requisitos grupales: AdministratorDashboard.
+	   Lo podemos encontrar en la carpeta /src/main/java/acme/forms.
+	 - Se han creado datos de ejemplo en diversos ficheros con formato CSV para cada una de las entidades 
+	   anteriormente mencionadas. Dichos datos los podemos encontrar en la carpeta: /src/main/webapp/WEB-INF/resources/sample-data.
+	 - Se ha elaborado un informe sobre el análisis para la segunda entrega.
+	 - Se ha elaborado un informe sobre la planificación para la segunda entrega.
+	 (*) Estos dos informes mencionados se encuentran disponibles en la carpeta /reports/Group.
+	 - Se ha elaborado un modelo UML de dominio. Lo encontramos en la carpeta /reports.
+	 - Individualmente, cada miembro del grupo ha creado un rol. Estos son los siguientes: Lecturer, Student, Assistant,
+	   Company y Auditor. Todos se pueden encontrar en la carpeta: /src/main/java/acme/roles.
+	 - Individualmente, cada miembro del grupo ha creado una serie de entidades con sus correspondientes relaciones 
+	   de acuerdo a sus respectivos requisitos individuales. Las entidades las podemos encontrar en la carpeta:
+	   /src/main/java/acme/entities. A continuación se muestran las entidades agrupadas según las que haya elaborado 
+	   cada estudiante:
+	    • Course, CourseLecture, Lecture
+	    • Enrolment, Activity
+	    • Tutorial, TutorialSession
+	    • Practicum, PracticumSession
+	    • Audit, AuditingRecord
+	 - Individualmente, cada miembro del grupo ha creado un dashboard. Estos son los siguientes: LecturerDashboard,
+	   StudentDashboard, AssistantDashboard, CompanyDashboard y AuditorDashboard. Todos se pueden encontrar en la
+	   carpeta /src/main/java/acme/forms.
+	 - Individualmente, cada miembro ha generado datos de prueba para las diferentes entidades y roles previamente
+	   mencionados. Todos estos datos se pueden encontrar en la carpeta /src/main/webapp/WEB-INF/resources/sample-data.
+	 - Individualmente, cada miembro ha elaborado un informe sobre el análisis relacionado con cada uno de
+	   los requisitos que tenían que abordar individualmente.
+	 - Individualmente, cada miembro ha elaborado un informe sobre la planificación relacionado con cada uno
+	   de los requisitos que tenían que abordar individualmente.
+	 (*) Todos estos informes individuales se encuentran disponibles en las carpetas /reports/Student #X,
+	 donde X denota el número de estudiante.
+	 
 	 
 In English:
 
@@ -61,5 +106,50 @@ Acme-L3-D01 (17/02/2023)
 	   they had to complete.
 	 - Individually, each member of the group has produced a planning report related to their personal tasks
 	   they had to complete.
+	 (*) All of these individual reports can be found in the folder /reports/Student #X, where X means the
+	 number of the student.
+	 
+	 
+Acme-L3-D02 (17/03/2023)
+
+	All the requirements related with the second deliverable of the project have been completed and uploaded 
+	to the repository.
+	
+	NEW FEATURES:
+	 - It has been created new entities related to group requirements. These entities can be found in the folder:
+	   /src/main/java/acme/entities. These are the entities that we mention:
+	    • SystemConfiguration
+	    • Peep
+	    • Bulletin
+	    • Offer
+	    • Note
+	    • Banner
+	 - It has been created a new dashboard according to one of the group requirements: AdministratorDashboard.
+	   It can be found in the folder: /src/main/java/acme/forms.
+	 - It has been created sample data files for each entity mentioned before. These data files can be found in the
+	   folder: /src/main/webapp/WEB-INF/resources/sample-data.
+	 - An analysis report has been produced for the second deliverable.
+	 - A planning report has been produced for the second deliverable.
+	 (*) Both reports can be found in the folder: /reports/Group.
+	 - An UML domain model has been created. It can be found in the folder: /reports.
+	 - Individually, each member of the group has created a new role. These roles are the following ones: Lecturer, 
+	   Student, Assistant, Company and Auditor. They can be found in the folder: /src/main/java/acme/roles.
+	 - Individually, each member of the group has created new entities with their corresponding relationships 
+	   according to individual requirements. These entities can be found in the folder: /src/main/java/acme/entities. 
+	   These entities are the following ones grouped according to those produced by each student:
+	    • Course, CourseLecture, Lecture
+	    • Enrolment, Activity
+	    • Tutorial, TutorialSession
+	    • Practicum, PracticumSession
+	    • Audit, AuditingRecord
+	 - Individually, each member of the group has created a dashboard. These are the following ones: LecturerDashboard,
+	   StudentDashboard, AssistantDashboard, CompanyDashboard y AuditorDashboard. They can be found in the folder:
+	   /src/main/java/acme/forms.
+	 - Individually, each member of the group has pruduced sample data files for the entities and roles that have been
+	   mentioned before. These files can be found in the folder: /src/main/webapp/WEB-INF/resources/sample-data.
+	 - Individually, each member of the group has produced an analysis report related to their personal tasks
+	   they had to complete for the second deliverable.
+	 - Individually, each member of the group has produced a planning report related to their personal tasks
+	   they had to complete for the second deliverable.
 	 (*) All of these individual reports can be found in the folder /reports/Student #X, where X means the
 	 number of the student.
