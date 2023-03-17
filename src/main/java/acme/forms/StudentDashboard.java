@@ -15,7 +15,7 @@ public class StudentDashboard extends AbstractForm {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	Map<Nature, Integer>		numOfActivitiesByType;
+	Map<Nature, Integer>		numOfActivitiesByNature;
 	Statistic					activitiesPeriodStats;
 	Statistic					coursesTimeStats;
 }
