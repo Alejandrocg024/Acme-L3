@@ -481,7 +481,7 @@ bg=pink</panel_attributes>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-x
-m2=1..*
+m2=0..*
 bg=black</panel_attributes>
     <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
   </element>
