@@ -26,6 +26,13 @@
       <acme:menu-suboption code="master.menu.anonymous.favourite-link-S4" action="https://www.coolors.co/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-S5" action="https://www.cadizcf.com/"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.any">
+			<acme:menu-suboption code="master.menu.any.course" action="/any/course/list"/>
+			<acme:menu-separator/>
+			
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
