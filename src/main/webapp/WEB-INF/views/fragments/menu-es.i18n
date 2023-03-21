@@ -39,6 +39,8 @@ master.menu.administrator.shut-down = Parar el sistema
 
 master.menu.authenticated = Autentificado
 master.menu.authenticated.note.list = Ver notas
+master.menu.authenticated.lecturer.create = Convertirme en profesor
+master.menu.authenticated.offer.list= Ver ofertas
 
 # master.menu.provider ########################################################
 
