@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 import acme.datatypes.Statistic;
 import acme.forms.LecturerDashboard;
+import acme.framework.components.accounts.Principal;
+import acme.framework.components.accounts.UserAccount;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
@@ -32,13 +34,22 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 
 	@Override
 	public void load() {
-		LecturerDashboard dashboard;
+		final LecturerDashboard dashboard;
 		final Double averageLectureLearningTime;
 		final Double maxLectureLearningTime;
 		final Double minLectureLearningTime;
 		final Double linDevOfLecturesLearningTime;
 
-		averageLectureLearningTime = this.repository.averageLectureLearningTime();
+		Principal principal;
+		int userAccountId;
+		UserAccount userAccount;
+
+		principal = super.getRequest().getPrincipal();
+		userAccountId = principal.getAccountId();
+		userAccount = this.repository.findOneUserAccountById(userAccountId);
+		final Lecturer lecturer = this.repository.findOneLecturerByUserAccountId(userAccountId);
+
+		averageLectureLearningTime = this.repository.averageLectureLearningTime(lecturer);
 		maxLectureLearningTime = this.repository.maxLectureLearningTime();
 		minLectureLearningTime = this.repository.minLectureLearningTime();
 		linDevOfLecturesLearningTime = this.repository.linDevOfLecturesLearningTime();
