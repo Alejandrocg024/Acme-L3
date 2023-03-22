@@ -45,6 +45,7 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show" access="isAuthenticated()"/>
 			<acme:menu-suboption code="master.menu.list.offer" action="/authenticated/offer/list" access="isAuthenticated()"/>
 		</acme:menu-option>
 
