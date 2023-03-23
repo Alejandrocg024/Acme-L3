@@ -16,11 +16,11 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-textbox code="any.course.form.label.code" path="code" readonly="true"/>	
-	<acme:input-textbox code="any.course.form.label.title" path="title" readonly="true"/>	
-	<acme:input-textbox code="any.course.form.label.abstract$" path="abstract$" readonly="true"/>	
-	<acme:input-textbox code="any.course.form.label.price" path="price" readonly="true"/>	
-	<acme:input-textbox code="any.course.form.label.furtherInformationLink" path="furtherInformationLink" readonly="true"/>	
-	<acme:input-textbox code="any.course.form.label.lecturer" path="lecturer" readonly="true"/>	
+	<acme:input-textbox code="lecturer.course.form.label.code" path="code"/>	
+	<acme:input-textbox code="lecturer.course.form.label.title" path="title"/>	
+	<acme:input-textbox code="lecturer.course.form.label.abstract$" path="abstract$"/>	
+	<acme:input-textbox code="lecturer.course.form.label.price" path="price"/>	
+	<acme:input-textbox code="lecturer.course.form.label.furtherInformationLink" path="furtherInformationLink"/>	
+	<acme:input-textbox code="lecturer.course.form.label.lecturer" path="lecturer"/>	
 	
 </acme:form>
