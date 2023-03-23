@@ -1,8 +1,6 @@
 
 package acme.features.administrator.systemConfiguration;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +11,6 @@ import acme.framework.repositories.AbstractRepository;
 public interface AdministratorSystemConfigurationRepository extends AbstractRepository {
 
 	@Query("select s from SystemConfiguration s")
-	List<SystemConfiguration> findCurrentSystemConfiguration();
+	SystemConfiguration findCurrentSystemConfiguration();
 
 }
