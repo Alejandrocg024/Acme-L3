@@ -4,8 +4,12 @@ package acme.features.authenticated.lecturer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import SpamFilter.SpamFilter;
+import acme.entities.SystemConfiguration;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
+import acme.framework.components.models.Errors;
+import acme.framework.components.models.Request;
 import acme.framework.components.models.Tuple;
 import acme.framework.controllers.HttpMethod;
 import acme.framework.helpers.PrincipalHelper;
@@ -58,8 +62,18 @@ public class AuthenticatedLecturerUpdateService extends AbstractService<Authenti
 	}
 
 	@Override
-	public void validate(final Lecturer object) {
+	public void validate(final Request request, final Lecturer object, final Errors errors) {
 		assert object != null;
+		assert request != null;
+		assert errors != null;
+
+		final SystemConfiguration config = this.repository.findSystemConfiguration();
+
+		final SpamFilter spamFilter = new SpamFilter(config.getSpamWords(), config.getSpamThreshold());
+
+		errors.state(request, !spamFilter.isSpam("almaMater"));
+		errors.state(request, !spamFilter.isSpam("listOfQualifications"));
+		errors.state(request, !spamFilter.isSpam("resume"));
 	}
 
 	@Override
