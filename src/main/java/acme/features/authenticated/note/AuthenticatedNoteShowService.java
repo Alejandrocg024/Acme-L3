@@ -1,23 +1,23 @@
 
-package acme.features.authenticated.offer;
+package acme.features.authenticated.note;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Offer;
+import acme.entities.Note;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AuthenticatedOfferShowService extends AbstractService<Authenticated, Offer> {
+public class AuthenticatedNoteShowService extends AbstractService<Authenticated, Note> {
 
 	@Autowired
-	protected AuthenticatedOfferRepository repository;
-
-	// AbstractService interface ----------------------------------------------
+	protected AuthenticatedNoteRepository repository;
 
 
 	@Override
@@ -31,34 +31,37 @@ public class AuthenticatedOfferShowService extends AbstractService<Authenticated
 
 	@Override
 	public void authorise() {
-		Offer object;
+		boolean status;
 		int id;
+		Note note;
+		Date deadline;
 
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findOfferById(id);
-		final Date date = new Date();
-		super.getResponse().setAuthorised(date.compareTo(object.getEndPeriod()) < 0);
+		note = this.repository.findOneNoteById(id);
+		deadline = MomentHelper.deltaFromCurrentMoment(-30, ChronoUnit.DAYS);
+		status = MomentHelper.isAfter(note.getInstantiationMoment(), deadline);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		Offer object;
+		Note object;
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findOfferById(id);
+		object = this.repository.findOneNoteById(id);
 
 		super.getBuffer().setData(object);
 	}
 
 	@Override
-	public void unbind(final Offer object) {
+	public void unbind(final Note object) {
 		assert object != null;
+
 		Tuple tuple;
 
-		tuple = super.unbind(object, "instantiationMoment", "heading", "summary", "startPeriod", "endPeriod", "price", "furtherInformationLink");
-		tuple.put("confirmation", false);
-		tuple.put("readonly", true);
+		tuple = super.unbind(object, "instantiationMoment", "title", "author", "message", "email", "furtherInformationLink");
 
 		super.getResponse().setData(tuple);
 	}

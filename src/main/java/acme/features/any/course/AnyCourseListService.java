@@ -1,23 +1,21 @@
 
-package acme.features.administrator.offer;
+package acme.features.any.course;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Offer;
-import acme.framework.components.accounts.Administrator;
+import acme.entities.Course;
+import acme.framework.components.accounts.Any;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AdministratorOfferListAllService extends AbstractService<Administrator, Offer> {
-
-	// Internal state ---------------------------------------------------------
+public class AnyCourseListService extends AbstractService<Any, Course> {
 
 	@Autowired
-	protected AdministratorOfferRepository repository;
+	protected AnyCoursesRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -34,19 +32,19 @@ public class AdministratorOfferListAllService extends AbstractService<Administra
 
 	@Override
 	public void load() {
-		Collection<Offer> objects;
-		objects = this.repository.findAllOffers();
+		Collection<Course> objects;
+		objects = this.repository.findAllCourses();
 
 		super.getBuffer().setData(objects);
 	}
 
 	@Override
-	public void unbind(final Offer object) {
+	public void unbind(final Course object) {
 		assert object != null;
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "instantiationMoment", "heading", "summary", "price", "furtherInformationLink");
+		tuple = super.unbind(object, "title", "abstract$", "price");
 
 		super.getResponse().setData(tuple);
 	}

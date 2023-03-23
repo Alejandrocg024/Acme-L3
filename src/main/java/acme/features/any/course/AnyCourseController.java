@@ -1,23 +1,23 @@
 
-package acme.features.authenticated.offer;
+package acme.features.any.course;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.Offer;
-import acme.framework.components.accounts.Authenticated;
+import acme.entities.Course;
+import acme.framework.components.accounts.Any;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-public class AuthenticatedOfferController extends AbstractController<Authenticated, Offer> {
+public class AnyCourseController extends AbstractController<Any, Course> {
 
 	@Autowired
-	protected AuthenticatedOfferListService	listService;
+	protected AnyCourseListService	listService;
 
 	@Autowired
-	protected AuthenticatedOfferShowService		showService;
+	protected AnyCourseShowService		showService;
 
 
 	@PostConstruct
@@ -25,5 +25,4 @@ public class AuthenticatedOfferController extends AbstractController<Authenticat
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
 	}
-
 }

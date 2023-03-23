@@ -1,23 +1,23 @@
 
-package acme.features.authenticated.offer;
+package acme.features.authenticated.note;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.Offer;
+import acme.entities.Note;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-public class AuthenticatedOfferController extends AbstractController<Authenticated, Offer> {
+public class AuthenticatedNoteController extends AbstractController<Authenticated, Note> {
 
 	@Autowired
-	protected AuthenticatedOfferListService	listService;
+	protected AuthenticatedNoteListService	listService;
 
 	@Autowired
-	protected AuthenticatedOfferShowService		showService;
+	protected AuthenticatedNoteShowService	showService;
 
 
 	@PostConstruct

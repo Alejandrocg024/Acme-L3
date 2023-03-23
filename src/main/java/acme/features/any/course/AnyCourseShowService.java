@@ -1,21 +1,20 @@
 
-package acme.features.authenticated.offer;
-
-import java.util.Date;
+package acme.features.any.course;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Offer;
-import acme.framework.components.accounts.Authenticated;
+import acme.entities.Course;
+import acme.framework.components.accounts.Any;
+import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AuthenticatedOfferShowService extends AbstractService<Authenticated, Offer> {
+public class AnyCourseShowService extends AbstractService<Any, Course> {
 
 	@Autowired
-	protected AuthenticatedOfferRepository repository;
+	protected AnyCoursesRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -31,36 +30,38 @@ public class AuthenticatedOfferShowService extends AbstractService<Authenticated
 
 	@Override
 	public void authorise() {
-		Offer object;
+		Course object;
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findOfferById(id);
-		final Date date = new Date();
-		super.getResponse().setAuthorised(date.compareTo(object.getEndPeriod()) < 0);
+		object = this.repository.findCourseById(id);
+		super.getResponse().setAuthorised(!object.isDraftMode());
 	}
 
 	@Override
 	public void load() {
-		Offer object;
+		Course object;
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findOfferById(id);
+		object = this.repository.findCourseById(id);
 
 		super.getBuffer().setData(object);
 	}
 
 	@Override
-	public void unbind(final Offer object) {
+	public void unbind(final Course object) {
 		assert object != null;
+
+		final SelectChoices choices;
 		Tuple tuple;
 
-		tuple = super.unbind(object, "instantiationMoment", "heading", "summary", "startPeriod", "endPeriod", "price", "furtherInformationLink");
+		//choices = SelectChoices.from(AnnouncementStatus.class, object.getStatus());
+
+		tuple = super.unbind(object, "code", "title", "abstract$", "price", "furtherInformationLink");
 		tuple.put("confirmation", false);
 		tuple.put("readonly", true);
+		//tuple.put("statuses", choices);
 
 		super.getResponse().setData(tuple);
 	}
-
 }
