@@ -39,7 +39,6 @@ master.menu.administrator.system-configuration = Show system configuration
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.note.list = List notes
-master.menu.authenticated.lecturer.create = Become lecturer
 master.menu.authenticated.offer.list = List offers
 
 # master.menu.provider ########################################################
@@ -61,6 +60,8 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.list.offer= List Offers
+master.menu.authenticated.lecturer.update = Lecturer data
+master.menu.authenticated.lecturer.create = Become a lecturer
 
 # master.menu.lecturer ####################################################
 master.menu.lecturer = Lecturer
