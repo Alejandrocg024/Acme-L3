@@ -12,7 +12,7 @@ import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AnyCourseListAllService extends AbstractService<Any, Course> {
+public class AnyCourseListService extends AbstractService<Any, Course> {
 
 	@Autowired
 	protected AnyCoursesRepository repository;

@@ -8,13 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.course.list.label.title = Título
-authenticated.course.list.label.abstract$ = Resumen
-authenticated.course.list.label.price = Precio
+lecturer.course.list.label.title = Título
+lecturer.course.list.label.abstract$ = Resumen
+lecturer.course.list.label.price = Precio
 
-any.course.form.label.code = Código
-any.course.form.label.title = Título
-any.course.form.label.abstract$ = Resumen
-any.course.form.label.price = Precio
-any.course.form.label.furtherInformationLink = Información adicional
-any.course.form.label.lecturer = Profesor
+lecturer.course.form.label.code = Código
+lecturer.course.form.label.title = Título
+lecturer.course.form.label.abstract$ = Resumen
+lecturer.course.form.label.price = Precio
+lecturer.course.form.label.furtherInformationLink = Información adicional
+lecturer.course.form.label.lecturer = Profesor
