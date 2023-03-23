@@ -40,6 +40,8 @@ master.menu.administrator.system-configuration = Mostrar configuración del sist
 
 master.menu.authenticated = Autentificado
 master.menu.authenticated.note.list = Ver notas
+master.menu.authenticated.lecturer.create = Convertirme en profesor
+master.menu.authenticated.offer.list= Ver ofertas
 
 # master.menu.provider ########################################################
 
