@@ -14,7 +14,7 @@ import acme.framework.controllers.AbstractController;
 public class AdministratorOfferController extends AbstractController<Administrator, Offer> {
 
 	@Autowired
-	protected AdministratorOfferListAllService	listAllService;
+	protected AdministratorOfferListService	listAllService;
 
 	@Autowired
 	protected AdministratorOfferShowService		showService;
