@@ -18,6 +18,6 @@ public interface AuthenticatedLecturerRepository extends AbstractRepository {
 	@Query("select ua from UserAccount ua where ua.id = :id")
 	UserAccount findOneUserAccountById(int id);
 
-	@Query("select sc from SystemConfiguration")
+	@Query("select sc from SystemConfiguration sc")
 	SystemConfiguration findSystemConfiguration();
 }

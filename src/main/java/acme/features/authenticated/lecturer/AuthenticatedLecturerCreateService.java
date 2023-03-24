@@ -4,6 +4,8 @@ package acme.features.authenticated.lecturer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import SpamFilter.SpamFilter;
+import acme.entities.SystemConfiguration;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.accounts.UserAccount;
@@ -63,7 +65,35 @@ public class AuthenticatedLecturerCreateService extends AbstractService<Authenti
 
 	@Override
 	public void validate(final Lecturer object) {
+
 		assert object != null;
+
+		final SystemConfiguration config = this.repository.findSystemConfiguration();
+		SpamFilter spamFilter;
+		//spamFilter = new SpamFilter(config.getSpamWords(), config.getSpamThreshold());
+		spamFilter = new SpamFilter("sex, viagra, cialis,one million, you've won, nigeria, sexo, ganaste, un millón, has ganado", 0.1);
+
+		if (!super.getBuffer().getErrors().hasErrors("almaMater")) {
+			final String almaMater = super.getRequest().getData("almaMater", String.class);
+			boolean validAlmaMater;
+			validAlmaMater = spamFilter.isSpam(almaMater);
+			if (validAlmaMater)
+				super.state(validAlmaMater, "almaMater", "authenticated.lecturer.form.error.almaMater");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("listOfQualifications")) {
+
+			final boolean validListOfQualifications = spamFilter.isSpam(object.getListOfQualifications());
+			if (validListOfQualifications)
+				super.state(validListOfQualifications, "listOfQualifications", "authenticated.lecturer.form.error.listOfQualifications");
+		}
+		if (!super.getBuffer().getErrors().hasErrors("resume")) {
+
+			final boolean validResume = spamFilter.isSpam(object.getResume());
+			if (validResume)
+				super.state(validResume, "resume", "authenticated.lecturer.form.error.resume");
+		}
+
 	}
 
 	@Override
