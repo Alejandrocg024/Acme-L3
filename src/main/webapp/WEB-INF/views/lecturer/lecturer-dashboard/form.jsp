@@ -25,15 +25,7 @@
 			<acme:message code="lecturer.lecturerDashboard.form.label.average-lecture-learning-time"/>
 		</th>
 		<td>
-			<acme:print value="${averageLectureLearningTime}"/>
-		</td>
-	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="lecturer.lecturerDashboard.form.label.max-lecture-learning-time"/>
-		</th>
-		<td>
-			<acme:print value="${maxLectureLearningTime}"/>
+			<acme:print value="${lecturesStats.getAverage()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -41,7 +33,15 @@
 			<acme:message code="lecturer.lecturerDashboard.form.label.min-lecture-learning-time"/>
 		</th>
 		<td>
-			<acme:print value="${minLectureLearningTime}"/>
+			<acme:print value="${lecturesStats.getMin()}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="lecturer.lecturerDashboard.form.label.max-lecture-learning-time"/>
+		</th>
+		<td>
+			<acme:print value="${lecturesStats.getMax()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -49,15 +49,34 @@
 			<acme:message code="lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time"/>
 		</th>
 		<td>
-			<acme:print value="${linDevOfLecturesLearningTime}"/>
+			<acme:print value="${lecturesStats.getLinDev()}"/>
 		</td>
-	</tr>		
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="lecturer.lecturerDashboard.form.label.average-course-learning-time"/>
+		</th>
+		<td>
+			<acme:print value="${coursesStats.getAverage()}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="lecturer.lecturerDashboard.form.label.theoretical-lectures"/>
+		</th>
+		<td>
+			<acme:print value="${numOfLecturesByType.get('THEORETICAL')}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="lecturer.lecturerDashboard.form.label.hands-on-lectures"/>
+		</th>
+		<td>
+			<acme:print value="${numOfLecturesByType.get('HANDS_ON')}"/>
+		</td>
+	</tr>	
 </table>
-
-<div>
-	<canvas id="canvas"></canvas>
-</div>
-
 
 <acme:return/>
 

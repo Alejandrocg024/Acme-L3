@@ -10,7 +10,10 @@
 
 lecturer.lecturerDashboard.form.title.general-indicators= Lecturer Dashboard
 
-lecturer.lecturerDashboard.form.label.average-lecture-learning-time = Average learning time
-lecturer.lecturerDashboard.form.label.max-lecture-learning-time = Max learning time
-lecturer.lecturerDashboard.form.label.min-lecture-learning-time = Min learning time
-lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time = Lineal deviation of learning time
+lecturer.lecturerDashboard.form.label.average-lecture-learning-time = Average learning time:
+lecturer.lecturerDashboard.form.label.max-lecture-learning-time = Max learning time:
+lecturer.lecturerDashboard.form.label.min-lecture-learning-time = Min learning time:
+lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time = Lineal deviation of learning time:
+
+lecturer.lecturerDashboard.form.label.theoretical-lectures = Number of theoretical lectures:
+lecturer.lecturerDashboard.form.label.hands-on-lectures = Number of hands-on lectures:

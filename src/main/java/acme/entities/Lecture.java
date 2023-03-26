@@ -42,5 +42,5 @@ public class Lecture extends AbstractEntity {
 	@URL
 	protected String			furtherInformationLink;
 
-	protected boolean			dratMode;
+	protected boolean			draftMode;
 }
