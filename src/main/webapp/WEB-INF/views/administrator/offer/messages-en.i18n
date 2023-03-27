@@ -19,3 +19,13 @@ administrator.offer.form.label.startPeriod = Start Date
 administrator.offer.form.label.endPeriod = End Date
 administrator.offer.form.label.price = Price
 administrator.offer.form.label.furtherInformationLink = Further Information
+
+administrator.offer.form.button.create = Crear
+administrator.offer.form.button.update = Update
+administrator.offer.form.button.delete = Delete
+
+administrator.offer.form.error.price = The price must be positive and smaller than 1000000
+administrator.offer.form.error.startPeriod = The start date must be at least a day after the instantiation moment
+administrator.offer.form.error.endPeriod = The end date must be maximum a week after the start date
+
+administrator.offer.create = Create offer

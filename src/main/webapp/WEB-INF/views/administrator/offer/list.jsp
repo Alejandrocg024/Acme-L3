@@ -23,4 +23,5 @@
 
 </acme:list>
 
+<acme:button code="administrator.offer.create" action="/administrator/offer/create"/>
 
