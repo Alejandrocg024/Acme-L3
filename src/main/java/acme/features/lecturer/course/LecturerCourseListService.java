@@ -37,7 +37,6 @@ public class LecturerCourseListService extends AbstractService<Lecturer, Course>
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 		objects = this.repository.findCoursesByLecturerId(userAccountId);
-
 		super.getBuffer().setData(objects);
 	}
 

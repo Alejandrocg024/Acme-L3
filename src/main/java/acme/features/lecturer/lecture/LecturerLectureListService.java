@@ -1,20 +1,23 @@
 
-package acme.features.lecturer.course;
+package acme.features.lecturer.lecture;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Course;
+import acme.entities.Lecture;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
 
 @Service
-public class LecturerCourseShowService extends AbstractService<Lecturer, Course> {
+public class LecturerLectureListService extends AbstractService<Lecturer, Lecture> {
 
 	@Autowired
-	protected LecturerCourseRepository repository;
+	protected LecturerLectureRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -41,28 +44,22 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 
 	@Override
 	public void load() {
-		Course object;
+		Collection<Lecture> objects;
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findCourseById(id);
-
-		super.getBuffer().setData(object);
+		objects = this.repository.findLecturesByCourse(id);
+		super.getBuffer().setData(objects);
 	}
 
 	@Override
-	public void unbind(final Course object) {
+	public void unbind(final Lecture object) {
 		assert object != null;
 
 		Tuple tuple;
 
-		//choices = SelectChoices.from(AnnouncementStatus.class, object.getStatus());
-
-		tuple = super.unbind(object, "id", "code", "title", "abstract$", "price", "furtherInformationLink");
-		tuple.put("confirmation", false);
-		tuple.put("readonly", true);
-		//tuple.put("statuses", choices);
+		tuple = super.unbind(object, "title", "summary", "estimatedLearningTime");
 
 		super.getResponse().setData(tuple);
 	}
+
 }

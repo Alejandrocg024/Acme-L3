@@ -16,13 +16,11 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-textbox code="lecturer.course.form.label.code" path="code"/>	
-	<acme:input-textbox code="lecturer.course.form.label.title" path="title"/>	
-	<acme:input-textbox code="lecturer.course.form.label.abstract$" path="abstract$"/>	
-	<acme:input-textbox code="lecturer.course.form.label.price" path="price"/>	
-	<acme:input-textbox code="lecturer.course.form.label.furtherInformationLink" path="furtherInformationLink"/>	
-	<acme:input-textbox code="lecturer.course.form.label.lecturer" path="lecturer"/>	
-	
+	<acme:input-textbox code="lecturer.lecture.form.label.title" path="title"/>	
+	<acme:input-textbox code="lecturer.lecture.form.label.summary" path="summary"/>	
+	<acme:input-textbox code="lecturer.lecture.form.label.estimatedLearningTime" path="estimatedLearningTime"/>	
+	<acme:input-textbox code="lecturer.lecture.form.label.body" path="body"/>	
+	<acme:input-textbox code="lecturer.lecture.form.label.nature" path="nature"/>	
+	<acme:input-textbox code="lecturer.lecture.form.label.furtherInformationLink" path="furtherInformationLink"/>
+	<acme:input-textbox code="lecturer.lecture.form.label.draftMode" path="draftMode"/>
 </acme:form>
-
-<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?id=${id}"/>
