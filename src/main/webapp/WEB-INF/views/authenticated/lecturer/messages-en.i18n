@@ -15,6 +15,4 @@ authenticated.lecturer.form.label.furtherInformation = Further information link
 
 authenticated.lecturer.form.button.create = Create
 authenticated.lecturer.form.button.update = Update
-authenticated.lecturer.form.error.almaMater= The text introduced in Alma mater is considered Spam
-authenticated.lecturer.form.error.listOfQualifications= The text introduced in List of qualifications is considered Spam
-authenticated.lecturer.form.error.resume = The text introduced in Resume is considered Spam
+authenticated.lecturer.form.error.spam = The introduced text is considered Spam

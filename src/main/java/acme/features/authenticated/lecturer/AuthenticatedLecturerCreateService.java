@@ -65,35 +65,15 @@ public class AuthenticatedLecturerCreateService extends AbstractService<Authenti
 
 	@Override
 	public void validate(final Lecturer object) {
-
 		assert object != null;
-
-		final SystemConfiguration config = this.repository.findSystemConfiguration();
-		SpamFilter spamFilter;
-		//spamFilter = new SpamFilter(config.getSpamWords(), config.getSpamThreshold());
-		spamFilter = new SpamFilter("sex, viagra, cialis,one million, you've won, nigeria, sexo, ganaste, un millón, has ganado", 0.1);
-
-		if (!super.getBuffer().getErrors().hasErrors("almaMater")) {
-			final String almaMater = super.getRequest().getData("almaMater", String.class);
-			boolean validAlmaMater;
-			validAlmaMater = spamFilter.isSpam(almaMater);
-			if (validAlmaMater)
-				super.state(validAlmaMater, "almaMater", "authenticated.lecturer.form.error.almaMater");
-		}
-
-		if (!super.getBuffer().getErrors().hasErrors("listOfQualifications")) {
-
-			final boolean validListOfQualifications = spamFilter.isSpam(object.getListOfQualifications());
-			if (validListOfQualifications)
-				super.state(validListOfQualifications, "listOfQualifications", "authenticated.lecturer.form.error.listOfQualifications");
-		}
-		if (!super.getBuffer().getErrors().hasErrors("resume")) {
-
-			final boolean validResume = spamFilter.isSpam(object.getResume());
-			if (validResume)
-				super.state(validResume, "resume", "authenticated.lecturer.form.error.resume");
-		}
-
+		final SystemConfiguration sc = this.repository.findSystemConfiguration();
+		final SpamFilter spamFilter = new SpamFilter(sc.getSpamWords(), sc.getSpamThreshold());
+		if (!super.getBuffer().getErrors().hasErrors("almaMater"))
+			super.state(!spamFilter.isSpam(object.getAlmaMater()), "almaMater", "authenticated.lecturer.form.error.spam");
+		if (!super.getBuffer().getErrors().hasErrors("resume"))
+			super.state(!spamFilter.isSpam(object.getResume()), "resume", "authenticated.lecturer.form.error.spam");
+		if (!super.getBuffer().getErrors().hasErrors("listOfQualifications"))
+			super.state(!spamFilter.isSpam(object.getListOfQualifications()), "listOfQualifications", "authenticated.lecturer.form.error.spam");
 	}
 
 	@Override
