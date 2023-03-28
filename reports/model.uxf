@@ -120,7 +120,7 @@ bg=green
       <x>2430</x>
       <y>1062</y>
       <w>450</w>
-      <h>135</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Lecture
@@ -131,6 +131,7 @@ Lecture
 + body: String {NotBlank, Length(max = 100)}
 + lectureType: Nature {NotNull}
 + furtherInformationLink: String {URL}
++ draftMode: boolean
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -736,7 +737,7 @@ bg=black</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>900</x>
-      <y>261</y>
+      <y>243</y>
       <w>261</w>
       <h>99</h>
     </coordinates>
@@ -753,12 +754,12 @@ bg=#FFD444</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1152</x>
-      <y>279</y>
+      <y>261</y>
       <w>99</w>
-      <h>117</h>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -841,26 +842,28 @@ bg=#FFD444</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1053</x>
-      <y>1170</y>
-      <w>117</w>
-      <h>45</h>
+      <x>1035</x>
+      <y>1161</y>
+      <w>144</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>price must be 
-positive or nought
+positive or nought, and
+maximum price must be 
+1000000 monetary units
 bg=#FFD444</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1161</x>
+      <x>1170</x>
       <y>1143</y>
-      <w>99</w>
+      <w>90</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;60.0;90.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;80.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -911,13 +914,15 @@ bg=#FFD444</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1044</x>
-      <y>387</y>
-      <w>117</w>
-      <h>45</h>
+      <x>1017</x>
+      <y>360</y>
+      <w>144</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>price must be 
-positive or nought
+positive or nought, and
+maximum price must be 
+1000000 monetary units
 bg=#FFD444</panel_attributes>
     <additional_attributes/>
   </element>
@@ -925,12 +930,12 @@ bg=#FFD444</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1152</x>
-      <y>396</y>
+      <y>378</y>
       <w>99</w>
-      <h>36</h>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;20.0;90.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -1100,8 +1105,8 @@ bg=#FFD444</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>918</x>
-      <y>1233</y>
+      <x>927</x>
+      <y>1251</y>
       <w>252</w>
       <h>45</h>
     </coordinates>
@@ -1113,13 +1118,13 @@ bg=#FFD444</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1161</x>
+      <x>1170</x>
       <y>1188</y>
-      <w>99</w>
-      <h>90</h>
+      <w>90</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;80.0;90.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;80.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
