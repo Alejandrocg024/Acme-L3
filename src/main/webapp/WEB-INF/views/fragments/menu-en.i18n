@@ -68,6 +68,7 @@ master.menu.authenticated.lecturer.create = Become a lecturer
 # master.menu.lecturer ####################################################
 master.menu.lecturer = Lecturer
 master.menu.lecturer.course = My courses
+master.menu.lecturer.lecturer-dashboard = Lecturer dashboard
 
 # master.menu.any ####################################################
 master.menu.any.course = Courses

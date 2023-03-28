@@ -12,6 +12,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.datatypes.Nature;
 import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
 import acme.roles.Lecturer;
@@ -39,8 +40,8 @@ public class Course extends AbstractEntity {
 	protected String			abstract$;
 
 	//Los cursos puramente teoricos deben ser rechazados
-	//@NotNull
-	//protected Nature			courseType;
+	@NotNull
+	protected Nature			courseType;
 
 	@NotNull
 	protected Money				price;
