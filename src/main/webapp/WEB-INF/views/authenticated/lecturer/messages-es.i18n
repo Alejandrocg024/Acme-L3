@@ -15,3 +15,4 @@ authenticated.lecturer.form.label.furtherInformation = Enlace con infomación ad
 
 authenticated.lecturer.form.button.create=Crear
 authenticated.lecturer.form.button.update=Actualizar
+authenticated.lecturer.form.error.spam = El texto introducido está considerado como Spam

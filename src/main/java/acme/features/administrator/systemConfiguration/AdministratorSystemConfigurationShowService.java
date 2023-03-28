@@ -41,7 +41,7 @@ public class AdministratorSystemConfigurationShowService extends AbstractService
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "systemCurrency", "aceptedCurrencies");
+		tuple = super.unbind(object, "systemCurrency", "aceptedCurrencies", "spamWords", "spamThreshold");
 
 		super.getResponse().setData(tuple);
 	}
