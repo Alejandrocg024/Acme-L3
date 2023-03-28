@@ -16,12 +16,9 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="administrator.offer.list.label.heading" path="heading"  width="40%"/>
-	<acme:list-column code="administrator.offer.list.label.summary" path="summary" width="40%" />
-	<acme:list-column code="administrator.offer.list.label.price" path="price" width="20%" />
-
-
+	<acme:list-column code="lecturer.lecture.list.label.title" path="title"  width="40%"/>
+	<acme:list-column code="lecturer.lecture.list.label.summary" path="summary" width="40%" />
+	<acme:list-column code="lecturer.lecture.list.label.estimatedLearningTime" path="estimatedLearningTime" width="20%" />
 </acme:list>
 
-<acme:button code="administrator.offer.create" action="/administrator/offer/create"/>
 

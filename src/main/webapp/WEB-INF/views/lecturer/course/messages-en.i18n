@@ -20,3 +20,5 @@ lecturer.course.form.label.abstract$ = Summary
 lecturer.course.form.label.price = Price
 lecturer.course.form.label.furtherInformationLink = Further Information
 lecturer.course.form.label.lecturer = Lecturer
+
+lecturer.course.lectures = Lectures
