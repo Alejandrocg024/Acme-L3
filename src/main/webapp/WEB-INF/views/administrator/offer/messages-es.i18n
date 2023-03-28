@@ -19,3 +19,14 @@ administrator.offer.form.label.startPeriod = Fecha de inicio
 administrator.offer.form.label.endPeriod = Fecha de fin
 administrator.offer.form.label.price = Precio
 administrator.offer.form.label.furtherInformationLink = Información adicional
+
+
+administrator.offer.form.button.create = Crear
+administrator.offer.form.button.update = Actualizar
+administrator.offer.form.button.delete = Borrar
+
+administrator.offer.form.error.price = El precio debe ser positivo y menor que 1000000
+administrator.offer.form.error.startPeriod = La fecha de inicio debe ser mínimo un día posterior a la fecha de creación
+administrator.offer.form.error.endPeriod = La fecha de fin debe ser como máximo una semana despues de la fecha de inicio
+
+administrator.offer.create=Crear oferta
