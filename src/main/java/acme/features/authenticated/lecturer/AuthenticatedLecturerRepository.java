@@ -13,7 +13,7 @@ import acme.roles.Lecturer;
 public interface AuthenticatedLecturerRepository extends AbstractRepository {
 
 	@Query("select l from Lecturer l where l.userAccount.id = :id")
-	Lecturer findOneEmployerByUserAccountId(int id);
+	Lecturer findOneLecturerByUserAccountId(int id);
 
 	@Query("select ua from UserAccount ua where ua.id = :id")
 	UserAccount findOneUserAccountById(int id);
