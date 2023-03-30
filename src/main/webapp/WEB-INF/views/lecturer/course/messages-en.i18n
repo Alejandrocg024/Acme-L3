@@ -20,5 +20,15 @@ lecturer.course.form.label.abstract$ = Summary
 lecturer.course.form.label.price = Price
 lecturer.course.form.label.furtherInformationLink = Further Information
 lecturer.course.form.label.lecturer = Lecturer
+lecturer.course.form.label.drafMode = Draft mode
+lecturer.course.form.label.courseType= Course Type
+
+lecturer.course.form.error.spam = The introduced text is considered Spam
 
 lecturer.course.lectures = Lectures
+
+lecturer.course.create = Create
+lecturer.course.form.button.delete = Delete
+lecturer.course.form.button.update = Update
+lecturer.course.form.button.publish = Publish
+lecturer.course.form.button.create = Create

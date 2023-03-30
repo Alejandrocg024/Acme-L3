@@ -25,7 +25,11 @@ course-28,AAI999,Course,Curso de Lengua,EUR 00.02,null,false,lecturer-01,THEORET
 course-29,AYA929,Course,Curso de Lengua,EUR 1000000.0,null,false,lecturer-01,THEORETICAL
 course-30,AAU999,Course,Curso de Lengua,EUR 999999.99,null,false,lecturer-01,THEORETICAL
 course-18,AAA969,Course,Curso de Lengua,"EUR 150,000.0",null,false,lecturer-01,THEORETICAL
-course-20,AAA979,Course,Curso de Lengua,EUR 15.0,https://github.com/Alejandrocg024/Acme-L3-D02,false,lecturer-01,THEORETICAL
+course-20,AA979,Course,Curso de Lengua,EUR 15.0,https://github.com/Alejandrocg024/Acme-L3-D02,false,lecturer-01,THEORETICAL
 course-27,AAE799,Course,Curso de Lengua,EUR 15.0,ftp://user:pass@acme.org,false,lecturer-01,THEORETICAL
-course-21,AAA989,Course,Curso de Lengua,EUR 15.0,null,true,lecturer-01,THEORETICAL
-course-22,AAA721,Course,Curso de Lengua,EUR 15.0,null,false,lecturer-02,HANDS_ON
+course-21,AAA989,CourseNPNV,Curso de Lengua,EUR 15.0,null,true,lecturer-01,THEORETICAL
+course-22,AAA721,Course,Curso de Lengua,EUR 15.0,null,false,lecturer-01,HANDS_ON
+course-35,AIA721,CourseNPB,Curso de Lengua,EUR 15.0,null,true,lecturer-01,BALANCED
+course-32,AIA829,CourseNPT,Curso de Lengua,EUR 15.0,null,true,lecturer-01,BALANCED
+course-33,YIY721,CourseNPH,Curso de Lengua,EUR 15.0,null,false,lecturer-01, BALANCED
+course-34,YIY781,CourseNPLNP,Curso de Lengua,EUR 15.0,null,false,lecturer-01, BALANCED

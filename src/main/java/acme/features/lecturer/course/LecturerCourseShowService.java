@@ -58,7 +58,7 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 
 		//choices = SelectChoices.from(AnnouncementStatus.class, object.getStatus());
 
-		tuple = super.unbind(object, "id", "code", "title", "abstract$", "price", "furtherInformationLink");
+		tuple = super.unbind(object, "id", "code", "title", "abstract$", "price", "furtherInformationLink", "draftMode", "lecturer", "courseType");
 		tuple.put("confirmation", false);
 		tuple.put("readonly", true);
 		//tuple.put("statuses", choices);
