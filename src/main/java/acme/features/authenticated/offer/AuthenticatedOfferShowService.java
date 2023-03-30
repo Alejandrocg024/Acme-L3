@@ -23,9 +23,7 @@ public class AuthenticatedOfferShowService extends AbstractService<Authenticated
 	@Override
 	public void check() {
 		boolean status;
-
 		status = super.getRequest().hasData("id", int.class);
-
 		super.getResponse().setChecked(status);
 	}
 
@@ -33,7 +31,6 @@ public class AuthenticatedOfferShowService extends AbstractService<Authenticated
 	public void authorise() {
 		Offer object;
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findOfferById(id);
 		final Date date = new Date();
@@ -44,10 +41,8 @@ public class AuthenticatedOfferShowService extends AbstractService<Authenticated
 	public void load() {
 		Offer object;
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findOfferById(id);
-
 		super.getBuffer().setData(object);
 	}
 
@@ -57,9 +52,6 @@ public class AuthenticatedOfferShowService extends AbstractService<Authenticated
 		Tuple tuple;
 
 		tuple = super.unbind(object, "instantiationMoment", "heading", "summary", "startPeriod", "endPeriod", "price", "furtherInformationLink");
-		tuple.put("confirmation", false);
-		tuple.put("readonly", true);
-
 		super.getResponse().setData(tuple);
 	}
 
