@@ -26,6 +26,8 @@ administrator.offer.form.button.delete = Delete
 
 administrator.offer.form.error.price = The price must be positive and smaller than 1000000
 administrator.offer.form.error.startPeriod = The start date must be at least a day after the instantiation moment
-administrator.offer.form.error.endPeriod = The end date must be maximum a week after the start date
+administrator.offer.form.error.endPeriod = The end date must be minimum a week after the start date
+
+administrator.offer.form.spam = The introduced text is considered Spam
 
 administrator.offer.create = Create offer

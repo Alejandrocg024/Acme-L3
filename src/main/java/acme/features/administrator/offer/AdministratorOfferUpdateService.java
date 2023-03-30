@@ -7,6 +7,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
@@ -17,7 +18,10 @@ import acme.framework.services.AbstractService;
 public class AdministratorOfferUpdateService extends AbstractService<Administrator, Offer> {
 
 	@Autowired
-	protected AdministratorOfferRepository repository;
+	protected AdministratorOfferRepository	repository;
+
+	@Autowired
+	protected AuxiliarService				auxiliarService;
 
 	// AbstractService<Employer, Job> -------------------------------------
 
@@ -31,7 +35,9 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		final int id = super.getRequest().getData("id", int.class);
+		final Offer object = this.repository.findOfferById(id);
+		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().before(object.getStartPeriod()));
 	}
 
 	@Override
@@ -46,7 +52,7 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 	@Override
 	public void bind(final Offer object) {
 		assert object != null;
-		super.bind(object, "instantiationMoment", "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
+		super.bind(object, "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
 	}
 
 	@Override
@@ -54,7 +60,7 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 		assert object != null;
 
 		if (!super.getBuffer().getErrors().hasErrors("price"))
-			super.state(object.getPrice().getAmount() > 0 && object.getPrice().getAmount() < 1000000, "price", "administrator.offer.form.error.price");
+			super.state(this.auxiliarService.validatePrice(object.getPrice()), "price", "administrator.offer.form.error.price");
 
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			Date minimumStartDate;
@@ -62,17 +68,20 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 			super.state(MomentHelper.isAfter(object.getStartPeriod(), minimumStartDate), "startPeriod", "administrator.offer.form.error.startPeriod");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("endPeriod")) {
+		if (!super.getBuffer().getErrors().hasErrors("endPeriod") && !super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			Date maximumPeriod;
-			maximumPeriod = MomentHelper.deltaFromMoment(object.getInstantiationMoment(), 7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isBefore(object.getEndPeriod(), maximumPeriod) && object.getEndPeriod().after(object.getStartPeriod()), "endPeriod", "administrator.offer.form.error.endPeriod");
+			maximumPeriod = MomentHelper.deltaFromMoment(object.getStartPeriod(), 7, ChronoUnit.DAYS);
+			super.state(MomentHelper.isAfter(object.getEndPeriod(), maximumPeriod) && object.getEndPeriod().after(object.getStartPeriod()), "endPeriod", "administrator.offer.form.error.endPeriod");
 		}
+		if (!super.getBuffer().getErrors().hasErrors("heading"))
+			super.state(this.auxiliarService.validateTextImput(object.getHeading()), "heading", "administrator.offer.form.spam");
+		if (!super.getBuffer().getErrors().hasErrors("summary"))
+			super.state(this.auxiliarService.validateTextImput(object.getSummary()), "summary", "administrator.offer.form.spam");
 	}
 
 	@Override
 	public void perform(final Offer object) {
 		assert object != null;
-
 		this.repository.save(object);
 	}
 
@@ -81,6 +90,8 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "instantiationMoment", "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
+		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getStartPeriod());
+		tuple.put("readonly", readonly);
 		super.getResponse().setData(tuple);
 	}
 

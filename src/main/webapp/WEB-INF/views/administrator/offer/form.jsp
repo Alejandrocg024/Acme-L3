@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-moment code="administrator.offer.form.label.instantiationMoment" path="instantiationMoment"/>	
+	<acme:input-moment code="administrator.offer.form.label.instantiationMoment" path="instantiationMoment" readonly="true"/>	
 	<acme:input-textbox code="administrator.offer.form.label.heading" path="heading" />
 	<acme:input-textbox code="administrator.offer.form.label.summary" path="summary" />
 	<acme:input-moment code="administrator.offer.form.label.startPeriod" path="startPeriod" />

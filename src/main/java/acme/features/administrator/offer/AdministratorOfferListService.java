@@ -36,18 +36,14 @@ public class AdministratorOfferListService extends AbstractService<Administrator
 	public void load() {
 		Collection<Offer> objects;
 		objects = this.repository.findAllOffers();
-
 		super.getBuffer().setData(objects);
 	}
 
 	@Override
 	public void unbind(final Offer object) {
 		assert object != null;
-
 		Tuple tuple;
-
-		tuple = super.unbind(object, "instantiationMoment", "heading", "summary", "price", "furtherInformationLink");
-
+		tuple = super.unbind(object, "heading", "summary", "price");
 		super.getResponse().setData(tuple);
 	}
 }
