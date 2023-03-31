@@ -2,8 +2,8 @@
 package acme.features.lecturer.course;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,9 +30,7 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 	@Override
 	public void check() {
 		boolean status;
-
 		status = super.getRequest().hasData("id", int.class);
-
 		super.getResponse().setChecked(status);
 	}
 
@@ -66,33 +64,19 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 	public void validate(final Course object) {
 		assert object != null;
 		final Collection<Lecture> lectures = this.repository.findLecturesByCourse(object.getId());
-		boolean handOnLectureInCourse;
-		handOnLectureInCourse = lectures.stream().anyMatch(x -> x.getNature().equals(Nature.HANDS_ON));
-		assert handOnLectureInCourse;
-		boolean publishedLectures;
-		publishedLectures = lectures.stream().allMatch(x -> x.isDraftMode() == false);
-		assert publishedLectures;
+		super.state(!lectures.isEmpty(), "nature", "lecturer.course.form.error.nolecture");
+		if (!lectures.isEmpty()) {
+			boolean handOnLectureInCourse;
+			handOnLectureInCourse = lectures.stream().anyMatch(x -> x.getNature().equals(Nature.HANDS_ON));
+			super.state(!handOnLectureInCourse, "nature", "lecturer.course.form.error.nohandson");
+			boolean publishedLectures;
+			publishedLectures = lectures.stream().allMatch(x -> x.isDraftMode() == false);
+			super.state(!publishedLectures, "nature", "lecturer.course.form.error.lecturenp");
+		}
 	}
 
 	@Override
 	public void perform(final Course object) {
-		final Collection<Lecture> lectures = this.repository.findLecturesByCourse(object.getId());
-		final Map<Nature, Integer> lecturesByType = new HashMap<>();
-		for (final Lecture l : lectures) {
-			final Nature nature = l.getNature();
-			if (lecturesByType.containsKey(nature))
-				lecturesByType.put(nature, lecturesByType.get(nature) + 1);
-			else
-				lecturesByType.put(nature, 1);
-		}
-
-		if (lecturesByType.get(Nature.HANDS_ON) > lecturesByType.get(Nature.THEORETICAL))
-			object.setCourseType(Nature.HANDS_ON);
-		else if (lecturesByType.get(Nature.HANDS_ON) < lecturesByType.get(Nature.THEORETICAL))
-			object.setCourseType(Nature.THEORETICAL);
-		else
-			object.setCourseType(Nature.BALANCED);
-
 		object.setDraftMode(false);
 		this.repository.save(object);
 	}
@@ -101,7 +85,10 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 	public void unbind(final Course object) {
 		assert object != null;
 		Tuple tuple;
-		tuple = super.unbind(object, "id", "code", "title", "abstract$", "price", "furtherInformationLink", "courseType", "draftMode", "lecturer");
+		tuple = super.unbind(object, "code", "title", "abstract$", "price", "furtherInformationLink", "draftMode");
+		final List<Lecture> lectures = this.repository.findLecturesByCourse(object.getId()).stream().collect(Collectors.toList());
+		final Nature nature = object.natureOfCourse(lectures);
+		tuple.put("nature", nature);
 		super.getResponse().setData(tuple);
 	}
 }

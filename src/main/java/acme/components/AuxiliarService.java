@@ -18,10 +18,10 @@ public class AuxiliarService {
 	private AuxiliarRepository repository;
 
 
-	public boolean validatePrice(final Money price) {
+	public boolean validatePrice(final Money price, final Integer minAm, final Integer maxAm) {
 		final String aceptedCurrencies = this.repository.findSystemConfiguration().getAceptedCurrencies();
 		final List<String> currencies = Arrays.asList(aceptedCurrencies.split(","));
-		return price.getAmount() >= 0 && price.getAmount() < 1000000 && currencies.contains(price.getCurrency());
+		return price.getAmount() >= minAm && price.getAmount() < maxAm && currencies.contains(price.getCurrency());
 	}
 
 	public boolean validateTextImput(final String input) {
