@@ -4,10 +4,8 @@ package acme.features.lecturer.course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import SpamFilter.SpamFilter;
-import acme.datatypes.Nature;
+import acme.components.AuxiliarService;
 import acme.entities.Course;
-import acme.entities.SystemConfiguration;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
@@ -18,7 +16,10 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected LecturerCourseRepository repository;
+	protected LecturerCourseRepository	repository;
+
+	@Autowired
+	protected AuxiliarService			auxiliarService;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -37,10 +38,9 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	public void load() {
 		Course object;
 		object = new Course();
-		final Lecturer lecturer = this.repository.findOneLecturerByUserAccountId(super.getRequest().getPrincipal().getActiveRoleId());
+		final Lecturer lecturer = this.repository.findOneLecturerById(super.getRequest().getPrincipal().getActiveRoleId());
 		object.setLecturer(lecturer);
 		object.setDraftMode(true);
-		object.setCourseType(Nature.BALANCED);
 		super.getBuffer().setData(object);
 	}
 
@@ -53,14 +53,12 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	@Override
 	public void validate(final Course object) {
 		assert object != null;
-		final SystemConfiguration sc = this.repository.findSystemConfiguration();
-		final SpamFilter spamFilter = new SpamFilter(sc.getSpamWords(), sc.getSpamThreshold());
 		if (!super.getBuffer().getErrors().hasErrors("price"))
-			super.state(object.getPrice().getAmount() > 0 && object.getPrice().getAmount() < 1000000, "price", "administrator.offer.form.error.price");
+			super.state(this.auxiliarService.validatePrice(object.getPrice(), 0, 1000000), "price", "administrator.offer.form.error.price");
 		if (!super.getBuffer().getErrors().hasErrors("title"))
-			super.state(!spamFilter.isSpam(object.getTitle()), "title", "lecturer.course.form.error.spam");
+			super.state(this.auxiliarService.validateTextImput(object.getTitle()), "title", "lecturer.course.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("abstract$"))
-			super.state(!spamFilter.isSpam(object.getAbstract$()), "abstract$", "lecturer.course.form.error.spam");
+			super.state(this.auxiliarService.validateTextImput(object.getAbstract$()), "abstract$", "lecturer.course.form.error.spam");
 	}
 
 	@Override
@@ -73,7 +71,7 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	public void unbind(final Course object) {
 		assert object != null;
 		Tuple tuple;
-		tuple = super.unbind(object, "id", "code", "title", "abstract$", "price", "furtherInformationLink", "courseType", "draftMode", "lecturer");
+		tuple = super.unbind(object, "code", "title", "abstract$", "price", "furtherInformationLink", "draftMode", "lecturer");
 		super.getResponse().setData(tuple);
 	}
 }

@@ -21,7 +21,8 @@
 	<acme:input-textbox code="lecturer.course.form.label.abstract$" path="abstract$"/>	
 	<acme:input-money code="lecturer.course.form.label.price" path="price"/>	
 	<acme:input-textbox code="lecturer.course.form.label.furtherInformationLink" path="furtherInformationLink"/>
-	<acme:input-textbox code="lecturer.course.form.label.courseType" path="courseType" readonly="true"/>		
+	<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature" readonly="true"/>
+		
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
 			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?id=${id}"/>			

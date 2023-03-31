@@ -23,6 +23,10 @@ lecturer.course.form.label.courseType = Tipo de curso
 
 lecturer.course.form.error.spam = El texto introducido está considerado como Spam
 
+lecturer.course.form.error.nolecture = El curso que quieres publicar no tiene lecciones
+lecturer.course.form.error.nohandson = El curso que quieres publicar no tiene lecciones prácticas
+lecturer.course.form.error.lecturenp = Este curso contiene lecciones no publicadas
+
 lecturer.course.lectures = Lecciones
 
 lecturer.course.create= Crear

@@ -1,12 +1,16 @@
 
 package acme.features.any.course;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.datatypes.Nature;
 import acme.entities.Course;
+import acme.entities.Lecture;
 import acme.framework.components.accounts.Any;
-import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
@@ -51,16 +55,12 @@ public class AnyCourseShowService extends AbstractService<Any, Course> {
 	@Override
 	public void unbind(final Course object) {
 		assert object != null;
-
-		final SelectChoices choices;
 		Tuple tuple;
-
-		//choices = SelectChoices.from(AnnouncementStatus.class, object.getStatus());
-
 		tuple = super.unbind(object, "code", "title", "abstract$", "price", "furtherInformationLink");
-		tuple.put("confirmation", false);
-		tuple.put("readonly", true);
-		//tuple.put("statuses", choices);
+		final List<Lecture> lectures = this.repository.findLecturesByCourse(object.getId()).stream().collect(Collectors.toList());
+		final Nature nature = object.natureOfCourse(lectures);
+		tuple.put("almaMater", object.getLecturer().getAlmaMater());
+		tuple.put("nature", nature);
 
 		super.getResponse().setData(tuple);
 	}

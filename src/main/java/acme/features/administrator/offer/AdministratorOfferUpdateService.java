@@ -60,7 +60,7 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 		assert object != null;
 
 		if (!super.getBuffer().getErrors().hasErrors("price"))
-			super.state(this.auxiliarService.validatePrice(object.getPrice()), "price", "administrator.offer.form.error.price");
+			super.state(this.auxiliarService.validatePrice(object.getPrice(), 0, 1000000), "price", "administrator.offer.form.error.price");
 
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			Date minimumStartDate;
