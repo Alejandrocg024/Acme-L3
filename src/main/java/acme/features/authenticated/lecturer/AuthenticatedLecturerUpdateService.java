@@ -4,8 +4,7 @@ package acme.features.authenticated.lecturer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import SpamFilter.SpamFilter;
-import acme.entities.SystemConfiguration;
+import acme.components.AuxiliarService;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
@@ -20,7 +19,10 @@ public class AuthenticatedLecturerUpdateService extends AbstractService<Authenti
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedLecturerRepository repository;
+	protected AuthenticatedLecturerRepository	repository;
+
+	@Autowired
+	protected AuxiliarService					auxiliarService;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -33,9 +35,7 @@ public class AuthenticatedLecturerUpdateService extends AbstractService<Authenti
 	@Override
 	public void authorise() {
 		boolean status;
-
 		status = super.getRequest().getPrincipal().hasRole(Lecturer.class);
-
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -44,11 +44,9 @@ public class AuthenticatedLecturerUpdateService extends AbstractService<Authenti
 		Lecturer object;
 		Principal principal;
 		int userAccountId;
-
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
 		object = this.repository.findOneLecturerByUserAccountId(userAccountId);
-
 		super.getBuffer().setData(object);
 	}
 
@@ -62,31 +60,25 @@ public class AuthenticatedLecturerUpdateService extends AbstractService<Authenti
 	@Override
 	public void validate(final Lecturer object) {
 		assert object != null;
-		final SystemConfiguration sc = this.repository.findSystemConfiguration();
-		final SpamFilter spamFilter = new SpamFilter(sc.getSpamWords(), sc.getSpamThreshold());
 		if (!super.getBuffer().getErrors().hasErrors("almaMater"))
-			super.state(!spamFilter.isSpam(object.getAlmaMater()), "almaMater", "authenticated.lecturer.form.error.spam");
+			super.state(this.auxiliarService.validateTextImput(object.getAlmaMater()), "almaMater", "authenticated.lecturer.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("resume"))
-			super.state(!spamFilter.isSpam(object.getResume()), "resume", "authenticated.lecturer.form.error.spam");
+			super.state(this.auxiliarService.validateTextImput(object.getResume()), "resume", "authenticated.lecturer.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("listOfQualifications"))
-			super.state(!spamFilter.isSpam(object.getListOfQualifications()), "listOfQualifications", "authenticated.lecturer.form.error.spam");
+			super.state(this.auxiliarService.validateTextImput(object.getListOfQualifications()), "listOfQualifications", "authenticated.lecturer.form.error.spam");
 	}
 
 	@Override
 	public void perform(final Lecturer object) {
 		assert object != null;
-
 		this.repository.save(object);
 	}
 
 	@Override
 	public void unbind(final Lecturer object) {
 		assert object != null;
-
 		Tuple tuple;
-
 		tuple = super.unbind(object, "almaMater", "resume", "listOfQualifications", "furtherInformation");
-
 		super.getResponse().setData(tuple);
 	}
 
