@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
@@ -22,15 +23,15 @@ public class AdministratorOfferDeleteService extends AbstractService<Administrat
 	@Override
 	public void check() {
 		boolean status;
-
 		status = super.getRequest().hasData("id", int.class);
-
 		super.getResponse().setChecked(status);
 	}
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		final int id = super.getRequest().getData("id", int.class);
+		final Offer object = this.repository.findOfferById(id);
+		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().before(object.getStartPeriod()));
 	}
 
 	@Override
@@ -48,7 +49,7 @@ public class AdministratorOfferDeleteService extends AbstractService<Administrat
 	public void bind(final Offer object) {
 		assert object != null;
 
-		super.bind(object, "instantiationMoment", "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
+		super.bind(object, "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
 	}
 
 	@Override
@@ -67,6 +68,8 @@ public class AdministratorOfferDeleteService extends AbstractService<Administrat
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "instantiationMoment", "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
+		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getStartPeriod());
+		tuple.put("readonly", readonly);
 		super.getResponse().setData(tuple);
 	}
 }

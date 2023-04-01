@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
-import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
@@ -22,9 +22,7 @@ public class AdministratorOfferShowService extends AbstractService<Administrator
 	@Override
 	public void check() {
 		boolean status;
-
 		status = super.getRequest().hasData("id", int.class);
-
 		super.getResponse().setChecked(status);
 	}
 
@@ -37,27 +35,18 @@ public class AdministratorOfferShowService extends AbstractService<Administrator
 	public void load() {
 		Offer object;
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findOfferById(id);
-
 		super.getBuffer().setData(object);
 	}
 
 	@Override
 	public void unbind(final Offer object) {
 		assert object != null;
-
-		final SelectChoices choices;
 		Tuple tuple;
-
-		//choices = SelectChoices.from(AnnouncementStatus.class, object.getStatus());
-
 		tuple = super.unbind(object, "instantiationMoment", "heading", "summary", "startPeriod", "endPeriod", "price", "furtherInformationLink");
-		tuple.put("confirmation", false);
-		tuple.put("readonly", true);
-		//tuple.put("statuses", choices);
-
+		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getStartPeriod());
+		tuple.put("readonly", readonly);
 		super.getResponse().setData(tuple);
 	}
 

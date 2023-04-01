@@ -47,7 +47,7 @@ public class AuthenticatedLecturerUpdateService extends AbstractService<Authenti
 
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
-		object = this.repository.findOneEmployerByUserAccountId(userAccountId);
+		object = this.repository.findOneLecturerByUserAccountId(userAccountId);
 
 		super.getBuffer().setData(object);
 	}
