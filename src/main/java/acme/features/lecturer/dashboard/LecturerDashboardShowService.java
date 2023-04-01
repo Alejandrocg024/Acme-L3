@@ -1,6 +1,7 @@
 
 package acme.features.lecturer.dashboard;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,10 +46,10 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 		userAccountId = principal.getAccountId();
 		final Lecturer lecturer = this.repository.findOneLecturerByUserAccountId(userAccountId);
 		//lecturesStats
-		final double averageLectureLearningTime = this.repository.findAverageLectureLearningTime(lecturer);
-		final double maxLectureLearningTime = this.repository.findMaxLectureLearningTime(lecturer);
-		final double minLectureLearningTime = this.repository.findMinLectureLearningTime(lecturer);
-		final double devLectureLearningTime = this.repository.findLinearDevLectureLearningTime(lecturer);
+		final double averageLectureLearningTime = this.repository.findAverageLectureLearningTime(lecturer).orElse(0.0);
+		final double maxLectureLearningTime = this.repository.findMaxLectureLearningTime(lecturer).orElse(0.0);
+		final double minLectureLearningTime = this.repository.findMinLectureLearningTime(lecturer).orElse(0.0);
+		final double devLectureLearningTime = this.repository.findLinearDevLectureLearningTime(lecturer).orElse(0.0);
 		final Statistic lectureStats = new Statistic();
 		lectureStats.setAverage(averageLectureLearningTime);
 		lectureStats.setMin(minLectureLearningTime);
@@ -58,13 +59,18 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 
 		//coursesStats
 		//final double averageCourseLearningTime = this.repository.findAverageCourseLearningTime(lecturer);
-		//final Statistic courseStats = new Statistic();
-		//courseStats.setAverage(averageCourseLearningTime);
+		final Statistic coursesStats = new Statistic();
+		final Collection<Double> courseEstimatedLearningTime = this.repository.findEstimatedLearningTimeByCourse(lecturer);
+		coursesStats.calcAverage(courseEstimatedLearningTime);
+		coursesStats.calcMax(courseEstimatedLearningTime);
+		coursesStats.calcMin(courseEstimatedLearningTime);
+		coursesStats.calcLinDev(courseEstimatedLearningTime);
+		dashboard.setCoursesStats(coursesStats);
 
 		//numOfLecturesByType
 		final Map<String, Integer> lecturesByNature = new HashMap<String, Integer>();
-		final Integer handsOnLectures = this.repository.findNumOfLecturesByType(lecturer, Nature.HANDS_ON);
-		final Integer theoreticalLectures = this.repository.findNumOfLecturesByType(lecturer, Nature.THEORETICAL);
+		final Integer handsOnLectures = this.repository.findNumOfLecturesByType(lecturer, Nature.HANDS_ON).orElse(0);
+		final Integer theoreticalLectures = this.repository.findNumOfLecturesByType(lecturer, Nature.THEORETICAL).orElse(0);
 		lecturesByNature.put("HANDS_ON", handsOnLectures);
 		lecturesByNature.put("THEORETICAL", theoreticalLectures);
 		dashboard.setNumOfLecturesByType(lecturesByNature);

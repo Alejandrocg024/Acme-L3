@@ -10,10 +10,19 @@
 
 lecturer.lecturerDashboard.form.title.general-indicators= Lecturer Dashboard
 
-lecturer.lecturerDashboard.form.label.average-lecture-learning-time = Average learning time:
-lecturer.lecturerDashboard.form.label.max-lecture-learning-time = Max learning time:
-lecturer.lecturerDashboard.form.label.min-lecture-learning-time = Min learning time:
-lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time = Lineal deviation of learning time:
+lecturer.lecturerDashboard.form.label.average-lecture-learning-time = Average learning time of the lectures:
+lecturer.lecturerDashboard.form.label.max-lecture-learning-time = Max learning time of the lectures:
+lecturer.lecturerDashboard.form.label.min-lecture-learning-time = Min learning time of the lectures:
+lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time = Lineal deviation of learning time of the lectures:
+
+lecturer.lecturerDashboard.form.label.average-course-learning-time = Average learning time of the courses:
+lecturer.lecturerDashboard.form.label.max-course-learning-time = Max learning time of the courses:
+lecturer.lecturerDashboard.form.label.min-course-learning-time = Min learning time of the courses:
+lecturer.lecturerDashboard.form.label.lin-dev-course-learning-time = Lineal deviation of learning time of the courses:
+
+lecturer.lecturerDashboard.form.label.lectures.information = Grafic about lectures leasning times
+lecturer.lecturerDashboard.form.label.courses.information = Grafic about courses learning times
+lecturer.lecturerDashboard.form.label.lectures.type.information = Grafic about the type of the lectures
 
 lecturer.lecturerDashboard.form.label.theoretical-lectures = Number of theoretical lectures:
 lecturer.lecturerDashboard.form.label.hands-on-lectures = Number of hands-on lectures:
