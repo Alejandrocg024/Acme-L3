@@ -69,6 +69,7 @@ master.menu.authenticated.lecturer.create = Convertirme en profesor
 master.menu.lecturer = Profesor
 master.menu.lecturer.course = Mis cursos
 master.menu.lecturer.lecturer-dashboard= Panel de profesor
+master.menu.lecturer.lecture = Mis lecciones
 
 # master.menu.any ####################################################
 master.menu.any.course = Cursos

@@ -21,3 +21,17 @@ lecturer.lecture.form.label.body = Body:
 lecturer.lecture.form.label.nature = Nature:
 lecturer.lecture.form.label.furtherInformationLink = Further information link:
 lecturer.lecture.form.label.draftMode = Draft mode:
+
+lecturer.lecture.list.button.create = Create lecture
+
+lecturer.lecture.form.error.spam = The introduced text is considered spam
+
+lecturer.lecture.form.error.nature = The nature of a lecture can't be BALANCED
+lecturer.lecture.form.error.estimatedLearningTIme = The estimated learning time must be bigger or equal to 0.01
+
+lecturer.lecture.list.button.add = Add lecture
+
+lecturer.lecture.form.button.update = Update
+lecturer.lecture.form.button.delete = Delete
+lecturer.lecture.form.button.publish = Publish
+lecturer.lecture.form.button.create = Create
