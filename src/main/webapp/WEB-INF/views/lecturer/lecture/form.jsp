@@ -18,9 +18,20 @@
 <acme:form>
 	<acme:input-textbox code="lecturer.lecture.form.label.title" path="title"/>	
 	<acme:input-textbox code="lecturer.lecture.form.label.summary" path="summary"/>	
-	<acme:input-textbox code="lecturer.lecture.form.label.estimatedLearningTime" path="estimatedLearningTime"/>	
+	<acme:input-double code="lecturer.lecture.form.label.estimatedLearningTime" path="estimatedLearningTime"/>	
 	<acme:input-textbox code="lecturer.lecture.form.label.body" path="body"/>	
-	<acme:input-textbox code="lecturer.lecture.form.label.nature" path="nature"/>	
+	<acme:input-select code="lecturer.lecture.form.label.nature" path="nature" choices="${natures}"/>	
 	<acme:input-textbox code="lecturer.lecture.form.label.furtherInformationLink" path="furtherInformationLink"/>
-	<acme:input-textbox code="lecturer.lecture.form.label.draftMode" path="draftMode"/>
+	<acme:input-textbox code="lecturer.lecture.form.label.draftMode" path="draftMode" readonly="true"/>
+	
+	<jstl:choose>	 
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+			<acme:submit code="lecturer.lecture.form.button.update" action="/lecturer/lecture/update"/>
+			<acme:submit code="lecturer.lecture.form.button.delete" action="/lecturer/lecture/delete"/>
+			<acme:submit code="lecturer.lecture.form.button.publish" action="/lecturer/lecture/publish"/>
+		</jstl:when>
+		<jstl:when test="${_command == 'create'}">
+			<acme:submit code="lecturer.lecture.form.button.create" action="/lecturer/lecture/create?masterId=${masterId}"/>
+		</jstl:when>		
+	</jstl:choose>
 </acme:form>

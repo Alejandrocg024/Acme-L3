@@ -25,18 +25,16 @@ public class LecturerLectureListService extends AbstractService<Lecturer, Lectur
 	@Override
 	public void check() {
 		boolean status;
-
-		status = super.getRequest().hasData("id", int.class);
-
+		status = super.getRequest().hasData("masterId", int.class);
 		super.getResponse().setChecked(status);
 	}
 
 	@Override
 	public void authorise() {
 		Course object;
-		int id;
-		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findCourseById(id);
+		int masterId;
+		masterId = super.getRequest().getData("masterId", int.class);
+		object = this.repository.findCourseById(masterId);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 		super.getResponse().setAuthorised(object.getLecturer().getUserAccount().getId() == userAccountId);
@@ -45,21 +43,39 @@ public class LecturerLectureListService extends AbstractService<Lecturer, Lectur
 	@Override
 	public void load() {
 		Collection<Lecture> objects;
-		int id;
-		id = super.getRequest().getData("id", int.class);
-		objects = this.repository.findLecturesByCourse(id);
+		int masterId;
+		masterId = super.getRequest().getData("masterId", int.class);
+		objects = this.repository.findLecturesByCourse(masterId);
 		super.getBuffer().setData(objects);
 	}
 
 	@Override
 	public void unbind(final Lecture object) {
 		assert object != null;
-
 		Tuple tuple;
-
 		tuple = super.unbind(object, "title", "summary", "estimatedLearningTime");
-
+		int masterId;
+		masterId = super.getRequest().getData("masterId", int.class);
+		super.getResponse().setGlobal("masterId", masterId);
+		tuple.put("masterId", masterId);
+		final Course c = this.repository.findCourseById(masterId);
+		final boolean showCreate = c.isDraftMode();
+		super.getResponse().setGlobal("showCreate", showCreate);
 		super.getResponse().setData(tuple);
+	}
+	@Override
+	public void unbind(final Collection<Lecture> object) {
+		assert object != null;
+		//final Tuple tuple;
+		//tuple = super.unbind(object, "title", "summary", "estimatedLearningTime");
+		int masterId;
+		masterId = super.getRequest().getData("masterId", int.class);
+		super.getResponse().setGlobal("masterId", masterId);
+		//tuple.put("masterId", masterId);
+		final Course c = this.repository.findCourseById(masterId);
+		final boolean showCreate = c.isDraftMode();
+		super.getResponse().setGlobal("showCreate", showCreate);
+		//super.getResponse().setData(tuple);
 	}
 
 }

@@ -19,3 +19,16 @@ lecturer.lecture.form.label.body = Cuerpo:
 lecturer.lecture.form.label.nature = Naturaleza:
 lecturer.lecture.form.label.furtherInformationLink = Información adicional:
 lecturer.lecture.form.label.draftMode = Modo borrador:
+
+lecturer.lecture.list.button.create = Crear lección
+
+lecturer.lecture.form.error.spam = El texto introducido es considerado spam
+lecturer.lecture.form.error.nature = La naturaleza de una lección no puede ser balanceada
+lecturer.lecture.form.error.estimatedLearningTIme = El tiempo de aprendizaje estimado debe ser mayor o igual que 0.01
+
+lecturer.lecture.list.button.add=Añadir lección
+
+lecturer.lecture.form.button.update = Actualizar
+lecturer.lecture.form.button.delete = Borrar
+lecturer.lecture.form.button.publish = Publicar
+lecturer.lecture.form.button.create = Crear
