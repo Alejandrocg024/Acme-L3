@@ -40,6 +40,7 @@ master.menu.administrator.system-configuration = Show system configuration
 master.menu.authenticated = Authenticated
 master.menu.authenticated.note.list = List notes
 master.menu.authenticated.offer.list = List offers
+master.menu.authenticated.bulletin.list = List bulletins
 
 # master.menu.provider ########################################################
 
