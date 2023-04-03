@@ -50,6 +50,7 @@
 			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show" access="isAuthenticated()"/>
 			<acme:menu-suboption code="master.menu.list.offer" action="/administrator/offer/list" access="isAuthenticated()"/>
 			<acme:menu-suboption code="master.menu.list.banner" action="/administrator/banner/list" access="isAuthenticated()"/>
+			<acme:menu-suboption code="master.menu.authenticated.bulletin.create" action="/administrator/bulletin/create" access="isAuthenticated()"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
