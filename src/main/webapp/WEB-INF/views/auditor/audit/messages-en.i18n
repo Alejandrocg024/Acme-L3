@@ -8,19 +8,19 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-audit.auditor.list.label.courseCode = Course code
-audit.auditor.list.label.title = Title
-audit.auditor.list.label.code = Audit code
+auditor.audit.list.label.courseCode = Course code
+auditor.audit.list.label.courseTitle = Course Title
+auditor.audit.list.label.code = Audit code
 
 
-audit.auditor.form.label.course = Course
-audit.auditor.form.label.code = Code
-audit.auditor.form.label.conclusion = Conclusion
-audit.auditor.form.label.strongPoints = Strong points
-audit.auditor.form.label.weakPoints = Weak Points
+auditor.audit.form.label.course = Course
+auditor.audit.form.label.code = Code
+auditor.audit.form.label.conclusion = Conclusion
+auditor.audit.form.label.strongPoints = Strong points
+auditor.audit.form.label.weakPoints = Weak Points
 
 auditor.audit.form.error.code = Code already exists
-auditor.audit.auditing-records = Auditing records
+auditor.audit.form.button.auditing-records = Auditing records
 
 auditor.audit.create = Create
 auditor.audit.form.button.delete = Delete
