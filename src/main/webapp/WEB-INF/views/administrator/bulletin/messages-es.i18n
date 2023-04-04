@@ -17,6 +17,7 @@ authenticated.bulletin.form.label.title = Título
 authenticated.bulletin.form.label.message = Mensaje
 authenticated.bulletin.form.label.critical = Crítico
 authenticated.bulletin.form.label.furtherInformationLink = Información adicional
+authenticated.bulletin.form.label.confirmation = Confirmar boletín
 authenticated.bulletin.form.button.create = Crear boletín
 
 administrator.bulletin.form.error.title = El título debe tener como máximo 75 caracteres.

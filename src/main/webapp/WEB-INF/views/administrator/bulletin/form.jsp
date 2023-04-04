@@ -24,8 +24,8 @@
 	
 	<jstl:choose> 
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="authenticated.bulletin.form.button.create"
-				action="/administrator/bulletin/create" />
+			<acme:input-checkbox code="authenticated.bulletin.form.label.confirmation" path="confirmation"/>
+			<acme:submit code="authenticated.bulletin.form.button.create" action="/administrator/bulletin/create" />
 		</jstl:when>
-	</jstl:choose> 
+	</jstl:choose>
 </acme:form>
