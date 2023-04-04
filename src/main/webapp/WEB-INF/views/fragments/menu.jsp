@@ -62,6 +62,10 @@
 			<acme:menu-suboption code="master.menu.lecturer.lecturer-dashboard" action="/lecturer/lecturer-dashboard/show"/>
 			<acme:menu-suboption code="master.menu.lecturer.lecture" action="/lecturer/lecture/list-all"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.audit" action="/auditor/audit/list"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
