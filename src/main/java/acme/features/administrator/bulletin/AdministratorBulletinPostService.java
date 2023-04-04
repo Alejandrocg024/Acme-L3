@@ -51,11 +51,17 @@ public class AdministratorBulletinPostService extends AbstractService<Administra
 	@Override
 	public void validate(final Bulletin object) {
 		assert object != null;
+		boolean confirmation;
+		confirmation = super.getRequest().getData("confirmation", boolean.class);
+		super.state(confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
 	}
 
 	@Override
 	public void perform(final Bulletin object) {
 		assert object != null;
+		Date moment;
+		moment = MomentHelper.getCurrentMoment();
+		object.setInstantiationMoment(moment);
 		this.repository.save(object);
 	}
 
@@ -64,6 +70,7 @@ public class AdministratorBulletinPostService extends AbstractService<Administra
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "instantiationMoment", "title", "message", "critical", "furtherInformationLink");
+		tuple.put("confirmation", false);
 		super.getResponse().setData(tuple);
 
 	}

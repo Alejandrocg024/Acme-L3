@@ -17,7 +17,9 @@ authenticated.bulletin.form.label.title = Title
 authenticated.bulletin.form.label.message = Message
 authenticated.bulletin.form.label.critical = Critical
 authenticated.bulletin.form.label.furtherInformationLink = Further Information
+authenticated.bulletin.form.label.confirmation = Confirm Bulletin
 authenticated.bulletin.form.button.create = Create Bulletin
+
 
 administrator.bulletin.form.error.title = Title must be shorter than 76 characters.
 administrator.bulletin.form.error.message = Message must be shorter than 101 characters.
