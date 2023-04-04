@@ -39,6 +39,8 @@ public class Audit extends AbstractEntity {
 	@NotBlank
 	@Length(max = 100)
 	protected String			weakPoints;
+	
+	protected boolean			draftMode;
 
 	@ManyToOne(optional = false)
 	@NotNull
