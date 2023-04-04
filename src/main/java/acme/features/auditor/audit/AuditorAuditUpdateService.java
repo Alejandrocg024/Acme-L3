@@ -56,12 +56,19 @@ public class AuditorAuditUpdateService extends AbstractService<Auditor, Audit> {
 	@Override
 	public void bind(final Audit object) {
 		assert object != null;
+		int courseId;
+		Course course;
+		courseId = super.getRequest().getData("course", int.class);
+		course = this.repository.findOneCourseById(courseId);
 		super.bind(object, "code", "conclusion", "strongPoints", "weakPoints");
+		object.setCourse(course);
 	}
 
 	@Override
 	public void validate(final Audit object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("code"))
+			super.state(this.repository.findAuditByCode(object.getCode()) == null, "code", "auditor.audit.form.error.code");
 	}
 
 	@Override
