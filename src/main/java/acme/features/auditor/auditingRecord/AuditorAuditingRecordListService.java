@@ -1,0 +1,59 @@
+
+package acme.features.auditor.auditingRecord;
+
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import acme.entities.Audit;
+import acme.entities.AuditingRecord;
+import acme.framework.components.accounts.Principal;
+import acme.framework.components.models.Tuple;
+import acme.framework.services.AbstractService;
+import acme.roles.Auditor;
+
+@Service
+public class AuditorAuditingRecordListService extends AbstractService<Auditor, AuditingRecord> {
+
+	@Autowired
+	protected AuditorAuditingRecordRepository repository;
+
+	// AbstractService interface ----------------------------------------------
+
+
+	@Override
+	public void check() {
+		boolean status;
+		status = super.getRequest().hasData("masterId", int.class);
+		super.getResponse().setChecked(status);
+	}
+
+	@Override
+	public void authorise() {
+		Audit object;
+		int masterId;
+		masterId = super.getRequest().getData("masterId", int.class);
+		object = this.repository.findAuditById(masterId);
+		final Principal principal = super.getRequest().getPrincipal();
+		final int userAccountId = principal.getAccountId();
+		super.getResponse().setAuthorised(object.getAuditor().getUserAccount().getId() == userAccountId);
+	}
+
+	@Override
+	public void load() {
+		Collection<AuditingRecord> objects;
+		int masterId;
+		masterId = super.getRequest().getData("masterId", int.class);
+		objects = this.repository.findAuditingRecordsByAuditId(masterId);
+		super.getBuffer().setData(objects);
+	}
+
+	@Override
+	public void unbind(final AuditingRecord object) {
+		assert object != null;
+		Tuple tuple;
+		tuple = super.unbind(object, "subject", "assesment");
+		super.getResponse().setData(tuple);
+	}
+}

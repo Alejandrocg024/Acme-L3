@@ -77,6 +77,7 @@ master.menu.lecturer.lecture = Mis lecciones
 # master.menu.auditor ####################################################
 master.menu.auditor = Auditor
 master.menu.auditor.audit = Mis auditorías
+master.menu.auditor.auditing-record = Mis registros de auditoría
 
 # master.menu.any ####################################################
 master.menu.any.course = Cursos
