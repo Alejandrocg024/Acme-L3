@@ -29,7 +29,9 @@ lecturer.lecture.form.error.spam = The introduced text is considered spam
 lecturer.lecture.form.error.nature = The nature of a lecture can't be BALANCED
 lecturer.lecture.form.error.estimatedLearningTIme = The estimated learning time must be bigger or equal to 0.01
 
-lecturer.lecture.list.button.add = Add lecture
+lecturer.lecture.list.button.add = Add lecture to a course
+
+lecturer.lecture.list.button.deleteFromCourse = Remove from a course
 
 lecturer.lecture.form.button.update = Update
 lecturer.lecture.form.button.delete = Delete

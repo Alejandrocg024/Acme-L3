@@ -22,6 +22,6 @@
 </acme:list>
 
 <acme:button test="${showCreate}" code="lecturer.lecture.list.button.create" action="/lecturer/lecture/create?masterId=${masterId}"/>
-<acme:button test="${showCreate}" code="lecturer.lecture.list.button.add" action="/lecturer/course-lecture/create?masterId=${masterId}"/>
+
 
 

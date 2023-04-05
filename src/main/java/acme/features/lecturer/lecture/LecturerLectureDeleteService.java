@@ -40,7 +40,8 @@ public class LecturerLectureDeleteService extends AbstractService<Lecturer, Lect
 		int id;
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findLectureById(id);
-		final Course course = this.repository.getCourseByLecture(object);
+		final Collection<Course> courses = this.repository.getCourseByLecture(object);
+		final Course course = courses.stream().findFirst().orElse(null);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 		super.getResponse().setAuthorised(course.getLecturer().getUserAccount().getId() == userAccountId && object.isDraftMode());
