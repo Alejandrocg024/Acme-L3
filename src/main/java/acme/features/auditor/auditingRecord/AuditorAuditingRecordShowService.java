@@ -36,7 +36,7 @@ public class AuditorAuditingRecordShowService extends AbstractService<Auditor, A
 		Audit object;
 		int id;
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findAuditById(id);
+		object = this.repository.findAuditByAuditingRecordId(id);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 		super.getResponse().setAuthorised(object.getAuditor().getUserAccount().getId() == userAccountId);
@@ -58,13 +58,13 @@ public class AuditorAuditingRecordShowService extends AbstractService<Auditor, A
 		assert object != null;
 
 		Tuple tuple;
+		tuple = super.unbind(object, "subject", "assessment", "startPeriod", "endPeriod", "mark", "furtherInformationLink");
 		SelectChoices choice;
 		choice = SelectChoices.from(Mark.class, object.getMark());
-		tuple = super.unbind(object, "subject", "assesment", "startPeriod", "endPeriod", "mark", "furtherInformationLink");
 		tuple.put("masterId", object.getAudit().getId());
 		tuple.put("draftMode", object.getAudit().isDraftMode());
-		tuple.put("course", choice.getSelected().getKey());
-		tuple.put("courses", choice);
+		tuple.put("mark", choice.getSelected().getKey());
+		tuple.put("marks", choice);
 		super.getResponse().setData(tuple);
 
 	}

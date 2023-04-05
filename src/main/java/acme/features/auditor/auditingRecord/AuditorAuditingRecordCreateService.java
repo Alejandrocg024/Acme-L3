@@ -53,6 +53,8 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 		int masterId;
 		masterId = super.getRequest().getData("masterId", int.class);
 		audit = this.repository.findAuditById(masterId);
+		object.setAssessment("");
+		object.setSubject("");
 		object.setAudit(audit);
 		super.getBuffer().setData(object);
 	}
@@ -66,10 +68,10 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 	@Override
 	public void validate(final AuditingRecord object) {
 		assert object != null;
-		if (!super.getBuffer().getErrors().hasErrors("endPeriod") || !super.getBuffer().getErrors().hasErrors("startPeriod"))
-			super.state(MomentHelper.isAfterOrEqual(object.getStartPeriod(), object.getEndPeriod()), "startPeriod", "auditor.audit.form.error.post-date");
-		if (!super.getBuffer().getErrors().hasErrors("endPeriod") || !super.getBuffer().getErrors().hasErrors("startPeriod"))
-			super.state(MomentHelper.isAfter(MomentHelper.deltaFromMoment(object.getStartPeriod(), 1, ChronoUnit.HOURS), object.getEndPeriod()), "endPeriod", "auditor.audit.form.error.not-enough-time");
+		if (!super.getBuffer().getErrors().hasErrors("endPeriod") && !super.getBuffer().getErrors().hasErrors("startPeriod"))
+			super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), object.getStartPeriod()), "startPeriod", "auditor.audit.form.error.post-date");
+		if (!super.getBuffer().getErrors().hasErrors("endPeriod") && !super.getBuffer().getErrors().hasErrors("startPeriod"))
+			super.state(MomentHelper.isAfter(object.getEndPeriod(), MomentHelper.deltaFromMoment(object.getStartPeriod(), 1, ChronoUnit.HOURS)), "endPeriod", "auditor.audit.form.error.not-enough-time");
 
 	}
 

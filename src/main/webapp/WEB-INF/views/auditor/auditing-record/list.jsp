@@ -21,6 +21,6 @@
 
 
 </acme:list>
-<acme:button code="auditor.auditing-record.create" action="/auditor/auditing-record/create"/>
+<acme:button test = "${createButton}" code="auditor.auditing-record.create" action="/auditor/auditing-record/create?masterId=${masterId}"/>
 
 
