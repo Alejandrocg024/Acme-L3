@@ -14,3 +14,4 @@ authenticated.auditor.form.label.certifications = Certificaciones
 authenticated.auditor.form.label.furtherInformationLink = Link información extra
 	
 authenticated.auditor.form.button.create = Crear
+authenticated.auditor.form.error.professionalId = Id profesional duplicado

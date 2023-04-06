@@ -46,7 +46,7 @@ public class AuthenticatedAuditorCreateService extends AbstractService<Authentic
 
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
-		userAccount = this.repository.findOneUserAccountById(userAccountId);
+		userAccount = this.repository.findUserAccountById(userAccountId);
 
 		object = new Auditor();
 		object.setUserAccount(userAccount);
@@ -64,6 +64,9 @@ public class AuthenticatedAuditorCreateService extends AbstractService<Authentic
 	@Override
 	public void validate(final Auditor object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("professionalId"))
+			super.state(this.repository.findAuditorByProfId(object.getProfessionalId()) == null, "professionalId", "authenticated.auditor.form.error.professionalId");
+
 	}
 
 	@Override
