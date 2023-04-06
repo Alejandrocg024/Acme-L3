@@ -22,4 +22,7 @@
 	<acme:input-url code="authenticated.auditor.form.label.furtherInformationLink" path="furtherInformationLink"/>
 	
 	<acme:submit test="${_command == 'create'}" code="authenticated.auditor.form.button.create" action="/authenticated/auditor/create"/>
+	<jstl:if test="${_command == 'update'}">
+		<acme:submit code="authenticated.auditor.form.button.update" action="/authenticated/auditor/update"/>
+	</jstl:if>
 </acme:form>

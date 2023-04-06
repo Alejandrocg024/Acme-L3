@@ -66,6 +66,8 @@ master.menu.authenticated.bulletin.create = Create bulletin
 master.menu.authenticated.lecturer.update = Lecturer data
 master.menu.authenticated.lecturer.create = Become a lecturer
 master.menu.authenticated.auditor.create = Become a auditor
+master.menu.authenticated.auditor.update = Auditor data
+
 
 
 # master.menu.lecturer ####################################################
