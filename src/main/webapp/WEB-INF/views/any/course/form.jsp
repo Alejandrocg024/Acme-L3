@@ -25,6 +25,7 @@
 	<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature"/>
 	
 	<acme:check-access test="isAuthenticated()">
+		<acme:button code="any.practicum.form.button.list" action="/authenticated/practicum/list?masterId=${id}"/>
 		<acme:button code="any.audit.form.button.list" action="/authenticated/audit/list?masterId=${id}"/>
 	</acme:check-access>
 </acme:form>
