@@ -1,0 +1,25 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.auditorDashboard.form.title.general-indicators= Auditor Dashboard
+
+auditor.auditorDashboard.form.label.average-num-auditing-records = Average num of auditing records:
+auditor.auditorDashboard.form.label.max-num-auditing-records = Max num of auditing records:
+auditor.auditorDashboard.form.label.max-num-auditing-records = Min num of auditing records:
+auditor.auditorDashboard.form.label.lin-dev-num-auditing-records = Lineal deviation of num of auditing records:
+
+auditor.auditorDashboard.form.label.average-time-period = Average period length of auditing records:
+auditor.auditorDashboard.form.label.max-time-period = Max period length of auditing records:
+auditor.auditorDashboard.form.label.min-time-period = Min period length of auditing records:
+auditor.auditorDashboard.form.label.lin-dev-time-period = Lineal deviation of period length of auditing records:
+
+auditor.auditorDashboard.form.label.audits.information = Grafic about num of auditing records
+auditor.auditorDashboard.form.label.periods.information = Grafic about auditing records period length
+auditor.auditorDashboard.form.label.audits.type.information = Grafic about the type of the audits

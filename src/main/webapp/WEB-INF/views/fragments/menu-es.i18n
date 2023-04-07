@@ -80,6 +80,7 @@ master.menu.lecturer.lecture = Mis lecciones
 # master.menu.auditor ####################################################
 master.menu.auditor = Auditor
 master.menu.auditor.audit = Mis auditorías
+master.menu.auditor.auditor-dashboard = Panel del auditor
 
 # master.menu.any ####################################################
 master.menu.any.course = Cursos

@@ -1,0 +1,25 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.auditorDashboard.form.title.general-indicators= Panel del auditor
+
+auditor.auditorDashboard.form.label.average-num-auditing-records = Número medio de registros de auditoría:
+auditor.auditorDashboard.form.label.max-num-auditing-records = Número máximo de registros de auditoría:
+auditor.auditorDashboard.form.label.max-num-auditing-records = Número mínimo de registros de auditoría:
+auditor.auditorDashboard.form.label.lin-dev-num-auditing-records = Desviación lineal del numero de registros de auditoría:
+
+auditor.auditorDashboard.form.label.average-time-period = Media de la longitud del periodo de los registros de auditoría:
+auditor.auditorDashboard.form.label.max-time-period = Máximo de la longitud del periodo de los registros de auditoría:
+auditor.auditorDashboard.form.label.min-time-period = Mínimo de la longitud del periodo de los registros de auditoría:
+auditor.auditorDashboard.form.label.lin-dev-time-period = Desviación lineal de la longitud del periodo de los registros de auditoría:
+
+auditor.auditorDashboard.form.label.audits.information = Gráfico sobre el número de registros de auditoría
+auditor.auditorDashboard.form.label.periods.information =Gráfico sobre la longitud del periodo de los registros de auditoría
+auditor.auditorDashboard.form.label.audits.type.information = Gráfico sobre los tipos de auditorías
