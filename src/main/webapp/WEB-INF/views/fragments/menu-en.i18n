@@ -65,6 +65,7 @@ master.menu.list.banner = List Banners
 master.menu.authenticated.bulletin.create = Create bulletin
 master.menu.authenticated.lecturer.update = Lecturer data
 master.menu.authenticated.lecturer.create = Become a lecturer
+master.menu.authenticated.company.update = Company data
 master.menu.authenticated.company.create = Become a company
 master.menu.authenticated.auditor.create = Become a auditor
 master.menu.authenticated.auditor.update = Auditor data

@@ -11,6 +11,7 @@
 authenticated.company.form.label.name = Nombre:
 authenticated.company.form.label.VAT = Número VAT:
 authenticated.company.form.label.summary = Resumen:
-authenticated.company.form.label.furtherInformationLink = Más información:
+authenticated.company.form.label.furtherInformationLink = Más información: (Opcional)
 
 authenticated.company.form.button.create = Crear
+authenticated.company.form.button.update = Actualizar
