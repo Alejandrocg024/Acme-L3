@@ -1,6 +1,9 @@
 
 package acme.entities;
 
+import java.util.Date;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -40,10 +43,6 @@ public class Tutorial extends AbstractEntity {
 	@Length(max = 100)
 	protected String			goal;
 
-	/*
-	 * protected Double estimatedTotalTime
-	 */
-
 	protected boolean			draftMode;
 
 	@NotNull
@@ -55,5 +54,22 @@ public class Tutorial extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	protected Assistant			assistant;
+
+
+	public Double estimatedTotalTime(final List<TutorialSession> sessions) {
+		double res = 0.0;
+		if (!sessions.isEmpty())
+			for (final TutorialSession sesion : sessions) {
+				final Date start = sesion.getStartPeriod();
+				final Date end = sesion.getEndPeriod();
+				double horas = 0.0;
+				double porcentajeMinutos = 0.0;
+				horas = Math.abs(end.getTime() / 3600000 - start.getTime() / 3600000);
+				porcentajeMinutos = Math.abs(end.getTime() / 60000 - start.getTime() / 60000) % 60 * 0.01;
+				res += horas + porcentajeMinutos;
+				System.out.println(horas + " " + end.getTime() + " " + start.getTime() + "//////" + porcentajeMinutos + "====" + res);
+			}
+		return res;
+	}
 
 }
