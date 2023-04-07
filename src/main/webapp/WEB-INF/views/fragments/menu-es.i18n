@@ -67,6 +67,7 @@ master.menu.list.banner = Listar Carteles
 master.menu.authenticated.bulletin.create = Crear Boletín
 master.menu.authenticated.lecturer.update = Datos del profesor
 master.menu.authenticated.lecturer.create = Convertirme en profesor
+master.menu.authenticated.company.create = Convertirme en empresa
 master.menu.authenticated.auditor.create = Convertirme en auditor
 master.menu.authenticated.auditor.update = Datos del auditor
 
