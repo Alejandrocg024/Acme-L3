@@ -78,6 +78,11 @@ master.menu.lecturer.course = My courses
 master.menu.lecturer.lecturer-dashboard = Lecturer dashboard
 master.menu.lecturer.lecture = My lectures
 
+# master.menu.company #######################################################
+
+master.menu.company = Company
+master.menu.company.my-practica = My practica
+
 # master.menu.auditor ####################################################
 master.menu.auditor = Auditor
 master.menu.auditor.audit = My audits
