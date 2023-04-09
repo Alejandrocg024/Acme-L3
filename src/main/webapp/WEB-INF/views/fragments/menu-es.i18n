@@ -91,3 +91,6 @@ master.menu.auditor.audit = Mis auditorías
 # master.menu.any ####################################################
 master.menu.any.course = Cursos
 master.menu.any= Cualquiera
+# master.menu.assistant ####################################################
+master.menu.assistant.tutorial = Mis tutoriales
+master.menu.assistant= Asistente
