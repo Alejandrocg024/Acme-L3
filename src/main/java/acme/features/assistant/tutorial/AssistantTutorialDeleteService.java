@@ -2,8 +2,6 @@
 package acme.features.assistant.tutorial;
 
 import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +16,7 @@ import acme.framework.services.AbstractService;
 import acme.roles.Assistant;
 
 @Service
-public class AssistantTutorialShowService extends AbstractService<Assistant, Tutorial> {
+public class AssistantTutorialDeleteService extends AbstractService<Assistant, Tutorial> {
 
 	@Autowired
 	protected AssistantTutorialRepository repository;
@@ -33,40 +31,65 @@ public class AssistantTutorialShowService extends AbstractService<Assistant, Tut
 
 	@Override
 	public void authorise() {
+		boolean status;
 		Tutorial object;
-		int id;
-		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findTutorialById(id);
-		final Principal principal = super.getRequest().getPrincipal();
-		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getAssistant().getUserAccount().getId() == userAccountId);
+		Principal principal;
+		int tutorialId;
+		tutorialId = super.getRequest().getData("id", int.class);
+		object = this.repository.findTutorialById(tutorialId);
+		principal = super.getRequest().getPrincipal();
+		status = object.getAssistant().getId() == principal.getActiveRoleId();
+		super.getResponse().setAuthorised(status);
 	}
-
 	@Override
 	public void load() {
 		Tutorial object;
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findTutorialById(id);
 		super.getBuffer().setData(object);
+	}
+	@Override
+	public void bind(final Tutorial object) {
+		assert object != null;
+		int courseId;
+		Course course;
+		courseId = super.getRequest().getData("course", int.class);
+		course = this.repository.findCourseById(courseId);
+		super.bind(object, "code", "title", "abstract$", "goal");
+		object.setCourse(course);
+	}
+	@Override
+	public void validate(final Tutorial object) {
+		assert object != null;
+	}
 
+	@Override
+	public void perform(final Tutorial object) {
+		assert object != null;
+
+		Collection<TutorialSession> tutorialSessions;
+
+		tutorialSessions = this.repository.findTutorialSessionsByTutorial(object);
+		this.repository.deleteAll(tutorialSessions);
+		this.repository.delete(object);
 	}
 
 	@Override
 	public void unbind(final Tutorial object) {
 		assert object != null;
+
+		Collection<Course> courses;
+		SelectChoices choices;
 		Tuple tuple;
-		final Collection<Course> courses;
-		final SelectChoices choices;
-		tuple = super.unbind(object, "code", "title", "abstract$", "goal", "draftMode");
-		final List<TutorialSession> sessions = this.repository.findTutorialSessionsByTutorial(object).stream().collect(Collectors.toList());
-		final Double totalTime = object.estimatedTotalTime(sessions);
-		tuple.put("estimatedTotalTime", totalTime);
+
 		courses = this.repository.findAllCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
+
+		tuple = super.unbind(object, "code", "title", "abstract$", "goal");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
+
 		super.getResponse().setData(tuple);
 	}
 }

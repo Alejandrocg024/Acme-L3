@@ -45,14 +45,14 @@ public class Tutorial extends AbstractEntity {
 
 	protected boolean			draftMode;
 
+	@ManyToOne(optional = false)
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
 	protected Course			course;
 
+	@ManyToOne(optional = false)
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
 	protected Assistant			assistant;
 
 
@@ -63,11 +63,11 @@ public class Tutorial extends AbstractEntity {
 				final Date start = sesion.getStartPeriod();
 				final Date end = sesion.getEndPeriod();
 				double horas = 0.0;
-				double porcentajeMinutos = 0.0;
+				double minutos = 0.0;
 				horas = Math.abs(end.getTime() / 3600000 - start.getTime() / 3600000);
-				porcentajeMinutos = Math.abs(end.getTime() / 60000 - start.getTime() / 60000) % 60 * 0.01;
+				minutos = Math.abs(end.getTime() / 60000 - start.getTime() / 60000) % 60;
+				final double porcentajeMinutos = minutos / 60;
 				res += horas + porcentajeMinutos;
-				System.out.println(horas + " " + end.getTime() + " " + start.getTime() + "//////" + porcentajeMinutos + "====" + res);
 			}
 		return res;
 	}

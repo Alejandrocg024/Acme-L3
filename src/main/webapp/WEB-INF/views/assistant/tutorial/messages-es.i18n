@@ -12,17 +12,17 @@
 assistant.tutorial.list.label.title = Titulo
 assistant.tutorial.list.label.abstract$ = resumen
 assistant.tutorial.list.label.goal = objetivo
-
+assistant.tutorial.list.button.create = Crear
 
 assistant.tutorial.form.label.code = Codigo
 assistant.tutorial.form.label.title = Titulo
 assistant.tutorial.form.label.abstract$ = Resumen
 assistant.tutorial.form.label.goal = Objetivo
+assistant.tutorial.form.label.course = Curso
 assistant.tutorial.form.label.estimatedTotalTime = Tiempo Total Estimado
-
-
-assistant.tutorial.form.error.nolecture = Este tutorial no tiene sesiones
-assistant.tutorial.form.error.nohandson = Este tutorial no tiene sesiones de practicas
-assistant.tutorial.form.error.lecturenp = Alguna sesion de este tutorial no esta publicada
+assistant.tutorial.form.button.update = Actualizar
+assistant.tutorial.form.button.create = Crear
+assistant.tutorial.form.button.delete = Borrar
+assistant.tutorial.form.button.publish = Publicar
 assistant.tutorial.form.error.spam = El texto introducido esta considerado como Spam
 

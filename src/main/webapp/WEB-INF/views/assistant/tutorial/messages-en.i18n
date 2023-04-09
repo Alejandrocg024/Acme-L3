@@ -12,17 +12,18 @@
 assistant.tutorial.list.label.title = Title
 assistant.tutorial.list.label.abstract$ = summary
 assistant.tutorial.list.label.goal = goal
-
+assistant.tutorial.list.button.create = Create
 
 assistant.tutorial.form.label.code = Code
 assistant.tutorial.form.label.title = Title
 assistant.tutorial.form.label.abstract$ = Summary
 assistant.tutorial.form.label.goal = Goal
+assistant.tutorial.form.label.course = Course
 assistant.tutorial.form.label.estimatedTotalTime = Estimated Total Time
-
-assistant.tutorial.form.error.nolecture = This tutorial has no sessions
-assistant.tutorial.form.error.nohandson = This tutorial has no hands-on sessions
-assistant.tutorial.form.error.lecturenp = Some session of this tutorial is not published
+assistant.tutorial.form.button.update = Update
+assistant.tutorial.form.button.create = Create
+assistant.tutorial.form.button.delete = Delete
+assistant.tutorial.form.button.publish = Publish
 
 assistant.tutorial.form.error.spam = The introduced text is considered Spam
 
