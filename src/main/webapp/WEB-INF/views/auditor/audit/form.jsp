@@ -22,7 +22,10 @@
 	<acme:input-textbox code="auditor.audit.form.label.strongPoints" path="strongPoints"/>	
 	<acme:input-textbox code="auditor.audit.form.label.weakPoints" path="weakPoints"/>	
 		
-	<jstl:choose>	 
+	<jstl:choose>
+		<jstl:when test="${_command == 'show'}">
+			<acme:input-textbox code="auditor.audit.form.label.mark" path="mark" readonly="true"/>
+		</jstl:when>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
 			<acme:button code="auditor.audit.form.button.auditing-records" action="/auditor/auditing-record/list?masterId=${id}"/>			
 		</jstl:when>

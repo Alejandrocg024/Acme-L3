@@ -6,10 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.components.AuxiliarService;
 import acme.datatypes.Nature;
-import acme.entities.Course;
-import acme.entities.CourseLecture;
 import acme.entities.Lecture;
-import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -31,20 +28,12 @@ public class LecturerLectureCreateService extends AbstractService<Lecturer, Lect
 
 	@Override
 	public void check() {
-		boolean status;
-		status = super.getRequest().hasData("masterId", int.class);
-		super.getResponse().setChecked(status);
+		super.getResponse().setChecked(true);
 	}
 
 	@Override
 	public void authorise() {
-		Course object;
-		int masterId;
-		masterId = super.getRequest().getData("masterId", int.class);
-		object = this.repository.findCourseById(masterId);
-		final Principal principal = super.getRequest().getPrincipal();
-		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getLecturer().getUserAccount().getId() == userAccountId);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -52,6 +41,8 @@ public class LecturerLectureCreateService extends AbstractService<Lecturer, Lect
 		Lecture object;
 		object = new Lecture();
 		object.setDraftMode(true);
+		final Lecturer lecturer = this.repository.findOneLecturerById(super.getRequest().getPrincipal().getActiveRoleId());
+		object.setLecturer(lecturer);
 		super.getBuffer().setData(object);
 	}
 
@@ -80,27 +71,17 @@ public class LecturerLectureCreateService extends AbstractService<Lecturer, Lect
 	public void perform(final Lecture object) {
 		assert object != null;
 		this.repository.save(object);
-		CourseLecture lc;
-		lc = new CourseLecture();
-		lc.setLecture(object);
-		Course course;
-		int masterId;
-		masterId = super.getRequest().getData("masterId", int.class);
-		course = this.repository.findCourseById(masterId);
-		lc.setCourse(course);
-		this.repository.save(lc);
 	}
 
 	@Override
 	public void unbind(final Lecture object) {
 		assert object != null;
 		Tuple tuple;
-		tuple = super.unbind(object, "title", "summary", "estimatedLearningTime", "body", "nature", "furtherInformationLink", "draftMode");
+		tuple = super.unbind(object, "title", "summary", "estimatedLearningTime", "body", "nature", "furtherInformationLink", "draftMode", "lecturer");
 		final SelectChoices choices;
 		choices = SelectChoices.from(Nature.class, object.getNature());
 		tuple.put("nature", choices.getSelected().getKey());
 		tuple.put("natures", choices);
-		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
 		super.getResponse().setData(tuple);
 	}
 }

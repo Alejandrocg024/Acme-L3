@@ -23,3 +23,5 @@ authenticated.note.list.label.title = Title
 authenticated.note.list.label.author = Author
 
 authenticated.note.list.button.create = Create
+
+authenticated.note.form.error.spam = The introduced text contains words that are considered spam

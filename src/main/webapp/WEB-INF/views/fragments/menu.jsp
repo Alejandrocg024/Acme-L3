@@ -63,6 +63,10 @@
 			<acme:menu-suboption code="master.menu.lecturer.lecture" action="/lecturer/lecture/list-all"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.company" access="hasRole('Company')">			
+			<acme:menu-suboption code="master.menu.company.my-practica" action="/company/practicum/list"/>			
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.audit" action="/auditor/audit/list"/>
 		</acme:menu-option>
@@ -70,7 +74,14 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.assistant" access="hasRole('Assistant')">
+			<acme:menu-suboption code="master.menu.assistant.tutorial" action="/assistant/tutorial/list"/>
+		</acme:menu-option>
 	</acme:menu-left>
+	
+				
+		
 
 	<acme:menu-right>
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>
@@ -85,6 +96,10 @@
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
 			<acme:menu-suboption code="master.menu.authenticated.lecturer.create" action="/authenticated/lecturer/create" access="!hasRole('Lecturer')"/>
 			<acme:menu-suboption code="master.menu.authenticated.lecturer.update" action="/authenticated/lecturer/update" access="hasRole('Lecturer')"/>
+			<acme:menu-suboption code="master.menu.authenticated.company.update" action="/authenticated/company/update" access="hasRole('Company')"/>
+			<acme:menu-suboption code="master.menu.authenticated.company.create" action="/authenticated/company/create" access="!hasRole('Company')"/>
+			<acme:menu-suboption code="master.menu.authenticated.auditor.create" action="/authenticated/auditor/create" access="!hasRole('Auditor')"/>
+			<acme:menu-suboption code="master.menu.authenticated.auditor.update" action="/authenticated/auditor/update" access="hasRole('Auditor')"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
