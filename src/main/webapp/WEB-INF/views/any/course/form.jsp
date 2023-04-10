@@ -23,6 +23,7 @@
 	<acme:input-textbox code="any.course.form.label.furtherInformationLink" path="furtherInformationLink"/>	
 	<acme:input-textbox code="any.course.form.label.lecturer" path="almaMater"/>	
 	<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature"/>
+	<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>
 	
 	<acme:check-access test="isAuthenticated()">
 		<acme:button code="any.practicum.form.button.list" action="/authenticated/practicum/list?masterId=${id}"/>
