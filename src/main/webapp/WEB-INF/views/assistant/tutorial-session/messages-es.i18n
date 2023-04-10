@@ -22,7 +22,7 @@ assistant.tutorial-session.form.label.start-period = Fecha de inicio:
 assistant.tutorial-session.form.label.end-period = Fecha de fin:
 assistant.tutorial-session.form.label.nature = Naturaleza:
 assistant.tutorial-session.form.label.further-information-link = Más información: (Opcional)
-assistant.tutorial-session.form.label.confirmation = Confirmar sesión de práctica excepcional
+assistant.tutorial-session.form.label.confirmation = Confirmar sesión de tutorí excepcional
 
 assistant.tutorial-session.form.button.create = Crear
 assistant.tutorial-session.form.button.create-exceptional = Crear sesión excepcional
