@@ -4,6 +4,7 @@ package acme.features.administrator.offer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
@@ -15,7 +16,10 @@ public class AdministratorOfferDeleteService extends AbstractService<Administrat
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AdministratorOfferRepository repository;
+	protected AdministratorOfferRepository	repository;
+
+	@Autowired
+	protected AuxiliarService				auxiliarService;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -70,6 +74,7 @@ public class AdministratorOfferDeleteService extends AbstractService<Administrat
 		tuple = super.unbind(object, "instantiationMoment", "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
 		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getStartPeriod());
 		tuple.put("readonly", readonly);
+		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}
 }
