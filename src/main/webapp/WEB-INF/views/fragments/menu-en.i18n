@@ -62,7 +62,7 @@ master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.list.offer= List Offers
 master.menu.list.banner = List Banners
-master.menu.authenticated.bulletin.create = Create bulletin
+master.menu.authenticated.bulletin.create = Post bulletin
 master.menu.authenticated.lecturer.update = Lecturer data
 master.menu.authenticated.lecturer.create = Become a lecturer
 
