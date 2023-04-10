@@ -21,6 +21,7 @@ company.practicum.form.label.practicum-title = Practicum title:
 company.practicum.form.label.abstract$ = Abstract:
 company.practicum.form.label.goals = Goals:
 
+company.practicum.form.button.practicum-sessions = Practicum sessions
 company.practicum.form.button.create = Create
 company.practicum.form.button.update = Update
 company.practicum.form.button.delete = Delete
