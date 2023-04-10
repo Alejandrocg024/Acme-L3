@@ -196,8 +196,6 @@
 					}
 				]
 			};
-
-	
 			var canvas, context;
 			canvas = document.getElementById("canvas2");
 			context = canvas.getContext("2d");
@@ -230,7 +228,6 @@
 						data : [
 							<jstl:out value="${numOfLecturesByType.get('THEORETICAL')}"/>, 
 							<jstl:out value="${numOfLecturesByType.get('HANDS_ON')}"/>, 
-							
 						],
 						backgroundColor: [
 					      'rgb(40, 180, 99)',
