@@ -2,8 +2,6 @@
 package acme.features.assistant.tutorial;
 
 import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -60,7 +58,7 @@ public class AssistantTutorialShowService extends AbstractService<Assistant, Tut
 		final Collection<Course> courses;
 		final SelectChoices choices;
 		tuple = super.unbind(object, "code", "title", "abstract$", "goal", "draftMode");
-		final List<TutorialSession> sessions = this.repository.findTutorialSessionsByTutorial(object).stream().collect(Collectors.toList());
+		final Collection<TutorialSession> sessions = this.repository.findTutorialSessionsByTutorial(object);
 		final Double totalTime = object.estimatedTotalTime(sessions);
 		tuple.put("estimatedTotalTime", totalTime);
 		courses = this.repository.findAllCourses();

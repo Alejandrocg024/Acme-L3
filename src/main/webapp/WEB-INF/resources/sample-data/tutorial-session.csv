@@ -18,13 +18,13 @@ tutorial-session-16,Sesion numero 1,"<script>alert(""hi!"")</script>",BALANCED,2
 tutorial-session-17,Sesion numero 1,<h1>Hola Mundo!</h1>,BALANCED,2022/08/01 11:20,2022/08/01 13:20,null,tutorial-01
 tutorial-session-18,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 11:20,2022/08/01 13:20,null,tutorial-02
 tutorial-session-19,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 23:59,2022/08/02 01:22,null,tutorial-01
-tutorial-session-20,Sesion numero 1,Primera sesion del tutorial,THEORETICAL,2022/08/01 12:00,2020/08/01 13:22,null,tutorial-02
+tutorial-session-20,Sesion numero 1,Primera sesion del tutorial,THEORETICAL,2022/08/01 12:00,2022/08/01 13:22,null,tutorial-02
 tutorial-session-21,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 11:59,2022/08/01 12:59,null,tutorial-01
 tutorial-session-22,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 00:00,2022/08/01 05:00,null,tutorial-02
 tutorial-session-23,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 23:20,2022/08/02 00:00,null,tutorial-01
 tutorial-session-24,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 22:20,2022/08/01 23:59,ftp://user:pass@acme.org,tutorial-02
 tutorial-session-25,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 10:20,2022/08/01 12:00,https://github.com/Alejandrocg024/Acme-L3-D02,tutorial-01
-tutorial-session-27,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 23:20,2022/08/01 00:00,null,tutorial-02
+tutorial-session-27,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 23:20,2022/08/02 00:00,null,tutorial-02
 tutorial-session-26,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 11:20,2022/08/01 11:59,null,tutorial-02
 tutorial-session-28,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/08/01 11:20,2022/08/01 13:20,ftp://user:pass@acme.org,tutorial-02
 tutorial-session-29,Sesion numero 1,Primera sesion del tutorial,BALANCED,2022/07/31 00:01,2022/07/31 03:20,https://github.com/Alejandrocg024/Acme-L3-D02,tutorial-02
