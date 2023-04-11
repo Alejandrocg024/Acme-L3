@@ -71,6 +71,7 @@ master.menu.authenticated.company.update = Datos de empresa
 master.menu.authenticated.company.create = Convertirme en empresa
 master.menu.authenticated.auditor.create = Convertirme en auditor
 master.menu.authenticated.auditor.update = Datos del auditor
+master.menu.authenticated.assistant.create = Convertirme en assistente
 
 
 # master.menu.lecturer ####################################################

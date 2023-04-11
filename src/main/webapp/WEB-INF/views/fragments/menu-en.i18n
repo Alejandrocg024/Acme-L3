@@ -69,6 +69,7 @@ master.menu.authenticated.company.update = Company data
 master.menu.authenticated.company.create = Become a company
 master.menu.authenticated.auditor.create = Become a auditor
 master.menu.authenticated.auditor.update = Auditor data
+master.menu.authenticated.assistant.create = Become an assistant
 
 
 
