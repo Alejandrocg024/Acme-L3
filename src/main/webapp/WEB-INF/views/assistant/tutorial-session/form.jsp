@@ -28,12 +28,9 @@
 			<acme:submit code="assistant.tutorial-session.form.button.update" action="/assistant/tutorial-session/update"/>
 			<acme:submit code="assistant.tutorial-session.form.button.delete" action="/assistant/tutorial-session/delete"/>
 		</jstl:when>
-		<jstl:when test="${_command == 'create' && draftMode == true}">
+		<jstl:when test="${_command == 'create' && draftMode == false}">
 			<acme:submit code="assistant.tutorial-session.form.button.create" action="/assistant/tutorial-session/create?masterId=${masterId}"/>
 		</jstl:when>
-		<jstl:when test="${_command == 'create' && draftMode == false}">
-			<acme:input-checkbox code="assistant.tutorial-session.form.label.confirmation" path="confirmation"/>
-			<acme:submit code="assistant.tutorial-session.form.button.create-exceptional" action="/assistant/tutorial-session/create?masterId=${masterId}"/>
-		</jstl:when>		
+			
 	</jstl:choose>		
 </acme:form>

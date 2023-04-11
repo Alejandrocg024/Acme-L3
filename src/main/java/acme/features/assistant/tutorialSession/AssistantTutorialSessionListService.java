@@ -64,13 +64,10 @@ public class AssistantTutorialSessionListService extends AbstractService<Assista
 		int tutorialId;
 		Tutorial tutorial;
 		final boolean showCreate;
-		final boolean exceptionalCreate;
 		tutorialId = super.getRequest().getData("masterId", int.class);
 		tutorial = this.repository.findTutorialById(tutorialId);
-		showCreate = super.getRequest().getPrincipal().hasRole(tutorial.getAssistant());
-		exceptionalCreate = tutorial.isDraftMode();
+		showCreate = super.getRequest().getPrincipal().hasRole(tutorial.getAssistant()) && !tutorial.isDraftMode();
 		super.getResponse().setGlobal("masterId", tutorialId);
 		super.getResponse().setGlobal("showCreate", showCreate);
-		super.getResponse().setGlobal("exceptionalCreate", exceptionalCreate);
 	}
 }

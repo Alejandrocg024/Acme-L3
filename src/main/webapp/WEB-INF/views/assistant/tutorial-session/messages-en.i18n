@@ -22,13 +22,12 @@ assistant.tutorial-session.form.label.start-period = Start date:
 assistant.tutorial-session.form.label.end-period = End date:
 assistant.tutorial-session.form.label.nature = Nature:
 assistant.tutorial-session.form.label.further-information-link = Further information: (Optional)
-assistant.tutorial-session.form.label.confirmation = Confirm exceptional tutorial session
 
 assistant.tutorial-session.form.button.create = Create
-assistant.tutorial-session.form.button.create-exceptional = Create exceptional session
 assistant.tutorial-session.form.button.update = Update
 assistant.tutorial-session.form.button.delete = Delete
 
 assistant.tutorial-session.form.error.spam = The introduced text contains words that are considered spam
-assistant.tutorial-session.form.error.start-period = The start date must be at least one week ahead from the current date
-assistant.tutorial-session.form.error.end-period = The end date must be at least one week ahead of the start date
+assistant.tutorial-session.form.error.start-period = The start date must be at least one day ahead from the current date
+assistant.tutorial-session.form.error.end-period = The end date must be at least one hour ahead of the start date
+assistant.tutorial.form.error.end-period.max = The end date must be 5 hours ahead of the start date maximum

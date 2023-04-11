@@ -19,10 +19,14 @@ public class AssistantTutorialSessionController extends AbstractController<Assis
 	@Autowired
 	protected AssistantTutorialSessionShowService	showService;
 
+	@Autowired
+	protected AssistantTutorialSessionCreateService	createService;
+
 
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
+		super.addBasicCommand("create", this.createService);
 	}
 }
