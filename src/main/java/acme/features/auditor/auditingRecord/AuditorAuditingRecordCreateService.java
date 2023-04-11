@@ -6,6 +6,7 @@ import java.time.temporal.ChronoUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.datatypes.Mark;
 import acme.entities.Audit;
 import acme.entities.AuditingRecord;
@@ -22,8 +23,10 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuditorAuditingRecordRepository repository;
+	protected AuditorAuditingRecordRepository	repository;
 
+	@Autowired
+	protected AuxiliarService					auxiliarService;
 	// AbstractService interface ----------------------------------------------
 
 
@@ -55,6 +58,7 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 		audit = this.repository.findAuditById(masterId);
 		object.setAssessment("");
 		object.setSubject("");
+		object.setExceptional(!audit.isDraftMode());
 		object.setAudit(audit);
 		super.getBuffer().setData(object);
 	}
@@ -62,16 +66,24 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 	@Override
 	public void bind(final AuditingRecord object) {
 		assert object != null;
-		super.bind(object, "subject", "assessment", "startPeriod", "endPeriod", "mark", "furtherInformationLink");
+		super.bind(object, "subject", "assessment", "startPeriod", "endPeriod", "mark", "furtherInformationLink", "confirmation");
 	}
 
 	@Override
 	public void validate(final AuditingRecord object) {
+		boolean confirmation;
+
+		confirmation = object.getAudit().isDraftMode() ? true : super.getRequest().getData("confirmation", boolean.class);
+		super.state(confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
 		assert object != null;
 		if (!super.getBuffer().getErrors().hasErrors("endPeriod") && !super.getBuffer().getErrors().hasErrors("startPeriod"))
-			super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), object.getStartPeriod()), "startPeriod", "auditor.audit.form.error.post-date");
+			super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), object.getStartPeriod()), "startPeriod", "auditor.auditing-record.form.error.post-date");
 		if (!super.getBuffer().getErrors().hasErrors("endPeriod") && !super.getBuffer().getErrors().hasErrors("startPeriod"))
-			super.state(MomentHelper.isAfter(object.getEndPeriod(), MomentHelper.deltaFromMoment(object.getStartPeriod(), 1, ChronoUnit.HOURS)), "endPeriod", "auditor.audit.form.error.not-enough-time");
+			super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), MomentHelper.deltaFromMoment(object.getStartPeriod(), 1, ChronoUnit.HOURS)), "endPeriod", "auditor.auditing-record.form.error.not-enough-time");
+		if (!super.getBuffer().getErrors().hasErrors("subject"))
+			super.state(this.auxiliarService.validateTextImput(object.getSubject()), "subject", "auditor.auditing-record.form.error.spam");
+		if (!super.getBuffer().getErrors().hasErrors("assessment"))
+			super.state(this.auxiliarService.validateTextImput(object.getSubject()), "assessment", "auditor.auditing-record.form.error.spam");
 
 	}
 
@@ -92,6 +104,7 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 		tuple.put("marks", choices);
 		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
 		tuple.put("draftMode", object.getAudit().isDraftMode());
+		tuple.put("confirmation", false);
 		super.getResponse().setData(tuple);
 	}
 }

@@ -28,9 +28,13 @@
 			<acme:submit code="auditor.auditing-record.form.button.update" action="/auditor/auditing-record/update"/>
 			<acme:submit code="auditor.auditing-record.form.button.delete" action="/auditor/auditing-record/delete"/>
 		</jstl:when>
-		<jstl:when test="${_command == 'create'}">
+		<jstl:when test="${_command == 'create' && draftMode == true}">
 			<acme:submit code="auditor.auditing-record.form.button.create" action="/auditor/auditing-record/create?masterId=${masterId}"/>
-		</jstl:when>		
+		</jstl:when>	
+		<jstl:when test="${_command == 'create'&& draftMode == false}">
+			<acme:input-checkbox code="auditor.auditing-record.form.button.confirmation" path="confirmation"/>
+			<acme:submit code="auditor.auditing-record.form.button.create-exceptional" action="/auditor/auditing-record/create?masterId=${masterId}"/>
+		</jstl:when>	
 	</jstl:choose>
 	
 </acme:form>
