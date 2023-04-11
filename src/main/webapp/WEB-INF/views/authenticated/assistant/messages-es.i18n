@@ -14,4 +14,6 @@ authenticated.lecturer.form.label.listOfQualifications = Lista de campos de espe
 authenticated.lecturer.form.label.furtherInformation = Enlace con infomación adicional
 
 authenticated.lecturer.form.button.create=Crear
+authenticated.assistant.form.button.update = Actualizar
+
 authenticated.lecturer.form.error.spam = El texto introducido está considerado como Spam

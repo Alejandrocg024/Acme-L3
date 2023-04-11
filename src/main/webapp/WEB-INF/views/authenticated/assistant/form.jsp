@@ -22,5 +22,7 @@
 	<acme:input-textbox code="authenticated.assistant.form.label.furtherInformationLink" path="furtherInformationLink"/>
 
 	<acme:submit test="${_command == 'create'}" code="authenticated.lecturer.form.button.create" action="/authenticated/assistant/create"/>
-
+	<jstl:if test="${_command == 'update'}">
+		<acme:submit code="authenticated.assistant.form.button.update" action="/authenticated/assistant/update"/>
+	</jstl:if>	
 </acme:form>

@@ -14,11 +14,15 @@ import acme.roles.Assistant;
 public class AuthenticatedAssistantController extends AbstractController<Authenticated, Assistant> {
 
 	@Autowired
-	protected AuthenticatedAssistantCreateService createService;
+	protected AuthenticatedAssistantCreateService	createService;
+
+	@Autowired
+	protected AuthenticatedAssistantUpdateService	updateService;
 
 
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("create", this.createService);
+		super.addBasicCommand("update", this.updateService);
 	}
 }
