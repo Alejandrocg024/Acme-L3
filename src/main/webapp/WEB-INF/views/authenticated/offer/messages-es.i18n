@@ -19,3 +19,5 @@ authenticated.offer.form.label.startPeriod = Fecha de inicio
 authenticated.offer.form.label.endPeriod = Fecha de fin
 authenticated.offer.form.label.price = Precio
 authenticated.offer.form.label.furtherInformationLink = Información adicional
+
+authenticated.offer.form.label.money = Precio en la divisa del sistema

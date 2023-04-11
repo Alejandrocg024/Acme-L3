@@ -14,16 +14,20 @@ import acme.framework.controllers.AbstractController;
 public class AuthenticatedNoteController extends AbstractController<Authenticated, Note> {
 
 	@Autowired
-	protected AuthenticatedNoteListService	listService;
+	protected AuthenticatedNoteListService		listService;
 
 	@Autowired
-	protected AuthenticatedNoteShowService	showService;
+	protected AuthenticatedNoteShowService		showService;
+
+	@Autowired
+	protected AuthenticatedNoteCreateService	createService;
 
 
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
+		super.addBasicCommand("create", this.createService);
 	}
 
 }

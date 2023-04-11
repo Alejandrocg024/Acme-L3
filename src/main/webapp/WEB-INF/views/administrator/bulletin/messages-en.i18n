@@ -8,18 +8,17 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.bulletin.list.label.title = Title
-authenticated.bulletin.list.label.message = Message
-authenticated.bulletin.list.label.critical = Critical
+administrator.bulletin.list.label.title = Title
+administrator.bulletin.list.label.message = Message
+administrator.bulletin.list.label.critical = Critical
 
-authenticated.bulletin.form.label.instantiationMoment = Instantiation Moment
-authenticated.bulletin.form.label.title = Title
-authenticated.bulletin.form.label.message = Message
-authenticated.bulletin.form.label.critical = Critical
-authenticated.bulletin.form.label.furtherInformationLink = Further Information
-authenticated.bulletin.form.button.create = Create Bulletin
+administrator.bulletin.form.label.instantiationMoment = Instantiation Moment
+administrator.bulletin.form.label.title = Title
+administrator.bulletin.form.label.message = Message
+administrator.bulletin.form.label.critical = Critical
+administrator.bulletin.form.label.furtherInformationLink = Further Information Link
+administrator.bulletin.form.label.confirmation = Confirm Bulletin
+administrator.bulletin.form.button.create = Post Bulletin
 
-administrator.bulletin.form.error.title = Title must be shorter than 76 characters.
-administrator.bulletin.form.error.message = Message must be shorter than 101 characters.
-administrator.bulletin.form.error.critical = Bulletin must be critical (true) or not critical (false).
-administrator.bulletin.form.error.furtherInformationLink = Link is not correct.
+
+administrator.bulletin.form.spam = The introduced text is considered Spam

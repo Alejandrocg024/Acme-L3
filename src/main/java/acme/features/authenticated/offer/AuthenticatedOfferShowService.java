@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.models.Tuple;
@@ -15,8 +16,10 @@ import acme.framework.services.AbstractService;
 public class AuthenticatedOfferShowService extends AbstractService<Authenticated, Offer> {
 
 	@Autowired
-	protected AuthenticatedOfferRepository repository;
+	protected AuthenticatedOfferRepository	repository;
 
+	@Autowired
+	protected AuxiliarService				auxiliarService;
 	// AbstractService interface ----------------------------------------------
 
 
@@ -52,6 +55,7 @@ public class AuthenticatedOfferShowService extends AbstractService<Authenticated
 		Tuple tuple;
 
 		tuple = super.unbind(object, "instantiationMoment", "heading", "summary", "startPeriod", "endPeriod", "price", "furtherInformationLink");
+		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}
 

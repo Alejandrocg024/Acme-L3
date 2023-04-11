@@ -15,6 +15,13 @@ authenticated.note.form.label.message = Mensaje:
 authenticated.note.form.label.email = Email: (Opcional)
 authenticated.note.form.label.furtherInformationLink = Más información: (Opcional)
 
+authenticated.note.form.button.create = Crear
+authenticated.note.form.label.confirmation = Confirmar nota
+
 authenticated.note.list.label.instantiationMoment = Fecha de creación
 authenticated.note.list.label.title = Título
 authenticated.note.list.label.author = Autor
+
+authenticated.note.list.button.create = Crear
+
+authenticated.note.form.error.spam = Las palabras introducidas son consideradas spam

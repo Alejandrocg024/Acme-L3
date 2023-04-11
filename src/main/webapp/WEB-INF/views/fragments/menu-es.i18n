@@ -67,12 +67,22 @@ master.menu.list.banner = Listar Carteles
 master.menu.authenticated.bulletin.create = Crear Boletín
 master.menu.authenticated.lecturer.update = Datos del profesor
 master.menu.authenticated.lecturer.create = Convertirme en profesor
+master.menu.authenticated.company.update = Datos de empresa
+master.menu.authenticated.company.create = Convertirme en empresa
+master.menu.authenticated.auditor.create = Convertirme en auditor
+master.menu.authenticated.auditor.update = Datos del auditor
+
 
 # master.menu.lecturer ####################################################
 master.menu.lecturer = Profesor
 master.menu.lecturer.course = Mis cursos
 master.menu.lecturer.lecturer-dashboard= Panel de profesor
 master.menu.lecturer.lecture = Mis lecciones
+
+# master.menu.company #######################################################
+
+master.menu.company = Empresa
+master.menu.company.my-practica = Mis prácticas
 
 # master.menu.auditor ####################################################
 master.menu.auditor = Auditor
@@ -81,3 +91,6 @@ master.menu.auditor.audit = Mis auditorías
 # master.menu.any ####################################################
 master.menu.any.course = Cursos
 master.menu.any= Cualquiera
+# master.menu.assistant ####################################################
+master.menu.assistant.tutorial = Mis tutoriales
+master.menu.assistant= Asistente
