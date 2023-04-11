@@ -26,4 +26,5 @@ company.practicum.form.button.update = Actualizar
 company.practicum.form.button.delete = Eliminar
 company.practicum.form.button.publish = Publicar
 
+company.practicum.form.error.code = El código ya existe
 company.practicum.form.error.spam = Las palabras introducidas son consideradas spam
