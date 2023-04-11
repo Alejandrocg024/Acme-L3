@@ -78,7 +78,7 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 		courses = this.repository.findCoursesNotAudited();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
-		tuple.put("courses", courses);
+		tuple.put("courses", choices);
 		tuple.put("course", choices.getSelected().getKey());
 		super.getResponse().setData(tuple);
 	}
