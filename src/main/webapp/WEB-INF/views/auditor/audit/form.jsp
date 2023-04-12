@@ -21,7 +21,7 @@
 	<acme:input-textbox code="auditor.audit.form.label.conclusion" path="conclusion"/>	
 	<acme:input-textbox code="auditor.audit.form.label.strongPoints" path="strongPoints"/>	
 	<acme:input-textbox code="auditor.audit.form.label.weakPoints" path="weakPoints"/>	
-	<jstl:if test="${_command == 'show'}">
+	<jstl:if test="${acme:anyOf(_command, 'show|update')}">
 			<acme:input-textbox code="auditor.audit.form.label.mark" path="mark" readonly="true"/>
 	</jstl:if>
 	
