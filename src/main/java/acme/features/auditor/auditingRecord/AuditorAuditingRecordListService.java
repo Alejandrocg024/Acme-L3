@@ -54,7 +54,6 @@ public class AuditorAuditingRecordListService extends AbstractService<Auditor, A
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "subject", "assessment");
-		tuple.put("draftMode", object.getAudit().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 
@@ -66,6 +65,7 @@ public class AuditorAuditingRecordListService extends AbstractService<Auditor, A
 		final Audit audit = this.repository.findAuditById(masterId);
 		if (super.getRequest().getPrincipal().getAccountId() == audit.getAuditor().getUserAccount().getId())
 			createButton = true;
+		super.getResponse().setGlobal("draftMode", audit.isDraftMode());
 		super.getResponse().setGlobal("createButton", createButton);
 		super.getResponse().setGlobal("masterId", masterId);
 	}

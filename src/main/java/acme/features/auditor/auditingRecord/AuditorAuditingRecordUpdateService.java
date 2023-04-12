@@ -27,8 +27,6 @@ public class AuditorAuditingRecordUpdateService extends AbstractService<Auditor,
 	@Autowired
 	protected AuxiliarService					auxiliarService;
 
-	// AbstractService<Employer, Job> -------------------------------------
-
 
 	@Override
 	public void check() {
@@ -75,7 +73,7 @@ public class AuditorAuditingRecordUpdateService extends AbstractService<Auditor,
 		if (!super.getBuffer().getErrors().hasErrors("subject"))
 			super.state(this.auxiliarService.validateTextImput(object.getSubject()), "subject", "auditor.auditing-record.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("assessment"))
-			super.state(this.auxiliarService.validateTextImput(object.getSubject()), "assessment", "auditor.auditing-record.form.error.spam");
+			super.state(this.auxiliarService.validateTextImput(object.getAssessment()), "assessment", "auditor.auditing-record.form.error.spam");
 
 	}
 
@@ -95,7 +93,6 @@ public class AuditorAuditingRecordUpdateService extends AbstractService<Auditor,
 		tuple.put("mark", choices.getSelected().getKey());
 		tuple.put("marks", choices);
 		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
-		tuple.put("draftMode", object.getAudit().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }
