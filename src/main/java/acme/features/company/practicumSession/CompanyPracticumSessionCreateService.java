@@ -58,6 +58,7 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 
 		object = new PracticumSession();
 		object.setPracticum(practicum);
+		object.setAddendum(!practicum.isDraftMode());
 
 		super.getBuffer().setData(object);
 	}
@@ -75,7 +76,7 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 
 		boolean confirmation;
 
-		confirmation = object.getPracticum().isDraftMode() ? true : super.getRequest().getData("confirmation", boolean.class);
+		confirmation = object.getPracticum().isDraftMode() || super.getRequest().getData("confirmation", boolean.class);
 		super.state(confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
 
 		if (!super.getBuffer().getErrors().hasErrors("title"))
