@@ -92,7 +92,7 @@ public class AuditorAuditingRecordUpdateService extends AbstractService<Auditor,
 		choices = SelectChoices.from(Mark.class, object.getMark());
 		tuple.put("mark", choices.getSelected().getKey());
 		tuple.put("marks", choices);
-		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
+		tuple.put("draftMode", object.getAudit().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }
