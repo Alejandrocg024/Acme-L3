@@ -30,6 +30,18 @@ public class AdministratorBannerDeleteService extends AbstractService<Administra
 		final Banner object = this.repository.findBannerById(id);
 		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().before(object.getDisplayPeriodBegin()));
 	}
+
+	@Override
+	public void load() {
+		Banner object;
+		int id;
+
+		id = super.getRequest().getData("id", int.class);
+		object = this.repository.findBannerById(id);
+
+		super.getBuffer().setData(object);
+	}
+
 	@Override
 	public void bind(final Banner object) {
 		assert object != null;
