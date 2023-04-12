@@ -8,6 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+auditor.auditing-record.message.exception =  (*) This is an auditing record created after the audit was published.
+
 auditor.auditing-record.list.label.subject = Subject
 auditor.auditing-record.list.label.assessment = Assessment
 auditor.auditing-record.list.button.create = Create
