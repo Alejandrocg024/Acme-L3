@@ -11,26 +11,24 @@ import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AdministratorBannerShowService extends AbstractService<Administrator, Banner> {
+public class AdministratorBannerDeleteService extends AbstractService<Administrator, Banner> {
 
 	@Autowired
 	protected AdministratorBannerRepository repository;
-
-	// AbstractService interface ----------------------------------------------
 
 
 	@Override
 	public void check() {
 		boolean status;
-
 		status = super.getRequest().hasData("id", int.class);
-
 		super.getResponse().setChecked(status);
 	}
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		final int id = super.getRequest().getData("id", int.class);
+		final Banner object = this.repository.findBannerById(id);
+		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().before(object.getDisplayPeriodBegin()));
 	}
 
 	@Override
@@ -45,13 +43,26 @@ public class AdministratorBannerShowService extends AbstractService<Administrato
 	}
 
 	@Override
+	public void bind(final Banner object) {
+		assert object != null;
+		super.bind(object, "displayPeriodBegin", "displayPeriodFinish", "pictureLink", "slogan", "webLink");
+
+	}
+	@Override
+	public void validate(final Banner object) {
+		assert object != null;
+	}
+	@Override
+	public void perform(final Banner object) {
+		assert object != null;
+		this.repository.delete(object);
+	}
+
+	@Override
 	public void unbind(final Banner object) {
 		assert object != null;
-
 		Tuple tuple;
-
-		tuple = super.unbind(object, "instantiationMoment", "slogan", "displayPeriodBegin", "displayPeriodFinish", "pictureLink", "pictureLink", "webLink");
-		tuple.put("confirmation", false);
+		tuple = super.unbind(object, "instantiationMoment", "displayPeriodBegin", "displayPeriodFinish", "pictureLink", "slogan", "webLink");
 		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getDisplayPeriodBegin());
 		tuple.put("readonly", readonly);
 		super.getResponse().setData(tuple);
