@@ -56,8 +56,6 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 		int masterId;
 		masterId = super.getRequest().getData("masterId", int.class);
 		audit = this.repository.findAuditById(masterId);
-		object.setAssessment("");
-		object.setSubject("");
 		object.setExceptional(!audit.isDraftMode());
 		object.setAudit(audit);
 		super.getBuffer().setData(object);
@@ -83,7 +81,7 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 		if (!super.getBuffer().getErrors().hasErrors("subject"))
 			super.state(this.auxiliarService.validateTextImput(object.getSubject()), "subject", "auditor.auditing-record.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("assessment"))
-			super.state(this.auxiliarService.validateTextImput(object.getSubject()), "assessment", "auditor.auditing-record.form.error.spam");
+			super.state(this.auxiliarService.validateTextImput(object.getAssessment()), "assessment", "auditor.auditing-record.form.error.spam");
 
 	}
 
