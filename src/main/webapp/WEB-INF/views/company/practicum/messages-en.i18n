@@ -20,6 +20,7 @@ company.practicum.form.label.practicum-code = Practicum code:
 company.practicum.form.label.practicum-title = Practicum title:
 company.practicum.form.label.abstract$ = Abstract:
 company.practicum.form.label.goals = Goals:
+company.practicum.form.label.estimatedTotalTime = Estimated total time:
 
 company.practicum.form.button.practicum-sessions = Practicum sessions
 company.practicum.form.button.create = Create
