@@ -16,6 +16,9 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
+	<jstl:if test="${exceptional}">
+		<acme:message code="auditor.auditing-record.message.exception"/>
+	</jstl:if>
 	<acme:input-textbox code="auditor.auditing-record.form.label.subject" path="subject"/>	
 	<acme:input-textbox code="auditor.auditing-record.form.label.assessment" path="assessment"/>	
 	<acme:input-moment code="auditor.auditing-record.form.label.startPeriod" path="startPeriod" />
