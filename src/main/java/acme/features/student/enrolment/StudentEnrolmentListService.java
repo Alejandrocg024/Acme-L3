@@ -37,7 +37,7 @@ public class StudentEnrolmentListService extends AbstractService<Student, Enrolm
 		Collection<Enrolment> objects;
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
-		objects = this.repository.findByStudentId(userAccountId);
+		objects = this.repository.findEnrolmentByStudentId(userAccountId);
 		super.getBuffer().setData(objects);
 	}
 

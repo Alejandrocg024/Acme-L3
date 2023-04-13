@@ -13,5 +13,8 @@ import acme.roles.Student;
 public interface StudentEnrolmentRepository extends AbstractRepository{
 	
 	@Query("select e from Enrolment e where e.student.userAccount.id = :id")
-	Collection<Enrolment> findByStudentId(int id);
+	Collection<Enrolment> findEnrolmentByStudentId(int id);
+	
+	@Query("select e from Enrolment e where e.id = :id")
+	Enrolment findEnrolmentById(int id);
 }
