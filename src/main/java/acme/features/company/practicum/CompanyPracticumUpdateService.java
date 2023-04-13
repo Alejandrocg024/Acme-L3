@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import acme.components.AuxiliarService;
 import acme.entities.Course;
 import acme.entities.Practicum;
-import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -37,15 +36,14 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 	@Override
 	public void authorise() {
 		boolean status;
-		Practicum object;
-		Principal principal;
 		int practicumId;
+		Practicum practicum;
+		Company company;
 
 		practicumId = super.getRequest().getData("id", int.class);
-		object = this.repository.findPracticumById(practicumId);
-		principal = super.getRequest().getPrincipal();
-
-		status = object.getCompany().getId() == principal.getActiveRoleId();
+		practicum = this.repository.findPracticumById(practicumId);
+		company = practicum == null ? null : practicum.getCompany();
+		status = practicum != null && practicum.isDraftMode() && super.getRequest().getPrincipal().hasRole(company);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -79,6 +77,9 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 	public void validate(final Practicum object) {
 		assert object != null;
 
+		if (!super.getBuffer().getErrors().hasErrors("code"))
+			super.state(this.repository.findPracticumByCode(object.getCode()) == null || this.repository.findPracticumByCode(object.getCode()).equals(object), "code", "company.practicum.form.error.code");
+
 		if (!super.getBuffer().getErrors().hasErrors("title"))
 			super.state(this.auxiliarService.validateTextImput(object.getTitle()), "title", "company.practicum.form.error.spam");
 
@@ -102,14 +103,17 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 
 		Collection<Course> courses;
 		SelectChoices choices;
+		String estimatedTotalTime;
 		Tuple tuple;
 
 		courses = this.repository.findAllCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
+		estimatedTotalTime = object.estimatedTotalTime(this.repository.findPracticumSessionsByPracticumId(object.getId()));
 
-		tuple = super.unbind(object, "code", "title", "abstract$", "goals");
+		tuple = super.unbind(object, "code", "title", "abstract$", "goals", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
+		tuple.put("estimatedTotalTime", estimatedTotalTime);
 
 		super.getResponse().setData(tuple);
 	}

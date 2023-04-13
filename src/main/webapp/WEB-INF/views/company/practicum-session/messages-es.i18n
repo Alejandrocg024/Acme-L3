@@ -31,3 +31,5 @@ company.practicum-session.form.button.delete = Eliminar
 company.practicum-session.form.error.spam = Las palabras introducidas son consideradas spam
 company.practicum-session.form.error.start-period = La fecha de inicio debe estar al menos una semana por delante del momento actual
 company.practicum-session.form.error.end-period = La fecha de fin debe estar al menos una semana por delante de la fecha de inicio
+
+company.practicum-session.message.addendum = (*) Esta es una sesión excepcional creada después de que la práctica fuese publicada.

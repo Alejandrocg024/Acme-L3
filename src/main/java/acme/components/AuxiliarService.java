@@ -2,9 +2,7 @@
 package acme.components;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,36 +37,15 @@ public class AuxiliarService {
 		return !spamFilter.isSpam(input);
 	}
 
-	public String translateBoolean(final boolean bool, final String lang) {
+	public String translateMoney(final Money money, final String lang) {
 		String res;
 		res = "";
-		if (lang.equals("en"))
-			res = bool ? "Yes" : "No";
-		else if (lang.equals("es"))
-			res = bool ? "Si" : "No";
-		return res;
-	}
-
-	public String translateDate(final Date date, final String lang) {
-		String res;
-		res = "";
-		final SimpleDateFormat spanishFormat = new SimpleDateFormat("yyyy/MM/dd hh:mm");
-		res = spanishFormat.format(date);
 		if (lang.equals("en")) {
-			final SimpleDateFormat englishFormat = new SimpleDateFormat("yyyy/dd/MM hh:mm");
-			res = englishFormat.format(date);
-		}
-		return res;
-	}
-
-	public Money translateMoney(final Money money, final String lang) {
-		Money res;
-		res = new Money();
-		res.setAmount(money.getAmount());
-		if (lang.equals("en"))
-			res.setCurrency("USD");
-		else if (lang.equals("es"))
-			res.setCurrency("EUR");
+			final double parteDecimal = money.getAmount() % 1;
+			final double parteEntera = money.getAmount() - parteDecimal;
+			res = parteEntera + "." + parteDecimal + " " + money.getCurrency();
+		} else if (lang.equals("es"))
+			res = money.getAmount() + " " + money.getCurrency();
 		return res;
 	}
 
@@ -79,6 +56,7 @@ public class AuxiliarService {
 		if (!money.getCurrency().equals(currentCurrency)) {
 			final String apiBase = "https://api.freecurrencyapi.com/v1/latest?apikey=";
 			final String apikey1 = "sTHyoIuiZKaQXMOomVo1r4AM5nr0frNRoXiJSKoj";
+			//Tenemos varias apikeys por si se supera el limite de solicitudes, solo habría que cambiar key
 			final String apikey2 = "IltvRNltXItpVmVkel1vys4oaQBZDpqOtYfqilz2";
 			final String apikey3 = "gwuSNFH2RE98js5t8bC7hkKCkFWKnVL7CKK7IJX5";
 			final String apikey4 = "sUcYZjfqDBI2A8sqbt7d5vpo2GkLaiMMbIAD0mTv";

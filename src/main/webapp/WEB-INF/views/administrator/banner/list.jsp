@@ -23,4 +23,5 @@
 
 </acme:list>
 
+<acme:button code="administrator.banner.create" action="/administrator/banner/create"/>
 

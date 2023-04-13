@@ -21,4 +21,5 @@
 	<acme:input-textbox code="authenticated.practicum.form.label.abstract$" path="abstract$"/>
 	<acme:input-textbox code="authenticated.practicum.form.label.goals" path="goals"/>
 	<acme:input-textbox code="authenticated.practicum.form.label.company" path="company"/>
+	<acme:input-textbox code="authenticated.practicum.form.label.estimatedTotalTime" path="estimatedTotalTime"/>
 </acme:form>

@@ -16,6 +16,9 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
+	<jstl:if test="${addendum}">
+		<acme:message code="company.practicum-session.message.addendum"/>
+	</jstl:if>
 	<acme:input-textbox code="company.practicum-session.form.label.title" path="title"/>
 	<acme:input-textbox code="company.practicum-session.form.label.abstract$" path="abstract$"/>
 	<acme:input-moment code="company.practicum-session.form.label.start-period" path="startPeriod"/>

@@ -60,7 +60,7 @@ public class AuthenticatedNoteCreateService extends AbstractService<Authenticate
 	public void bind(final Note object) {
 		assert object != null;
 
-		super.bind(object, "instantiationMoment", "title", "author", "message", "email", "furtherInformationLink");
+		super.bind(object, "title", "author", "message", "email", "furtherInformationLink");
 	}
 
 	@Override
@@ -105,7 +105,7 @@ public class AuthenticatedNoteCreateService extends AbstractService<Authenticate
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "instantiationMoment", "title", "author", "message", "email", "furtherInformationLink");
+		tuple = super.unbind(object, "title", "author", "message", "email", "furtherInformationLink");
 		tuple.put("confirmation", false);
 
 		super.getResponse().setData(tuple);

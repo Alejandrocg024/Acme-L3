@@ -17,8 +17,8 @@
 
 <acme:list>
 	<acme:list-column code="assistant.tutorial.list.label.title" path="title"  width="20%"/>
-	<acme:list-column code="assistant.tutorial.list.label.abstract$" path="abstract$" width="60%" />
-	<acme:list-column code="assistant.tutorial.list.label.goal" path="goal" width="20%" />
+	<acme:list-column code="assistant.tutorial.list.label.abstract$" path="abstract$" width="40%" />
+	<acme:list-column code="assistant.tutorial.list.label.goal" path="goal" width="40%" />
 
 </acme:list>
 

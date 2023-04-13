@@ -1,6 +1,8 @@
 
 package acme.entities;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -12,6 +14,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.framework.data.AbstractEntity;
+import acme.framework.helpers.MomentHelper;
 import acme.roles.Company;
 import lombok.Getter;
 import lombok.Setter;
@@ -51,5 +54,15 @@ public class Practicum extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	protected Course			course;
+
+
+	public String estimatedTotalTime(final Collection<PracticumSession> practicumSessions) {
+		double exactHours = 0.0;
+		String estimatedTotalTime;
+		for (final PracticumSession ps : practicumSessions)
+			exactHours += MomentHelper.computeDuration(ps.getStartPeriod(), ps.getEndPeriod()).getSeconds() / 3600.0;
+		estimatedTotalTime = String.format("%.2f horas ± %.2f horas", exactHours, exactHours * 0.1);
+		return estimatedTotalTime;
+	}
 
 }
