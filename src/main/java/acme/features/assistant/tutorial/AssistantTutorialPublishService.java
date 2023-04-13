@@ -6,8 +6,10 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.entities.Course;
 import acme.entities.Tutorial;
+import acme.entities.TutorialSession;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
@@ -18,7 +20,10 @@ import acme.roles.Assistant;
 public class AssistantTutorialPublishService extends AbstractService<Assistant, Tutorial> {
 
 	@Autowired
-	protected AssistantTutorialRepository repository;
+	protected AssistantTutorialRepository	repository;
+
+	@Autowired
+	protected AuxiliarService				auxiliarService;
 
 
 	@Override
@@ -35,13 +40,13 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 		boolean status;
 		Tutorial object;
 		Principal principal;
-		int practicumId;
+		int tutorialId;
 
-		practicumId = super.getRequest().getData("id", int.class);
-		object = this.repository.findTutorialById(practicumId);
+		tutorialId = super.getRequest().getData("id", int.class);
+		object = this.repository.findTutorialById(tutorialId);
 		principal = super.getRequest().getPrincipal();
 
-		status = object.getAssistant().getId() == principal.getActiveRoleId();
+		status = object.getAssistant().getUserAccount().getId() == principal.getAccountId();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -74,12 +79,29 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 	@Override
 	public void validate(final Tutorial object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("code"))
+			super.state(this.repository.findTutorialByCode(object.getCode()) == null || this.repository.findTutorialByCode(object.getCode()).equals(object), "code", "assistant.tutorial.form.error.code");
+
+		if (!super.getBuffer().getErrors().hasErrors("title"))
+			super.state(this.auxiliarService.validateTextImput(object.getTitle()), "title", "assistant.tutorial.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("abstract$"))
+			super.state(this.auxiliarService.validateTextImput(object.getAbstract$()), "abstract$", "assistant.tutorial.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("goal"))
+			super.state(this.auxiliarService.validateTextImput(object.getGoal()), "goal", "assistant.tutorial.form.error.spam");
+		{
+			final Collection<TutorialSession> sessions = this.repository.findTutorialSessionsByTutorial(object);
+			final Double totalTime = object.estimatedTotalTime(sessions);
+
+			super.state(totalTime != null && totalTime != 0.0, "*", "assistant.tutorial.form.error.estimatedTotalTime");
+		}
+
 	}
 
 	@Override
 	public void perform(final Tutorial object) {
 		assert object != null;
-
 		object.setDraftMode(false);
 		this.repository.save(object);
 	}
@@ -95,10 +117,12 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 		courses = this.repository.findAllCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 
-		tuple = super.unbind(object, "code", "title", "abstract$", "goal");
+		tuple = super.unbind(object, "code", "title", "abstract$", "goal", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
-
+		final Collection<TutorialSession> sessions = this.repository.findTutorialSessionsByTutorial(object);
+		final Double totalTime = object.estimatedTotalTime(sessions);
+		tuple.put("estimatedTotalTime", totalTime);
 		super.getResponse().setData(tuple);
 	}
 }
