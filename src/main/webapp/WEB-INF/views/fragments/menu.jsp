@@ -29,6 +29,7 @@
 		
 		<acme:menu-option code="master.menu.any">
 			<acme:menu-suboption code="master.menu.any.course" action="/any/course/list"/>
+			<acme:menu-suboption code="master.menu.any.peep" action="/any/peep/list"/>
 			<acme:menu-separator/>
 			
 		</acme:menu-option>
