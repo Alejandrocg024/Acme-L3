@@ -11,6 +11,7 @@ import acme.components.AuxiliarService;
 import acme.datatypes.Nature;
 import acme.entities.Tutorial;
 import acme.entities.TutorialSession;
+import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.helpers.MomentHelper;
@@ -18,7 +19,7 @@ import acme.framework.services.AbstractService;
 import acme.roles.Assistant;
 
 @Service
-public class AssistantTutorialSessionCreateService extends AbstractService<Assistant, TutorialSession> {
+public class AssistantTutorialSessionUpdateService extends AbstractService<Assistant, TutorialSession> {
 
 	@Autowired
 	protected AssistantTutorialSessionRepository	repository;
@@ -30,7 +31,7 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 	@Override
 	public void check() {
 		boolean status;
-		status = super.getRequest().hasData("masterId", int.class);
+		status = super.getRequest().hasData("id", int.class);
 		super.getResponse().setChecked(status);
 	}
 	@Override
@@ -38,21 +39,20 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		boolean status;
 		int tutorialId;
 		Tutorial tutorial;
-		tutorialId = super.getRequest().getData("masterId", int.class);
-		tutorial = this.repository.findTutorialById(tutorialId);
-		status = tutorial != null && super.getRequest().getPrincipal().hasRole(tutorial.getAssistant()) && tutorial.isDraftMode();
+		tutorialId = super.getRequest().getData("id", int.class);
+		tutorial = this.repository.findTutorialByTutorialSessionId(tutorialId);
+		final Principal principal = super.getRequest().getPrincipal();
+		final int userAccountId = principal.getAccountId();
+		status = tutorial != null && tutorial.getAssistant().getUserAccount().getId() == userAccountId && tutorial.isDraftMode();
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
 		TutorialSession object;
-		int tutorialId;
-		Tutorial tutorial;
-		tutorialId = super.getRequest().getData("masterId", int.class);
-		tutorial = this.repository.findTutorialById(tutorialId);
-		object = new TutorialSession();
-		object.setTutorial(tutorial);
+		int id;
+		id = super.getRequest().getData("id", int.class);
+		object = this.repository.findTutorialSessionById(id);
 		super.getBuffer().setData(object);
 	}
 
@@ -116,5 +116,4 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		tuple.put("natures", choices);
 		super.getResponse().setData(tuple);
 	}
-
 }

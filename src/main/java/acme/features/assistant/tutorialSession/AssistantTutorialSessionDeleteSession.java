@@ -14,7 +14,7 @@ import acme.framework.services.AbstractService;
 import acme.roles.Assistant;
 
 @Service
-public class AssistantTutorialSessionShowService extends AbstractService<Assistant, TutorialSession> {
+public class AssistantTutorialSessionDeleteSession extends AbstractService<Assistant, TutorialSession> {
 
 	@Autowired
 	protected AssistantTutorialSessionRepository repository;
@@ -29,17 +29,16 @@ public class AssistantTutorialSessionShowService extends AbstractService<Assista
 
 	@Override
 	public void authorise() {
-		final boolean status;
-		final int tutorialSessionId;
-		final Tutorial object;
-		tutorialSessionId = super.getRequest().getData("id", int.class);
-		object = this.repository.findTutorialByTutorialSessionId(tutorialSessionId);
+		boolean status;
+		int tutorialId;
+		Tutorial tutorial;
+		tutorialId = super.getRequest().getData("id", int.class);
+		tutorial = this.repository.findTutorialByTutorialSessionId(tutorialId);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
-		status = object != null && object.getAssistant().getUserAccount().getId() == userAccountId;
+		status = tutorial != null && tutorial.getAssistant().getUserAccount().getId() == userAccountId && tutorial.isDraftMode();
 		super.getResponse().setAuthorised(status);
 	}
-
 	@Override
 	public void load() {
 		TutorialSession object;
@@ -48,6 +47,25 @@ public class AssistantTutorialSessionShowService extends AbstractService<Assista
 		object = this.repository.findTutorialSessionById(id);
 		super.getBuffer().setData(object);
 	}
+	@Override
+	public void bind(final TutorialSession object) {
+		assert object != null;
+		super.bind(object, "title", "abstract$", "startPeriod", "endPeriod", "furtherInformationLink");
+		Nature nature;
+		nature = super.getRequest().getData("nature", Nature.class);
+		object.setNature(nature);
+	}
+	@Override
+	public void validate(final TutorialSession object) {
+		assert object != null;
+	}
+
+	@Override
+	public void perform(final TutorialSession object) {
+		assert object != null;
+
+		this.repository.delete(object);
+	}
 
 	@Override
 	public void unbind(final TutorialSession object) {
@@ -55,11 +73,11 @@ public class AssistantTutorialSessionShowService extends AbstractService<Assista
 		Tuple tuple;
 		final SelectChoices choices;
 		tuple = super.unbind(object, "title", "abstract$", "startPeriod", "endPeriod", "furtherInformationLink");
-		choices = SelectChoices.from(Nature.class, object.getNature());
+		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
 		tuple.put("draftMode", object.getTutorial().isDraftMode());
+		choices = SelectChoices.from(Nature.class, object.getNature());
 		tuple.put("nature", choices.getSelected().getKey());
 		tuple.put("natures", choices);
-		tuple.put("masterId", object.getTutorial().getId());
 		super.getResponse().setData(tuple);
 	}
 }

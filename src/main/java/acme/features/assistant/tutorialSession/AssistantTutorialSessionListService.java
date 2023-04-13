@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Tutorial;
 import acme.entities.TutorialSession;
+import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Assistant;
@@ -32,9 +33,12 @@ public class AssistantTutorialSessionListService extends AbstractService<Assista
 		boolean status;
 		int masterId;
 		Tutorial tutorial;
+		final Principal principal = super.getRequest().getPrincipal();
+		final int userAccountId = principal.getAccountId();
 		masterId = super.getRequest().getData("masterId", int.class);
 		tutorial = this.repository.findTutorialById(masterId);
-		status = tutorial != null && super.getRequest().getPrincipal().hasRole(tutorial.getAssistant());
+
+		status = tutorial != null && tutorial.getAssistant().getUserAccount().getId() == userAccountId;
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -66,7 +70,7 @@ public class AssistantTutorialSessionListService extends AbstractService<Assista
 		final boolean showCreate;
 		tutorialId = super.getRequest().getData("masterId", int.class);
 		tutorial = this.repository.findTutorialById(tutorialId);
-		showCreate = super.getRequest().getPrincipal().hasRole(tutorial.getAssistant()) && !tutorial.isDraftMode();
+		showCreate = super.getRequest().getPrincipal().hasRole(tutorial.getAssistant()) && tutorial.isDraftMode();
 		super.getResponse().setGlobal("masterId", tutorialId);
 		super.getResponse().setGlobal("showCreate", showCreate);
 	}

@@ -24,7 +24,7 @@
 	<acme:input-textbox code="assistant.tutorial.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
 		
 	<jstl:choose>
-		<jstl:when test="${_command == 'show' && draftMode == false}">
+		<jstl:when test="${_command == 'show' }">
 			<acme:button code="assistant.tutorial.form.button.tutorial-sessions" action="/assistant/tutorial-session/list?masterId=${id}"/>	
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">

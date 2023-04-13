@@ -21,6 +21,8 @@ assistant.tutorial-session.form.label.abstract$ = Resumen:
 assistant.tutorial-session.form.label.start-period = Fecha de inicio:
 assistant.tutorial-session.form.label.end-period = Fecha de fin:
 assistant.tutorial-session.form.label.nature = Naturaleza:
+assistant.tutorial-session.form.label.course = Curso:
+
 assistant.tutorial-session.form.label.further-information-link = Más información: (Opcional)
 
 assistant.tutorial-session.form.button.create = Crear
