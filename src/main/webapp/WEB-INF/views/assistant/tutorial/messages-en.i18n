@@ -24,7 +24,7 @@ assistant.tutorial.form.button.update = Update
 assistant.tutorial.form.button.create = Create
 assistant.tutorial.form.button.delete = Delete
 assistant.tutorial.form.button.publish = Publish
-
+assistant.tutorial.form.button.tutorial-sessions = Tutorial sessions
 assistant.tutorial.form.error.spam = The introduced text is considered Spam
 assistant.tutorial.form.error.estimatedTotalTime = Cannot publish a tutorial without sessions
 
