@@ -27,5 +27,4 @@ audit-25,A921,Auditoría finalizada,"Completa, clara, sencilla",коза,true,co
 audit-26,A922,Auditoría finalizada,"Completa, clara, sencilla",<script>alert("hi!")</script>,true,course-01,auditor-01
 audit-27,A923,Auditoría finalizada,"Completa, clara, sencilla",<h1>Hola Mundo!</h1>,true,course-01,auditor-01
 audit-28,A924,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-01
-audit-29,A925,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-02,auditor-01
-audit-30,A926,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-02
+audit-29,A925,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-02
