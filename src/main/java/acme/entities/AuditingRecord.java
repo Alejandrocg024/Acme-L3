@@ -51,6 +51,8 @@ public class AuditingRecord extends AbstractEntity {
 	@URL
 	protected String			furtherInformationLink;
 
+	protected boolean			exceptional;
+
 	@ManyToOne(optional = false)
 	@NotNull
 	@Valid

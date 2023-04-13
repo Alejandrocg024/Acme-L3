@@ -19,7 +19,7 @@
 	<acme:input-textbox code="assistant.tutorial.form.label.code" path="code"/>	
 	<acme:input-textbox code="assistant.tutorial.form.label.title" path="title"/>	
 	<acme:input-textbox code="assistant.tutorial.form.label.abstract$" path="abstract$"/>	
-	<acme:input-money code="assistant.tutorial.form.label.goal" path="goal" placeholder="Lorem ipsum"/>	
+	<acme:input-textbox code="assistant.tutorial.form.label.goal" path="goal" />	
 <acme:input-select code="assistant.tutorial.form.label.course" path="course" choices="${courses}"/>
 	<acme:input-textbox code="assistant.tutorial.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
 		

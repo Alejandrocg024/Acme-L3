@@ -56,6 +56,7 @@ public class Tutorial extends AbstractEntity {
 	protected Assistant			assistant;
 
 
+
 	public Double estimatedTotalTime(final Collection<TutorialSession> collection) {
 		double res = 0.0;
 		if (!collection.isEmpty())
