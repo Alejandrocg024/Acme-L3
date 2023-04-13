@@ -30,3 +30,4 @@ company.practicum.form.button.publish = Publish
 
 company.practicum.form.error.code = Code already exists
 company.practicum.form.error.spam = The introduced text contains words that are considered spam
+company.practicum.form.error.code = Practicum with no practicum sessions cannot be published
