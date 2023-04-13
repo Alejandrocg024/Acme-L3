@@ -8,13 +8,17 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.peep.list.label.title = Título
-authenticated.peep.list.label.nick = Apodo
-authenticated.peep.list.label.message = Mensaje
+any.peep.list.label.title = Título
+any.peep.list.label.nick = Apodo
+any.peep.list.label.message = Mensaje
 
+any.peep.list.button.publish = Publicar
 
-any.peep.form.label.title = Título
-any.peep.form.label.nick = Apodo
-any.peep.form.label.message = Mensaje
-any.peep.form.label.email = Email
-any.peep.form.label.link = Enlace
+any.peep.form.label.instantiationMoment = Instantiation moment:
+any.peep.form.label.title = Título:
+any.peep.form.label.nick = Apodo:
+any.peep.form.label.message = Mensaje:
+any.peep.form.label.email = Email: (Opcional)
+any.peep.form.label.link = Enlace: (Opcional)
+
+any.peep.form.button.publish = Publicar
