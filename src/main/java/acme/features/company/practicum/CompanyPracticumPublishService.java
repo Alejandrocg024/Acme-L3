@@ -73,7 +73,7 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 	public void validate(final Practicum object) {
 		assert object != null;
 
-		super.state(!this.repository.findPracticumSessionsByPracticumId(object.getId()).isEmpty(), "*", "company.practicum.form.error.code");
+		super.state(!this.repository.findPracticumSessionsByPracticumId(object.getId()).isEmpty(), "*", "company.practicum.form.error.publish");
 	}
 
 	@Override
