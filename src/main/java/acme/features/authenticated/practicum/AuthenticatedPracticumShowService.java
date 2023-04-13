@@ -45,10 +45,14 @@ public class AuthenticatedPracticumShowService extends AbstractService<Authentic
 	public void unbind(final Practicum object) {
 		assert object != null;
 
+		String estimatedTotalTime;
 		Tuple tuple;
+
+		estimatedTotalTime = object.estimatedTotalTime(this.repository.findPracticumSessionsByPracticumId(object.getId()));
 
 		tuple = super.unbind(object, "code", "title", "abstract$", "goals");
 		tuple.put("company", object.getCompany().getName());
+		tuple.put("estimatedTotalTime", estimatedTotalTime);
 
 		super.getResponse().setData(tuple);
 	}

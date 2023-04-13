@@ -1,31 +1,31 @@
 key,code,title,abstract$,goals,draft_mode,key:company,key:course
 practicum-01,AAA999,Practicum,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
 practicum-02,AA999,Practicum,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-03,A999,Practicum,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-04,A100,P,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-05,A101,Pr,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-06,A102,Título de setenta y cinco caracteres exactos para esta práctica profesional,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-07,A103,Soy un título de setenta y cuatro caracteres para la práctica profesional.,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-08,A104,練習題目,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-09,A105,τίτλος πρακτικής,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-10,A106,<script>alert("hi!")</script>,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-11,A107,<h1>Hola Mundo!</h1>,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-01
-practicum-12,A108,Practicum,I,"Conocer, entender, aprender",false,company-01,course-01
-practicum-13,A109,Practicum,In,"Conocer, entender, aprender",false,company-01,course-01
-practicum-14,A110,Practicum,Nos encontramos frente a resumen de exactamente cien caracteres para la actual práctica profesional.,"Conocer, entender, aprender",false,company-01,course-01
-practicum-15,A111,Practicum,Nos encontramos delante de un resumen de exactamente noventa y nueve caracteres para esta práctica.,"Conocer, entender, aprender",false,company-01,course-01
-practicum-16,A112,Practicum,專業實踐La,"Conocer, entender, aprender",false,company-01,course-01
-practicum-17,A113,Practicum,περίληψη πρακτικής,"Conocer, entender, aprender",false,company-01,course-01
-practicum-18,A114,Practicum,<script>alert("hi!")</script>,"Conocer, entender, aprender",false,company-01,course-01
-practicum-19,A115,Practicum,<h1>Hola Mundo!</h1>,"Conocer, entender, aprender",false,company-01,course-01
-practicum-20,A116,Practicum,Práctica de iniciación,O,false,company-01,course-01
-practicum-21,A117,Practicum,Práctica de iniciación,Ob,false,company-01,course-01
-practicum-22,A118,Practicum,Práctica de iniciación,Nos encontramos delante de un texto de cien caracteres relacionado con los objetivos de la práctica.,false,company-01,course-01
-practicum-23,A119,Practicum,Práctica de iniciación,Esto es un texto de noventa y nueve caracteres asociado a los objetivos de la práctica profesional.,false,company-01,course-01
-practicum-24,A120,Practicum,Práctica de iniciación,練習目標,false,company-01,course-01
-practicum-25,A121,Practicum,Práctica de iniciación,στόχους εξάσκησης,false,company-01,course-01
-practicum-26,A122,Practicum,Práctica de iniciación,<script>alert("hi!")</script>,false,company-01,course-01
-practicum-27,A123,Practicum,Práctica de iniciación,<h1>Hola Mundo!</h1>,false,company-01,course-01
+practicum-03,A999,Practicum,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
+practicum-04,A100,P,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
+practicum-05,A101,Pr,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
+practicum-06,A102,Título de setenta y cinco caracteres exactos para esta práctica profesional,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
+practicum-07,A103,Soy un título de setenta y cuatro caracteres para la práctica profesional.,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
+practicum-08,A104,練習題目,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
+practicum-09,A105,τίτλος πρακτικής,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
+practicum-10,A106,<script>alert("hi!")</script>,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
+practicum-11,A107,<h1>Hola Mundo!</h1>,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
+practicum-12,A108,Practicum,I,"Conocer, entender, aprender",true,company-01,course-01
+practicum-13,A109,Practicum,In,"Conocer, entender, aprender",true,company-01,course-01
+practicum-14,A110,Practicum,Nos encontramos frente a resumen de exactamente cien caracteres para la actual práctica profesional.,"Conocer, entender, aprender",true,company-01,course-01
+practicum-15,A111,Practicum,Nos encontramos delante de un resumen de exactamente noventa y nueve caracteres para esta práctica.,"Conocer, entender, aprender",true,company-01,course-01
+practicum-16,A112,Practicum,專業實踐La,"Conocer, entender, aprender",true,company-01,course-01
+practicum-17,A113,Practicum,περίληψη πρακτικής,"Conocer, entender, aprender",true,company-01,course-01
+practicum-18,A114,Practicum,<script>alert("hi!")</script>,"Conocer, entender, aprender",true,company-01,course-01
+practicum-19,A115,Practicum,<h1>Hola Mundo!</h1>,"Conocer, entender, aprender",true,company-01,course-01
+practicum-20,A116,Practicum,Práctica de iniciación,O,true,company-01,course-01
+practicum-21,A117,Practicum,Práctica de iniciación,Ob,true,company-01,course-01
+practicum-22,A118,Practicum,Práctica de iniciación,Nos encontramos delante de un texto de cien caracteres relacionado con los objetivos de la práctica.,true,company-01,course-01
+practicum-23,A119,Practicum,Práctica de iniciación,Esto es un texto de noventa y nueve caracteres asociado a los objetivos de la práctica profesional.,true,company-01,course-01
+practicum-24,A120,Practicum,Práctica de iniciación,練習目標,true,company-01,course-01
+practicum-25,A121,Practicum,Práctica de iniciación,στόχους εξάσκησης,true,company-01,course-01
+practicum-26,A122,Practicum,Práctica de iniciación,<script>alert("hi!")</script>,true,company-01,course-01
+practicum-27,A123,Practicum,Práctica de iniciación,<h1>Hola Mundo!</h1>,true,company-01,course-01
 practicum-28,A124,Practicum,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-01
 practicum-29,A125,Practicum,Práctica de iniciación,"Conocer, entender, aprender",true,company-02,course-01
-practicum-30,A126,Practicum,Práctica de iniciación,"Conocer, entender, aprender",false,company-01,course-02
+practicum-30,A126,Practicum,Práctica de iniciación,"Conocer, entender, aprender",true,company-01,course-02

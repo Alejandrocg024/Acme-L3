@@ -35,7 +35,7 @@ public class CompanyPracticumListService extends AbstractService<Company, Practi
 		Principal principal;
 
 		principal = super.getRequest().getPrincipal();
-		objects = this.repository.findPracticaByCompanyId(principal.getActiveRoleId());
+		objects = this.repository.findPracticaByCompanyId(principal.getAccountId());
 
 		super.getBuffer().setData(objects);
 	}
