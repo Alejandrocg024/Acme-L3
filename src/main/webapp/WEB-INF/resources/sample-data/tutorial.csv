@@ -13,7 +13,7 @@ tutorial-11,A938,<h1>Hola Mundo!</h1>,R,"Aprender ,concentrarse",true,course-02,
 tutorial-12,A943,Tutorial de prueba,Re,"Aprender ,concentrarse",true,course-01,assistant-02
 tutorial-13,A940,Tutorial de prueba,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,"Aprender ,concentrarse",true,course-02,assistant-01
 tutorial-14,A945,Tutorial de prueba,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,"Aprender ,concentrarse",true,course-01,assistant-02
-tutorial-15,A942,Tutorial de prueba,თხა,"Aprender ,concentrarse",false,course-02,assistant-01
+tutorial-15,A942,Tutorial de prueba,თხა,"Aprender ,concentrarse",true,course-02,assistant-01
 tutorial-16,A922,Tutorial de prueba,коза,"Aprender ,concentrarse",true,course-01,assistant-02
 tutorial-17,A944,Tutorial de prueba,"<script>alert(""hi!"")</script>","Aprender ,concentrarse",true,course-02,assistant-01
 tutorial-18,A749,Tutorial de prueba,<h1>Hola Mundo!</h1>,"Aprender ,concentrarse",true,course-01,assistant-02
