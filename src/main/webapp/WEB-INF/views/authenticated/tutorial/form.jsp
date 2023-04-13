@@ -20,6 +20,7 @@
 	<acme:input-textbox code="authenticated.tutorial.form.label.title" path="title"/>	
 	<acme:input-textbox code="authenticated.tutorial.form.label.abstract$" path="abstract$"/>	
 	<acme:input-textbox code="authenticated.tutorial.form.label.goal" path="goal" />
+	<acme:input-textbox code="authenticated.tutorial.form.label.assistant" path="assistant" />
 	<acme:input-textbox code="authenticated.tutorial.form.label.estimatedTotalTime" path="estimatedTotalTime" />
 		
 </acme:form>

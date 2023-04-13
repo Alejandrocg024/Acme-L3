@@ -17,3 +17,4 @@ authenticated.tutorial.form.label.estimatedTotalTime = Tiempo total estimado:
 
 authenticated.tutorial.list.label.code = Codigo
 authenticated.tutorial.list.label.title = Titulo
+authenticated.tutorial.form.label.assistant = Asistente
