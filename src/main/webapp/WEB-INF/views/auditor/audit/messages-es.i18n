@@ -22,6 +22,7 @@ auditor.audit.form.label.mark = Notas de los registros
 
 auditor.audit.form.error.spam = Las palabras introducidas son consideradas spam
 auditor.audit.form.error.code = El código ya existe
+auditor.audit.form.error.records = No puedes publicar una auditoría sin registros de auditoría
 auditor.audit.form.button.auditing-records = Registros de auditoría
 
 auditor.audit.create = Crear

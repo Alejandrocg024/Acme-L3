@@ -22,7 +22,9 @@ auditor.audit.form.label.mark = Auditing Records' marks
 
 auditor.audit.form.error.spam = The introduced text contains words that are considered spam
 auditor.audit.form.error.code = Code already exists
+auditor.audit.form.error.records = Can't publish an audit without auditing records
 auditor.audit.form.button.auditing-records = Auditing records
+
 
 auditor.audit.create = Create
 auditor.audit.form.button.delete = Delete
