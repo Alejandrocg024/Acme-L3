@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 
 import acme.entities.Course;
 import acme.entities.Enrolment;
+import acme.features.lecturer.course.LecturerCourseShowService;
 import acme.framework.controllers.AbstractController;
 import acme.roles.Lecturer;
 import acme.roles.Student;
@@ -17,10 +18,14 @@ public class StudentEnrolmentController extends AbstractController<Student, Enro
 
 	@Autowired
 	protected StudentEnrolmentListService	listAllService;
+	
+	@Autowired
+	protected StudentEnrolmentShowService		showService;
 
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listAllService);
+		super.addBasicCommand("show", this.showService);
 	}
 
 }

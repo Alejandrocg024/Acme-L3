@@ -97,3 +97,7 @@ master.menu.any= Any
 # master.menu.assistant ####################################################
 master.menu.assistant = Assistant
 master.menu.assistant.tutorial = My tutorials
+
+# master.menu.student ####################################################
+master.menu.student = Student
+master.menu.student.enrolment = My enrolments

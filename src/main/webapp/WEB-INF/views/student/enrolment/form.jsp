@@ -16,16 +16,13 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-textbox code="lecturer.course.form.label.code" path="code"/>	
-	<acme:input-textbox code="lecturer.course.form.label.title" path="title"/>	
-	<acme:input-textbox code="lecturer.course.form.label.abstract$" path="abstract$"/>	
-	<acme:input-money code="lecturer.course.form.label.price" path="price"/>	
-	<acme:input-textbox code="lecturer.course.form.label.furtherInformationLink" path="furtherInformationLink"/>
-	<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature" readonly="true"/>
-	<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>
+	<acme:input-textbox code="student.course.form.label.code" path="code"/>	
+	<acme:input-textbox code="student.course.form.label.motivation" path="motivation"/>	
+	<acme:input-textbox code="student.course.form.label.goals" path="goals"/>	
+	<acme:input-textbox code="student.course.form.label.course" path="course"/>	
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
-			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>			
+			<acme:button code="student.enrolment.activities" action="/student/activities/list?masterId=${id}"/>			
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
