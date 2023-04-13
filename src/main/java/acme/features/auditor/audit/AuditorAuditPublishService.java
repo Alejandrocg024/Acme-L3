@@ -60,8 +60,7 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 	@Override
 	public void validate(final Audit object) {
 		assert object != null;
-		if (!super.getBuffer().getErrors().hasErrors("weakPoints"))
-			super.state(this.repository.findAuditingRecordsByAudit(object) == null, "weakPoints", "auditor.audit.form.error.records");
+		super.state(this.repository.findAuditingRecordsByAudit(object) == null, "*", "auditor.audit.form.error.records");
 
 	}
 
