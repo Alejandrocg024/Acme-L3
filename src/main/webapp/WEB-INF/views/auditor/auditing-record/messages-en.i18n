@@ -1,0 +1,35 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.auditing-record.message.exception =  (*) This is an auditing record created after the audit was published.
+
+auditor.auditing-record.list.label.subject = Subject
+auditor.auditing-record.list.label.assessment = Assessment
+auditor.auditing-record.list.button.create = Create
+auditor.auditing-record.list.button.create-exceptional = Create exceptional record
+
+auditor.auditing-record.form.label.subject = Subject
+auditor.auditing-record.form.label.assessment = Assessment
+auditor.auditing-record.form.label.startPeriod = Start Period
+auditor.auditing-record.form.label.endPeriod = End Period
+auditor.auditing-record.form.label.mark = Mark
+auditor.auditing-record.form.label.furtherInformationLink = Further Information Link
+
+auditor.auditing-record.form.error.spam = The introduced text contains words that are considered spam
+auditor.auditing-record.form.error.post-date = End Date before Start Date
+auditor.auditing-record.form.error.not-enough-time = Period of time incorrect
+
+
+
+auditor.auditing-record.form.button.delete = Delete
+auditor.auditing-record.form.button.update = Update
+auditor.auditing-record.form.button.create = Create
+auditor.auditing-record.form.button.confirmation = Confirm exceptional record
+auditor.auditing-record.form.button.create-exceptional = Create exceptional record

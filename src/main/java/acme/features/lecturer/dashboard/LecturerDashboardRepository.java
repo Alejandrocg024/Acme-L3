@@ -15,19 +15,19 @@ import acme.roles.Lecturer;
 @Repository
 public interface LecturerDashboardRepository extends AbstractRepository {
 
-	@Query("select count(distinct l)  from Lecture l inner join CourseLecture cl on l = cl.lecture inner join Course c on cl.course = c where c.lecturer = :lecturer and l.nature = :nature")
+	@Query("select count(l)  from Lecture l where l.lecturer = :lecturer and l.nature = :nature")
 	Optional<Integer> findNumOfLecturesByType(Lecturer lecturer, Nature nature);
 
-	@Query("select avg(l.estimatedLearningTime) from Lecture l inner join CourseLecture cl on l = cl.lecture inner join Course c on cl.course = c where c.lecturer = :lecturer")
+	@Query("select avg(l.estimatedLearningTime) from Lecture l where l.lecturer = :lecturer")
 	Optional<Double> findAverageLectureLearningTime(Lecturer lecturer);
 
-	@Query("select max(l.estimatedLearningTime) from Lecture l inner join CourseLecture cl on l = cl.lecture inner join Course c on cl.course = c where c.lecturer = :lecturer")
+	@Query("select max(l.estimatedLearningTime) from Lecture l where l.lecturer = :lecturer")
 	Optional<Double> findMaxLectureLearningTime(Lecturer lecturer);
 
-	@Query("select min(l.estimatedLearningTime) from Lecture l inner join CourseLecture cl on l = cl.lecture inner join Course c on cl.course = c where c.lecturer = :lecturer")
+	@Query("select min(l.estimatedLearningTime) from Lecture l where l.lecturer = :lecturer")
 	Optional<Double> findMinLectureLearningTime(Lecturer lecturer);
 
-	@Query("select stddev(l.estimatedLearningTime) from Lecture l inner join CourseLecture cl on l = cl.lecture inner join Course c on cl.course = c where c.lecturer = :lecturer")
+	@Query("select stddev(l.estimatedLearningTime) from Lecture l where l.lecturer = :lecturer")
 	Optional<Double> findLinearDevLectureLearningTime(Lecturer lecturer);
 
 	@Query("select l from Lecturer l where l.userAccount.id = :id")

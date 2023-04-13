@@ -35,14 +35,12 @@ public class LecturerCourseLectureDeleteService extends AbstractService<Lecturer
 	@Override
 	public void authorise() {
 		Lecture object;
-		int lectureId;
-		lectureId = super.getRequest().getData("lectureId", int.class);
-		object = this.repository.findOneLectureById(lectureId);
-		final Collection<Course> courses = this.repository.findCourseByLecture(object);
-		final Course c = courses.stream().findFirst().orElse(null);
+		int id;
+		id = super.getRequest().getData("lectureId", int.class);
+		object = this.repository.findLectureById(id);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(c.getLecturer().getUserAccount().getId() == userAccountId);
+		super.getResponse().setAuthorised(object.getLecturer().getUserAccount().getId() == userAccountId);
 	}
 
 	@Override

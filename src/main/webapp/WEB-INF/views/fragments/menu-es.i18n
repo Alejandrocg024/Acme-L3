@@ -71,6 +71,8 @@ master.menu.authenticated.company.update = Datos de empresa
 master.menu.authenticated.company.create = Convertirme en empresa
 master.menu.authenticated.auditor.create = Convertirme en auditor
 master.menu.authenticated.auditor.update = Datos del auditor
+master.menu.authenticated.assistant.create = Convertirme en assistente
+master.menu.authenticated.assistant.update = Datos del assistente
 
 
 # master.menu.lecturer ####################################################
@@ -91,3 +93,11 @@ master.menu.auditor.audit = Mis auditorías
 # master.menu.any ####################################################
 master.menu.any.course = Cursos
 master.menu.any= Cualquiera
+
+# master.menu.assistant ####################################################
+master.menu.assistant.tutorial = Mis tutoriales
+master.menu.assistant= Asistente
+
+# master.menu.lecturer ####################################################
+master.menu.student = Estudiante
+master.menu.student.enrolment = Mis matriculas

@@ -32,3 +32,5 @@ administrator.offer.form.error.endPeriod = La fecha de fin debe ser como mínimo
 administrator.offer.form.spam = El texto introducido está considerado como Spam
 
 administrator.offer.create=Crear oferta
+
+administrator.offer.form.label.money = Precio en la divisa del sistema

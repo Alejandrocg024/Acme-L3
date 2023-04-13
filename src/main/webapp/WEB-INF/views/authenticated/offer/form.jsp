@@ -23,4 +23,5 @@
 	<acme:input-textbox code="authenticated.offer.form.label.endPeriod" path="endPeriod"/>
 	<acme:input-textbox code="authenticated.offer.form.label.price" path="price"/>
 	<acme:input-textbox code="authenticated.offer.form.label.furtherInformationLink" path="furtherInformationLink"/>
+	<acme:input-textbox code="authenticated.offer.form.label.money" path="money"/>
 </acme:form>

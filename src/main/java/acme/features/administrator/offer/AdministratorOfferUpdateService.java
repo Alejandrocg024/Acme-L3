@@ -92,6 +92,7 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 		tuple = super.unbind(object, "instantiationMoment", "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
 		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getStartPeriod());
 		tuple.put("readonly", readonly);
+		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}
 

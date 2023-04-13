@@ -36,7 +36,7 @@
 			<acme:button code="lecturer.lecture.list.button.deleteFromCourse" action="/lecturer/course-lecture/delete?lectureId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="lecturer.lecture.form.button.create" action="/lecturer/lecture/create?masterId=${masterId}"/>
+			<acme:submit code="lecturer.lecture.form.button.create" action="/lecturer/lecture/create"/>
 		</jstl:when>		
 	</jstl:choose>
 	

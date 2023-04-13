@@ -14,3 +14,5 @@ administrator.system-configuration.form.label.spamWords = Words considered spam:
 administrator.system-configuration.form.label.spamThreshold = Threshold of spam words:
 
 administrator.system-configuration.form.button.update = Update
+
+administrator.system-configuration.form.error.system-currency = The currency introduced is not accepted by the system
