@@ -23,7 +23,11 @@
 <acme:input-select code="assistant.tutorial.form.label.course" path="course" choices="${courses}"/>
 	<acme:input-textbox code="assistant.tutorial.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
 		
+		<jstl:if test="${_command == 'show' }">
+			<acme:button code="assistant.tutorial.form.button.tutorial-sessions" action="/assistant/tutorial-session/list?masterId=${id}"/>	
+		</jstl:if>
 	<jstl:choose>
+		
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:submit code="assistant.tutorial.form.button.update" action="/assistant/tutorial/update"/>
 			<acme:submit code="assistant.tutorial.form.button.delete" action="/assistant/tutorial/delete"/>
