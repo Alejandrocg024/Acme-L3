@@ -68,10 +68,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 	@Override
 	public void validate(final TutorialSession object) {
 		assert object != null;
-		boolean conditionOfCreate;
 
-		conditionOfCreate = object.getTutorial().isDraftMode() ? false : true;
-		super.state(!conditionOfCreate, "*", "assistant.tutorial.form.error.create");
 		if (!super.getBuffer().getErrors().hasErrors("title"))
 			super.state(this.auxiliarService.validateTextImput(object.getTitle()), "title", "assistant.tutorial-session.form.error.spam");
 
@@ -80,7 +77,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			Date minimumStartDate;
-			minimumStartDate = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
+			minimumStartDate = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
 			super.state(MomentHelper.isAfterOrEqual(object.getStartPeriod(), minimumStartDate), "startPeriod", "assistant.tutorial-session.form.error.start-period");
 		}
 
@@ -109,7 +106,6 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		Tuple tuple;
 		final SelectChoices choices;
 		tuple = super.unbind(object, "title", "abstract$", "startPeriod", "endPeriod", "furtherInformationLink");
-		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
 		tuple.put("draftMode", object.getTutorial().isDraftMode());
 		choices = SelectChoices.from(Nature.class, object.getNature());
 		tuple.put("nature", choices.getSelected().getKey());
