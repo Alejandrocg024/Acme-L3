@@ -80,7 +80,7 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			Date minimumStartDate;
-			minimumStartDate = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
+			minimumStartDate = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
 			super.state(MomentHelper.isAfterOrEqual(object.getStartPeriod(), minimumStartDate), "startPeriod", "assistant.tutorial-session.form.error.start-period");
 		}
 

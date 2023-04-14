@@ -20,7 +20,7 @@
 	<acme:input-textbox code="assistant.tutorial-session.form.label.abstract$" path="abstract$"/>
 	<acme:input-moment code="assistant.tutorial-session.form.label.start-period" path="startPeriod"/>
 	<acme:input-moment code="assistant.tutorial-session.form.label.end-period" path="endPeriod"/>
-	<acme:input-select code="assistant.tutorial-session.form.label.course" path="nature" choices="${natures}"/>
+	<acme:input-select code="assistant.tutorial-session.form.label.nature" path="nature" choices="${natures}"/>
 	<acme:input-url code="assistant.tutorial-session.form.label.further-information-link" path="furtherInformationLink"/>
 	
 	<jstl:choose>
