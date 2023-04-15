@@ -17,7 +17,7 @@ any.course.form.label.title = Título
 any.course.form.label.abstract$ = Resumen
 any.course.form.label.price = Precio
 any.course.form.label.furtherInformationLink = Información adicional
-any.course.form.label.lecturer = Profesor
+any.course.form.label.lecturer = Alma mater del profesor
 
 lecturer.course.form.label.money = Precio en la divisa del sistema
 

@@ -26,6 +26,8 @@ administrator.offer.form.button.update = Actualizar
 administrator.offer.form.button.delete = Borrar
 
 administrator.offer.form.error.price = El precio debe ser positivo y menor que 1000000
+
+administrator.offer.form.error.price2 = La moneda introducida no es aceptada por el sistema
 administrator.offer.form.error.startPeriod = La fecha de inicio debe ser mínimo un día posterior a la fecha de creación
 administrator.offer.form.error.endPeriod = La fecha de fin debe ser como mínimo una semana despues de la fecha de inicio
 

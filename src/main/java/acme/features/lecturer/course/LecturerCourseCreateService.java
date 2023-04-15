@@ -54,11 +54,18 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	public void validate(final Course object) {
 		assert object != null;
 		if (!super.getBuffer().getErrors().hasErrors("price"))
-			super.state(this.auxiliarService.validatePrice(object.getPrice(), 0, 1000000), "price", "administrator.offer.form.error.price");
+			super.state(this.auxiliarService.validatePrice(object.getPrice(), 0, 1000000), "price", "lecturer.course.form.error.price");
 		if (!super.getBuffer().getErrors().hasErrors("title"))
 			super.state(this.auxiliarService.validateTextImput(object.getTitle()), "title", "lecturer.course.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("abstract$"))
 			super.state(this.auxiliarService.validateTextImput(object.getAbstract$()), "abstract$", "lecturer.course.form.error.spam");
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Course existing;
+			existing = this.repository.findCourseByCode(object.getCode());
+			super.state(existing == null, "code", "lecturer.course.form.error.code");
+		}
+		if (!super.getBuffer().getErrors().hasErrors("price"))
+			super.state(this.auxiliarService.validateCurrency(object.getPrice()), "price", "lecturer.course.form.error.price2");
 	}
 
 	@Override

@@ -67,6 +67,7 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 		final List<Lecture> lectures = this.repository.findLecturesByCourse(object.getId()).stream().collect(Collectors.toList());
 		final Nature nature = object.natureOfCourse(lectures);
 		tuple.put("nature", nature);
+		tuple.put("hasLectures", lectures.isEmpty());
 		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}

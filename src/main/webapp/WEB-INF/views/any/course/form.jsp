@@ -19,8 +19,8 @@
 	<acme:input-textbox code="any.course.form.label.code" path="code"/>	
 	<acme:input-textbox code="any.course.form.label.title" path="title"/>	
 	<acme:input-textbox code="any.course.form.label.abstract$" path="abstract$"/>	
-	<acme:input-textbox code="any.course.form.label.price" path="price"/>	
-	<acme:input-textbox code="any.course.form.label.furtherInformationLink" path="furtherInformationLink"/>	
+	<acme:input-money code="any.course.form.label.price" path="price"/>	
+	<acme:input-url code="any.course.form.label.furtherInformationLink" path="furtherInformationLink"/>	
 	<acme:input-textbox code="any.course.form.label.lecturer" path="almaMater"/>	
 	<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature"/>
 	<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>
