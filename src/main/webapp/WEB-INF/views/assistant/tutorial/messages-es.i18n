@@ -32,3 +32,4 @@ assistant.tutorial.form.button.tutorial-sessions = Sessiones del Tutorial
 assistant.tutorial.form.error.estimatedTotalTime = No puedes publicar un tutorial sin sesiones
 assistant.tutorial.form.error.code = El codig debe ser unico para cada tutorial
 assistant.tutorial-session.form.error.end-period.max = El periodo debe durar como maximo 5 horas
+assistant.tutorial.form.error.courseunique = El curso debe ser unico para cada tutorial

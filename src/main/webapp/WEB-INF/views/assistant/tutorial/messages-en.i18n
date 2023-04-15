@@ -29,3 +29,4 @@ assistant.tutorial.form.error.spam = The introduced text is considered Spam
 assistant.tutorial.form.error.estimatedTotalTime = Cannot publish a tutorial without sessions
 assistant.tutorial.form.error.code = Code must be unique for each tutorial
 assistant.tutorial-session.form.error.end-period.max = The the period must last maximum 5 hours
+assistant.tutorial.form.error.courseunique = The course must be unique for each tutorial
