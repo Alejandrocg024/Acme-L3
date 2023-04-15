@@ -21,8 +21,9 @@
 	<acme:input-textbox code="assistant.tutorial.form.label.abstract$" path="abstract$"/>	
 	<acme:input-textbox code="assistant.tutorial.form.label.goal" path="goal" />	
 <acme:input-select code="assistant.tutorial.form.label.course" path="course" choices="${courses}"/>
+	<jstl:if test="${acme:anyOf(_command, 'show|update|publish')}">
 	<acme:input-textbox code="assistant.tutorial.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
-
+	</jstl:if>
 	<jstl:choose>
 	<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == false}">
 			<acme:button code="assistant.tutorial.form.button.tutorial-sessions" action="/assistant/tutorial-session/list?masterId=${id}"/>	
