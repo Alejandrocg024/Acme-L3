@@ -18,7 +18,7 @@ lecturer.lecture.form.label.estimatedLearningTime = Tiempo de aprendizaje estima
 lecturer.lecture.form.label.body = Cuerpo:
 lecturer.lecture.form.label.nature = Naturaleza:
 lecturer.lecture.form.label.furtherInformationLink = Información adicional:
-lecturer.lecture.form.label.draftMode = Modo borrador:
+lecturer.lecture.form.label.draftMode = Modo borrador
 
 lecturer.lecture.list.button.create = Crear lección
 

@@ -21,12 +21,13 @@
 	<acme:input-double code="lecturer.lecture.form.label.estimatedLearningTime" path="estimatedLearningTime"/>	
 	<acme:input-textbox code="lecturer.lecture.form.label.body" path="body"/>	
 	<acme:input-select code="lecturer.lecture.form.label.nature" path="nature" choices="${natures}"/>	
-	<acme:input-textbox code="lecturer.lecture.form.label.furtherInformationLink" path="furtherInformationLink"/>
-	<acme:input-textbox code="lecturer.lecture.form.label.draftMode" path="draftMode" readonly="true"/>
+	<acme:input-url code="lecturer.lecture.form.label.furtherInformationLink" path="furtherInformationLink"/>
+	<acme:input-checkbox code="lecturer.lecture.form.label.draftMode" path="draftMode" readonly="true"/>
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == false}">	 
 			<acme:button code="lecturer.lecture.list.button.add" action="/lecturer/course-lecture/create?lectureId=${id}"/>
+			<acme:button code="lecturer.lecture.list.button.deleteFromCourse" action="/lecturer/course-lecture/delete?lectureId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:submit code="lecturer.lecture.form.button.update" action="/lecturer/lecture/update"/>
@@ -36,7 +37,7 @@
 			<acme:button code="lecturer.lecture.list.button.deleteFromCourse" action="/lecturer/course-lecture/delete?lectureId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="lecturer.lecture.form.button.create" action="/lecturer/lecture/create?masterId=${masterId}"/>
+			<acme:submit code="lecturer.lecture.form.button.create" action="/lecturer/lecture/create"/>
 		</jstl:when>		
 	</jstl:choose>
 	

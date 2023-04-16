@@ -16,6 +16,7 @@ lecturer.course.form.label.code = Código
 lecturer.course.form.label.title = Título
 lecturer.course.form.label.abstract$ = Resumen
 lecturer.course.form.label.price = Precio
+lecturer.course.form.label.money = Precio en la divisa del sistema
 lecturer.course.form.label.furtherInformationLink = Información adicional
 lecturer.course.form.label.lecturer = Profesor
 lecturer.course.form.label.drafMode = Modo borrador
@@ -26,6 +27,11 @@ lecturer.course.form.error.spam = El texto introducido está considerado como Sp
 lecturer.course.form.error.nolecture = El curso que quieres publicar no tiene lecciones
 lecturer.course.form.error.nohandson = El curso que quieres publicar no tiene lecciones prácticas
 lecturer.course.form.error.lecturenp = Este curso contiene lecciones no publicadas
+lecturer.course.form.error.code = Ya existe un curso con este código
+
+lecturer.course.form.error.price = El positivo tiene que ser positivo y menor que 1000000
+
+lecturer.course.form.error.price2 = La moneda introducida no es soportada por el sistema
 
 lecturer.course.lectures = Lecciones
 

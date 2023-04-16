@@ -1,32 +1,30 @@
 key,code,conclusion,strong_points,weak_points,draft_mode,key:course,key:auditor
 audit-01,AAA999,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-01
 audit-02,AA999,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-01
-audit-03,A999,Auditoría finalizada,"Completa, clara, sencilla","General,poca información",false,course-01,auditor-01
-audit-04,A900,A,"Completa, clara, sencilla","General,poca información",false,course-01,auditor-01
-audit-05,A901,Au,"Completa, clara, sencilla","General,poca información",false,course-01,auditor-01
-audit-06,A902,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima.,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-01
-audit-07,A903,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-01
-audit-08,A904,თხა,"Completa, clara, sencilla","General,poca información",false,course-01,auditor-01
-audit-09,A905,коза,"Completa, clara, sencilla","General,poca información",false,course-01,auditor-01
-audit-10,A906,<script>alert("hi!")</script>,"Completa, clara, sencilla","General,poca información",false,course-01,auditor-01
-audit-11,A907,<h1>Hola Mundo!</h1>,"Completa, clara, sencilla","General,poca información",false,course-01,auditor-01
-audit-12,A908,Auditoría finalizada,A,Demasiado general poca información,false,course-01,auditor-01
-audit-13,A909,Auditoría finalizada,Au,Demasiado general poca información,false,course-01,auditor-01
-audit-14,A910,Auditoría finalizada,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima.,Demasiado general poca información,false,course-01,auditor-01
-audit-15,A911,Auditoría finalizada,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima,Demasiado general poca información,false,course-01,auditor-01
-audit-16,A912,Auditoría finalizada,თხა,Demasiado general poca información,false,course-01,auditor-01
-audit-17,A913,Auditoría finalizada,коза,Demasiado general poca información,false,course-01,auditor-01
-audit-18,A914,Auditoría finalizada,<script>alert("hi!")</script>,Demasiado general poca información,false,course-01,auditor-01
-audit-19,A915,Auditoría finalizada,<h1>Hola Mundo!</h1>,Demasiado general poca información,false,course-01,auditor-01
-audit-20,A916,Auditoría finalizada,"Completa, clara, sencilla",A,false,course-01,auditor-01
-audit-21,A917,Auditoría finalizada,"Completa, clara, sencilla",Au,false,course-01,auditor-01
-audit-22,A918,Auditoría finalizada,"Completa, clara, sencilla",Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima.,false,course-01,auditor-01
-audit-23,A919,Auditoría finalizada,"Completa, clara, sencilla",Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima,false,course-01,auditor-01
-audit-24,A920,Auditoría finalizada,"Completa, clara, sencilla",თხა,false,course-01,auditor-01
-audit-25,A921,Auditoría finalizada,"Completa, clara, sencilla",коза,false,course-01,auditor-01
-audit-26,A922,Auditoría finalizada,"Completa, clara, sencilla",<script>alert("hi!")</script>,false,course-01,auditor-01
-audit-27,A923,Auditoría finalizada,"Completa, clara, sencilla",<h1>Hola Mundo!</h1>,false,course-01,auditor-01
-audit-28,A924,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-01
-audit-29,A925,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-01
-audit-30,A926,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-02,auditor-01
-audit-31,A927,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-02
+audit-03,A999,Auditoría finalizada,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
+audit-04,A900,A,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
+audit-05,A901,Au,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
+audit-06,A902,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima.,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-01
+audit-07,A903,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-01
+audit-08,A904,თხა,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
+audit-09,A905,коза,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
+audit-10,A906,<script>alert("hi!")</script>,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
+audit-11,A907,<h1>Hola Mundo!</h1>,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
+audit-12,A908,Auditoría finalizada,A,Demasiado general poca información,true,course-01,auditor-01
+audit-13,A909,Auditoría finalizada,Au,Demasiado general poca información,true,course-01,auditor-01
+audit-14,A910,Auditoría finalizada,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima.,Demasiado general poca información,true,course-01,auditor-01
+audit-15,A911,Auditoría finalizada,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima,Demasiado general poca información,true,course-01,auditor-01
+audit-16,A912,Auditoría finalizada,თხა,Demasiado general poca información,true,course-01,auditor-01
+audit-17,A913,Auditoría finalizada,коза,Demasiado general poca información,true,course-01,auditor-01
+audit-18,A914,Auditoría finalizada,<script>alert("hi!")</script>,Demasiado general poca información,true,course-01,auditor-01
+audit-19,A915,Auditoría finalizada,<h1>Hola Mundo!</h1>,Demasiado general poca información,true,course-01,auditor-01
+audit-20,A916,Auditoría finalizada,"Completa, clara, sencilla",A,true,course-01,auditor-01
+audit-21,A917,Auditoría finalizada,"Completa, clara, sencilla",Au,true,course-01,auditor-01
+audit-22,A918,Auditoría finalizada,"Completa, clara, sencilla",Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima.,true,course-01,auditor-01
+audit-23,A919,Auditoría finalizada,"Completa, clara, sencilla",Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima,true,course-01,auditor-01
+audit-24,A920,Auditoría finalizada,"Completa, clara, sencilla",თხა,true,course-01,auditor-01
+audit-25,A921,Auditoría finalizada,"Completa, clara, sencilla",коза,true,course-01,auditor-01
+audit-26,A922,Auditoría finalizada,"Completa, clara, sencilla",<script>alert("hi!")</script>,true,course-01,auditor-01
+audit-27,A923,Auditoría finalizada,"Completa, clara, sencilla",<h1>Hola Mundo!</h1>,true,course-01,auditor-01
+audit-28,A924,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-01
+audit-29,A925,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-02

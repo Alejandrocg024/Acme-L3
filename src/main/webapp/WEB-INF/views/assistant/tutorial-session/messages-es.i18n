@@ -1,0 +1,35 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+assistant.tutorial-session.list.label.title = Título
+assistant.tutorial-session.list.label.start-period = Fecha de inicio
+assistant.tutorial-session.list.label.abstract = Resumen
+
+assistant.tutorial-session.list.button.create = Crear
+assistant.tutorial-session.list.button.create-exceptional = Crear sesión excepcional
+
+assistant.tutorial-session.form.label.title = Título:
+assistant.tutorial-session.form.label.abstract$ = Resumen:
+assistant.tutorial-session.form.label.start-period = Fecha de inicio:
+assistant.tutorial-session.form.label.end-period = Fecha de fin:
+assistant.tutorial-session.form.label.nature = Naturaleza:
+
+
+assistant.tutorial-session.form.label.further-information-link = Más información: (Opcional)
+
+assistant.tutorial-session.form.button.create = Crear
+assistant.tutorial-session.form.button.update = Actualizar
+assistant.tutorial-session.form.button.delete = Eliminar
+
+assistant.tutorial-session.form.error.spam = Las palabras introducidas son consideradas spam
+assistant.tutorial-session.form.error.start-period = La fecha de inicio debe estar al menos un dia por delante del momento actual
+assistant.tutorial-session.form.error.end-period = La fecha de fin debe estar al menos una hora por delante de la fecha de inicio
+assistant.tutorial.form.error.end-period.max = La fecha de fin debe estar como maximo 5 horas por delante de la fecha de inicio

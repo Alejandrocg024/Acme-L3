@@ -10,8 +10,8 @@
 
 
 lecturer.courseLecture.form.label.lecture = Lección
-lecturer.courseLecture.form.button.delete = Borrar
-lecturer.courseLecture.form.button.create = Crear
+lecturer.courseLecture.form.button.delete = Quitar
+lecturer.courseLecture.form.button.create = Añadir
 
 lecturer.courseLecture.form.error.lecture = La lección seleccionada ya estaba en el curso
 
