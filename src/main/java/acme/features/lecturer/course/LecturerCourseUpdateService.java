@@ -76,7 +76,8 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Course existing;
 			existing = this.repository.findCourseByCode(object.getCode());
-			super.state(existing == null, "code", "lecturer.course.form.error.code");
+			final Course course2 = this.repository.findCourseById(object.getId());
+			super.state(existing == null || course2.equals(existing), "code", "lecturer.course.form.error.code");
 		}
 		if (!super.getBuffer().getErrors().hasErrors("price"))
 			super.state(this.auxiliarService.validateCurrency(object.getPrice()), "price", "lecturer.course.form.error.price2");

@@ -23,11 +23,20 @@
 	<acme:input-url code="lecturer.course.form.label.furtherInformationLink" path="furtherInformationLink"/>
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
-			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>			
+			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
+			<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>	
+			<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature" readonly="true"/>			
 		</jstl:when>
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
-				<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>	
-				<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature" readonly="true"/>
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true && hasLectures}">
+			<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>	
+			<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature" readonly="true"/>
+			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
+			<acme:submit code="lecturer.course.form.button.update" action="/lecturer/course/update"/>
+			<acme:submit code="lecturer.course.form.button.delete" action="/lecturer/course/delete"/>
+			<acme:submit code="lecturer.course.form.button.publish" action="/lecturer/course/publish"/>
+		</jstl:when>
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true }">
+			<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>
 			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
 			<acme:submit code="lecturer.course.form.button.update" action="/lecturer/course/update"/>
 			<acme:submit code="lecturer.course.form.button.delete" action="/lecturer/course/delete"/>
