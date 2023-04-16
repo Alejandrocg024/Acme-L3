@@ -26,9 +26,13 @@ public class AuxiliarService {
 
 
 	public boolean validatePrice(final Money price, final Integer minAm, final Integer maxAm) {
+		return price.getAmount() >= minAm && price.getAmount() < maxAm;
+	}
+
+	public boolean validateCurrency(final Money price) {
 		final String aceptedCurrencies = this.repository.findSystemConfiguration().getAceptedCurrencies();
 		final List<String> currencies = Arrays.asList(aceptedCurrencies.split(","));
-		return price.getAmount() >= minAm && price.getAmount() < maxAm && currencies.contains(price.getCurrency());
+		return currencies.contains(price.getCurrency());
 	}
 
 	public boolean validateTextImput(final String input) {

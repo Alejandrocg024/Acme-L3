@@ -4,32 +4,32 @@ course-02,AA999,Course,Curso de Lengua,EUR 15.0,null,false,lecturer-01
 course-03,A999,Course,Curso de Lengua,EUR 15.0,null,false,lecturer-01
 course-04,AAA991,C,Curso de Lengua,EUR 15.0,null,false,lecturer-01
 course-05,AAA992,Co,Curso de Lengua,EUR 15.0,null,false,lecturer-01
-course-06,AAA993,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,Curso de Lengua,EUR 15.0,null,false,lecturer-01
-course-07,AAA994,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,Curso de Lengua,EUR 15.0,null,false,lecturer-01
-course-08,AAA995,თხა,Curso de Lengua,EUR 15.0,null,false,lecturer-01
-course-09,AAA996,коза,Curso de Lengua,EUR 15.0,null,false,lecturer-01
-course-23,ZAA999,<script>alert("hi!")</script>,Curso de Lengua,EUR 15.0,null,false,lecturer-01
-course-24,ZAA909,<h1>Hola Mundo!</h1>,Curso de Lengua,EUR 15.0,null,false,lecturer-01
-course-10,AAA997,Course,C,EUR 15.0,null,false,lecturer-01
-course-11,AAA998,Course,Cu,EUR 15.0,null,false,lecturer-01
-course-12,AAA990,Course,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,EUR 15.0,null,false,lecturer-01
-course-13,AAA919,Course,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,EUR 15.0,null,false,lecturer-01
-course-14,AAA929,Course,თხა,EUR 15.0,null,false,lecturer-01
-course-15,AAA939,Course,коза,EUR 15.0,null,false,lecturer-01
-course-26,AAA729,Course,<script>alert("hi!")</script>,EUR 15.0,null,false,lecturer-01
-course-25,AZA999,Course,<h1>Hola Mundo!</h1>,EUR 15.0,null,false,lecturer-01
-course-16,AAA949,Course,Curso de Lengua,USD 15.0,null,false,lecturer-01
-course-17,AAA959,Course,Curso de Lengua,GBP 15.0,null,false,lecturer-01
-course-31,AAR999,Course,Curso de Lengua,EUR 0.01,null,false,lecturer-01
-course-28,AAI999,Course,Curso de Lengua,EUR 00.02,null,false,lecturer-01
-course-29,AYA929,Course,Curso de Lengua,EUR 1000000.0,null,false,lecturer-01
-course-30,AAU999,Course,Curso de Lengua,EUR 999999.99,null,false,lecturer-01
-course-18,AAA969,Course,Curso de Lengua,"EUR 150,000.0",null,false,lecturer-01
-course-20,AA979,Course,Curso de Lengua,EUR 15.0,https://github.com/Alejandrocg024/Acme-L3-D02,false,lecturer-01
-course-27,AAE799,Course,Curso de Lengua,EUR 15.0,ftp://user:pass@acme.org,false,lecturer-01
+course-06,AAA993,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,Curso de Lengua,EUR 15.0,null,true,lecturer-01
+course-07,AAA994,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,Curso de Lengua,EUR 15.0,null,true,lecturer-01
+course-08,AAA995,თხა,Curso de Lengua,EUR 15.0,null,true,lecturer-01
+course-09,AAA996,коза,Curso de Lengua,EUR 15.0,null,true,lecturer-01
+course-23,ZAA999,"<script>alert(""hi!"")</script>",Curso de Lengua,EUR 15.0,null,true,lecturer-01
+course-24,ZAA909,<h1>Hola Mundo!</h1>,Curso de Lengua,EUR 15.0,null,true,lecturer-01
+course-10,AAA997,Course,C,EUR 15.0,null,true,lecturer-01
+course-11,AAA998,Course,Cu,EUR 15.0,null,true,lecturer-01
+course-12,AAA990,Course,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,EUR 15.0,null,true,lecturer-01
+course-13,AAA919,Course,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,EUR 15.0,null,true,lecturer-01
+course-14,AAA929,Course,თხა,EUR 15.0,null,true,lecturer-01
+course-15,AAA939,Course,коза,EUR 15.0,null,true,lecturer-01
+course-26,AAA729,Course,"<script>alert(""hi!"")</script>",EUR 15.0,null,true,lecturer-01
+course-25,AZA999,Course,<h1>Hola Mundo!</h1>,EUR 15.0,null,true,lecturer-01
+course-16,AAA949,Course,Curso de Lengua,USD 15.0,null,true,lecturer-01
+course-17,AAA959,Course,Curso de Lengua,GBP 15.0,null,true,lecturer-01
+course-31,AAR999,Course,Curso de Lengua,EUR 0.01,null,true,lecturer-01
+course-28,AAI999,Course,Curso de Lengua,EUR 00.02,null,true,lecturer-01
+course-29,AYA929,Course,Curso de Lengua,EUR 1000000.0,null,true,lecturer-01
+course-30,AAU999,Course,Curso de Lengua,EUR 999999.99,null,true,lecturer-01
+course-18,AAA969,Course,Curso de Lengua,"EUR 150,000.0",null,true,lecturer-01
+course-20,AA979,Course,Curso de Lengua,EUR 15.0,https://github.com/Alejandrocg024/Acme-L3-D02,true,lecturer-01
+course-27,AAE799,Course,Curso de Lengua,EUR 15.0,ftp://user:pass@acme.org,true,lecturer-01
 course-21,AAA989,CourseNPNV,Curso de Lengua,EUR 15.0,null,true,lecturer-01
-course-22,AAA721,Course,Curso de Lengua,EUR 15.0,null,false,lecturer-01
+course-22,AAA721,Course,Curso de Lengua,EUR 15.0,null,true,lecturer-01
 course-35,AIA721,CourseNPB,Curso de Lengua,EUR 15.0,null,true,lecturer-01
 course-32,AIA829,CourseNPT,Curso de Lengua,EUR 15.0,null,true,lecturer-01
-course-33,YIY721,CourseNPH,Curso de Lengua,EUR 15.0,null,false,lecturer-01
-course-34,YIY781,CourseNPLNP,Curso de Lengua,EUR 15.0,null,false,lecturer-01
+course-33,YIY721,CourseNPH,Curso de Lengua,EUR 15.0,null,true,lecturer-01
+course-34,YIY781,CourseNPLNP,Curso de Lengua,EUR 15.0,null,true,lecturer-01

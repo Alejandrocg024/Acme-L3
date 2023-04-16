@@ -49,10 +49,8 @@ public class AnyCourseShowService extends AbstractService<Any, Course> {
 	public void load() {
 		Course object;
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findCourseById(id);
-
 		super.getBuffer().setData(object);
 	}
 

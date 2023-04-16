@@ -20,14 +20,14 @@
 	<acme:input-textbox code="lecturer.course.form.label.title" path="title"/>	
 	<acme:input-textbox code="lecturer.course.form.label.abstract$" path="abstract$"/>	
 	<acme:input-money code="lecturer.course.form.label.price" path="price"/>	
-	<acme:input-textbox code="lecturer.course.form.label.furtherInformationLink" path="furtherInformationLink"/>
-	<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature" readonly="true"/>
-	<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>
+	<acme:input-url code="lecturer.course.form.label.furtherInformationLink" path="furtherInformationLink"/>
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
 			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>			
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+				<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>	
+				<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature" readonly="true"/>
 			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
 			<acme:submit code="lecturer.course.form.button.update" action="/lecturer/course/update"/>
 			<acme:submit code="lecturer.course.form.button.delete" action="/lecturer/course/delete"/>

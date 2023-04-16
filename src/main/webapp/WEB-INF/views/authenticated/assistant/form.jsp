@@ -19,7 +19,7 @@
 	<acme:input-textbox code="authenticated.assistant.form.label.supervisor" path="supervisor"/>
 	<acme:input-textbox code="authenticated.assistant.form.label.expertiseFields" path="expertiseFields"/>
 	<acme:input-textbox code="authenticated.assistant.form.label.resume" path="resume"/>
-	<acme:input-textbox code="authenticated.assistant.form.label.furtherInformationLink" path="furtherInformationLink"/>
+	<acme:input-url code="authenticated.assistant.form.label.furtherInformationLink" path="furtherInformationLink"/>
 
 	<acme:submit test="${_command == 'create'}" code="authenticated.lecturer.form.button.create" action="/authenticated/assistant/create"/>
 	<jstl:if test="${_command == 'update'}">
