@@ -196,12 +196,31 @@
 					}
 				]
 			};
+			
+			
+			var options = {
+					scales : {
+						yAxes : [
+							{
+								ticks : {
+									suggestedMin : 0.0,
+									suggestedMax : 100.0
+								}
+							}
+						]
+					},
+					legend : {
+						display : false
+					}
+				};
+			
 			var canvas, context;
 			canvas = document.getElementById("canvas2");
 			context = canvas.getContext("2d");
 			new Chart(context, {
 				type : "bar",
 				data : data,
+				options : options
 			});
 		});
 	</script>
