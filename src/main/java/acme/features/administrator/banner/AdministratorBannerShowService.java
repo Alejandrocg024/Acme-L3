@@ -52,7 +52,7 @@ public class AdministratorBannerShowService extends AbstractService<Administrato
 
 		tuple = super.unbind(object, "instantiationMoment", "slogan", "displayPeriodBegin", "displayPeriodFinish", "pictureLink", "pictureLink", "webLink");
 		tuple.put("confirmation", false);
-		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getDisplayPeriodBegin());
+		final boolean readonly = MomentHelper.isAfterOrEqual(MomentHelper.getCurrentMoment(), object.getDisplayPeriodBegin()) && MomentHelper.isBeforeOrEqual(MomentHelper.getCurrentMoment(), object.getDisplayPeriodFinish());
 		tuple.put("readonly", readonly);
 		super.getResponse().setData(tuple);
 	}
