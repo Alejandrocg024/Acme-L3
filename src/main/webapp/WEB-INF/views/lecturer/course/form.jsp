@@ -23,9 +23,10 @@
 	<acme:input-url code="lecturer.course.form.label.furtherInformationLink" path="furtherInformationLink"/>
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
-			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
 			<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>	
-			<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature" readonly="true"/>			
+			<acme:input-textbox code="lecturer.course.form.label.courseType" path="nature" readonly="true"/>	
+			<acme:button code="lecturer.course.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
+					
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true && hasLectures}">
 			<acme:input-money code="lecturer.course.form.label.money" path="money" readonly="true"/>	
