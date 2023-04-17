@@ -90,8 +90,6 @@ public class AssistantTutorialUpdateService extends AbstractService<Assistant, T
 
 		if (!super.getBuffer().getErrors().hasErrors("goal"))
 			super.state(this.auxiliarService.validateTextImput(object.getGoal()), "goal", "assistant.tutorial.form.error.spam");
-		if (!super.getBuffer().getErrors().hasErrors("course"))
-			super.state(this.repository.findTutorialsByCourseCode(object.getCourse().getCode()).isEmpty(), "course", "assistant.tutorial.form.error.courseunique");
 
 	}
 
