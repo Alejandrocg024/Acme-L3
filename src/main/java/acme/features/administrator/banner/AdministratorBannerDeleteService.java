@@ -64,6 +64,7 @@ public class AdministratorBannerDeleteService extends AbstractService<Administra
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "instantiationMoment", "displayPeriodBegin", "displayPeriodFinish", "pictureLink", "slogan", "webLink");
+
 		final Banner banner = this.repository.findBannerById(object.getId());
 		final boolean readonly = !(MomentHelper.getCurrentMoment().before(banner.getDisplayPeriodBegin()) && MomentHelper.getCurrentMoment().before(banner.getDisplayPeriodFinish()) || MomentHelper.getCurrentMoment().after(banner.getDisplayPeriodFinish()));
 		tuple.put("readonly", readonly);
