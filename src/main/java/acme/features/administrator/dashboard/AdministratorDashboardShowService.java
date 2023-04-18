@@ -99,6 +99,8 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 			final int semana = calendar.get(Calendar.WEEK_OF_YEAR);
 			notasPorSemana.put(semana, notasPorSemana.getOrDefault(semana, 0.0) + 1);
 		}
+		dashboard.calcNotesInLast10WeeksStats(notasPorSemana);
+
 		super.getBuffer().setData(dashboard);
 	}
 
