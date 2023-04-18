@@ -57,7 +57,7 @@ public class AuthenticatedAuditorUpdateService extends AbstractService<Authentic
 	public void validate(final Auditor object) {
 		assert object != null;
 		if (!super.getBuffer().getErrors().hasErrors("professionalId"))
-			super.state(this.repository.findAuditorByProfId(object.getProfessionalId()) == null || this.repository.findAuditorByProfId(object.getProfessionalId()) == object, "professionalId", "authenticated.auditor.form.error.professionalId");
+			super.state(this.repository.findAuditorByProfId(object.getProfessionalId()) == null || this.repository.findAuditorByProfId(object.getProfessionalId()).equals(object), "professionalId", "authenticated.auditor.form.error.professionalId");
 	}
 
 	@Override
