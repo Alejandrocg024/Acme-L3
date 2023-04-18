@@ -16,7 +16,9 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-moment code="administrator.banner.form.label.instantiationMoment" path="instantiationMoment" readonly="true"/>	
+	<jstl:if test="${acme:anyOf(_command, 'show|update|delete')}">
+		<acme:input-moment code="administrator.banner.form.label.instantiationMoment" path="instantiationMoment" readonly="true"/>	
+	</jstl:if>
 	<acme:input-textbox code="administrator.banner.form.label.slogan" path="slogan" />
 	<acme:input-moment code="administrator.banner.form.label.displayPeriodBegin" path="displayPeriodBegin" />
 	<acme:input-moment code="administrator.banner.form.label.displayPeriodFinish" path="displayPeriodFinish" />

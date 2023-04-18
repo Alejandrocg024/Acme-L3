@@ -4,7 +4,6 @@ package acme.features.any.peep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.AuxiliarService;
 import acme.entities.Peep;
 import acme.framework.components.accounts.Any;
 import acme.framework.components.models.Tuple;
@@ -14,10 +13,7 @@ import acme.framework.services.AbstractService;
 public class AnyPeepShowService extends AbstractService<Any, Peep> {
 
 	@Autowired
-	protected AnyPeepRepository	repository;
-
-	@Autowired
-	protected AuxiliarService	auxiliarService;
+	protected AnyPeepRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 

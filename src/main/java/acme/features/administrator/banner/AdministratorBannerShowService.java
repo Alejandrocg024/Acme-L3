@@ -52,8 +52,11 @@ public class AdministratorBannerShowService extends AbstractService<Administrato
 
 		tuple = super.unbind(object, "instantiationMoment", "slogan", "displayPeriodBegin", "displayPeriodFinish", "pictureLink", "pictureLink", "webLink");
 		tuple.put("confirmation", false);
-		final boolean readonly = MomentHelper.isAfterOrEqual(MomentHelper.getCurrentMoment(), object.getDisplayPeriodBegin()) && MomentHelper.isBeforeOrEqual(MomentHelper.getCurrentMoment(), object.getDisplayPeriodFinish());
+		final Banner banner = this.repository.findBannerById(object.getId());
+		final boolean readonly = !(MomentHelper.getCurrentMoment().before(banner.getDisplayPeriodBegin()) && MomentHelper.getCurrentMoment().before(banner.getDisplayPeriodFinish()) || MomentHelper.getCurrentMoment().after(banner.getDisplayPeriodFinish()));
 		tuple.put("readonly", readonly);
+		final boolean boton = !readonly;
+		tuple.put("boton", !boton);
 		super.getResponse().setData(tuple);
 	}
 }

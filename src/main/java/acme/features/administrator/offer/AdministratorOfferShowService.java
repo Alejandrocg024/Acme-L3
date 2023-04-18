@@ -49,8 +49,10 @@ public class AdministratorOfferShowService extends AbstractService<Administrator
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "instantiationMoment", "heading", "summary", "startPeriod", "endPeriod", "price", "furtherInformationLink");
-		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getStartPeriod());
+		final boolean readonly = !(MomentHelper.getCurrentMoment().before(object.getStartPeriod()) && MomentHelper.getCurrentMoment().before(object.getEndPeriod()) || MomentHelper.getCurrentMoment().after(object.getEndPeriod()));
 		tuple.put("readonly", readonly);
+		final boolean boton = !readonly;
+		tuple.put("boton", !boton);
 		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}
