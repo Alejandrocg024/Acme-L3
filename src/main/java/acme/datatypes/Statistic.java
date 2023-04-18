@@ -54,4 +54,9 @@ public class Statistic {
 
 	}
 
+	@Override
+	public String toString() {
+		return "Statistic [count=" + this.count + ", average=" + this.average + ", max=" + this.max + ", min=" + this.min + ", linDev=" + this.linDev + "]";
+	}
+
 }
