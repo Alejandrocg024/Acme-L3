@@ -16,9 +16,9 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="administrator.banner.list.label.displayPeriodBegin" path="displayPeriodBegin"  width="40%"/>
-	<acme:list-column code="administrator.banner.list.label.slogan" path="slogan" width="40%" />
-	<acme:list-column code="administrator.banner.list.label.webLink" path="webLink" width="20%" />
+	<acme:list-column code="administrator.banner.list.label.displayPeriodBegin" path="displayPeriodBegin" />
+	<acme:list-column code="administrator.banner.list.label.slogan" path="slogan" />
+
 
 
 </acme:list>

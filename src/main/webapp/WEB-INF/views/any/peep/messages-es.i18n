@@ -14,11 +14,13 @@ any.peep.list.label.message = Mensaje
 
 any.peep.list.button.publish = Publicar
 
-any.peep.form.label.instantiationMoment = Instantiation moment:
+any.peep.form.label.instantiationMoment =Momento de instanciación:
 any.peep.form.label.title = Título:
 any.peep.form.label.nick = Apodo:
 any.peep.form.label.message = Mensaje:
 any.peep.form.label.email = Email: (Opcional)
 any.peep.form.label.link = Enlace: (Opcional)
+
+any.peep.form.error.spam= El texto introducido es considerado spam
 
 any.peep.form.button.publish = Publicar

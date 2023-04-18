@@ -86,11 +86,6 @@ public class AnyPeepPublishService extends AbstractService<Any, Peep> {
 	@Override
 	public void perform(final Peep object) {
 		assert object != null;
-
-		Date moment;
-
-		moment = MomentHelper.getCurrentMoment();
-		object.setInstantiationMoment(moment);
 		this.repository.save(object);
 	}
 

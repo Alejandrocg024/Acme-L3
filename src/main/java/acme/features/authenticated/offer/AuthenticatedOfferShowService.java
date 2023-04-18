@@ -1,8 +1,6 @@
 
 package acme.features.authenticated.offer;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +8,7 @@ import acme.components.AuxiliarService;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
@@ -36,8 +35,8 @@ public class AuthenticatedOfferShowService extends AbstractService<Authenticated
 		int id;
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findOfferById(id);
-		final Date date = new Date();
-		super.getResponse().setAuthorised(date.compareTo(object.getEndPeriod()) < 0);
+		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().after(object.getStartPeriod()) //
+			&& MomentHelper.getCurrentMoment().before(object.getEndPeriod()));
 	}
 
 	@Override

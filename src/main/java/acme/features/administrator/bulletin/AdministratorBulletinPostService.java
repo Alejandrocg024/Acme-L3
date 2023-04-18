@@ -49,7 +49,7 @@ public class AdministratorBulletinPostService extends AbstractService<Administra
 	@Override
 	public void bind(final Bulletin object) {
 		assert object != null;
-		super.bind(object, "instantiationMoment", "title", "message", "critical", "furtherInformationLink");
+		super.bind(object, "title", "message", "critical", "furtherInformationLink");
 	}
 
 	@Override
