@@ -23,14 +23,16 @@ public class AdministratorDashboard extends AbstractForm {
 	Statistic					notesInLast10WeeksStats;
 
 
-	public void calcNotesInLast10WeeksStats(final Map<Integer, Double> map) {
+	public Statistic calcNotesInLast10WeeksStats(final Map<Integer, Double> map) {
 		Statistic stats;
 		stats = new Statistic();
 		final List<Double> values = new ArrayList<Double>();
 		values.addAll(map.values());
+		stats.setCount(values.size());
 		stats.calcAverage(values);
 		stats.calcMax(values);
 		stats.calcMin(values);
 		stats.calcLinDev(values);
+		return stats;
 	}
 }

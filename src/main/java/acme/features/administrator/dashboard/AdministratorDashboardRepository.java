@@ -53,7 +53,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	Double countAllNonCriticalBulletin();
 
 	@Query("select l.price.amount from Offer l where l.price.currency = :currency")
-	Collection<Double> findPriceOfferByUSD(String currency);
+	Collection<Double> findPriceOfferByCurrency(String currency);
 
 	@Query("select n from Note n where n.instantiationMoment >= :date ")
 	Collection<Note> findNotesInLast10Weeks(Date date);

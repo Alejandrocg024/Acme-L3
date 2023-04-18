@@ -16,60 +16,62 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <h2>
-	<acme:message code="administrator.dashboard.form.title.general-indicators"/>
+	<acme:message
+		code="administrator.dashboard.form.title.general-indicators" />
 </h2>
 
 <table class="table table-sm">
 	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.number-principals"/>
+		<th scope="row"><acme:message
+				code="administrator.dashboard.form.label.number-principals" />		
 		</th>
-		
+<td>
 		<jstl:forEach items="${principalsByRole}" var="principal">
-		<td>
-		<jstl:out value="${principal}"></jstl:out>
-		</td>
+			<jstl:out value="${principal}"></jstl:out>
 		</jstl:forEach>
-		
-	</tr>
-		<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.ratio-peeps"/>
-		</th>
-	
-		<td>
-		<jstl:out value="${peepsRatioWithLinkAndEmail}"></jstl:out>
 		</td>
-		
-		
+
+	</tr>
+	<tr >
+		<th scope="row"><acme:message
+				code="administrator.dashboard.form.label.ratio-peeps" /></th>
+
+		<td><jstl:out value="${peepsRatioWithLinkAndEmail}"></jstl:out></td>
+
+
 	</tr>
 	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.ratio-bulletin"/>
-		</th>
-		
+		<th scope="row"><acme:message
+				code="administrator.dashboard.form.label.ratio-bulletin" /></th>
+<td>
 		<jstl:forEach items="${ratioOfBulletinsByCriticality}" var="bulletin">
-		<td>
-		<jstl:out value="${bulletin}"></jstl:out>
-		</td>
+			<jstl:out value="${bulletin}"></jstl:out>
 		</jstl:forEach>
-		
+		</td>
+
 	</tr>
+
+	
+		<jstl:forEach items="${currentsOffersStats}" var="offer">
+<tr>
+			<th><acme:message code="Stats of offers with: ${offer.key}" /></th>
+			<td><jstl:out value="${offer.value.toString()}">
+				</jstl:out></td>
+</tr>
+		</jstl:forEach>
 	
 	<tr>
-	<jstl:forEach items="${currentsOffersStats}" var="offer">
-	
-	<th>
-	<acme:message code="${offer.key}"/>
-	</th>
-		<td>
-		<jstl:out value="${offer.value.toString()}">
-		</jstl:out>
-		</td>
-	
-	</jstl:forEach>
-	</tr>
+		<th scope="row"><acme:message
+				code="administrator.dashboard.form.label.notes" /></th>
+
+		<td><jstl:out value="${notesInLast10WeeksStats}"></jstl:out></td>
 </table>
+
+<h2>
+	<acme:message code="administrator.dashboard.form.title.application-statuses"/>
+</h2>
+
+
 <div>
 	<canvas id="canvas"></canvas>
 </div>
@@ -77,7 +79,7 @@
 	$(document).ready(function() {
 		var data = {
 			labels : [
-					"Ratio of Peep with email and link"
+				"Ratio of Peep with email and link"
 			],
 			datasets : [
 				{
@@ -102,9 +104,9 @@
 				display : false
 			}
 		};
-	
+
 		var canvas, context;
-	
+
 		canvas = document.getElementById("canvas");
 		context = canvas.getContext("2d");
 		new Chart(context, {
@@ -115,5 +117,5 @@
 	});
 </script>
 
-<acme:return/>
+<acme:return />
 

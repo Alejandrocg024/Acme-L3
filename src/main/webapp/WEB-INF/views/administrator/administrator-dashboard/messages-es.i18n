@@ -12,3 +12,5 @@ administrator.dashboard.form.title.general-indicators = Indicadores generales
 administrator.dashboard.form.label.number-principals = Numero de cuentas por rol
 administrator.dashboard.form.label.ratio-peeps = Proporcion de peeps con correo y enlace
 administrator.dashboard.form.label.ratio-bulletin = Proporcion de Comunicados criticos o no criticos
+administrator.dashboard.form.label.notes = Estadisticas de notas en las ultimas 10 semanas
+administrator.dashboard.form.title.peeps-statuses = Estado de mensajes

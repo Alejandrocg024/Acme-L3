@@ -1,10 +1,10 @@
 
 package acme.features.administrator.dashboard;
 
-import java.sql.Date;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -64,20 +64,23 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		ratioOfBulletinsByCriticality.put(false, this.repository.countAllNonCriticalBulletin() / this.repository.countAllBulletin());
 
 		final Statistic statsOfUSD = new Statistic();
-		statsOfUSD.calcAverage(this.repository.findPriceOfferByUSD("USD"));
-		statsOfUSD.calcMax(this.repository.findPriceOfferByUSD("USD"));
-		statsOfUSD.calcMin(this.repository.findPriceOfferByUSD("USD"));
-		statsOfUSD.calcLinDev(this.repository.findPriceOfferByUSD("USD"));
+		statsOfUSD.setCount(this.repository.findPriceOfferByCurrency("USD").size());
+		statsOfUSD.calcAverage(this.repository.findPriceOfferByCurrency("USD"));
+		statsOfUSD.calcMax(this.repository.findPriceOfferByCurrency("USD"));
+		statsOfUSD.calcMin(this.repository.findPriceOfferByCurrency("USD"));
+		statsOfUSD.calcLinDev(this.repository.findPriceOfferByCurrency("USD"));
 		final Statistic statsOfEUR = new Statistic();
-		statsOfEUR.calcAverage(this.repository.findPriceOfferByUSD("EUR"));
-		statsOfEUR.calcMax(this.repository.findPriceOfferByUSD("EUR"));
-		statsOfEUR.calcMin(this.repository.findPriceOfferByUSD("EUR"));
-		statsOfEUR.calcLinDev(this.repository.findPriceOfferByUSD("EUR"));
+		statsOfEUR.setCount(this.repository.findPriceOfferByCurrency("EUR").size());
+		statsOfEUR.calcAverage(this.repository.findPriceOfferByCurrency("EUR"));
+		statsOfEUR.calcMax(this.repository.findPriceOfferByCurrency("EUR"));
+		statsOfEUR.calcMin(this.repository.findPriceOfferByCurrency("EUR"));
+		statsOfEUR.calcLinDev(this.repository.findPriceOfferByCurrency("EUR"));
 		final Statistic statsOfGBP = new Statistic();
-		statsOfGBP.calcAverage(this.repository.findPriceOfferByUSD("GBP"));
-		statsOfGBP.calcMax(this.repository.findPriceOfferByUSD("GBP"));
-		statsOfGBP.calcMin(this.repository.findPriceOfferByUSD("GBP"));
-		statsOfGBP.calcLinDev(this.repository.findPriceOfferByUSD("GBP"));
+		statsOfGBP.setCount(this.repository.findPriceOfferByCurrency("GBP").size());
+		statsOfGBP.calcAverage(this.repository.findPriceOfferByCurrency("GBP"));
+		statsOfGBP.calcMax(this.repository.findPriceOfferByCurrency("GBP"));
+		statsOfGBP.calcMin(this.repository.findPriceOfferByCurrency("GBP"));
+		statsOfGBP.calcLinDev(this.repository.findPriceOfferByCurrency("GBP"));
 		currentOfferStatistic.put("USD", statsOfUSD);
 		currentOfferStatistic.put("EUR", statsOfEUR);
 		currentOfferStatistic.put("GBP", statsOfGBP);
@@ -89,7 +92,7 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		dashboard.setPeepsRatioWithLinkAndEmail(ratioOfPeeps);
 		dashboard.setRatioOfBulletinsByCriticality(ratioOfBulletinsByCriticality);
 
-		final Date tenWeeks = (Date) MomentHelper.deltaFromCurrentMoment(-70, ChronoUnit.DAYS);
+		final Date tenWeeks = MomentHelper.deltaFromCurrentMoment(-70, ChronoUnit.DAYS);
 		final Collection<Note> notes = this.repository.findNotesInLast10Weeks(tenWeeks);
 		final Map<Integer, Double> notasPorSemana = new HashMap<>();
 
@@ -99,7 +102,7 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 			final int semana = calendar.get(Calendar.WEEK_OF_YEAR);
 			notasPorSemana.put(semana, notasPorSemana.getOrDefault(semana, 0.0) + 1);
 		}
-		dashboard.calcNotesInLast10WeeksStats(notasPorSemana);
+		dashboard.setNotesInLast10WeeksStats(dashboard.calcNotesInLast10WeeksStats(notasPorSemana));
 
 		super.getBuffer().setData(dashboard);
 	}
@@ -108,8 +111,7 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 	public void unbind(final AdministratorDashboard object) {
 		Tuple tuple;
 
-		tuple = super.unbind(object, //
-			"principalsByRole", "peepsRatioWithLinkAndEmail", "ratioOfBulletinsByCriticality", "currentsOffersStats");
+		tuple = super.unbind(object, "principalsByRole", "peepsRatioWithLinkAndEmail", "ratioOfBulletinsByCriticality", "currentsOffersStats", "notesInLast10WeeksStats");
 
 		super.getResponse().setData(tuple);
 	}
