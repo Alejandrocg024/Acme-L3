@@ -17,6 +17,6 @@ public class AdministratorDashboard extends AbstractForm {
 	Map<String, Integer>		principalsByRole;
 	Double						peepsRatioWithLinkAndEmail;
 	Map<Boolean, Double>		ratioOfBulletinsByCriticality;
-	Statistic					currentsOffersStats;
+	Map<String, Statistic>		currentsOffersStats;
 	Statistic					notesInLast10WeeksStats;
 }

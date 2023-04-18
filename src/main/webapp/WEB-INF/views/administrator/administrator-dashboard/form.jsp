@@ -43,10 +43,77 @@
 		
 		
 	</tr>
-
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratio-bulletin"/>
+		</th>
+		
+		<jstl:forEach items="${ratioOfBulletinsByCriticality}" var="bulletin">
+		<td>
+		<jstl:out value="${bulletin}"></jstl:out>
+		</td>
+		</jstl:forEach>
+		
+	</tr>
+	
+	<tr>
+	<jstl:forEach items="${currentsOffersStats}" var="offer">
+	
+	<th>
+	<acme:message code="${offer.key}"/>
+	</th>
+		<td>
+		<jstl:out value="${offer.value.toString()}">
+		</jstl:out>
+		</td>
+	
+	</jstl:forEach>
+	</tr>
 </table>
-
-
+<div>
+	<canvas id="canvas"></canvas>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var data = {
+			labels : [
+					"Ratio of Peep with email and link"
+			],
+			datasets : [
+				{
+					data : [
+						<jstl:out value="${peepsRatioWithLinkAndEmail}"/>
+					]
+				}
+			]
+		};
+		var options = {
+			scales : {
+				yAxes : [
+					{
+						ticks : {
+							suggestedMin : 0.0,
+							suggestedMax : 1.0
+						}
+					}
+				]
+			},
+			legend : {
+				display : false
+			}
+		};
+	
+		var canvas, context;
+	
+		canvas = document.getElementById("canvas");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type : "bar",
+			data : data,
+			options : options
+		});
+	});
+</script>
 
 <acme:return/>
 

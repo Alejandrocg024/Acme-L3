@@ -1,6 +1,8 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.Collection;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -38,5 +40,17 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select count(l) from Peep l where l.email is not null and l.link is not null")
 	Double countAllPeepsWithBoth();
+
+	@Query("select count(l) from Bulletin l ")
+	Double countAllBulletin();
+
+	@Query("select count(l) from Bulletin l where l.critical = true")
+	Double countAllCriticalBulletin();
+
+	@Query("select count(l) from Bulletin l where l.critical = false")
+	Double countAllNonCriticalBulletin();
+
+	@Query("select l.price.amount from Offer l where l.price.currency = :currency")
+	Collection<Double> findPriceOfferByUSD(String currency);
 
 }

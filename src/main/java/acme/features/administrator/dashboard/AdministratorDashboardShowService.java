@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.datatypes.Statistic;
 import acme.forms.AdministratorDashboard;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
@@ -35,6 +36,8 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 	public void load() {
 		AdministratorDashboard dashboard;
 		final Map<String, Integer> principalsByRole = new HashMap();
+		final Map<Boolean, Double> ratioOfBulletinsByCriticality = new HashMap();
+		final Map<String, Statistic> currentOfferStatistic = new HashMap();
 		final Integer lecturerPrincipals = this.repository.countPrincipalByLecturer();
 		final Integer assistantPrincipals = this.repository.countPrincipalByAssistant();
 		final Integer providerPrincipals = this.repository.countPrincipalByProvider();
@@ -51,10 +54,35 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		principalsByRole.put("Student", studentPrincipals);
 		principalsByRole.put("Auditor", auditorPrincipals);
 		principalsByRole.put("Administrator", adminPrincipals);
+		ratioOfBulletinsByCriticality.put(true, this.repository.countAllCriticalBulletin() / this.repository.countAllBulletin());
+		ratioOfBulletinsByCriticality.put(false, this.repository.countAllNonCriticalBulletin() / this.repository.countAllBulletin());
+
+		final Statistic statsOfUSD = new Statistic();
+		statsOfUSD.calcAverage(this.repository.findPriceOfferByUSD("USD"));
+		statsOfUSD.calcMax(this.repository.findPriceOfferByUSD("USD"));
+		statsOfUSD.calcMin(this.repository.findPriceOfferByUSD("USD"));
+		statsOfUSD.calcLinDev(this.repository.findPriceOfferByUSD("USD"));
+		final Statistic statsOfEUR = new Statistic();
+		statsOfEUR.calcAverage(this.repository.findPriceOfferByUSD("EUR"));
+		statsOfEUR.calcMax(this.repository.findPriceOfferByUSD("EUR"));
+		statsOfEUR.calcMin(this.repository.findPriceOfferByUSD("EUR"));
+		statsOfEUR.calcLinDev(this.repository.findPriceOfferByUSD("EUR"));
+		final Statistic statsOfGBP = new Statistic();
+		statsOfGBP.calcAverage(this.repository.findPriceOfferByUSD("GBP"));
+		statsOfGBP.calcMax(this.repository.findPriceOfferByUSD("GBP"));
+		statsOfGBP.calcMin(this.repository.findPriceOfferByUSD("GBP"));
+		statsOfGBP.calcLinDev(this.repository.findPriceOfferByUSD("GBP"));
+		currentOfferStatistic.put("USD", statsOfUSD);
+		currentOfferStatistic.put("EUR", statsOfEUR);
+		currentOfferStatistic.put("GBP", statsOfGBP);
 		dashboard = new AdministratorDashboard();
 		dashboard.setPrincipalsByRole(principalsByRole);
+		dashboard.setCurrentsOffersStats(currentOfferStatistic);
+
 		final double ratioOfPeeps = this.repository.countAllPeepsWithBoth() / this.repository.countAllPeeps();
 		dashboard.setPeepsRatioWithLinkAndEmail(ratioOfPeeps);
+		dashboard.setRatioOfBulletinsByCriticality(ratioOfBulletinsByCriticality);
+
 		super.getBuffer().setData(dashboard);
 	}
 
@@ -63,7 +91,7 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		Tuple tuple;
 
 		tuple = super.unbind(object, //
-			"principalsByRole", "peepsRatioWithLinkAndEmail");
+			"principalsByRole", "peepsRatioWithLinkAndEmail", "ratioOfBulletinsByCriticality", "currentsOffersStats");
 
 		super.getResponse().setData(tuple);
 	}
