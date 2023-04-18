@@ -2,10 +2,12 @@
 package acme.features.administrator.dashboard;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Note;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -52,5 +54,8 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select l.price.amount from Offer l where l.price.currency = :currency")
 	Collection<Double> findPriceOfferByUSD(String currency);
+
+	@Query("select n from Note n where n.instantiationMoment >= :date ")
+	Collection<Note> findNotesInLast10Weeks(Date date);
 
 }

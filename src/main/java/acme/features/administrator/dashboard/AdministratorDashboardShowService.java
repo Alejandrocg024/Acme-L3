@@ -1,6 +1,10 @@
 
 package acme.features.administrator.dashboard;
 
+import java.sql.Date;
+import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,9 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.datatypes.Statistic;
+import acme.entities.Note;
 import acme.forms.AdministratorDashboard;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
@@ -83,6 +89,16 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		dashboard.setPeepsRatioWithLinkAndEmail(ratioOfPeeps);
 		dashboard.setRatioOfBulletinsByCriticality(ratioOfBulletinsByCriticality);
 
+		final Date tenWeeks = (Date) MomentHelper.deltaFromCurrentMoment(-70, ChronoUnit.DAYS);
+		final Collection<Note> notes = this.repository.findNotesInLast10Weeks(tenWeeks);
+		final Map<Integer, Double> notasPorSemana = new HashMap<>();
+
+		for (final Note nota : notes) {
+			final Calendar calendar = Calendar.getInstance();
+			calendar.setTime(nota.getInstantiationMoment());
+			final int semana = calendar.get(Calendar.WEEK_OF_YEAR);
+			notasPorSemana.put(semana, notasPorSemana.getOrDefault(semana, 0.0) + 1);
+		}
 		super.getBuffer().setData(dashboard);
 	}
 
