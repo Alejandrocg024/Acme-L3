@@ -88,6 +88,7 @@ master.menu.company.my-practica = My practica
 # master.menu.auditor ####################################################
 master.menu.auditor = Auditor
 master.menu.auditor.audit = My audits
+master.menu.auditor.auditor-dashboard = Auditor dashboard
 
 
 # master.menu.any ####################################################
