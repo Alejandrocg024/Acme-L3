@@ -1,8 +1,8 @@
 
 package acme.components;
 
-import java.io.IOException;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +41,12 @@ public class AuxiliarService {
 		return !spamFilter.isSpam(input);
 	}
 
+	public boolean validateDate(final Date date) {
+		final Date maxDate = new Date(200, 11, 31, 23, 59);
+		final Date minDate = new Date(100, 0, 1, 00, 00);
+		return minDate.before(date) && maxDate.after(date);
+	}
+
 	public String translateMoney(final Money money, final String lang) {
 		String res;
 		res = "";
@@ -68,17 +74,20 @@ public class AuxiliarService {
 			final String requestURL = apiBase + apikey1 + "&currencies=" + money.getCurrency() + "&base_currency=" + currentCurrency;
 			final OkHttpClient client = new OkHttpClient();
 			final Request request = new Request.Builder().url(requestURL).build();
-			res.setCurrency(currentCurrency);
 			Response response;
 			try {
 				response = client.newCall(request).execute();
 				final String responseBody = response.body().string();
 				final ObjectMapper mapper = new ObjectMapper();
 				final JsonNode jsonNode = mapper.readTree(responseBody);
-				final double value = jsonNode.get("data").get(money.getCurrency()).asDouble();
-				res.setAmount(value * money.getAmount());
-			} catch (final IOException e) {
+				final Double value = jsonNode.get("data").get(money.getCurrency()).asDouble();
+				if (value != null) {
+					res.setCurrency(currentCurrency);
+					res.setAmount(value * money.getAmount());
+				}
+			} catch (final Exception e) {
 				// TODO Auto-generated catch block
+				res = money;
 				e.printStackTrace();
 			}
 		} else

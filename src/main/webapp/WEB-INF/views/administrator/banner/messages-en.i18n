@@ -25,3 +25,6 @@ administrator.banner.form.button.update = Update
 administrator.banner.form.spam = The introduced text is considered Spam
 administrator.banner.form.error.displayPeriodBegin = The displayPeriod must begin any moment after instantation moment
 administrator.banner.form.error.displayPeriodFinish = The displayPeriod must end at one week maximum of the begin period
+
+administrator.bulletin.form.error.endPeriod.oor = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
+administrator.bulletin.form.error.startPeriod.oor = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
