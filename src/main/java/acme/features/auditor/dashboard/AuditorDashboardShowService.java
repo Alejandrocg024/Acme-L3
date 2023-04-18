@@ -2,11 +2,14 @@
 package acme.features.auditor.dashboard;
 
 import java.util.Collection;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.datatypes.Nature;
 import acme.datatypes.Statistic;
+import acme.entities.Audit;
 import acme.forms.AuditorDashboard;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
@@ -36,38 +39,32 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 	@Override
 	public void load() {
 		final AuditorDashboard dashboard = new AuditorDashboard();
-
 		Principal principal;
 		int userAccountId;
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
 		final Auditor auditor = this.repository.findOneAuditorByUserAccountId(userAccountId);
-		final double averageNumOfAuditingRecords = this.repository.findAverageNumOfAuditingRecords(auditor.getId()).orElse(0.0);
-		final double maxNumOfAuditingRecords = this.repository.findMaxNumOfAuditingRecords(auditor.getId()).orElse(0.0);
-		final double minNumOfAuditingRecords = this.repository.findMinNumOfAuditingRecords(auditor.getId()).orElse(0.0);
-		//final double devNumOfAuditingRecords = this.repository.findLinearDevNumOfAuditingRecords(auditor.getId()).orElse(0.0);
-		final Statistic auditStats = new Statistic();
-		auditStats.setAverage(averageNumOfAuditingRecords);
-		auditStats.setMin(minNumOfAuditingRecords);
-		auditStats.setMax(maxNumOfAuditingRecords);
-		//auditStats.setLinDev(devNumOfAuditingRecords);
-		dashboard.setNumOfAuditingRecordsStats(auditStats);
+		final Map<Nature, Integer> auditsPerNature;
+		final Collection<Double> numAuditingRecordsPerAudit = this.repository.findNumOfAuditingRecords(auditor.getId());
+		final Statistic numAuditingStats = new Statistic();
+		final Statistic periodAuditingStats = new Statistic();
 
-		final Statistic periodStats = new Statistic();
-		final Collection<Double> auditingRecordsPeriodOfTime = this.repository.findAuditingRecordsPeriodOfTime(auditor.getId());
-		periodStats.calcAverage(auditingRecordsPeriodOfTime);
-		periodStats.calcMax(auditingRecordsPeriodOfTime);
-		periodStats.calcMin(auditingRecordsPeriodOfTime);
-		periodStats.calcLinDev(auditingRecordsPeriodOfTime);
-		dashboard.setPeriodOfAuditingRecordStats(periodStats);
+		final Collection<Audit> audits = this.repository.findAudits(auditor.getId());
+		auditsPerNature = this.repository.auditsPerNature(audits);
 
-		//numOfAuditsByType
-		//final Map<String, Integer> auditsByNature = new HashMap<String, Integer>();
-		//final Integer handsOnAudits = this.repository.findNumOfAuditsByType(auditor, Nature.HANDS_ON).orElse(0);
-		//final Integer theoreticalAudits = this.repository.findNumOfAuditsByType(auditor, Nature.THEORETICAL).orElse(0);
-		//auditsByNature.put("HANDS_ON", handsOnAudits);
-		//auditsByNature.put("THEORETICAL", theoreticalAudits);
-		//dashboard.setNumOfAuditsByType(auditsByNature);
+		numAuditingStats.setAverage(this.repository.findAverageNumOfAuditingRecords(auditor.getId()));
+		numAuditingStats.setMax(this.repository.findMaxNumOfAuditingRecords(auditor.getId()));
+		numAuditingStats.setMin(this.repository.findMinNumOfAuditingRecords(auditor.getId()));
+		numAuditingStats.calcLinDev(numAuditingRecordsPerAudit);
+
+		periodAuditingStats.setAverage(this.repository.findAverageDurationOfAuditingRecords(auditor.getId()));
+		periodAuditingStats.setMax(this.repository.findMaxDurationOfAuditingRecords(auditor.getId()));
+		periodAuditingStats.setMin(this.repository.findMinDurationOfAuditingRecords(auditor.getId()));
+		periodAuditingStats.setLinDev(this.repository.findDesvLinDurationOfAuditingRecords(auditor.getId()));
+
+		dashboard.setNumOfAuditsByType(auditsPerNature);
+		dashboard.setNumOfAuditingRecordsStats(numAuditingStats);
+		dashboard.setPeriodOfAuditingRecordStats(periodAuditingStats);
 
 		super.getBuffer().setData(dashboard);
 	}
@@ -76,7 +73,10 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 	public void unbind(final AuditorDashboard object) {
 		Tuple tuple;
 
-		tuple = super.unbind(object, "auditStats", "numOfAuditsByType", "periodStats");
+		tuple = super.unbind(object, "numOfAuditingRecordsStats", "numOfAuditsByType", "periodOfAuditingRecordStats");
+		tuple.put("numberOfHandsOnAudits", object.getNumOfAuditsByType().get(Nature.HANDS_ON));
+		tuple.put("numberOfTheoreticalAudits", object.getNumOfAuditsByType().get(Nature.THEORETICAL));
+		tuple.put("numberOfBalancedAudits", object.getNumOfAuditsByType().get(Nature.BALANCED));
 
 		super.getResponse().setData(tuple);
 	}
