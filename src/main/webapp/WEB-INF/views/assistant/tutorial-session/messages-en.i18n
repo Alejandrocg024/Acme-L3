@@ -24,3 +24,4 @@ assistant.tutorial-session.form.error.spam = The introduced text contains words 
 assistant.tutorial-session.form.error.start-period = The start date must be at least one day ahead from the current date
 assistant.tutorial-session.form.error.end-period = The end date must be at least one hour ahead of the start date
 assistant.tutorial.form.error.end-period.max = The end date must be 5 hours ahead of the start date maximum
+assistant.tutorial-session.form.error.end-period.error = Both dates must be in the period 2000/01/01 00:00 to 2100/12/31 23:59
