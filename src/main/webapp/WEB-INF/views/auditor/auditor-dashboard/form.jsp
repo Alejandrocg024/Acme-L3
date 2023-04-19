@@ -97,6 +97,61 @@
 		</td>
 	</tr>	
 </table>
+ <h2>
+	<acme:message code="auditor.auditorDashboard.form.title.nature-audits"/>
+</h2>
+
+<div>
+	<canvas id="canvas"></canvas>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var data = {
+			labels : [
+					"HANDS-ON", "THEORETICAL", "BALANCED"
+			],
+			datasets : [
+				{
+					data : [
+						<jstl:out value="${numberOfHandsOnAudits}"/>, 
+						<jstl:out value="${numberOfTheoreticalAudits}"/>, 
+						<jstl:out value="${numberOfBalancedAudits}"/>,
+					],
+					backgroundColor: [
+					      'rgb(250, 235, 215)',
+					      'rgb(127, 255, 212)',
+					      'rgb(0, 255, 255)',				    ]
+				}
+			]
+		};
+		var options = {
+			scales : {
+				yAxes : [
+					{
+						ticks : {
+							suggestedMin : 0.0,
+							suggestedMax : 100.0
+						}
+					}
+				]
+			},
+			legend : {
+				display : false
+			}
+		};
+	
+		var canvas, context;
+	
+		canvas = document.getElementById("canvas");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type : "bar",
+			data : data,
+			options : options
+		});
+	});
+</script>
  
 <acme:return/>
 

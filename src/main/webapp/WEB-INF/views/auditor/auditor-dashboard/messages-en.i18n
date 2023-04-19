@@ -13,3 +13,4 @@ auditor.auditorDashboard.form.label.lin-dev-time-period = Lineal deviation of pe
 auditor.auditorDashboard.form.label.hands-on-audits = Number of hand-on audits
 auditor.auditorDashboard.form.label.theoretical-audits = Number of theoretical audits
 auditor.auditorDashboard.form.label.balanced-audits = Number of balanced audits
+auditor.auditorDashboard.form.title.nature-audits = Number of audits by nature

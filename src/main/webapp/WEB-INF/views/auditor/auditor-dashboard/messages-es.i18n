@@ -13,3 +13,4 @@ auditor.auditorDashboard.form.label.lin-dev-time-period = Desviación lineal de 
 auditor.auditorDashboard.form.label.hands-on-audits = Número de auditorías prácticas
 auditor.auditorDashboard.form.label.theoretical-audits = Número de auditorías teóricas
 auditor.auditorDashboard.form.label.balanced-audits = Número de auditorías balanceadas
+auditor.auditorDashboard.form.title.nature-audits = Número de auditorías por su naturaleza

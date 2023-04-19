@@ -38,20 +38,17 @@ public interface AuditorDashboardRepository extends AbstractRepository {
 	@Query("select ua from UserAccount ua where ua.id = :id")
 	UserAccount findOneUserAccountById(int id);
 
-	@Query("select (select ((ar.endPeriod-ar.startPeriod)/3600000) from AuditingRecord ar where ar.audit.id = a.id) from Audit a where a.auditor.id = :id")
-	Collection<Double> findAuditingRecordsPeriodOfTime(int id);
-
-	@Query("select avg((ar.endPeriod-ar.startPeriod)/10000) from AuditingRecord ar where ar.audit.auditor.id = :id")
+	@Query("select avg(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
 	Double findAverageDurationOfAuditingRecords(int id);
 
-	@Query("select max((ar.endPeriod-ar.startPeriod)/10000) from AuditingRecord ar where ar.audit.auditor.id = :id")
+	@Query("select max(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
 	Double findMaxDurationOfAuditingRecords(int id);
 
-	@Query("select min((ar.endPeriod-ar.startPeriod)/10000) from AuditingRecord ar where ar.audit.auditor.id = :id")
+	@Query("select min(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
 	Double findMinDurationOfAuditingRecords(int id);
 
-	@Query("select stddev((ar.endPeriod-ar.startPeriod)/10000) from AuditingRecord ar where ar.audit.auditor.id = :id")
-	Double findDesvLinDurationOfAuditingRecords(int id);
+	@Query("select stddev(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
+	Double findLinDevDurationOfAuditingRecords(int id);
 
 	@Query("select count(cl) from CourseLecture cl where cl.course.id = :courseId and cl.lecture.nature = :nature")
 	Integer findNumLecturesByCourseNature(int courseId, Nature nature);
