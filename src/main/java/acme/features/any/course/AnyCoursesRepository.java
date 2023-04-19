@@ -13,10 +13,10 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnyCoursesRepository extends AbstractRepository {
 
-	@Query("select c from Course c")
-	Collection<Course> findAllCourses();
+	@Query("select c from Course c where c.draftMode = false")
+	Collection<Course> findPublishedCourses();
 
-	@Query("select c from Course c where c.id = :id and c.draftMode = false")
+	@Query("select c from Course c where c.id = :id")
 	Course findCourseById(int id);
 
 	@Query("select l from Lecture l inner join CourseLecture cl on l = cl.lecture inner join Course c on cl.course = c where c.id = :id")

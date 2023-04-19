@@ -1,12 +1,3 @@
-# messages-en.i18n
-#
-# Copyright (C) 2012-2023 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
 
 auditor.audit.list.label.courseCode = Código del curso
 auditor.audit.list.label.courseTitle = Título del curso
@@ -15,12 +6,14 @@ auditor.audit.list.label.code = Código de la auditoría
 
 auditor.audit.form.label.course = Curso
 auditor.audit.form.label.code = Código
-auditor.audit.form.label.conclusion = Conclusion
+auditor.audit.form.label.conclusion = Conclusión
 auditor.audit.form.label.strongPoints = Puntos fuertes
 auditor.audit.form.label.weakPoints = Puntos débiles
 auditor.audit.form.label.mark = Notas de los registros
 
+auditor.audit.form.error.spam = Las palabras introducidas son consideradas spam
 auditor.audit.form.error.code = El código ya existe
+auditor.audit.form.error.records = No puedes publicar una auditoría sin registros de auditoría
 auditor.audit.form.button.auditing-records = Registros de auditoría
 
 auditor.audit.create = Crear

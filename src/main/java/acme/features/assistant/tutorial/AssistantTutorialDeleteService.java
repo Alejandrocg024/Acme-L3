@@ -38,7 +38,7 @@ public class AssistantTutorialDeleteService extends AbstractService<Assistant, T
 		tutorialId = super.getRequest().getData("id", int.class);
 		object = this.repository.findTutorialById(tutorialId);
 		principal = super.getRequest().getPrincipal();
-		status = object.getAssistant().getId() == principal.getActiveRoleId();
+		status = object.getAssistant().getUserAccount().getId() == principal.getAccountId();
 		super.getResponse().setAuthorised(status);
 	}
 	@Override

@@ -1,12 +1,3 @@
-# messages-en.i18n
-#
-# Copyright (C) 2012-2023 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
 
 administrator.banner.list.label.slogan = Slogan
 administrator.banner.list.label.displayPeriodBegin = Display Period
@@ -18,3 +9,13 @@ administrator.banner.form.label.displayPeriodFinish = End Date
 administrator.banner.form.label.pictureLink = Pictrue Link
 administrator.banner.form.label.slogan = Slogan
 administrator.banner.form.label.webLink = Web Link
+administrator.banner.create = Create Banner
+administrator.banner.form.button.create = Create
+administrator.banner.form.button.delete = Delete
+administrator.banner.form.button.update = Update
+administrator.banner.form.spam = The introduced text is considered Spam
+administrator.banner.form.error.displayPeriodBegin = The displayPeriod must begin any moment after instantation moment
+administrator.banner.form.error.displayPeriodFinish = The displayPeriod must end at one week maximum of the begin period
+
+administrator.bulletin.form.error.endPeriod.oor = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
+administrator.bulletin.form.error.startPeriod.oor = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
