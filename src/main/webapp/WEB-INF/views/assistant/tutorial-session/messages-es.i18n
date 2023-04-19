@@ -24,3 +24,4 @@ assistant.tutorial-session.form.error.spam = Las palabras introducidas son consi
 assistant.tutorial-session.form.error.start-period = La fecha de inicio debe estar al menos un dia por delante del momento actual
 assistant.tutorial-session.form.error.end-period = La fecha de fin debe estar al menos una hora por delante de la fecha de inicio
 assistant.tutorial.form.error.end-period.max = La fecha de fin debe estar como maximo 5 horas por delante de la fecha de inicio
+assistant.tutorial-session.form.error.end-period.error = Ambas fechas deben estar entre el 01/01/2000 00:00 y el 31/12/2100 23:59

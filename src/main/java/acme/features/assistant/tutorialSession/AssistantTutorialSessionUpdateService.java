@@ -79,6 +79,8 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 			Date minimumStartDate;
 			minimumStartDate = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
 			super.state(MomentHelper.isAfterOrEqual(object.getStartPeriod(), minimumStartDate), "startPeriod", "assistant.tutorial-session.form.error.start-period");
+			super.state(this.auxiliarService.validateDate(object.getStartPeriod()), "startPeriod", "assistant.tutorial-session.form.error.end-period.error");
+
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("endPeriod")) {
@@ -88,6 +90,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 			Date maximumEndDate;
 			maximumEndDate = MomentHelper.deltaFromMoment(object.getStartPeriod(), 5, ChronoUnit.HOURS);
 			super.state(MomentHelper.isBeforeOrEqual(object.getEndPeriod(), maximumEndDate), "endPeriod", "assistant.tutorial-session.form.error.end-period.max");
+			super.state(this.auxiliarService.validateDate(object.getEndPeriod()), "endPeriod", "assistant.tutorial-session.form.error.end-period.error");
 
 		}
 
