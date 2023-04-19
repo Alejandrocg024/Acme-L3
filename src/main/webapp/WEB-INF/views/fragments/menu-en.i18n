@@ -84,6 +84,7 @@ master.menu.lecturer.lecture = My lectures
 
 master.menu.company = Company
 master.menu.company.my-practica = My practica
+master.menu.company.company-dashboard = Company dashboard
 
 # master.menu.auditor ####################################################
 master.menu.auditor = Auditor
