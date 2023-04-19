@@ -60,7 +60,7 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		periodAuditingStats.setAverage(this.repository.findAverageDurationOfAuditingRecords(auditor.getId()));
 		periodAuditingStats.setMax(this.repository.findMaxDurationOfAuditingRecords(auditor.getId()));
 		periodAuditingStats.setMin(this.repository.findMinDurationOfAuditingRecords(auditor.getId()));
-		periodAuditingStats.setLinDev(this.repository.findDesvLinDurationOfAuditingRecords(auditor.getId()));
+		periodAuditingStats.setLinDev(this.repository.findLinDevDurationOfAuditingRecords(auditor.getId()));
 
 		dashboard.setNumOfAuditsByType(auditsPerNature);
 		dashboard.setNumOfAuditingRecordsStats(numAuditingStats);
