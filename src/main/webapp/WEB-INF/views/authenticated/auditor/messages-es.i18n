@@ -2,7 +2,7 @@
 authenticated.auditor.form.label.firm = Forma
 authenticated.auditor.form.label.professionalId = Id profesional
 authenticated.auditor.form.label.certifications = Certificaciones
-authenticated.auditor.form.label.furtherInformationLink = Link información extra
+authenticated.auditor.form.label.furtherInformationLink = Link información extra (Opcional)
 	
 authenticated.auditor.form.button.create = Crear
 authenticated.auditor.form.button.update = Actualizar

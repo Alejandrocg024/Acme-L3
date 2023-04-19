@@ -82,6 +82,10 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 			super.state(this.auxiliarService.validateTextImput(object.getSubject()), "subject", "auditor.auditing-record.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("assessment"))
 			super.state(this.auxiliarService.validateTextImput(object.getAssessment()), "assessment", "auditor.auditing-record.form.error.spam");
+		if (!super.getBuffer().getErrors().hasErrors("startPeriod"))
+			super.state(this.auxiliarService.validateDate(object.getStartPeriod()), "startPeriod", "auditor.auditing-record.form.error.before-ini");
+		if (!super.getBuffer().getErrors().hasErrors("endPeriod"))
+			super.state(this.auxiliarService.validateDate(object.getEndPeriod()), "endPeriod", "auditor.auditing-record.form.error.after-end");
 
 	}
 

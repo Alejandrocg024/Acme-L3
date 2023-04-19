@@ -12,11 +12,13 @@ auditor.auditing-record.form.label.assessment = Assessment
 auditor.auditing-record.form.label.startPeriod = Start Period
 auditor.auditing-record.form.label.endPeriod = End Period
 auditor.auditing-record.form.label.mark = Mark
-auditor.auditing-record.form.label.furtherInformationLink = Further Information Link
+auditor.auditing-record.form.label.furtherInformationLink = Further Information Link (Optional)
 
 auditor.auditing-record.form.error.spam = The introduced text contains words that are considered spam
 auditor.auditing-record.form.error.post-date = End Date before Start Date
 auditor.auditing-record.form.error.not-enough-time = Period of time incorrect
+auditor.auditing-record.form.error.before-ini = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
+auditor.auditing-record.form.error.after-end = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
 
 
 
