@@ -5,7 +5,7 @@ lecturer.courseLecture.form.label.lecture = Lecture
 lecturer.courseLecture.form.button.delete = Quit
 lecturer.courseLecture.form.button.create = Add
 
-lecturer.courseLecture.form.error.lecture = The selected lecture is yet in the course
+lecturer.courseLecture.form.error.lecture = This lecture is yet in the course
 
 lecturer.courseLecture.form.error.course = The selected course is not editable
 

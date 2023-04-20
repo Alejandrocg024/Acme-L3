@@ -69,8 +69,8 @@ public class LecturerLectureUpdateService extends AbstractService<Lecturer, Lect
 			super.state(this.auxiliarService.validateTextImput(object.getSummary()), "summary", "lecturer.lecture.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("body"))
 			super.state(this.auxiliarService.validateTextImput(object.getBody()), "body", "lecturer.lecture.form.error.spam");
-		if (!super.getBuffer().getErrors().hasErrors("nature"))
-			super.state(!object.getNature().equals(Nature.BALANCED), "nature", "lecturer.lecture.form.error.nature");
+		//if (!super.getBuffer().getErrors().hasErrors("nature"))
+		//	super.state(!object.getNature().equals(Nature.BALANCED), "nature", "lecturer.lecture.form.error.nature");
 	}
 
 	@Override
