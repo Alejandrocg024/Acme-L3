@@ -78,6 +78,8 @@ public class AuditorAuditingRecordUpdateService extends AbstractService<Auditor,
 			super.state(this.auxiliarService.validateDate(object.getStartPeriod()), "startPeriod", "auditor.auditing-record.form.error.before-ini");
 		if (!super.getBuffer().getErrors().hasErrors("endPeriod"))
 			super.state(this.auxiliarService.validateDate(object.getEndPeriod()), "endPeriod", "auditor.auditing-record.form.error.after-end");
+		if (!super.getBuffer().getErrors().hasErrors("startPeriod"))
+			super.state(MomentHelper.isAfterOrEqual(MomentHelper.getCurrentMoment(), MomentHelper.deltaFromMoment(object.getStartPeriod(), 1, ChronoUnit.HOURS)), "startPeriod", "auditor.auditing-record.form.error.one-hour-before");
 
 	}
 
