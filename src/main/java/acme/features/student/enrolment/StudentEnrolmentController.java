@@ -14,22 +14,19 @@ import acme.roles.Student;
 public class StudentEnrolmentController extends AbstractController<Student, Enrolment> {
 
 	@Autowired
-	protected StudentEnrolmentListService		listAllService;
+	protected StudentEnrolmentListService	listAllService;
 
 	@Autowired
-	protected StudentEnrolmentShowService		showService;
+	protected StudentEnrolmentShowService	showService;
 
 	@Autowired
-	protected StudentEnrolmentCreateService		createService;
+	protected StudentEnrolmentCreateService	createService;
 
 	@Autowired
-	protected StudentEnrolmentDeleteService		deleteService;
+	protected StudentEnrolmentDeleteService	deleteService;
 
 	@Autowired
-	protected StudentEnrolmentUpdateService		updateService;
-
-	@Autowired
-	protected StudentEnrolmentPublishService	publishService;
+	protected StudentEnrolmentUpdateService	updateService;
 
 
 	@PostConstruct
@@ -39,7 +36,6 @@ public class StudentEnrolmentController extends AbstractController<Student, Enro
 		super.addBasicCommand("create", this.createService);
 		super.addBasicCommand("delete", this.deleteService);
 		super.addBasicCommand("update", this.updateService);
-		super.addCustomCommand("publish", "update", this.publishService);
 	}
 
 }

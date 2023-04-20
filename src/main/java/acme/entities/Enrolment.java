@@ -39,9 +39,10 @@ public class Enrolment extends AbstractEntity {
 	@Length(max = 100)
 	protected String			goals;
 
-	//protected String			holderName;
+	protected String			holderName;
 
-	//protected Integer			lowerNibble;
+	@Pattern(regexp = "^\\d{4}$")
+	protected String			lowerNibble;
 
 	protected boolean			draftMode;
 
