@@ -1,3 +1,4 @@
+
 package acme.features.student.enrolment;
 
 import java.util.Collection;
@@ -5,16 +6,14 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Course;
 import acme.entities.Enrolment;
-import acme.features.lecturer.course.LecturerCourseRepository;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Student;
 
 @Service
-public class StudentEnrolmentListService extends AbstractService<Student, Enrolment>{
+public class StudentEnrolmentListService extends AbstractService<Student, Enrolment> {
 
 	@Autowired
 	protected StudentEnrolmentRepository repository;
@@ -37,7 +36,7 @@ public class StudentEnrolmentListService extends AbstractService<Student, Enrolm
 		Collection<Enrolment> objects;
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
-		objects = this.repository.findEnrolmentByStudentId(userAccountId);
+		objects = this.repository.findEnrolmentsByStudentId(userAccountId);
 		super.getBuffer().setData(objects);
 	}
 
@@ -47,7 +46,7 @@ public class StudentEnrolmentListService extends AbstractService<Student, Enrolm
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "motivation", "goals");
+		tuple = super.unbind(object, "code", "motivation");
 
 		super.getResponse().setData(tuple);
 	}
