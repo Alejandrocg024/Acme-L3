@@ -94,7 +94,7 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 		Tuple tuple;
 
 		courses = this.repository.findAllPublishedCourses();
-		choices.add("---", "0", true);
+		choices.add("0", "---", true);
 		for (final Course c : courses)
 			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
 
