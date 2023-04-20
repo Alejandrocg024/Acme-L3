@@ -99,10 +99,10 @@
 			datasets : [
 				{
 					data : [
-						<jstl:out value="${periodLengthOfPracticaStats.getMax()}"/>, 
-						<jstl:out value="${periodLengthOfPracticaStats.getMin()}"/>, 
-						<jstl:out value="${periodLengthOfPracticaStats.getLinDev()}"/>,
-						<jstl:out value="${periodLengthOfPracticaStats.getAverage()}"/>
+						<jstl:out value="${periodLengthOfSessionsStats.getMax()}"/>, 
+						<jstl:out value="${periodLengthOfSessionsStats.getMin()}"/>, 
+						<jstl:out value="${periodLengthOfSessionsStats.getLinDev()}"/>,
+						<jstl:out value="${periodLengthOfSessionsStats.getAverage()}"/>
 					],
 					backgroundColor: [
 					      'rgb(255, 202, 58)',
@@ -158,10 +158,10 @@
 			datasets : [
 				{
 					data : [
-						<jstl:out value="${periodLengthOfSessionsStats.getMax()}"/>, 
-						<jstl:out value="${periodLengthOfSessionsStats.getMin()}"/>, 
-						<jstl:out value="${periodLengthOfSessionsStats.getLinDev()}"/>,
-						<jstl:out value="${periodLengthOfSessionsStats.getAverage()}"/>
+						<jstl:out value="${periodLengthOfPracticaStats.getMax()}"/>, 
+						<jstl:out value="${periodLengthOfPracticaStats.getMin()}"/>, 
+						<jstl:out value="${periodLengthOfPracticaStats.getLinDev()}"/>,
+						<jstl:out value="${periodLengthOfPracticaStats.getAverage()}"/>
 					],
 					backgroundColor: [
 					      'rgb(255, 202, 58)',

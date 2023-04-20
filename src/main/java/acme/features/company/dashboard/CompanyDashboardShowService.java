@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.datatypes.Statistic;
-import acme.entities.Practicum;
 import acme.forms.CompanyDashboard;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
@@ -42,7 +41,6 @@ public class CompanyDashboardShowService extends AbstractService<Company, Compan
 		Double maximunLengthOfPracticumSessionsPerCompany;
 
 		Double averageLengthOfPracticumPerCompany;
-		Double deviationLengthOfPracticumPerCompany;
 		Double minimumLengthOfPracticumPerCompany;
 		Double maximumLengthOfPracticumPerCompany;
 
@@ -52,19 +50,12 @@ public class CompanyDashboardShowService extends AbstractService<Company, Compan
 		principal = super.getRequest().getPrincipal();
 		companyId = principal.getActiveRoleId();
 
-		dashboard = new CompanyDashboard();
-		numberOfPracticaPerMonth = new int[12];
-		for (final Practicum p : this.repository.findPracticaByCompanyId(companyId)) {
-			int[] monthsPerPracticum;
-			monthsPerPracticum = dashboard.countMonthsPerPracticum(this.repository.findPracticumSessionsByPracticumId(p.getId()));
-			for (int i = 0; i <= 11; i++)
-				numberOfPracticaPerMonth[i] += monthsPerPracticum[i];
-		}
+		numberOfPracticaPerMonth = this.repository.getNumberOfPracticaPerMonth(companyId);
 
 		averageLengthOfPracticumSessionsPerCompany = this.repository.averageLengthOfPracticumSessionsPerCompany(companyId);
 		deviationLengthOfPracticumSessionsPerCompany = this.repository.deviationLengthOfPracticumSessionsPerCompany(companyId);
 		minimumLengthOfPracticumSessionsPerCompany = this.repository.minimumLengthOfPracticumSessionsPerCompany(companyId);
-		maximunLengthOfPracticumSessionsPerCompany = this.repository.maximunLengthOfPracticumSessionsPerCompany(companyId);
+		maximunLengthOfPracticumSessionsPerCompany = this.repository.maximumLengthOfPracticumSessionsPerCompany(companyId);
 
 		periodLengthOfSessionsStats = new Statistic();
 		periodLengthOfSessionsStats.setAverage(averageLengthOfPracticumSessionsPerCompany);
@@ -73,16 +64,16 @@ public class CompanyDashboardShowService extends AbstractService<Company, Compan
 		periodLengthOfSessionsStats.setMax(maximunLengthOfPracticumSessionsPerCompany);
 
 		averageLengthOfPracticumPerCompany = this.repository.averageLengthOfPracticumPerCompany(companyId);
-		deviationLengthOfPracticumPerCompany = this.repository.deviationLengthOfPracticumPerCompany(companyId);
 		minimumLengthOfPracticumPerCompany = this.repository.minimumLengthOfPracticumPerCompany(companyId);
 		maximumLengthOfPracticumPerCompany = this.repository.maximumLengthOfPracticumPerCompany(companyId);
 
 		periodLengthOfPracticaStats = new Statistic();
 		periodLengthOfPracticaStats.setAverage(averageLengthOfPracticumPerCompany);
-		periodLengthOfPracticaStats.setLinDev(deviationLengthOfPracticumPerCompany);
+		periodLengthOfPracticaStats.calcLinDev(this.repository.deviationLengthOfPracticumPerCompany(companyId));
 		periodLengthOfPracticaStats.setMin(minimumLengthOfPracticumPerCompany);
 		periodLengthOfPracticaStats.setMax(maximumLengthOfPracticumPerCompany);
 
+		dashboard = new CompanyDashboard();
 		dashboard.setNumberOfPracticaPerMonth(numberOfPracticaPerMonth);
 		dashboard.setPeriodLengthOfSessionsStats(periodLengthOfSessionsStats);
 		dashboard.setPeriodLengthOfPracticaStats(periodLengthOfPracticaStats);
