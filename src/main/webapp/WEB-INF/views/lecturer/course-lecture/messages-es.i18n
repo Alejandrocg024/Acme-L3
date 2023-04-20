@@ -5,7 +5,7 @@ lecturer.courseLecture.form.label.lecture = Lección
 lecturer.courseLecture.form.button.delete = Quitar
 lecturer.courseLecture.form.button.create = Añadir
 
-lecturer.courseLecture.form.error.lecture = La lección seleccionada ya estaba en el curso
+lecturer.courseLecture.form.error.lecture = Esta lección seleccionada ya estaba en el curso
 
 lecturer.courseLecture.form.error.course = El curso seleccionado no se puede editar
 

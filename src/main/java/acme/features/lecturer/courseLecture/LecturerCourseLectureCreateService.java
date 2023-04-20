@@ -98,7 +98,11 @@ public class LecturerCourseLectureCreateService extends AbstractService<Lecturer
 		tuple.put("draftMode", lecture.isDraftMode());
 
 		final SelectChoices choices;
-		choices = SelectChoices.from(courses, "code", object.getCourse());
+		choices = new SelectChoices();
+
+		choices.add("0", "---", true);
+		for (final Course c : courses)
+			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 
