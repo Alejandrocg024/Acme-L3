@@ -71,10 +71,19 @@ public class StudentEnrolmentShowService extends AbstractService<Student, Enrolm
 
 		final List<Activity> activities = this.repository.findActivitiesByEnrolmentId(object.getId()).stream().collect(Collectors.toList());
 		final Double workTime = object.workTime(activities);
-		courses = this.repository.findAllCourses();
-		choices = SelectChoices.from(courses, "code", object.getCourse());
 
-		tuple = super.unbind(object, "code", "motivation", "goals", "draftMode");
+		choices = new SelectChoices();
+		courses = this.repository.findAllPublishedCourses();
+		for (final Course c : courses) {
+			if (c.getId() == object.getCourse().getId()) {
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
+				continue;
+			}
+			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+		}
+		choices.add("0", "---", false);
+
+		tuple = super.unbind(object, "code", "motivation", "goals", "draftMode", "holderName", "lowerNibble");
 		tuple.put("workTime", workTime);
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);

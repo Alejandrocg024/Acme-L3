@@ -1,16 +1,19 @@
-
-
 student.enrolment.activities = Actividades
 student.enrolment.create = Crear
 
 student.enrolment.list.label.code = Código
 student.enrolment.list.label.motivation = Motivación
 
+student.enrolment.form.label.draftModeTrue = Matrícula en progreso
+student.enrolment.form.label.draftModeFalse = Matrícula realizada
 student.enrolment.form.label.code = Código
 student.enrolment.form.label.motivation = Motivación
 student.enrolment.form.label.goals = Objetivos
 student.enrolment.form.label.course = Código del curso asociado
 student.enrolment.form.label.workTime = Tiempo total del libro de trabajo
+student.enrolment.form.label.lowerNibble = Cuatro últimos dígitos del número de la tarjeta de credito
+student.enrolment.form.label.holderName = Nombre del propietario
+student.enrolment.form.label.paymentInfo = Información de pago
 
 student.enrolment.form.button.activities = Libro de trabajo
 student.enrolment.form.button.create = Registrar
