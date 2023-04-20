@@ -90,11 +90,13 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 		assert object != null;
 
 		Collection<Course> courses;
-		SelectChoices choices;
+		final SelectChoices choices = new SelectChoices();
 		Tuple tuple;
 
-		courses = this.repository.findAllCourses();
-		choices = SelectChoices.from(courses, "code", object.getCourse());
+		courses = this.repository.findAllPublishedCourses();
+		choices.add("---", "0", true);
+		for (final Course c : courses)
+			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
 
 		tuple = super.unbind(object, "code", "title", "abstract$", "goal");
 		tuple.put("course", choices.getSelected().getKey());
