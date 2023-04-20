@@ -18,7 +18,8 @@ import acme.framework.services.AbstractService;
 import acme.roles.Auditor;
 
 @Service
-public class AuditorAuditingRecordUpdateService extends AbstractService<Auditor, AuditingRecord> {
+public class AuditorAuditingRecordPublishService extends AbstractService<Auditor, AuditingRecord> {
+
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
@@ -31,23 +32,19 @@ public class AuditorAuditingRecordUpdateService extends AbstractService<Auditor,
 	@Override
 	public void check() {
 		boolean status;
-
 		status = super.getRequest().hasData("id", int.class);
-
 		super.getResponse().setChecked(status);
 	}
 
 	@Override
 	public void authorise() {
 		Audit object;
-		AuditingRecord auditingRecord;
 		int id;
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findAuditByAuditingRecordId(id);
-		auditingRecord = this.repository.findAuditingRecordById(id);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getAuditor().getUserAccount().getId() == userAccountId && object.isDraftMode() && auditingRecord.isDraftMode());
+		super.getResponse().setAuthorised(object.getAuditor().getUserAccount().getId() == userAccountId && object.isDraftMode());
 	}
 
 	@Override
@@ -87,7 +84,7 @@ public class AuditorAuditingRecordUpdateService extends AbstractService<Auditor,
 
 	@Override
 	public void perform(final AuditingRecord object) {
-		assert object != null;
+		object.setDraftMode(false);
 		this.repository.save(object);
 	}
 

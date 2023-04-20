@@ -26,5 +26,6 @@ auditor.auditing-record.form.error.one-hour-before = El registro de auditoría d
 auditor.auditing-record.form.button.delete = Borrar
 auditor.auditing-record.form.button.update = Actualizar
 auditor.auditing-record.form.button.create = Crear
+auditor.auditing-record.form.button.publish = Publicar
 auditor.auditing-record.form.button.confirmation = Confirmar registro excepcional
 auditor.auditing-record.form.button.create-exceptional = Crear registro excepcional

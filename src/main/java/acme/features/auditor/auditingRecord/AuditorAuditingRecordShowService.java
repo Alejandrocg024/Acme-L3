@@ -58,11 +58,11 @@ public class AuditorAuditingRecordShowService extends AbstractService<Auditor, A
 		assert object != null;
 
 		Tuple tuple;
-		tuple = super.unbind(object, "subject", "assessment", "startPeriod", "endPeriod", "mark", "furtherInformationLink", "exceptional");
+		tuple = super.unbind(object, "subject", "assessment", "startPeriod", "endPeriod", "mark", "furtherInformationLink", "exceptional", "draftMode");
 		SelectChoices choice;
 		choice = SelectChoices.from(Mark.class, object.getMark());
 		tuple.put("masterId", object.getAudit().getId());
-		tuple.put("draftMode", object.getAudit().isDraftMode());
+		tuple.put("draftModeAudit", object.getAudit().isDraftMode());
 		tuple.put("mark", choice.getSelected().getKey());
 		tuple.put("marks", choice);
 		super.getResponse().setData(tuple);

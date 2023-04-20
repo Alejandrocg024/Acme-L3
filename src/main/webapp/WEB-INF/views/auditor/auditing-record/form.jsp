@@ -16,14 +16,15 @@
 	<acme:input-url code="auditor.auditing-record.form.label.furtherInformationLink" path="furtherInformationLink"/>
 		
 	<jstl:choose>	 
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:submit code="auditor.auditing-record.form.button.update" action="/auditor/auditing-record/update"/>
 			<acme:submit code="auditor.auditing-record.form.button.delete" action="/auditor/auditing-record/delete"/>
+			<acme:submit code="auditor.auditing-record.form.button.publish" action="/auditor/auditing-record/publish"/>
 		</jstl:when>
-		<jstl:when test="${_command == 'create' && draftMode == true}">
+		<jstl:when test="${_command == 'create' && draftModeAudit == true}">
 			<acme:submit code="auditor.auditing-record.form.button.create" action="/auditor/auditing-record/create?masterId=${masterId}"/>
 		</jstl:when>	
-		<jstl:when test="${_command == 'create'&& draftMode == false}">
+		<jstl:when test="${_command == 'create'&& draftModeAudit == false}">
 			<acme:input-checkbox code="auditor.auditing-record.form.button.confirmation" path="confirmation"/>
 			<acme:submit code="auditor.auditing-record.form.button.create-exceptional" action="/auditor/auditing-record/create?masterId=${masterId}"/>
 		</jstl:when>	
