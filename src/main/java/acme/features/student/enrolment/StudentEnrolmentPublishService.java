@@ -75,9 +75,10 @@ public class StudentEnrolmentPublishService extends AbstractService<Student, Enr
 	@Override
 	public void validate(final Enrolment object) {
 		assert object != null;
-		if (!super.getBuffer().getErrors().hasErrors("holderName"))
-			super.state(!object.getHolderName().isEmpty(), "holderName", "student.enrolment.form.error.emptyHolderName");
-		super.state(this.auxiliarService.validateTextImput(object.getHolderName()), "holderName", "student.enrolment.form.error.spam");
+		if (!super.getBuffer().getErrors().hasErrors("holderName")) {
+			//super.state(!object.getHolderName().isEmpty(), "holderName", "student.enrolment.form.error.emptyHolderName");
+			//super.state(this.auxiliarService.validateTextImput(object.getHolderName()), "holderName", "student.enrolment.form.error.spam");
+		}
 		if (!super.getBuffer().getErrors().hasErrors("creditCardNumber")) {
 			//debe pasar las comprobaciones de @CreditCardNumber
 		}

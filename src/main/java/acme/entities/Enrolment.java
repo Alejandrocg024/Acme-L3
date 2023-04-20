@@ -39,9 +39,9 @@ public class Enrolment extends AbstractEntity {
 	@Length(max = 100)
 	protected String			goals;
 
-	protected String			holderName;
+	//protected String			holderName;
 
-	protected Integer			lowerNibble;
+	//protected Integer			lowerNibble;
 
 	protected boolean			draftMode;
 
