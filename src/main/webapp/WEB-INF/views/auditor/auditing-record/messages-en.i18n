@@ -25,5 +25,6 @@ auditor.auditing-record.form.error.one-hour-before = The audit must start at lea
 auditor.auditing-record.form.button.delete = Delete
 auditor.auditing-record.form.button.update = Update
 auditor.auditing-record.form.button.create = Create
+auditor.auditing-record.form.button.publish = Publish
 auditor.auditing-record.form.button.confirmation = Confirm exceptional record
 auditor.auditing-record.form.button.create-exceptional = Create exceptional record

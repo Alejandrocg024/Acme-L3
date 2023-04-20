@@ -35,11 +35,13 @@ public class AuditorAuditingRecordDeleteService extends AbstractService<Auditor,
 	public void authorise() {
 		Audit object;
 		int id;
+		AuditingRecord auditingRecord;
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findAuditByAuditingRecordId(id);
+		auditingRecord = this.repository.findAuditingRecordById(id);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getAuditor().getUserAccount().getId() == userAccountId && object.isDraftMode());
+		super.getResponse().setAuthorised(object.getAuditor().getUserAccount().getId() == userAccountId && object.isDraftMode() && auditingRecord.isDraftMode());
 	}
 
 	@Override
@@ -74,7 +76,7 @@ public class AuditorAuditingRecordDeleteService extends AbstractService<Auditor,
 	public void unbind(final AuditingRecord object) {
 		assert object != null;
 		Tuple tuple;
-		tuple = super.unbind(object, "subject", "assesment", "startPeriod", "endPeriod", "mark", "furtherInformationLink");
+		tuple = super.unbind(object, "subject", "assesment", "startPeriod", "endPeriod", "mark", "furtherInformationLink", "draftMode");
 		final SelectChoices choices;
 		choices = SelectChoices.from(Mark.class, object.getMark());
 		tuple.put("mark", choices.getSelected().getKey());

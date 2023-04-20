@@ -61,6 +61,7 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 	public void validate(final Audit object) {
 		assert object != null;
 		super.state(!this.repository.findAuditingRecordsByAudit(object).isEmpty(), "*", "auditor.audit.form.error.records");
+		super.state(!this.repository.findAuditingRecordsByAudit(object).stream().anyMatch(x -> x.isDraftMode()), "*", "auditor.audit.form.error.records-published");
 
 	}
 

@@ -28,6 +28,9 @@ public class AuditorAuditingRecordController extends AbstractController<Auditor,
 	@Autowired
 	protected AuditorAuditingRecordUpdateService	updateService;
 
+	@Autowired
+	protected AuditorAuditingRecordPublishService	publishService;
+
 
 	@PostConstruct
 	protected void initialise() {
@@ -36,6 +39,8 @@ public class AuditorAuditingRecordController extends AbstractController<Auditor,
 		super.addBasicCommand("create", this.createService);
 		super.addBasicCommand("delete", this.deleteService);
 		super.addBasicCommand("update", this.updateService);
+		super.addCustomCommand("publish", "update", this.publishService);
+
 	}
 
 }

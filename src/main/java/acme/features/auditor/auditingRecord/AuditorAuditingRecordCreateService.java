@@ -57,6 +57,7 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 		masterId = super.getRequest().getData("masterId", int.class);
 		audit = this.repository.findAuditById(masterId);
 		object.setExceptional(!audit.isDraftMode());
+		object.setDraftMode(true);
 		object.setAudit(audit);
 		super.getBuffer().setData(object);
 	}
@@ -101,13 +102,13 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 	public void unbind(final AuditingRecord object) {
 		assert object != null;
 		Tuple tuple;
-		tuple = super.unbind(object, "subject", "assessment", "startPeriod", "endPeriod", "mark", "furtherInformationLink", "exceptional");
+		tuple = super.unbind(object, "subject", "assessment", "startPeriod", "endPeriod", "mark", "furtherInformationLink", "exceptional", "draftMode");
 		final SelectChoices choices;
 		choices = SelectChoices.from(Mark.class, object.getMark());
 		tuple.put("mark", choices.getSelected().getKey());
 		tuple.put("marks", choices);
 		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
-		tuple.put("draftMode", object.getAudit().isDraftMode());
+		tuple.put("draftModeAudit", object.getAudit().isDraftMode());
 		tuple.put("confirmation", false);
 		super.getResponse().setData(tuple);
 	}
