@@ -66,7 +66,8 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.company" access="hasRole('Company')">			
-			<acme:menu-suboption code="master.menu.company.my-practica" action="/company/practicum/list"/>			
+			<acme:menu-suboption code="master.menu.company.my-practica" action="/company/practicum/list"/>
+			<acme:menu-suboption code="master.menu.company.company-dashboard" action="/company/company-dashboard/show"/>			
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
