@@ -20,6 +20,7 @@ auditor.auditing-record.form.error.post-date = Fecha inicial posterior a fecha f
 auditor.auditing-record.form.error.not-enough-time = Periodo de tiempo menor de 1 hora
 auditor.auditing-record.form.error.before-ini = La fecha debe estar entre el 01/01/2000 00:00 y el 31/12/2100 23:59
 auditor.auditing-record.form.error.after-end =  La fecha debe estar entre el 01/01/2000 00:00 y el 31/12/2100 23:59
+auditor.auditing-record.form.error.one-hour-before = El registro de auditoría debe iniciarse al menos 1 hora antes de la fecha actual
 
 
 auditor.auditing-record.form.button.delete = Borrar
