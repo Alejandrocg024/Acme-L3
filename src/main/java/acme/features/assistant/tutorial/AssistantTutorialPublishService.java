@@ -79,6 +79,12 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 	@Override
 	public void validate(final Tutorial object) {
 		assert object != null;
+		{
+			final Collection<TutorialSession> sessions = this.repository.findTutorialSessionsByTutorial(object);
+			final Double totalTime = object.estimatedTotalTime(sessions);
+
+			super.state(totalTime != null && totalTime != 0.0, "*", "assistant.tutorial.form.error.estimatedTotalTime");
+		}
 		if (!super.getBuffer().getErrors().hasErrors("code"))
 			super.state(this.repository.findTutorialByCode(object.getCode()) == null || this.repository.findTutorialByCode(object.getCode()).equals(object), "code", "assistant.tutorial.form.error.code");
 
@@ -90,13 +96,6 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 
 		if (!super.getBuffer().getErrors().hasErrors("goal"))
 			super.state(this.auxiliarService.validateTextImput(object.getGoal()), "goal", "assistant.tutorial.form.error.spam");
-
-		{
-			final Collection<TutorialSession> sessions = this.repository.findTutorialSessionsByTutorial(object);
-			final Double totalTime = object.estimatedTotalTime(sessions);
-
-			super.state(totalTime != null && totalTime != 0.0, "*", "assistant.tutorial.form.error.estimatedTotalTime");
-		}
 
 	}
 
@@ -112,12 +111,18 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 		assert object != null;
 
 		Collection<Course> courses;
-		SelectChoices choices;
+		final SelectChoices choices = new SelectChoices();
 		Tuple tuple;
 
-		courses = this.repository.findAllCourses();
-		choices = SelectChoices.from(courses, "code", object.getCourse());
-
+		courses = this.repository.findAllPublishedCourses();
+		for (final Course c : courses) {
+			if (c.getId() == object.getCourse().getId()) {
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
+				continue;
+			}
+			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+		}
+		choices.add("0", "---", false);
 		tuple = super.unbind(object, "code", "title", "abstract$", "goal", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
