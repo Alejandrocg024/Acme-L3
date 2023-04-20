@@ -8,30 +8,24 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-lecturer.course.list.label.motivation = Motivacion
-lecturer.course.list.label.goals = Objetivos
+student.enrolment.activities = Actividades
+student.enrolment.create = Crear
 
-lecturer.course.form.label.code = Código
-lecturer.course.form.label.title = Título
-lecturer.course.form.label.abstract$ = Resumen
-lecturer.course.form.label.price = Precio
-lecturer.course.form.label.money = Precio en la divisa del sistema
-lecturer.course.form.label.furtherInformationLink = Información adicional
-lecturer.course.form.label.lecturer = Profesor
-lecturer.course.form.label.drafMode = Modo borrador
-lecturer.course.form.label.courseType = Tipo de curso
+student.enrolment.list.label.code = Código
+student.enrolment.list.label.motivation = Motivación
 
-lecturer.course.form.error.spam = El texto introducido está considerado como Spam
+student.enrolment.form.label.code = Código
+student.enrolment.form.label.motivation = Motivación
+student.enrolment.form.label.goals = Objetivos
+student.enrolment.form.label.course = Código del curso asociado
+student.enrolment.form.label.workTime = Tiempo total del libro de trabajo
 
-lecturer.course.form.error.nolecture = El curso que quieres publicar no tiene lecciones
-lecturer.course.form.error.nohandson = El curso que quieres publicar no tiene lecciones prácticas
-lecturer.course.form.error.lecturenp = Este curso contiene lecciones no publicadas
+student.enrolment.form.button.activities = Libro de trabajo
+student.enrolment.form.button.create = Registrar
+student.enrolment.form.button.update = Actualizar
+student.enrolment.form.button.delete = Borrar
+student.enrolment.form.button.publish = Publicar
 
-lecturer.course.lectures = Lecciones
-
-lecturer.course.create= Crear
-
-lecturer.course.form.button.delete = Borrar
-lecturer.course.form.button.update = Actualizar
-lecturer.course.form.button.publish = Publicar
-lecturer.course.form.button.create = Crear
+student.enrolment.form.error.spam = El texto introducido está considerado como Spam
+student.enrolment.form.error.code = El código introducido ya está en uso
+student.enrolment.form.error.emptyHolderName = El nombre del titular no puede estar vacio
