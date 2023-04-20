@@ -1,12 +1,4 @@
-# messages-en.i18n
-#
-# Copyright (C) 2012-2023 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
+
 
 administrator.offer.list.label.heading = Heading
 administrator.offer.list.label.summary = Summary
@@ -25,10 +17,15 @@ administrator.offer.form.button.update = Update
 administrator.offer.form.button.delete = Delete
 
 administrator.offer.form.error.price = The price must be positive and smaller than 1000000
+
+administrator.offer.form.error.price2 = The introduced currency is not accepted by the system
 administrator.offer.form.error.startPeriod = The start date must be at least a day after the instantiation moment
 administrator.offer.form.error.endPeriod = The end date must be minimum a week after the start date
 
 administrator.offer.form.spam = The introduced text is considered Spam
+
+administrator.offer.form.error.endPeriod.oor = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
+administrator.offer.form.error.startPeriod.oor = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
 
 administrator.offer.create = Create offer
 

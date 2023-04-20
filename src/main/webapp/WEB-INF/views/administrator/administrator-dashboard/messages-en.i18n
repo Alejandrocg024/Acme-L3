@@ -1,0 +1,7 @@
+
+administrator.dashboard.form.title.general-indicators = General indicators
+administrator.dashboard.form.label.number-principals = Number of Principals per role
+administrator.dashboard.form.label.ratio-peeps = Ratio of Peeps with email and link
+administrator.dashboard.form.label.ratio-bulletin = Ratio of Critical or non critical Bulletins
+administrator.dashboard.form.label.notes = Statistics of notes in the last 10 weeks
+administrator.dashboard.form.title.peeps-statuses = Peeps status

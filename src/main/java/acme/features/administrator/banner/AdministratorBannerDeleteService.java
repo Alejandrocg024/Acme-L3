@@ -28,7 +28,8 @@ public class AdministratorBannerDeleteService extends AbstractService<Administra
 	public void authorise() {
 		final int id = super.getRequest().getData("id", int.class);
 		final Banner object = this.repository.findBannerById(id);
-		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().before(object.getDisplayPeriodBegin()));
+		super.getResponse()
+			.setAuthorised(MomentHelper.getCurrentMoment().before(object.getDisplayPeriodBegin()) && MomentHelper.getCurrentMoment().before(object.getDisplayPeriodFinish()) || MomentHelper.getCurrentMoment().after(object.getDisplayPeriodFinish()));
 	}
 
 	@Override
@@ -63,8 +64,12 @@ public class AdministratorBannerDeleteService extends AbstractService<Administra
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "instantiationMoment", "displayPeriodBegin", "displayPeriodFinish", "pictureLink", "slogan", "webLink");
-		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getDisplayPeriodBegin());
+
+		final Banner banner = this.repository.findBannerById(object.getId());
+		final boolean readonly = !(MomentHelper.getCurrentMoment().before(banner.getDisplayPeriodBegin()) && MomentHelper.getCurrentMoment().before(banner.getDisplayPeriodFinish()) || MomentHelper.getCurrentMoment().after(banner.getDisplayPeriodFinish()));
 		tuple.put("readonly", readonly);
+		final boolean boton = !readonly;
+		tuple.put("boton", !boton);
 		super.getResponse().setData(tuple);
 	}
 }

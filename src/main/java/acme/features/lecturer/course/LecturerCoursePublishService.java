@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.datatypes.Nature;
 import acme.entities.Course;
 import acme.entities.Lecture;
@@ -22,7 +23,10 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected LecturerCourseRepository repository;
+	protected LecturerCourseRepository	repository;
+
+	@Autowired
+	protected AuxiliarService			auxiliarService;
 
 	// AbstractService<Employer, Job> -------------------------------------
 
@@ -88,7 +92,9 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 		tuple = super.unbind(object, "code", "title", "abstract$", "price", "furtherInformationLink", "draftMode");
 		final List<Lecture> lectures = this.repository.findLecturesByCourse(object.getId()).stream().collect(Collectors.toList());
 		final Nature nature = object.natureOfCourse(lectures);
+		tuple.put("hasLectures", lectures.size() > 0);
 		tuple.put("nature", nature);
+		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}
 }

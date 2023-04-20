@@ -16,6 +16,6 @@ public interface AuthenticatedOfferRepository extends AbstractRepository {
 	@Query("select o from Offer o where o.id = :id")
 	Offer findOfferById(int id);
 
-	@Query("select o from Offer o where o.endPeriod >= :date")
+	@Query("select o from Offer o where o.endPeriod > :date and o.startPeriod < :date")
 	Collection<Offer> findAllOffers(Date date);
 }

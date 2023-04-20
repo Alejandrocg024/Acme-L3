@@ -1,14 +1,4 @@
-<%--
-- form.jsp
--
-- Copyright (C) 2012-2023 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
---%>
+
 
 <%@page language="java"%>
 
@@ -19,7 +9,7 @@
 	<acme:input-textbox code="authenticated.assistant.form.label.supervisor" path="supervisor"/>
 	<acme:input-textbox code="authenticated.assistant.form.label.expertiseFields" path="expertiseFields"/>
 	<acme:input-textbox code="authenticated.assistant.form.label.resume" path="resume"/>
-	<acme:input-textbox code="authenticated.assistant.form.label.furtherInformationLink" path="furtherInformationLink"/>
+	<acme:input-url code="authenticated.assistant.form.label.furtherInformationLink" path="furtherInformationLink"/>
 
 	<acme:submit test="${_command == 'create'}" code="authenticated.lecturer.form.button.create" action="/authenticated/assistant/create"/>
 	<jstl:if test="${_command == 'update'}">

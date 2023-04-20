@@ -36,8 +36,7 @@ public class AssistantTutorialShowService extends AbstractService<Assistant, Tut
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findTutorialById(id);
 		final Principal principal = super.getRequest().getPrincipal();
-		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getAssistant().getUserAccount().getId() == userAccountId);
+		super.getResponse().setAuthorised(object.getAssistant().getUserAccount().getId() == principal.getAccountId());
 	}
 
 	@Override

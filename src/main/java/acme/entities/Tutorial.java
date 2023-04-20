@@ -56,10 +56,11 @@ public class Tutorial extends AbstractEntity {
 	protected Assistant			assistant;
 
 
-	public Double estimatedTotalTime(final Collection<TutorialSession> sessions) {
+
+	public Double estimatedTotalTime(final Collection<TutorialSession> collection) {
 		double res = 0.0;
-		if (!sessions.isEmpty())
-			for (final TutorialSession sesion : sessions) {
+		if (!collection.isEmpty())
+			for (final TutorialSession sesion : collection) {
 				final Date start = sesion.getStartPeriod();
 				final Date end = sesion.getEndPeriod();
 				double horas = 0.0;

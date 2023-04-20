@@ -1,12 +1,4 @@
-# messages-en.i18n
-#
-# Copyright (C) 2012-2023 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
+
 
 lecturer.course.list.label.title = Título
 lecturer.course.list.label.abstract$ = Resumen
@@ -27,6 +19,11 @@ lecturer.course.form.error.spam = El texto introducido está considerado como Sp
 lecturer.course.form.error.nolecture = El curso que quieres publicar no tiene lecciones
 lecturer.course.form.error.nohandson = El curso que quieres publicar no tiene lecciones prácticas
 lecturer.course.form.error.lecturenp = Este curso contiene lecciones no publicadas
+lecturer.course.form.error.code = Ya existe un curso con este código
+
+lecturer.course.form.error.price = El positivo tiene que ser positivo y menor que 1000000
+
+lecturer.course.form.error.price2 = La moneda introducida no es soportada por el sistema
 
 lecturer.course.lectures = Lecciones
 

@@ -1,12 +1,4 @@
-# messages-en.i18n
-#
-# Copyright (C) 2012-2023 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
+
 
 
 lecturer.course.list.label.title = Title
@@ -32,6 +24,11 @@ lecturer.course.form.error.spam = The introduced text is considered Spam
 
 lecturer.course.lectures = Lectures
 
+lecturer.course.form.error.code = It exist a course with the same code
+
+lecturer.course.form.error.price = The price must be positive and smaller than 1000000
+
+lecturer.course.form.error.price2 = The introduced currency is not accepted by the system
 lecturer.course.create = Create
 lecturer.course.form.button.delete = Delete
 lecturer.course.form.button.update = Update

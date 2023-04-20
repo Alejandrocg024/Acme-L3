@@ -64,6 +64,8 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 	@Override
 	public void validate(final Tutorial object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("code"))
+			super.state(this.repository.findTutorialByCode(object.getCode()) == null || this.repository.findTutorialByCode(object.getCode()).equals(object), "code", "assistant.tutorial.form.error.code");
 
 		if (!super.getBuffer().getErrors().hasErrors("title"))
 			super.state(this.auxiliarService.validateTextImput(object.getTitle()), "title", "assistant.tutorial.form.error.spam");
@@ -73,6 +75,7 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 
 		if (!super.getBuffer().getErrors().hasErrors("goal"))
 			super.state(this.auxiliarService.validateTextImput(object.getGoal()), "goal", "assistant.tutorial.form.error.spam");
+
 	}
 
 	@Override

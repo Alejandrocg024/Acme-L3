@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.components.AuxiliarService;
 import acme.entities.Course;
 import acme.entities.Tutorial;
+import acme.entities.TutorialSession;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
@@ -45,7 +46,7 @@ public class AssistantTutorialUpdateService extends AbstractService<Assistant, T
 		object = this.repository.findTutorialById(practicumId);
 		principal = super.getRequest().getPrincipal();
 
-		status = object.getAssistant().getId() == principal.getActiveRoleId();
+		status = object.getAssistant().getUserAccount().getId() == principal.getAccountId();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -78,6 +79,8 @@ public class AssistantTutorialUpdateService extends AbstractService<Assistant, T
 	@Override
 	public void validate(final Tutorial object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("code"))
+			super.state(this.repository.findTutorialByCode(object.getCode()) == null || this.repository.findTutorialByCode(object.getCode()).equals(object), "code", "assistant.tutorial.form.error.code");
 
 		if (!super.getBuffer().getErrors().hasErrors("title"))
 			super.state(this.auxiliarService.validateTextImput(object.getTitle()), "title", "assistant.tutorial.form.error.spam");
@@ -87,6 +90,7 @@ public class AssistantTutorialUpdateService extends AbstractService<Assistant, T
 
 		if (!super.getBuffer().getErrors().hasErrors("goal"))
 			super.state(this.auxiliarService.validateTextImput(object.getGoal()), "goal", "assistant.tutorial.form.error.spam");
+
 	}
 
 	@Override
@@ -107,9 +111,12 @@ public class AssistantTutorialUpdateService extends AbstractService<Assistant, T
 		courses = this.repository.findAllCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 
-		tuple = super.unbind(object, "code", "title", "abstract$", "goal");
+		tuple = super.unbind(object, "code", "title", "abstract$", "goal", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
+		final Collection<TutorialSession> sessions = this.repository.findTutorialSessionsByTutorial(object);
+		final Double totalTime = object.estimatedTotalTime(sessions);
+		tuple.put("estimatedTotalTime", totalTime);
 
 		super.getResponse().setData(tuple);
 	}

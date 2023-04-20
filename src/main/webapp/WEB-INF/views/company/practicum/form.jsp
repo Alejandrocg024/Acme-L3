@@ -21,7 +21,7 @@
 	<acme:input-textbox code="company.practicum.form.label.practicum-title" path="title"/>
 	<acme:input-textbox code="company.practicum.form.label.abstract$" path="abstract$"/>
 	<acme:input-textbox code="company.practicum.form.label.goals" path="goals"/>
-	<jstl:if test="${acme:anyOf(_command, 'show|update')}">
+	<jstl:if test="${acme:anyOf(_command, 'show|update|publish')}">
 		<acme:input-textbox code="company.practicum.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
 	</jstl:if>
 	

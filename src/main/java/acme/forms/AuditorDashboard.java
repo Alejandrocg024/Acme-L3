@@ -18,4 +18,5 @@ public class AuditorDashboard extends AbstractForm {
 	Map<Nature, Integer>		numOfAuditsByType;
 	Statistic					numOfAuditingRecordsStats;
 	Statistic					periodOfAuditingRecordStats;
+
 }

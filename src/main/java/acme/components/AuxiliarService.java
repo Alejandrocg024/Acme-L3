@@ -1,8 +1,8 @@
 
 package acme.components;
 
-import java.io.IOException;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,15 +26,25 @@ public class AuxiliarService {
 
 
 	public boolean validatePrice(final Money price, final Integer minAm, final Integer maxAm) {
+		return price.getAmount() >= minAm && price.getAmount() < maxAm;
+	}
+
+	public boolean validateCurrency(final Money price) {
 		final String aceptedCurrencies = this.repository.findSystemConfiguration().getAceptedCurrencies();
 		final List<String> currencies = Arrays.asList(aceptedCurrencies.split(","));
-		return price.getAmount() >= minAm && price.getAmount() < maxAm && currencies.contains(price.getCurrency());
+		return currencies.contains(price.getCurrency());
 	}
 
 	public boolean validateTextImput(final String input) {
 		final SystemConfiguration sc = this.repository.findSystemConfiguration();
 		final SpamFilter spamFilter = new SpamFilter(sc.getSpamWords(), sc.getSpamThreshold());
 		return !spamFilter.isSpam(input);
+	}
+
+	public boolean validateDate(final Date date) {
+		final Date maxDate = new Date(200, 11, 31, 23, 59);
+		final Date minDate = new Date(100, 0, 1, 00, 00);
+		return minDate.before(date) && maxDate.after(date);
 	}
 
 	public String translateMoney(final Money money, final String lang) {
@@ -64,17 +74,20 @@ public class AuxiliarService {
 			final String requestURL = apiBase + apikey1 + "&currencies=" + money.getCurrency() + "&base_currency=" + currentCurrency;
 			final OkHttpClient client = new OkHttpClient();
 			final Request request = new Request.Builder().url(requestURL).build();
-			res.setCurrency(currentCurrency);
 			Response response;
 			try {
 				response = client.newCall(request).execute();
 				final String responseBody = response.body().string();
 				final ObjectMapper mapper = new ObjectMapper();
 				final JsonNode jsonNode = mapper.readTree(responseBody);
-				final double value = jsonNode.get("data").get(money.getCurrency()).asDouble();
-				res.setAmount(value * money.getAmount());
-			} catch (final IOException e) {
+				final Double value = jsonNode.get("data").get(money.getCurrency()).asDouble();
+				if (value != null) {
+					res.setCurrency(currentCurrency);
+					res.setAmount(value * money.getAmount());
+				}
+			} catch (final Exception e) {
 				// TODO Auto-generated catch block
+				res = money;
 				e.printStackTrace();
 			}
 		} else
