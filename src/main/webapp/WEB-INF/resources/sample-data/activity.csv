@@ -7,8 +7,8 @@ activity-05,Este mensaje tiene setenta y cinco caracteres se usa para validar me
 activity-06,!@#$%&/()=?¿,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-07,у меня желтый трактор,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-08,我有一輛黃色拖拉機,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
-activity-09,console.log("Hola!"),Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
-activity-10,<script>alert("hi!")</script>,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
+activity-09,"console.log(""Hola!"")",Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
+activity-10,"<script>alert(""hi!"")</script>",Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-11,<h1>Hola Mundo!</h1>,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-12,Activity number 12,E,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-13,Activity number 13,Es,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
@@ -17,8 +17,8 @@ activity-15,Activity number 15,Este mensaje tiene noventa y nueve caracteres usa
 activity-16,Activity number 16,!@#$%&/()=?¿,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-17,Activity number 17,у меня желтый трактор,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-18,Activity number 18,我有一輛黃色拖拉機,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
-activity-19,Activity number 19,console.log("Hola!"),THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
-activity-20,Activity number 20,<script>alert("hi!")</script>,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
+activity-19,Activity number 19,"console.log(""Hola!"")",THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
+activity-20,Activity number 20,"<script>alert(""hi!"")</script>",THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-21,Activity number 21,<h1>Hola Mundo!</h1>,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-22,Activity number 22,Summary of the activity,HANDS_ON,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-23,Activity number 23,Summary of the activity,BALANCED,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
@@ -38,4 +38,4 @@ activity-36,Activity number 36,Summary of the activity,THEORETICAL,2022/01/01 10
 activity-37,Activity number 37,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/07/30 00:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-01
 activity-38,Activity number 38,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,null,enrolment-01
 activity-39,Activity number 39,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,ftp://user:pass@acme.org,enrolment-01
-activity-40,Activity number 40,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-02
+activity-40,Activity number 40,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://github.com/Alejandrocg024/Acme-L3-D02,enrolment-35

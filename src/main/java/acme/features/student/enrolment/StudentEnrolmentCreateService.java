@@ -96,14 +96,17 @@ public class StudentEnrolmentCreateService extends AbstractService<Student, Enro
 
 		choices = new SelectChoices();
 		courses = this.repository.findAllPublishedCourses();
-		for (final Course c : courses) {
-			if (c.getId() == object.getCourse().getId()) {
+
+		if (object.getCourse() == null)
+			choices.add("0", "---", true);
+		else
+			choices.add("0", "---", false);
+
+		for (final Course c : courses)
+			if (object.getCourse() != null && object.getCourse().getId() == c.getId())
 				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
-				continue;
-			}
-			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
-		}
-		choices.add("0", "---", false);
+			else
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
 
 		tuple = super.unbind(object, "code", "motivation", "goals");
 		tuple.put("course", choices.getSelected().getKey());

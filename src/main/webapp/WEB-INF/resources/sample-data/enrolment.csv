@@ -1,5 +1,5 @@
 key,code,motivation,goals,holderName,lowerNibble,draftMode,key:student,key:course
-enrolment-01,AAA999,Learning new things,"Discover, Learn, Enjoy",null,null,true,student-01,course-01
+enrolment-01,AAA999,Learning new things,"Discover, Learn, Enjoy",Alejandro Campano,1234,false,student-01,course-01
 enrolment-02,ABC123,Learning new things,"Discover, Learn, Enjoy",null,null,true,student-01,course-01
 enrolment-03,XYZ789,Learning new things,"Discover, Learn, Enjoy",null,null,true,student-01,course-01
 enrolment-04,AB111,Learning new things,"Discover, Learn, Enjoy",null,null,true,student-01,course-01
