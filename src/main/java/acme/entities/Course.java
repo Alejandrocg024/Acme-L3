@@ -47,6 +47,7 @@ public class Course extends AbstractEntity {
 	protected Money				price;
 
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformationLink;
 
 	@ManyToOne(optional = false)
