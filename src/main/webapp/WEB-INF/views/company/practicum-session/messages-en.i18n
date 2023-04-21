@@ -31,5 +31,6 @@ company.practicum-session.form.button.delete = Delete
 company.practicum-session.form.error.spam = The introduced text contains words that are considered spam
 company.practicum-session.form.error.start-period = The start date must be at least one week ahead from the current date
 company.practicum-session.form.error.end-period = The end date must be at least one week ahead of the start date
+company.practicum-session.form.error.date-limit = The date must be between 2000/01/01 00:00 and 2100/31/12 00:00
 
 company.practicum-session.message.addendum = (*) This is an addendum session created after the practicum was published.

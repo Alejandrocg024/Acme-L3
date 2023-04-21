@@ -89,6 +89,12 @@ public class CompanyPracticumSessionUpdateService extends AbstractService<Compan
 
 		if (!super.getBuffer().getErrors().hasErrors("furtherInformationLink"))
 			super.state(this.auxiliarService.validateTextImput(object.getFurtherInformationLink()), "furtherInformationLink", "company.practicum-session.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("startPeriod"))
+			super.state(this.auxiliarService.validateDate(object.getStartPeriod()), "startPeriod", "company.practicum-session.form.error.date-limit");
+
+		if (!super.getBuffer().getErrors().hasErrors("endPeriod"))
+			super.state(this.auxiliarService.validateDate(object.getEndPeriod()), "endPeriod", "company.practicum-session.form.error.date-limit");
 	}
 
 	@Override
