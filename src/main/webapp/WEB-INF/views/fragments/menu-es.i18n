@@ -98,7 +98,7 @@ master.menu.any.peep = Personas
 master.menu.any= Cualquiera
 
 # master.menu.assistant ####################################################
-master.menu.assistant.tutorial = Mis tutoriales
+master.menu.assistant.tutorial = Mis tutorias
 master.menu.assistant= Asistente
 master.menu.assistant.dashboard = Panel de asistente
 
