@@ -23,4 +23,3 @@ student.enrolment.form.button.publish = Publicar
 
 student.enrolment.form.error.spam = El texto introducido está considerado como Spam
 student.enrolment.form.error.code = El código introducido ya está en uso
-student.enrolment.form.error.emptyHolderName = El nombre del titular no puede estar vacio

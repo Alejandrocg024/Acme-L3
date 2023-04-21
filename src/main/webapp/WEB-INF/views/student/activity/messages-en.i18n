@@ -1,0 +1,21 @@
+
+student.activity.list.label.title = Title
+student.activity.list.label.endPeriod = End Date
+student.activity.list.label.startPeriod = Start Date
+
+student.activity.form.label.title = Title
+student.activity.form.label.abstract$ = Abstract
+student.activity.form.label.startPeriod = Start Date
+student.activity.form.label.endPeriod = End Date
+student.activity.form.label.nature = Nature of the Activity
+student.activity.form.label.furtherInformationLink = Link with further information
+
+student.activity.form.button.update = Update
+student.activity.form.button.delete = Delete
+student.activity.form.button.create = Create
+
+student.activity.form.error.dates = Date must be in the period 2000/01/01 00:00 to 2100/12/31 23:59
+student.activity.form.error.period = End Date must be after the Start Date
+student.activity.form.error.spam = The introduced text is considered Spam
+
+student.activity.create = Create Activity

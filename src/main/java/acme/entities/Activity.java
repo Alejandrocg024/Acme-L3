@@ -41,12 +41,12 @@ public class Activity extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				startPeriod;
 
-	//startPeriod must be before the endPeriod
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				endPeriod;
 
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformationLink;
 
 	@NotNull
