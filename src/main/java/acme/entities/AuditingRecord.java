@@ -52,6 +52,7 @@ public class AuditingRecord extends AbstractEntity {
 	protected boolean			draftMode;
 
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformationLink;
 
 	protected boolean			exceptional;

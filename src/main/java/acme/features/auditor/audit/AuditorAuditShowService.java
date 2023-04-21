@@ -61,16 +61,27 @@ public class AuditorAuditShowService extends AbstractService<Auditor, Audit> {
 
 		Tuple tuple;
 		Collection<Course> courses;
-		SelectChoices choices;
 		Collection<Mark> marks;
 		String mark;
 		courses = this.repository.findCoursesNotAudited();
+		final SelectChoices choices = new SelectChoices();
+		courses = this.repository.findCoursesNotAudited();
+		if (object.getCourse() == null)
+			choices.add("0", "---", true);
+		else
+			choices.add("0", "---", false);
+
+		for (final Course c : courses)
+			if (object.getCourse() != null && object.getCourse().getId() == c.getId())
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
+			else
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+
 		marks = this.repository.findMarksByAuditId(object.getId());
 		if (marks.isEmpty())
 			mark = "N/A";
 		else
 			mark = marks.toString().replace("[", "").replace("]", "");
-		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
