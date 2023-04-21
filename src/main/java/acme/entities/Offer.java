@@ -50,6 +50,7 @@ public class Offer extends AbstractEntity {
 	protected Money				price;
 
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformationLink;
 
 }

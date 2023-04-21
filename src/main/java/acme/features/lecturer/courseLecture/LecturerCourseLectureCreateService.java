@@ -97,14 +97,22 @@ public class LecturerCourseLectureCreateService extends AbstractService<Lecturer
 		final Lecture lecture = this.repository.findOneLectureById(lectureId);
 		tuple.put("draftMode", lecture.isDraftMode());
 
-		final SelectChoices choices;
-		choices = new SelectChoices();
+		final SelectChoices choices = new SelectChoices();
 
-		choices.add("0", "---", true);
+		if (object.getCourse() == null)
+			choices.add("0", "---", true);
+		else
+			choices.add("0", "---", false);
+
 		for (final Course c : courses)
-			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+			if (object.getCourse() != null && object.getCourse().getId() == c.getId())
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
+			else
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
+		tuple.put("cursos", courses);
 
 		super.getResponse().setData(tuple);
 	}
