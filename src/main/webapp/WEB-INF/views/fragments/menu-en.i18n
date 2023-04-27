@@ -75,8 +75,8 @@ master.menu.authenticated.assistant.update = Assistant Data
 
 
 # master.menu.lecturer ####################################################
-master.menu.lecturer = Lecturer
-master.menu.lecturer.course = My courses
+master.menu.lecturer =Lecturer
+master.menu.lecturer.course =My courses
 master.menu.lecturer.lecturer-dashboard = Lecturer dashboard
 master.menu.lecturer.lecture = My lectures
 
