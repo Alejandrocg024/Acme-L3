@@ -2,8 +2,8 @@
 
 
 lecturer.course.list.label.title = Title
-lecturer.course.list.label.abstract$ = summary
-lecturer.course.list.label.price = price
+lecturer.course.list.label.abstract$ = Summary
+lecturer.course.list.label.price = Price
 
 
 lecturer.course.form.label.code = Code
