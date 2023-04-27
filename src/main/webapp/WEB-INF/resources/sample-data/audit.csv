@@ -1,6 +1,6 @@
 key,code,conclusion,strong_points,weak_points,draft_mode,key:course,key:auditor
 audit-01,AAA999,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-01
-audit-02,AA999,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-01
+audit-02,AA999,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-01
 audit-03,A999,Auditoría finalizada,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
 audit-04,A900,A,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
 audit-05,A901,Au,"Completa, clara, sencilla","General,poca información",true,course-01,auditor-01
@@ -28,3 +28,4 @@ audit-26,A922,Auditoría finalizada,"Completa, clara, sencilla",<script>alert("h
 audit-27,A923,Auditoría finalizada,"Completa, clara, sencilla",<h1>Hola Mundo!</h1>,true,course-01,auditor-01
 audit-28,A924,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-01
 audit-29,A925,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,true,course-01,auditor-02
+audit-30,A926,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información,false,course-01,auditor-02
