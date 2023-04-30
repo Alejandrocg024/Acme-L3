@@ -69,7 +69,7 @@ public class AssistantTutorialShowService extends AbstractService<Assistant, Tut
 			}
 			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
 		}
-		choices.add("0", "---", false);
+
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 		super.getResponse().setData(tuple);
