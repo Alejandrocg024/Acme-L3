@@ -67,12 +67,12 @@ master.menu.authenticated.lecturer.update = Lecturer data
 master.menu.authenticated.lecturer.create = Become a lecturer
 master.menu.authenticated.company.update = Company data
 master.menu.authenticated.company.create = Become a company
-master.menu.authenticated.auditor.create = Become a auditor
+master.menu.authenticated.auditor.create = Become an auditor
 master.menu.authenticated.auditor.update = Auditor data
 master.menu.authenticated.assistant.create = Become an assistant
 master.menu.authenticated.assistant.update = Assistant Data
-
-
+master.menu.authenticated.student.create = Become a student
+master.menu.authenticated.student.update = Student Data
 
 # master.menu.lecturer ####################################################
 master.menu.lecturer = Lecturer
@@ -105,3 +105,4 @@ master.menu.assistant.dashboard = Assistant Dashboard
 # master.menu.student ####################################################
 master.menu.student = Student
 master.menu.student.enrolment = My enrolments
+master.menu.student.dashboard = Student Dashboard
