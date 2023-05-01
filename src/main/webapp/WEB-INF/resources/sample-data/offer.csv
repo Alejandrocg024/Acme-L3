@@ -5,6 +5,13 @@ offer-03,2020/01/01 00:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11
 offer-04,2020/01/01 12:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-05,2020/01/01 11:59,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-06,2022/07/30 00:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-61,2022/07/29 23:59,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-62,2022/07/28 12:01,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-63,2020/12/31 23:59,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-64,2021/12/31 00:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-65,2021/12/31 00:01,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-66,2000/01/01 00:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
+offer-67,2000/01/01 00:01,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-07,2020/01/01 10:00,O,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-08,2020/01/01 10:00,Of,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
 offer-09,2020/01/01 10:00,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,null
@@ -37,8 +44,11 @@ offer-28,2020/01/01 10:00,Offer,Esto es una offer,2022/07/28 11:00,2022/07/30 00
 offer-29,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,USD 10.0,null
 offer-30,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,GBP 10.0,null
 offer-31,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,"EUR 150,000.0",null
+offer-68,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 0.0,null
 offer-32,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,https://github.com/Alejandrocg024/Acme-L3-D02
 offer-37,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,ftp://user:pass@acme.org
+offer-69,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,https://acme.com/estoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255
+offer-70,2020/01/01 10:00,Offer,Esto es una offer,2020/01/01 11:00,2020/01/02 11:00,EUR 10.0,https://acme.com/estoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255
 offer-53,2020/01/01 10:00,Offer,Esto es una offer,2023/03/22 11:00,2023/03/28 11:00,EUR 10.0,null
 offer-54,2020/01/01 10:00,Offer,Esto es una offer,2023/03/28 11:00,2023/04/03 11:00,EUR 10.0,null
 offer-41,2020/01/01 10:00,Offer,Esto es una offer,2023/04/03 11:00,2023/04/10 11:00,EUR 10.0,null

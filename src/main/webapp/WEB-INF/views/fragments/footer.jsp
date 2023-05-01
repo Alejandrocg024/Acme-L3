@@ -16,6 +16,16 @@
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
+<jstl:if test="${banner != null}">
+	<div style="text-align:center;margin:0em 0em 1em 0em;">
+	
+		<a href="${banner.webLink}" target ="_blank">
+			<img src="${banner.pictureLink}" alt="${banner.slogan}" class="img-fluid rounded" style="width: 800px; height: 100px;"/>
+		</a>
+			
+	</div>
+</jstl:if>
+
 <acme:footer-panel>
 	<acme:footer-subpanel code="master.footer.title.about">
 		<acme:footer-option icon="fa fa-building" code="master.footer.label.company" action="/master/company"/>
@@ -39,16 +49,3 @@
 	</acme:footer-logo>		
 
 </acme:footer-panel>
-
-<jstl:if test="${banner != null }">
-	<div style="margin:1em 0em 1em 0em; text-align:left;font-size: 30px">
-	
-		<a href="${banner.webLink}" target ="_blank">
-			<img src="${banner.pictureLink}" alt="${banner.slogan}" class="img-fluid rounded" style="align-text:left;max-height: 200px;width: auto"/>
-		</a>
-		
-		<acme:print value="${banner.slogan}"/>
-	
-	</div>
-</jstl:if>
-

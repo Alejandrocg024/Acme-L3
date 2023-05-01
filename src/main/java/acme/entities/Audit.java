@@ -25,7 +25,7 @@ public class Audit extends AbstractEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{1,3}\\d{3}$")
+	@Pattern(regexp = "^[A-Z]{1,3}\\d{3}$", message = "{validation.enrolment.reference}")
 	protected String			code;
 
 	@NotBlank
@@ -39,7 +39,7 @@ public class Audit extends AbstractEntity {
 	@NotBlank
 	@Length(max = 100)
 	protected String			weakPoints;
-	
+
 	protected boolean			draftMode;
 
 	@ManyToOne(optional = false)
