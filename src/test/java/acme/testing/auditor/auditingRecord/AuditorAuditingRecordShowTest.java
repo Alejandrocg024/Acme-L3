@@ -14,7 +14,7 @@ import acme.testing.TestHarness;
 public class AuditorAuditingRecordShowTest extends TestHarness {
 
 	@Autowired
-	AuditorAuditingRecordTestRepository respository;
+	AuditorAuditingRecordTestRepository repository;
 
 
 	@ParameterizedTest
@@ -52,7 +52,7 @@ public class AuditorAuditingRecordShowTest extends TestHarness {
 		Collection<AuditingRecord> auditingRecords;
 		String param;
 
-		auditingRecords = this.respository.findManyAuditingRecordsByAuditorUsername("auditor2");
+		auditingRecords = this.repository.findManyAuditingRecordsByAuditorUsername("auditor2");
 		for (final AuditingRecord ar : auditingRecords) {
 			param = String.format("id=%d", ar.getId());
 			super.checkLinkExists("Sign in");
