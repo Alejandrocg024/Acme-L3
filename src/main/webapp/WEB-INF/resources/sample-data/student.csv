@@ -8,8 +8,8 @@ student-06,!@#$%&/()=?¿,"Discipline, Consistent, Responsible","Bad Team Player,
 student-07,у меня желтый трактор,"Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-07
 student-08,我有一輛黃色拖拉機,"Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-08
 student-09,لدي جرار أصفر,"Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-09
-student-10,"console.log(""Hola!"")","Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-10
-student-11,"<script>alert(""hi!"")</script>","Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-11
+student-10,console.log("Hola!"),"Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-10
+student-11,<script>alert("hi!")</script>,"Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-11
 student-12,<h1>Hola Mundo!</h1>,"Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-12
 student-13,Student number 1,D,"Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-13
 student-14,Student number 1,Di,"Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-14
@@ -18,8 +18,8 @@ student-16,Student number 1,Este mensaje tiene noventa y nueve caracteres usado 
 student-17,Student number 1,!@#$%&/()=?¿,"Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-17
 student-18,Student number 1,у меня желтый трактор,"Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-18
 student-19,Student number 1,我有一輛黃色拖拉機,"Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-19
-student-20,Student number 1,"console.log(""Hola!"")","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-20
-student-21,Student number 1,"<script>alert(""hi!"")</script>","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-21
+student-20,Student number 1,console.log("Hola!"),"Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-20
+student-21,Student number 1,<script>alert("hi!")</script>,"Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-21
 student-22,Student number 1,<h1>Hola Mundo!</h1>,"Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-22
 student-23,Student number 1,"Discipline, Consistent, Responsible",D,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-23
 student-24,Student number 1,"Discipline, Consistent, Responsible",Di,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-24
@@ -29,9 +29,11 @@ student-27,Student number 1,"Discipline, Consistent, Responsible",!@#$%&/()=?¿,
 student-28,Student number 1,"Discipline, Consistent, Responsible",у меня желтый трактор,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-28
 student-29,Student number 1,"Discipline, Consistent, Responsible",我有一輛黃色拖拉機,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-29
 student-30,Student number 1,"Discipline, Consistent, Responsible",لدي جرار أصفر,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-30
-student-31,Student number 1,"Discipline, Consistent, Responsible","console.log(""Hola!"")",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-31
-student-32,Student number 1,"Discipline, Consistent, Responsible","<script>alert(""hi!"")</script>",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-32
+student-31,Student number 1,"Discipline, Consistent, Responsible",console.log("Hola!"),https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-31
+student-32,Student number 1,"Discipline, Consistent, Responsible",<script>alert("hi!")</script>,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-32
 student-33,Student number 1,"Discipline, Consistent, Responsible",<h1>Hola Mundo!</h1>,https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-33
 student-34,Student number 1,"Discipline, Consistent, Responsible","Bad Team Player, Late",ftp://user:pass@acme.org,user-account-student-34
 student-35,Student number 1,"Discipline, Consistent, Responsible","Bad Team Player, Late",null,user-account-student-35
-student-36,Student number 1,"Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-36
+student-36,Student number 1,"Discipline, Consistent, Responsible","Bad Team Player, Late",https://acme.com/estoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255,user-account-student-35
+student-37,Student number 1,"Discipline, Consistent, Responsible","Bad Team Player, Late",https://acme.com/estoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede25,user-account-student-35
+student-38,Student number 1,"Discipline, Consistent, Responsible","Bad Team Player, Late",https://github.com/Alejandrocg024/Acme-L3-D02,user-account-student-36

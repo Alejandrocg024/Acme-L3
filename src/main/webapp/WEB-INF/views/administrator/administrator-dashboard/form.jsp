@@ -41,7 +41,7 @@
 	</tr>
 
 	
-		<jstl:forEach items="${currentsOffersStats}" var="offer">
+		<jstl:forEach items="${offersByCurrencyStats}" var="offer">
 <tr>
 			<th><acme:message code="Stats of offers with: ${offer.key}" /></th>
 			<td><jstl:out value="${offer.value.toString()}">
