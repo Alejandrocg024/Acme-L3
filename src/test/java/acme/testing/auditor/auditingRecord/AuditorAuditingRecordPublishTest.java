@@ -39,8 +39,8 @@ public class AuditorAuditingRecordPublishTest extends TestHarness {
 	public void test200Negative() {
 		//Con el procedimiento anterior intentamos publicar auditorías que no se pueden publicar
 		//debido a que ya lo están
-		super.signIn("auditor1", "auditor1");
-		final Collection<AuditingRecord> ars = this.repository.findPublishedAuditingRecordsByAuditorUsername("auditor1");
+		super.signIn("auditor2", "auditor2");
+		final Collection<AuditingRecord> ars = this.repository.findPublishedAuditingRecordsByAuditorUsername("auditor2");
 		for (final AuditingRecord ar : ars) {
 			final String param = String.format("id=%d", ar.getId());
 			super.request("/auditor/auditing-record/show", param);
