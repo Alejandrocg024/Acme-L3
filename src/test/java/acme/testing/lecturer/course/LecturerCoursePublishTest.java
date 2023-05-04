@@ -25,6 +25,8 @@ public class LecturerCoursePublishTest extends TestHarness {
 		super.checkNotErrorsExist();
 		super.request("/lecturer/course/show", param);
 		super.checkNotSubmitExists("Publish");
+		super.request("/lecturer/course/publish", param);
+		super.checkPanicExists();
 		super.signOut();
 	}
 
@@ -81,6 +83,21 @@ public class LecturerCoursePublishTest extends TestHarness {
 		super.signOut();
 
 		super.signIn("auditor1", "auditor1");
+		super.request("/lecturer/course/publish", param);
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("student1", "student1");
+		super.request("/lecturer/course/publish", param);
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("assistant1", "assistant1");
+		super.request("/lecturer/course/publish", param);
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("company1", "company1");
 		super.request("/lecturer/course/publish", param);
 		super.checkPanicExists();
 		super.signOut();

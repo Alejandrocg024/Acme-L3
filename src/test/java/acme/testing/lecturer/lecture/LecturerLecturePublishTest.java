@@ -30,6 +30,8 @@ public class LecturerLecturePublishTest extends TestHarness {
 			super.checkNotErrorsExist();
 			super.request("/lecturer/lecture/show", param);
 			super.checkNotSubmitExists("Publish");
+
+			super.checkInputBoxHasValue("draftMode", "false");
 		}
 		super.signOut();
 	}
