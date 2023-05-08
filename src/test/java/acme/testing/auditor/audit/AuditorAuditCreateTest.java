@@ -4,10 +4,16 @@ package acme.testing.auditor.audit;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import acme.entities.Audit;
 import acme.testing.TestHarness;
 
 public class AuditorAuditCreateTest extends TestHarness {
+
+	@Autowired
+	AuditorAuditTestRepository repository;
+
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/auditor/audit/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -28,12 +34,10 @@ public class AuditorAuditCreateTest extends TestHarness {
 		super.fillInputBoxIn("weakPoints", weakPoints);
 		super.clickOnSubmit("Create");
 
-		super.clickOnMenu("Auditor", "My audits");
-		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 0, course);
-		super.checkColumnHasValue(recordIndex, 1, code);
-		super.clickOnListingRecord(recordIndex);
+		final Audit a;
+		a = this.repository.findAuditByCode(code);
+		final String param = String.format("id=%d", a.getId());
+		super.request("/auditor/audit/show", param);
 
 		super.checkFormExists();
 		super.checkInputBoxHasValue("course", course);

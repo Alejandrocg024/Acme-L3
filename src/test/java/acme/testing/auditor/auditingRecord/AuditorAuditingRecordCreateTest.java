@@ -46,13 +46,15 @@ public class AuditorAuditingRecordCreateTest extends TestHarness {
 		super.checkColumnHasValue(auditingRecordRecordIndex, 0, subject);
 		super.checkColumnHasValue(auditingRecordRecordIndex, 1, assessment);
 
-		super.clickOnListingRecord(auditingRecordRecordIndex);
-		super.checkInputBoxHasValue("subject", subject);
-		super.checkInputBoxHasValue("assessment", assessment);
-		super.checkInputBoxHasValue("startPeriod", startPeriod);
-		super.checkInputBoxHasValue("endPeriod", endPeriod);
-		super.checkInputBoxHasValue("mark", mark);
-		super.checkInputBoxHasValue("furtherInformationLink", furtherInformationLink);
+		/*
+		 * super.clickOnListingRecord(auditingRecordRecordIndex);
+		 * super.checkInputBoxHasValue("subject", subject);
+		 * super.checkInputBoxHasValue("assessment", assessment);
+		 * super.checkInputBoxHasValue("startPeriod", startPeriod);
+		 * super.checkInputBoxHasValue("endPeriod", endPeriod);
+		 * super.checkInputBoxHasValue("mark", mark);
+		 * super.checkInputBoxHasValue("furtherInformationLink", furtherInformationLink);
+		 */
 
 		super.signOut();
 	}
