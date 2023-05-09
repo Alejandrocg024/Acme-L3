@@ -22,17 +22,21 @@ public class LecturerCourseUpdateTest extends TestHarness {
 	public void test100Positive(final int recordIndex, final String title, final String abstract$, final String price, final String furtherInformationLink, final String code) {
 		super.signIn("lecturer1", "lecturer1");
 
-		if (code.equals("ZAA909")) {//Mientras no vayamos a cambiar el código, siempre accederemos a la url del show para modificar a traves del código
-			final Course c;
-			c = this.repository.findCourseByCode("ZAA909");
-			final String param = String.format("id=%d", c.getId());
-			super.request("/lecturer/course/show", param);
-		} else {
-			super.clickOnMenu("Lecturer", "My courses");
-			super.checkListingExists();
-			super.sortListing(0, "asc");
-			super.clickOnListingRecord(0);
-		}
+		//		if (code.equals("ZAA909")) {//Mientras no vayamos a cambiar el código, siempre accederemos a la url del show para modificar a traves del código
+		//			final Course c;
+		//			c = this.repository.findCourseByCode("ZAA909");
+		//			final String param = String.format("id=%d", c.getId());
+		//			super.request("/lecturer/course/show", param);
+		//		} else {
+		//			super.clickOnMenu("Lecturer", "My courses");
+		//			super.checkListingExists();
+		//			super.sortListing(0, "asc");
+		//			super.clickOnListingRecord(0);
+		//		}
+		super.clickOnMenu("Lecturer", "My courses");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(0);
 
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("title", title);
@@ -41,18 +45,23 @@ public class LecturerCourseUpdateTest extends TestHarness {
 		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
 		super.clickOnSubmit("Update");
 
-		if (code.equals("ZAA909")) {//Mientras no vayamos a cambiar el código, siempre accederemos a la url del show para modificar a traves del código
-			final Course c;
-			c = this.repository.findCourseByCode("ZAA909");
-			final String param = String.format("id=%d", c.getId());
-			super.request("/lecturer/course/show", param);
-			super.checkFormExists();
-		} else {
-			final Course c;
-			c = this.repository.findCourseByCode(code);
-			final String param = String.format("id=%d", c.getId());
-			super.request("/lecturer/course/show", param);
-		}
+		//		if (code.equals("ZAA909")) {//Mientras no vayamos a cambiar el código, siempre accederemos a la url del show para modificar a traves del código
+		//			final Course c;
+		//			c = this.repository.findCourseByCode("ZAA909");
+		//			final String param = String.format("id=%d", c.getId());
+		//			super.request("/lecturer/course/show", param);
+		//			super.checkFormExists();
+		//		} else {
+		//			final Course c;
+		//			c = this.repository.findCourseByCode(code);
+		//			final String param = String.format("id=%d", c.getId());
+		//			super.request("/lecturer/course/show", param);
+		//		}
+
+		super.clickOnMenu("Lecturer", "My courses");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(0);
 
 		super.checkFormExists();
 		super.checkInputBoxHasValue("code", code);
@@ -123,6 +132,19 @@ public class LecturerCourseUpdateTest extends TestHarness {
 			super.request("/lecturer/course/update", param);
 			super.checkPanicExists();
 			super.signOut();
+
+		}
+	}
+
+	@Test
+	public void test301Hacking() {
+
+		final Collection<Course> courses;
+		String param;
+
+		courses = this.repository.findNonPublishedCoursesByLecturerUsername("lecturer1");
+		for (final Course c : courses) {
+			param = String.format("id=%d", c.getId());
 
 			super.signIn("lecturer2", "lecturer2");
 			super.request("/lecturer/course/update", param);

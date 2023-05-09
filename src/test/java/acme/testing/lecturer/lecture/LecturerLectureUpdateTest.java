@@ -77,32 +77,33 @@ public class LecturerLectureUpdateTest extends TestHarness {
 	public void test300Hacking() {
 		final Collection<Lecture> lectures = this.repository.findNonPublishedLecturesByLecturerUsername("lecturer1");
 		for (final Lecture l : lectures) {
+			final String param = String.format("id=%d", l.getId());
 			super.checkLinkExists("Sign in");
-			super.request("/lecturer/lecture/update");
+			super.request("/lecturer/lecture/update", param);
 			super.checkPanicExists();
 
 			super.signIn("administrator", "administrator");
-			super.request("/lecturer/lecture/update");
+			super.request("/lecturer/lecture/update", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("assistant1", "assistant1");
-			super.request("/lecturer/lecture/update");
+			super.request("/lecturer/lecture/update", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("auditor1", "auditor1");
-			super.request("/lecturer/lecture/update");
+			super.request("/lecturer/lecture/update", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("student1", "student1");
-			super.request("/lecturer/lecture/update");
+			super.request("/lecturer/lecture/update", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("company1", "company1");
-			super.request("/lecturer/lecture/update");
+			super.request("/lecturer/lecture/update", param);
 			super.checkPanicExists();
 			super.signOut();
 		}

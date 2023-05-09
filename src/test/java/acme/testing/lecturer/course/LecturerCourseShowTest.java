@@ -43,8 +43,6 @@ public class LecturerCourseShowTest extends TestHarness {
 
 	@Test
 	public void test300Hacking() {
-
-		//Intentamos ver los cursos de un profesor que no somos nosotros
 		Collection<Course> courses;
 		String param;
 
@@ -81,10 +79,24 @@ public class LecturerCourseShowTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
+			}
+	}
+	@Test
+	public void test301Hacking() {
+
+		//Intentamos ver los cursos de un profesor que no somos nosotros
+		Collection<Course> courses;
+		String param;
+
+		courses = this.respository.findManyCoursesByLecturerUsername("lecturer2");
+		for (final Course c : courses)
+			if (c.isDraftMode()) {
+				param = String.format("id=%d", c.getId());
 				super.signIn("lecturer1", "lecturer1");
 				super.request("/lecturer/course/show", param);
 				super.checkPanicExists();
 				super.signOut();
+
 			}
 	}
 
