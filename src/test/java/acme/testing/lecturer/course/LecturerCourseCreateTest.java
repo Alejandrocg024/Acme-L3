@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.entities.Course;
 import acme.testing.TestHarness;
 
 public class LecturerCourseCreateTest extends TestHarness {
@@ -17,11 +16,12 @@ public class LecturerCourseCreateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/course/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String code, final String title, final String abstract$, final String price, final String furtherInformationLink) {
-		super.signIn("lecturer1", "lecturer1");
+	public void test100Positive(final int recordIndex, final String title, final String abstract$, final String price, final String furtherInformationLink, final String code) {
+		super.signIn("lecturer3", "lecturer3");
 
 		super.clickOnMenu("Lecturer", "My courses");
 		super.checkListingExists();
+		super.sortListing(0, "asc");
 
 		super.clickOnButton("Create");
 		super.fillInputBoxIn("code", code);
@@ -31,12 +31,13 @@ public class LecturerCourseCreateTest extends TestHarness {
 		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
 		super.clickOnSubmit("Create");
 
-		final Course c;
-		c = this.repository.findCourseByCode(code);
-		final String param = String.format("id=%d", c.getId());
-		super.request("/lecturer/course/show", param);
-
-		super.clickOnButton("Create");
+		//final Course c;
+		//c = this.repository.findCourseByCode(code);
+		//final String param = String.format("id=%d", c.getId());
+		//super.request("/lecturer/course/show", param);
+		super.clickOnMenu("Lecturer", "My courses");
+		super.clickOnListingRecord(recordIndex);
+		super.sortListing(0, "asc");
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("abstract$", abstract$);
