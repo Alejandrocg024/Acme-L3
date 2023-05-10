@@ -39,7 +39,7 @@ public class AuthenticatedAuditListService extends AbstractService<Authenticated
 		Collection<Audit> objects;
 		int masterId;
 		masterId = super.getRequest().getData("masterId", int.class);
-		objects = this.repository.findAuditsByCourseId(masterId);
+		objects = this.repository.findPublishedAuditsByCourseId(masterId);
 		super.getBuffer().setData(objects);
 	}
 
