@@ -1,2 +1,2 @@
-recordIndex,code,title,abstract$,goal,draftMode,course
-1,AAA199,Tutorial de prueba,Realizado primer tutorial de prueba,"Aprender ,concentrarse",false,"AA999-Course"
+recordIndex,code,title,abstract$,goal,course
+1,AAA199,Tutorial de prueba,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AAA999-Course
