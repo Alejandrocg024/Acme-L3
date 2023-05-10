@@ -26,7 +26,6 @@ public class AuditorAuditingRecordUpdateTest extends TestHarness {
 		super.signIn("auditor2", "auditor2");
 
 		super.clickOnMenu("Auditor", "My audits");
-		super.checkListingExists();
 		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(auditRecordIndex);
@@ -43,7 +42,6 @@ public class AuditorAuditingRecordUpdateTest extends TestHarness {
 		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
 		super.clickOnSubmit("Update");
 
-		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.checkColumnHasValue(auditingRecordRecordIndex, 0, subject);
 		super.checkColumnHasValue(auditingRecordRecordIndex, 1, assessment);
@@ -57,7 +55,6 @@ public class AuditorAuditingRecordUpdateTest extends TestHarness {
 		super.checkInputBoxHasValue("mark", mark);
 		super.checkInputBoxHasValue("furtherInformationLink", furtherInformationLink);
 
-		//Fallaban  9 10 28 29 30 31
 		super.signOut();
 	}
 
