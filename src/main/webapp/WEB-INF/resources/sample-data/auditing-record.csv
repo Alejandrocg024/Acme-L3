@@ -34,3 +34,7 @@ auditing-record-32,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/
 auditing-record-33,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,null,false,false,audit-01
 auditing-record-34,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,null,true,false,audit-01
 auditing-record-35,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,null,false,false,audit-02
+auditing-record-36,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,null,false,true,audit-02
+auditing-record-37,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,null,false,false,audit-03
+auditing-record-38,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,null,false,true,audit-29
+auditing-record-39,Subject número 1,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,null,false,true,audit-30

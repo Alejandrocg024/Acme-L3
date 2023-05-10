@@ -63,7 +63,6 @@ public class AuditorAuditShowService extends AbstractService<Auditor, Audit> {
 		Collection<Course> courses;
 		Collection<Mark> marks;
 		String mark;
-		courses = this.repository.findCoursesNotAudited();
 		final SelectChoices choices = new SelectChoices();
 		courses = this.repository.findCoursesNotAudited();
 		if (object.getCourse() == null)

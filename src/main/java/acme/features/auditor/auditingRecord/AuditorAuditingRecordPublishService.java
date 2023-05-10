@@ -38,13 +38,15 @@ public class AuditorAuditingRecordPublishService extends AbstractService<Auditor
 
 	@Override
 	public void authorise() {
-		Audit object;
+		Audit audit;
+		AuditingRecord auditingRecord;
 		int id;
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findAuditByAuditingRecordId(id);
+		audit = this.repository.findAuditByAuditingRecordId(id);
+		auditingRecord = this.repository.findAuditingRecordById(id);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getAuditor().getUserAccount().getId() == userAccountId && object.isDraftMode());
+		super.getResponse().setAuthorised(audit.getAuditor().getUserAccount().getId() == userAccountId && audit.isDraftMode() && auditingRecord.isDraftMode());
 	}
 
 	@Override
