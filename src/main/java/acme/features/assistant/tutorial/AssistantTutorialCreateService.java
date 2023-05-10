@@ -103,6 +103,9 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 				continue;
 			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
 		}
+		while (choices.iterator().hasNext())
+			System.out.println(choices.iterator().next() + " + ");
+
 		tuple = super.unbind(object, "code", "title", "abstract$", "goal");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
