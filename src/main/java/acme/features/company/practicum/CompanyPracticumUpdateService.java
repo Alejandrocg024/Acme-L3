@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.components.AuxiliarService;
 import acme.entities.Course;
 import acme.entities.Practicum;
+import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -37,13 +38,14 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 	public void authorise() {
 		boolean status;
 		int practicumId;
-		Practicum practicum;
-		Company company;
+		Practicum object;
+		Principal principal;
 
 		practicumId = super.getRequest().getData("id", int.class);
-		practicum = this.repository.findPracticumById(practicumId);
-		company = practicum == null ? null : practicum.getCompany();
-		status = practicum != null && practicum.isDraftMode() && super.getRequest().getPrincipal().hasRole(company);
+		object = this.repository.findPracticumById(practicumId);
+		principal = super.getRequest().getPrincipal();
+
+		status = object.getCompany().getUserAccount().getId() == principal.getAccountId() && object.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -108,7 +110,7 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 
 		choices = new SelectChoices();
 		courses = this.repository.findAllCourses();
-    estimatedTotalTime = object.estimatedTotalTime(this.repository.findPracticumSessionsByPracticumId(object.getId()));
+		estimatedTotalTime = object.estimatedTotalTime(this.repository.findPracticumSessionsByPracticumId(object.getId()));
 
 		if (object.getCourse() == null)
 			choices.add("0", "---", true);

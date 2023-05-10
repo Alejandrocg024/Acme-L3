@@ -33,15 +33,15 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 	@Override
 	public void authorise() {
 		boolean status;
+		int practicumId;
 		Practicum object;
 		Principal principal;
-		int practicumId;
 
 		practicumId = super.getRequest().getData("id", int.class);
 		object = this.repository.findPracticumById(practicumId);
 		principal = super.getRequest().getPrincipal();
 
-		status = object.getCompany().getId() == principal.getActiveRoleId();
+		status = object.getCompany().getUserAccount().getId() == principal.getAccountId();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -68,7 +68,7 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 
 		choices = new SelectChoices();
 		courses = this.repository.findAllCourses();
-    estimatedTotalTime = object.estimatedTotalTime(this.repository.findPracticumSessionsByPracticumId(object.getId()));
+		estimatedTotalTime = object.estimatedTotalTime(this.repository.findPracticumSessionsByPracticumId(object.getId()));
 
 		if (object.getCourse() == null)
 			choices.add("0", "---", true);
