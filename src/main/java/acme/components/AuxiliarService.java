@@ -63,7 +63,7 @@ public class AuxiliarService {
 		Money res;
 		final String currentCurrency = this.repository.findSystemConfiguration().getSystemCurrency();
 		res = new Money();
-		if (!money.getCurrency().equals(currentCurrency)) {
+		if (money != null && !money.getCurrency().equals(currentCurrency)) {
 			final String apiBase = "https://api.freecurrencyapi.com/v1/latest?apikey=";
 			final String apikey1 = "sTHyoIuiZKaQXMOomVo1r4AM5nr0frNRoXiJSKoj";
 			//Tenemos varias apikeys por si se supera el limite de solicitudes, solo habría que cambiar key
@@ -88,7 +88,6 @@ public class AuxiliarService {
 			} catch (final Exception e) {
 				// TODO Auto-generated catch block
 				res = money;
-				e.printStackTrace();
 			}
 		} else
 			res = money;

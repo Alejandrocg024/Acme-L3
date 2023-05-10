@@ -1,0 +1,5 @@
+validation.code = El código debe tener de 1 a 3 letras mayúsculas, seguidas de 3 números
+
+validation.systemConfiguration.systemCurrency = La divisa del sistema debe ser 3 letras en mayuscula
+validation.systemConfiguration.aceptedCurrencies = La divisas aceptadas deben tener 3 letras en mayuscula y están separadas por coma
+validation.systemConfiguration.spamWords = Las palabras consideradas spam deben estar separadas por coma

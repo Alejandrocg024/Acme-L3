@@ -122,7 +122,6 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 			}
 			choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
 		}
-		choices.add("0", "---", false);
 		tuple = super.unbind(object, "code", "title", "abstract$", "goal", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);

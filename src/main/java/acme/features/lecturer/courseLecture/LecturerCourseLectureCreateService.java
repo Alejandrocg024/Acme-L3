@@ -93,7 +93,7 @@ public class LecturerCourseLectureCreateService extends AbstractService<Lecturer
 		tuple.put("lectureId", super.getRequest().getData("lectureId", int.class));
 		final Lecturer lecturer = this.repository.findOneLecturerById(super.getRequest().getPrincipal().getActiveRoleId());
 		Collection<Course> courses;
-		courses = this.repository.findCoursesByLecturer(lecturer);
+		courses = this.repository.findNonPublishedCoursesByLecturer(lecturer);
 		final Lecture lecture = this.repository.findOneLectureById(lectureId);
 		tuple.put("draftMode", lecture.isDraftMode());
 

@@ -20,14 +20,14 @@ public class LecturerLecturerListTest extends TestHarness {
 	public void test100Positive(final int recordIndex, final String title, final String summary, final String estimatedLearningTime) {
 		super.signIn("lecturer1", "lecturer1");
 		final Course c = this.repository.findOneCourseByCode("AAA999");
-		final String param = String.format("masterId=%d", c.getId());
-		super.request("/lecturer/lecture/list", param);
+		final String param = String.format("id=%d", c.getId());
+		super.request("/lecturer/course/show", param);
+		super.clickOnButton("Lectures");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, summary);
 		super.checkColumnHasValue(recordIndex, 2, estimatedLearningTime);
-
 		super.signOut();
 	}
 
@@ -62,6 +62,16 @@ public class LecturerLecturerListTest extends TestHarness {
 		super.signOut();
 
 		super.signIn("student1", "student1");
+		super.request("/lecturer/lecture/list", param);
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("company1", "company1");
+		super.request("/lecturer/lecture/list", param);
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("assistant1", "assistant1");
 		super.request("/lecturer/lecture/list", param);
 		super.checkPanicExists();
 		super.signOut();

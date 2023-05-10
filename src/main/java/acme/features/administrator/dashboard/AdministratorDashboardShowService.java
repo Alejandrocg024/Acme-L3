@@ -43,7 +43,7 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		AdministratorDashboard dashboard;
 		final Map<String, Integer> principalsByRole = new HashMap();
 		final Map<Boolean, Double> ratioOfBulletinsByCriticality = new HashMap();
-		final Map<String, Statistic> currentOfferStatistic = new HashMap();
+		final Map<String, Statistic> offersByCurrencyStats = new HashMap();
 		final Integer lecturerPrincipals = this.repository.countPrincipalByLecturer();
 		final Integer assistantPrincipals = this.repository.countPrincipalByAssistant();
 		final Integer providerPrincipals = this.repository.countPrincipalByProvider();
@@ -81,12 +81,12 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		statsOfGBP.calcMax(this.repository.findPriceOfferByCurrency("GBP"));
 		statsOfGBP.calcMin(this.repository.findPriceOfferByCurrency("GBP"));
 		statsOfGBP.calcLinDev(this.repository.findPriceOfferByCurrency("GBP"));
-		currentOfferStatistic.put("USD", statsOfUSD);
-		currentOfferStatistic.put("EUR", statsOfEUR);
-		currentOfferStatistic.put("GBP", statsOfGBP);
+		offersByCurrencyStats.put("USD", statsOfUSD);
+		offersByCurrencyStats.put("EUR", statsOfEUR);
+		offersByCurrencyStats.put("GBP", statsOfGBP);
 		dashboard = new AdministratorDashboard();
 		dashboard.setPrincipalsByRole(principalsByRole);
-		dashboard.setCurrentsOffersStats(currentOfferStatistic);
+		dashboard.setOffersByCurrencyStats(offersByCurrencyStats);
 
 		final double ratioOfPeeps = this.repository.countAllPeepsWithBoth() / this.repository.countAllPeeps();
 		dashboard.setPeepsRatioWithLinkAndEmail(ratioOfPeeps);
@@ -111,7 +111,7 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 	public void unbind(final AdministratorDashboard object) {
 		Tuple tuple;
 
-		tuple = super.unbind(object, "principalsByRole", "peepsRatioWithLinkAndEmail", "ratioOfBulletinsByCriticality", "currentsOffersStats", "notesInLast10WeeksStats");
+		tuple = super.unbind(object, "principalsByRole", "peepsRatioWithLinkAndEmail", "ratioOfBulletinsByCriticality", "offersByCurrencyStats", "notesInLast10WeeksStats");
 
 		super.getResponse().setData(tuple);
 	}

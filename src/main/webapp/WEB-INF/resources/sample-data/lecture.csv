@@ -16,10 +16,10 @@ lecture-12,Lecture1,коза,2.0,En esta lecture aprendereis mucho,THEORETICAL,n
 lecture-13,Lecture1,თხა,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
 lecture-28,Lecture1,<script>alert("hi!")</script>,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
 lecture-29,Lecture1,<h1>Hola Mundo!</h1>,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
-lecture-14,Lecture1,Primera lecture,1.01,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-14,Lecture1,Primera lecture,0.01,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
 lecture-15,Lecture1,Primera lecture,0.99,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
-lecture-16,Lecture1,Primera lecture,99.00,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
-lecture-17,Lecture1,Primera lecture,99.99,E,THEORETICAL,null,false,lecturer-01
+lecture-16,Lecture1,Primera lecture,999.00,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-17,Lecture1,Primera lecture,999.99,E,THEORETICAL,null,false,lecturer-01
 lecture-18,Lecture1,Primera lecture,2.0,En,THEORETICAL,null,false,lecturer-01
 lecture-19,Lecture1,Primera lecture,2.0,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,THEORETICAL,null,false,lecturer-01
 lecture-20,Lecture1,Primera lecture,2.0,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,THEORETICAL,null,false,lecturer-01
@@ -28,7 +28,6 @@ lecture-22,Lecture1,Primera lecture,2.0,თხა,THEORETICAL,null,false,lecture
 lecture-30,Lecture1,Primera lecture,2.0,<script>alert("hi!")</script>,THEORETICAL,null,false,lecturer-01
 lecture-31,Lecture1,Primera lecture,2.0,<h1>Hola Mundo!</h1>,THEORETICAL,null,false,lecturer-01
 lecture-23,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,HANDS_ON,null,false,lecturer-01
-lecture-24,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
 lecture-25,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,https://github.com/Alejandrocg024/Acme-L3-D02,false,lecturer-01
 lecture-32,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,ftp://user:pass@acme.org,false,lecturer-01
 lecture-33,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,true,lecturer-01

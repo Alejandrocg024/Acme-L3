@@ -86,6 +86,7 @@
 		
 		<acme:menu-option code="master.menu.student" access="hasRole('Student')">
 			<acme:menu-suboption code="master.menu.student.enrolment" action="/student/enrolment/list"/>
+			<acme:menu-suboption code="master.menu.student.enrolment" action="/student/student-dashboard/show"/>
 		</acme:menu-option>
 	</acme:menu-left>
 	
@@ -111,6 +112,8 @@
 			<acme:menu-suboption code="master.menu.authenticated.auditor.update" action="/authenticated/auditor/update" access="hasRole('Auditor')"/>
 			<acme:menu-suboption code="master.menu.authenticated.assistant.create" action="/authenticated/assistant/create" access="!hasRole('Assistant')"/>
 			<acme:menu-suboption code="master.menu.authenticated.assistant.update" action="/authenticated/assistant/update" access="hasRole('Assistant')"/>
+			<acme:menu-suboption code="master.menu.authenticated.student.create" action="/authenticated/student/create" access="!hasRole('Student')"/>
+			<acme:menu-suboption code="master.menu.authenticated.student.update" action="/authenticated/student/update" access="hasRole('Student')"/>
 			
 		</acme:menu-option>
 
