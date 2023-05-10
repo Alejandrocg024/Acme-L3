@@ -87,28 +87,32 @@ public class AuditorAuditUpdateTest extends TestHarness {
 		String param;
 
 		audits = this.repository.findManyAuditsByAuditorUsername("auditor1");
-		for (final Audit a : audits) {
-			param = String.format("id=%d", a.getId());
+		final Audit a = audits.stream().findFirst().get();
+		param = String.format("id=%d", a.getId());
 
-			super.checkLinkExists("Sign in");
-			super.request("/auditor/audit/update", param);
-			super.checkPanicExists();
+		super.checkLinkExists("Sign in");
+		super.request("/auditor/audit/update", param);
+		super.checkPanicExists();
 
-			super.signIn("administrator", "administrator");
-			super.request("/auditor/audit/update", param);
-			super.checkPanicExists();
-			super.signOut();
+		super.signIn("administrator", "administrator");
+		super.request("/auditor/audit/update", param);
+		super.checkPanicExists();
+		super.signOut();
 
-			super.signIn("lecturer1", "lecturer1");
-			super.request("/auditor/audit/update", param);
-			super.checkPanicExists();
-			super.signOut();
+		super.signIn("auditor2", "auditor2");
+		super.request("/auditor/audit/update", param);
+		super.checkPanicExists();
+		super.signOut();
 
-			super.signIn("company1", "company1");
-			super.request("/auditor/audit/update", param);
-			super.checkPanicExists();
-			super.signOut();
-		}
+		super.signIn("lecturer1", "lecturer1");
+		super.request("/auditor/audit/update", param);
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("company1", "company1");
+		super.request("/auditor/audit/update", param);
+		super.checkPanicExists();
+		super.signOut();
 	}
 
 }
