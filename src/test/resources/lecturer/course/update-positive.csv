@@ -1,0 +1,32 @@
+recordIndex,title,abstract$,price,furtherInformationLink,code,
+0,<<dena de setenta y cuatro caracteres usada para no pasar los 75 caractere,hola,EUR 5.00,,ZAA909
+0,<<dena de setenta y cinco caracteres usada para el testing formal en 75chch,hola,EUR 5.00,,ZAA909
+0,<,hola,EUR 5.00,,ZAA909
+0,<<,hola,EUR 5.00,,ZAA909
+0,<script>alert("hi!")</script>,hola,EUR 5.00,,ZAA909
+0,<h1>Hola Mundo!</h1>,hola,EUR 5.00,,ZAA909
+0,<<თხა,hola,EUR 5.00,,ZAA909
+0,<<коза,hola,EUR 5.00,,ZAA909
+0,<<sex a a a a aa a a a a a a a a a a a a a a a,hola,EUR 5.00,,ZAA909
+0,<<hola,Cadena de cien caracteres usada para probar cadenas de texto que tengan como máximo 100 caracteresok,EUR 5.00,,ZAA909
+0,<<hola,Cadena de noventa y nueve caracteres usada para no pasarnos del limite en cadenas de 100 caracteres,EUR 5.00,,ZAA909
+0,<<hola,h,EUR 5.00,,ZAA909
+0,<<hola,h,EUR 5.00,,ZAA909
+0,<<hola,<script>alert("hi!")</script>,EUR 5.00,,ZAA909
+0,<<hola,<h1>Hola Mundo!</h1>,EUR 5.00,,ZAA909
+0,<<hola,თხა,EUR 5.00,,ZAA909
+0,<<hola,коза,EUR 5.00,,ZAA909
+0,<<hola,sex a a a a aa a a a a a a a a a a a a a a a,EUR 5.00,,ZAA909
+0,<<hola,hola,GBP 5.00,,ZAA909
+0,<<hola,hola,USD 5.00,,ZAA909
+0,<<hola,hola,EUR 0.00,,ZAA909
+0,<<hola,hola,EUR 0.01,,ZAA909
+0,<<hola,hola,"EUR 999,999.99",,ZAA909
+0,<<hola,hola,"EUR 999,999.98",,ZAA909
+0,<<hola,hola,EUR 5.00,http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com,ZAA909
+0,<<hola,hola,EUR 5.00,http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com,ZAA909
+0,<<hola,hola,EUR 5.00,http://hola.com,ZAA909
+0,<<hola,hola,EUR 5.00,ftp://usuario@telefonica.net,ZAA909
+0,<h1>Hola Mundo!</h1>,Curso de Lengua,EUR 15.00,,ZAA909
+0,<<hola,hola,EUR 5.00,,ZA909
+0,<<hola,hola,EUR 5.00,,Z909

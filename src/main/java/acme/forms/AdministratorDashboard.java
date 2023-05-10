@@ -1,6 +1,8 @@
 
 package acme.forms;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import acme.datatypes.Statistic;
@@ -17,6 +19,20 @@ public class AdministratorDashboard extends AbstractForm {
 	Map<String, Integer>		principalsByRole;
 	Double						peepsRatioWithLinkAndEmail;
 	Map<Boolean, Double>		ratioOfBulletinsByCriticality;
-	Statistic					currentsOffersStats;
+	Map<String, Statistic>		offersByCurrencyStats;
 	Statistic					notesInLast10WeeksStats;
+
+
+	public Statistic calcNotesInLast10WeeksStats(final Map<Integer, Double> map) {
+		Statistic stats;
+		stats = new Statistic();
+		final List<Double> values = new ArrayList<Double>();
+		values.addAll(map.values());
+		stats.setCount(values.size());
+		stats.calcAverage(values);
+		stats.calcMax(values);
+		stats.calcMin(values);
+		stats.calcLinDev(values);
+		return stats;
+	}
 }

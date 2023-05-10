@@ -1,0 +1,13 @@
+
+
+
+authenticated.tutorial.form.label.code = Code:
+authenticated.tutorial.form.label.title = Title:
+authenticated.tutorial.form.label.abstract$ = Abstract:
+authenticated.tutorial.form.label.goal = Goal:
+authenticated.tutorial.form.label.assistant = Assistant:
+authenticated.tutorial.form.label.estimatedTotalTime = Estimated total time:
+
+authenticated.tutorial.list.label.code = Code
+authenticated.tutorial.list.label.title = Title
+authenticated.tutorial.form.label.assistant = Assistant

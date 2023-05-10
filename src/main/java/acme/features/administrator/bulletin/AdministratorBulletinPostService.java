@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.entities.Bulletin;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
@@ -18,7 +19,10 @@ public class AdministratorBulletinPostService extends AbstractService<Administra
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AdministratorBulletinRepository repository;
+	protected AdministratorBulletinRepository	repository;
+
+	@Autowired
+	protected AuxiliarService					auxiliarService;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -45,7 +49,7 @@ public class AdministratorBulletinPostService extends AbstractService<Administra
 	@Override
 	public void bind(final Bulletin object) {
 		assert object != null;
-		super.bind(object, "instantiationMoment", "title", "message", "critical", "furtherInformationLink");
+		super.bind(object, "title", "message", "critical", "furtherInformationLink");
 	}
 
 	@Override
@@ -54,6 +58,11 @@ public class AdministratorBulletinPostService extends AbstractService<Administra
 		boolean confirmation;
 		confirmation = super.getRequest().getData("confirmation", boolean.class);
 		super.state(confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+		if (!super.getBuffer().getErrors().hasErrors("title"))
+			super.state(this.auxiliarService.validateTextImput(object.getTitle()), "title", "administrator.bulletin.form.spam");
+		if (!super.getBuffer().getErrors().hasErrors("message"))
+			super.state(this.auxiliarService.validateTextImput(object.getMessage()), "message", "administrator.bulletin.form.spam");
+
 	}
 
 	@Override

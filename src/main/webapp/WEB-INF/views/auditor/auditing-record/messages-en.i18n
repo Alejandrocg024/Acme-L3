@@ -1,0 +1,30 @@
+
+
+auditor.auditing-record.message.exception =  (*) This is an auditing record created after the audit was published.
+
+auditor.auditing-record.list.label.subject = Subject
+auditor.auditing-record.list.label.assessment = Assessment
+auditor.auditing-record.list.button.create = Create
+auditor.auditing-record.list.button.create-exceptional = Create exceptional record
+
+auditor.auditing-record.form.label.subject = Subject
+auditor.auditing-record.form.label.assessment = Assessment
+auditor.auditing-record.form.label.startPeriod = Start Period
+auditor.auditing-record.form.label.endPeriod = End Period
+auditor.auditing-record.form.label.mark = Mark
+auditor.auditing-record.form.label.furtherInformationLink = Further Information Link (Optional)
+
+auditor.auditing-record.form.error.spam = The introduced text contains words that are considered spam
+auditor.auditing-record.form.error.post-date = End Date before Start Date
+auditor.auditing-record.form.error.not-enough-time = Period of time incorrect
+auditor.auditing-record.form.error.before-ini = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
+auditor.auditing-record.form.error.after-end = The date must be in the period 01/01/2000 00:00 to 31/12/2100 23:59
+auditor.auditing-record.form.error.one-hour-before = The audit must start at least 1 hour before the current date
+
+
+auditor.auditing-record.form.button.delete = Delete
+auditor.auditing-record.form.button.update = Update
+auditor.auditing-record.form.button.create = Create
+auditor.auditing-record.form.button.publish = Publish
+auditor.auditing-record.form.button.confirmation = Confirm exceptional record
+auditor.auditing-record.form.button.create-exceptional = Create exceptional record

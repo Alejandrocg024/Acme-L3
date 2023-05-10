@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.datatypes.Mark;
 import acme.entities.Audit;
 import acme.entities.Course;
 import acme.framework.components.accounts.Principal;
@@ -21,8 +22,6 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 
 	@Autowired
 	protected AuditorAuditRepository repository;
-
-	// AbstractService<Employer, Job> -------------------------------------
 
 
 	@Override
@@ -61,6 +60,9 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 	@Override
 	public void validate(final Audit object) {
 		assert object != null;
+		super.state(!this.repository.findAuditingRecordsByAudit(object).isEmpty(), "*", "auditor.audit.form.error.records");
+		super.state(!this.repository.findAuditingRecordsByAudit(object).stream().anyMatch(x -> x.isDraftMode()), "*", "auditor.audit.form.error.records-published");
+
 	}
 
 	@Override
@@ -74,11 +76,29 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 		assert object != null;
 		Tuple tuple;
 		Collection<Course> courses;
-		SelectChoices choices;
+		Collection<Mark> marks;
+		String mark;
+		final SelectChoices choices = new SelectChoices();
 		courses = this.repository.findCoursesNotAudited();
-		choices = SelectChoices.from(courses, "code", object.getCourse());
+		if (object.getCourse() == null)
+			choices.add("0", "---", true);
+		else
+			choices.add("0", "---", false);
+
+		for (final Course c : courses)
+			if (object.getCourse() != null && object.getCourse().getId() == c.getId())
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
+			else
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+
 		tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
-		tuple.put("courses", courses);
+		marks = this.repository.findMarksByAuditId(object.getId());
+		if (marks.isEmpty())
+			mark = "N/A";
+		else
+			mark = marks.toString().replace("[", "").replace("]", "");
+		tuple.put("mark", mark);
+		tuple.put("courses", choices);
 		tuple.put("course", choices.getSelected().getKey());
 		super.getResponse().setData(tuple);
 	}

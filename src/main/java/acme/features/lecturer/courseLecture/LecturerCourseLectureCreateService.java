@@ -34,14 +34,12 @@ public class LecturerCourseLectureCreateService extends AbstractService<Lecturer
 	@Override
 	public void authorise() {
 		Lecture object;
-		int lectureId;
-		lectureId = super.getRequest().getData("lectureId", int.class);
-		object = this.repository.findOneLectureById(lectureId);
-		final Collection<Course> courses = this.repository.findCourseByLecture(object);
-		final Course c = courses.stream().findFirst().orElse(null);
+		int id;
+		id = super.getRequest().getData("lectureId", int.class);
+		object = this.repository.findLectureById(id);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(c.getLecturer().getUserAccount().getId() == userAccountId);
+		super.getResponse().setAuthorised(object.getLecturer().getUserAccount().getId() == userAccountId);
 	}
 
 	@Override
@@ -95,14 +93,26 @@ public class LecturerCourseLectureCreateService extends AbstractService<Lecturer
 		tuple.put("lectureId", super.getRequest().getData("lectureId", int.class));
 		final Lecturer lecturer = this.repository.findOneLecturerById(super.getRequest().getPrincipal().getActiveRoleId());
 		Collection<Course> courses;
-		courses = this.repository.findCoursesByLecturer(lecturer);
+		courses = this.repository.findNonPublishedCoursesByLecturer(lecturer);
 		final Lecture lecture = this.repository.findOneLectureById(lectureId);
 		tuple.put("draftMode", lecture.isDraftMode());
 
-		final SelectChoices choices;
-		choices = SelectChoices.from(courses, "code", object.getCourse());
+		final SelectChoices choices = new SelectChoices();
+
+		if (object.getCourse() == null)
+			choices.add("0", "---", true);
+		else
+			choices.add("0", "---", false);
+
+		for (final Course c : courses)
+			if (object.getCourse() != null && object.getCourse().getId() == c.getId())
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
+			else
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
+		tuple.put("cursos", courses);
 
 		super.getResponse().setData(tuple);
 	}

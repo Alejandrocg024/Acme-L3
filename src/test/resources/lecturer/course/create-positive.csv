@@ -1,0 +1,30 @@
+recordIndex,title,abstract$,price,furtherInformationLink,code
+0,ჰ,hola,EUR 5.00,,QWE004
+1,ჰ<h1>Hola Mundo!</h1>,hola,EUR 5.00,,QWE007
+2,ჰ<script>alert("hi!")</script>,hola,EUR 5.00,,QWE006
+3,ჰa,hola,EUR 5.00,,QWE005
+4,ჰaola,hola,EUR 5.00,,QWE001
+5,ჰbola,hola,EUR 5.00,,QW001
+6,ჰcola,hola,EUR 5.00,,Q001
+7,ჰddena de setenta y cuatro caracteres usada para no pasar los 75 caractere,hola,EUR 5.00,,QWE002
+8,ჰedena de setenta y cinco caracteres usada para el testing formal en 75chch,hola,EUR 5.00,,QWE003
+9,ჰf sex a a a a aa a a a a a a a a a a a a a a a,hola,EUR 5.00,,QWE010
+10,ჰgola,Cadena de cien caracteres usada para probar cadenas de texto que tengan como máximo 100 caracteresok,EUR 5.00,,QWE011
+11,ჰgola,Cadena de noventa y nueve caracteres usada para no pasarnos del limite en cadenas de 100 caracteres,EUR 5.00,,QWE012
+12,ჰhola,h,EUR 5.00,,QWE013
+13,ჰiola,h,EUR 5.00,,QWE014
+14,ჰjola,<script>alert("hi!")</script>,EUR 5.00,,QWE015
+15,ჰkola,<h1>Hola Mundo!</h1>,EUR 5.00,,QWE016
+16,ჰlola,თხა,EUR 5.00,,QWE017
+17,ჰmola,коза,EUR 5.00,,QWE018
+18,ჰnola,sex a a a a aa a a a a a a a a a a a a a a a,EUR 5.00,,QWE019
+19,ჰoola,hola,GBP 5.00,,QWE020
+20,ჰpola,hola,USD 5.00,,QWE021
+21,ჰqola,hola,EUR 0.00,,QWE022
+22,ჰrola,hola,EUR 0.01,,QWE023
+23,ჰsola,hola,"EUR 999,999.99",,QWE024
+24,ჰtola,hola,"EUR 999,999.98",,QWE025
+25,ჰtola,hola,EUR 5.00,http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com,QWE026
+26,ჰvola,hola,EUR 5.00,http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com,QWE027
+27,ჰwola,hola,EUR 5.00,http://hola.com,QWE028
+28,ჰxola,hola,EUR 5.00,ftp://usuario@telefonica.net,QWE029

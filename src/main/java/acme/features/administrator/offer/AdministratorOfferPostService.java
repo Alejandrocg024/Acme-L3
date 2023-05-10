@@ -59,6 +59,8 @@ public class AdministratorOfferPostService extends AbstractService<Administrator
 
 		if (!super.getBuffer().getErrors().hasErrors("price"))
 			super.state(this.auxiliarService.validatePrice(object.getPrice(), 0, 1000000), "price", "administrator.offer.form.error.price");
+		if (!super.getBuffer().getErrors().hasErrors("price"))
+			super.state(this.auxiliarService.validateCurrency(object.getPrice()), "price", "administrator.offer.form.error.price2");
 
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			Date minimumStartDate;
@@ -70,6 +72,9 @@ public class AdministratorOfferPostService extends AbstractService<Administrator
 			Date maximumPeriod;
 			maximumPeriod = MomentHelper.deltaFromMoment(object.getStartPeriod(), 7, ChronoUnit.DAYS);
 			super.state(MomentHelper.isAfter(object.getEndPeriod(), maximumPeriod) && object.getEndPeriod().after(object.getStartPeriod()), "endPeriod", "administrator.offer.form.error.endPeriod");
+			super.state(this.auxiliarService.validateDate(object.getEndPeriod()), "endPeriod", "administrator.offer.form.error.endPeriod.oor");
+			super.state(this.auxiliarService.validateDate(object.getStartPeriod()), "startPeriod", "administrator.offer.form.error.startPeriod.oor");
+
 		}
 		if (!super.getBuffer().getErrors().hasErrors("heading"))
 			super.state(this.auxiliarService.validateTextImput(object.getHeading()), "heading", "administrator.offer.form.spam");

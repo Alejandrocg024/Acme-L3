@@ -1,0 +1,10 @@
+
+authenticated.lecturer.form.label.almaMater = Supervisor
+authenticated.lecturer.form.label.resume = Resumen
+authenticated.lecturer.form.label.listOfQualifications = Lista de campos de especializacion
+authenticated.lecturer.form.label.furtherInformation = Enlace con infomación adicional
+
+authenticated.lecturer.form.button.create=Crear
+authenticated.assistant.form.button.update = Actualizar
+
+authenticated.lecturer.form.error.spam = El texto introducido está considerado como Spam

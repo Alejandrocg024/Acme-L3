@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.datatypes.Nature;
 import acme.entities.Course;
 import acme.entities.Lecture;
@@ -19,7 +20,10 @@ import acme.roles.Lecturer;
 public class LecturerCourseShowService extends AbstractService<Lecturer, Course> {
 
 	@Autowired
-	protected LecturerCourseRepository repository;
+	protected LecturerCourseRepository	repository;
+
+	@Autowired
+	protected AuxiliarService			auxiliarService;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -63,6 +67,8 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 		final List<Lecture> lectures = this.repository.findLecturesByCourse(object.getId()).stream().collect(Collectors.toList());
 		final Nature nature = object.natureOfCourse(lectures);
 		tuple.put("nature", nature);
+		tuple.put("hasLectures", !lectures.isEmpty());
+		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}
 }

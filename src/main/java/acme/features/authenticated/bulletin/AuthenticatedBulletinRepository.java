@@ -2,7 +2,6 @@
 package acme.features.authenticated.bulletin;
 
 import java.util.Collection;
-import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -16,7 +15,7 @@ public interface AuthenticatedBulletinRepository extends AbstractRepository {
 	@Query("select b from Bulletin b where b.id = :id")
 	Bulletin findBulletinById(int id);
 
-	@Query("select b from Bulletin b where b.instantiationMoment <= :date")
-	Collection<Bulletin> findAllBulletins(Date date);
+	@Query("select b from Bulletin b")
+	Collection<Bulletin> findAllBulletins();
 
 }

@@ -10,6 +10,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
@@ -37,7 +38,7 @@ public class AuditingRecord extends AbstractEntity {
 
 	@Temporal(value = TemporalType.TIMESTAMP)
 	@NotNull
-	@PastOrPresent
+	@Past
 	protected Date				startPeriod;
 
 	@Temporal(value = TemporalType.TIMESTAMP)
@@ -48,8 +49,13 @@ public class AuditingRecord extends AbstractEntity {
 	@NotNull
 	protected Mark				mark;
 
+	protected boolean			draftMode;
+
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformationLink;
+
+	protected boolean			exceptional;
 
 	@ManyToOne(optional = false)
 	@NotNull

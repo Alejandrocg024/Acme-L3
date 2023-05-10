@@ -31,5 +31,6 @@ public class Lecturer extends AbstractRole {
 	protected String			listOfQualifications;
 
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformation;
 }

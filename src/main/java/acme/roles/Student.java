@@ -16,7 +16,11 @@ import lombok.Setter;
 @Setter
 public class Student extends AbstractRole {
 
+	// Serialisation identifier -----------------------------------------------
+
 	protected static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------
 
 	@NotBlank
 	@Length(max = 75)
@@ -31,6 +35,11 @@ public class Student extends AbstractRole {
 	protected String			weakFeatures;
 
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformationLink;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 }

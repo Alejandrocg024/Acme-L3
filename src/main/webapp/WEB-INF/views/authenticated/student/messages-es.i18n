@@ -1,0 +1,9 @@
+
+authenticated.student.form.label.statement =Declaración
+authenticated.student.form.label.strongFeatures =Lista de puntos fuertes
+authenticated.student.form.label.weakFeatures = Lista de características débiles 
+authenticated.student.form.label.furtherInformationLink = Enlace para más información
+
+authenticated.student.form.button.create = Crear
+authenticated.student.form.button.update = Actualizar
+authenticated.student.form.error.spam = El texto introducido se considera como Spam

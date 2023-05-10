@@ -1,14 +1,4 @@
-<%--
-- form.jsp
--
-- Copyright (C) 2012-2023 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
---%>
+
 
 <%@page language="java"%>
 
@@ -16,16 +6,18 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-moment code="authenticated.bulletin.form.label.instantiationMoment" path="instantiationMoment" readonly="true"/>	
-	<acme:input-textbox code="authenticated.bulletin.form.label.title" path="title" />
-	<acme:input-textbox code="authenticated.bulletin.form.label.message" path="message" />
-	<acme:input-checkbox code="authenticated.bulletin.form.label.critical" path="critical" />
-	<acme:input-url code="authenticated.bulletin.form.label.furtherInformationLink" path="furtherInformationLink" />
+	<jstl:if test="${_command == 'show'}">
+		<acme:input-moment code="administrator.bulletin.form.label.instantiationMoment" path="instantiationMoment" readonly="true"/>	
+	</jstl:if>
+	<acme:input-textbox code="administrator.bulletin.form.label.title" path="title" />
+	<acme:input-textbox code="administrator.bulletin.form.label.message" path="message" />
+	<acme:input-checkbox code="administrator.bulletin.form.label.critical" path="critical" />
+	<acme:input-url code="administrator.bulletin.form.label.furtherInformationLink" path="furtherInformationLink" />
 	
 	<jstl:choose> 
 		<jstl:when test="${_command == 'create'}">
-			<acme:input-checkbox code="authenticated.bulletin.form.label.confirmation" path="confirmation"/>
-			<acme:submit code="authenticated.bulletin.form.button.create" action="/administrator/bulletin/create" />
+			<acme:input-checkbox code="administrator.bulletin.form.label.confirmation" path="confirmation"/>
+			<acme:submit code="administrator.bulletin.form.button.create" action="/administrator/bulletin/create" />
 		</jstl:when>
 	</jstl:choose>
 </acme:form>
