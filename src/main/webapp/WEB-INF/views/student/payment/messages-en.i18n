@@ -11,3 +11,4 @@ student.payment.form.button.payment = Pay the enrolment
 student.payment.form.error.spam = The introduced text is considered Spam
 student.payment.form.error.futureDate = The introduced date must be in the future
 student.payment.form.error.creditCardNumber = The credit card must have between 12 and 16 digits
+student.payment.form.error.month = Month must be a number between 1 and 12
