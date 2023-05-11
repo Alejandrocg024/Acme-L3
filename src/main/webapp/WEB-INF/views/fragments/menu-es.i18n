@@ -106,3 +106,4 @@ master.menu.assistant.dashboard = Panel de asistente
 master.menu.student = Estudiante
 master.menu.student.enrolment = Mis matriculas
 master.menu.student.dashboard = Panel del estudiante
+master.menu.student.course = Cursos

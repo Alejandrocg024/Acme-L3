@@ -1,9 +1,12 @@
 <%@page language="java"%>
-
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
-
 <acme:form>
+	<div style="text-align: center;">
+		<h2>
+			<acme:message code="student.enrolment.form.label.activity"/>
+		</h2>
+	</div>
 	<acme:input-textbox code="student.activity.form.label.title" path="title"/>
 	<acme:input-textbox code="student.activity.form.label.abstract$" path="abstract$"/>
 	<acme:input-moment code="student.activity.form.label.startPeriod" path="startPeriod"/>

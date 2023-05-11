@@ -18,11 +18,15 @@ import acme.framework.services.AbstractService;
 @Service
 public class AnyPeepPublishService extends AbstractService<Any, Peep> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected AnyPeepRepository	repository;
 
 	@Autowired
 	protected AuxiliarService	auxiliarService;
+
+	// AbstractService interface ----------------------------------------------
 
 
 	@Override
@@ -45,13 +49,13 @@ public class AnyPeepPublishService extends AbstractService<Any, Peep> {
 
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
-		userAccount = this.repository.findOneUserAccountById(userAccountId);
+		userAccount = this.repository.findUserAccountById(userAccountId);
 
 		moment = MomentHelper.getCurrentMoment();
 
 		object = new Peep();
 		object.setInstantiationMoment(moment);
-		object.setNick(principal.isAnonymous() ? "" : String.format("%s %s", userAccount.getIdentity().getName(), userAccount.getIdentity().getSurname()));
+		object.setNick(principal.isAnonymous() ? "" : userAccount.getIdentity().getFullName());
 
 		super.getBuffer().setData(object);
 	}
@@ -86,6 +90,7 @@ public class AnyPeepPublishService extends AbstractService<Any, Peep> {
 	@Override
 	public void perform(final Peep object) {
 		assert object != null;
+
 		this.repository.save(object);
 	}
 

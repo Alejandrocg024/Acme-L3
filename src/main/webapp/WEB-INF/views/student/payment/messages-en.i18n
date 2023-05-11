@@ -1,12 +1,13 @@
-student.enrolment.form.date = YY/MM
+student.payment.form.date = YY/MM
 
-student.enrolment.form.label.holderName = Holder Name
-student.enrolment.form.label.creditCardNumer = Credit Card Number
-student.enrolment.form.label.expirationDate = Expiration Date
-student.enrolment.form.label.securityCode = Security Code
+student.payment.form.label.payment = Payment
+student.payment.form.label.holderName = Holder Name:
+student.payment.form.label.creditCardNumer = Credit Card Number:
+student.payment.form.label.expirationDate = Expiration Date:
+student.payment.form.label.securityCode = Security Code:
 
-student.enrolment.form.button.payment = Pay the enrolment
+student.payment.form.button.payment = Pay the enrolment
 
-student.enrolment.form.error.spam = The introduced text is considered Spam
-student.enrolment.form.error.futureDate = The introduced date must be in the future
-student.enrolment.form.error.creditCardNumber = The credit card must have between 12 and 16 digits
+student.payment.form.error.spam = The introduced text is considered Spam
+student.payment.form.error.futureDate = The introduced date must be in the future
+student.payment.form.error.creditCardNumber = The credit card must have between 12 and 16 digits

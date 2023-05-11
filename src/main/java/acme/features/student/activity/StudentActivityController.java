@@ -13,6 +13,8 @@ import acme.roles.Student;
 @Controller
 public class StudentActivityController extends AbstractController<Student, Activity> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected StudentActivityListService	listAllService;
 
@@ -27,6 +29,8 @@ public class StudentActivityController extends AbstractController<Student, Activ
 
 	@Autowired
 	protected StudentActivityUpdateService	updateService;
+
+	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct

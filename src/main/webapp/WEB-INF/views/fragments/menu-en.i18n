@@ -106,3 +106,4 @@ master.menu.assistant.dashboard = Assistant Dashboard
 master.menu.student = Student
 master.menu.student.enrolment = My enrolments
 master.menu.student.dashboard = Student Dashboard
+master.menu.student.course = Courses
