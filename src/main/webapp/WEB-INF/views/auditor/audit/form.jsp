@@ -7,7 +7,7 @@
 
 <acme:form>
 	<acme:input-select code="auditor.audit.form.label.course" path="course" choices="${courses}"/>
-	<acme:input-textbox code="auditor.audit.form.label.code" path="code"/>	
+	<acme:input-textbox code="auditor.audit.form.label.code" path="code" placeholder="ABC123"/>	
 	<acme:input-textbox code="auditor.audit.form.label.conclusion" path="conclusion"/>	
 	<acme:input-textbox code="auditor.audit.form.label.strongPoints" path="strongPoints"/>	
 	<acme:input-textbox code="auditor.audit.form.label.weakPoints" path="weakPoints"/>	
