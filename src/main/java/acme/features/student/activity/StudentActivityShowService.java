@@ -17,6 +17,8 @@ import acme.roles.Student;
 @Service
 public class StudentActivityShowService extends AbstractService<Student, Activity> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected StudentActivityRepository	repository;
 

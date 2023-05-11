@@ -1,28 +1,25 @@
 
-package acme.features.any.peep;
+package acme.features.student.course;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.Peep;
-import acme.framework.components.accounts.Any;
+import acme.entities.Course;
 import acme.framework.controllers.AbstractController;
+import acme.roles.Student;
 
 @Controller
-public class AnyPeepController extends AbstractController<Any, Peep> {
+public class StudentCourseController extends AbstractController<Student, Course> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnyPeepListService	listService;
+	protected StudentCourseListService	listService;
 
 	@Autowired
-	protected AnyPeepShowService	showService;
-
-	@Autowired
-	protected AnyPeepPublishService	publishService;
+	protected StudentCourseShowService	showService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -31,6 +28,5 @@ public class AnyPeepController extends AbstractController<Any, Peep> {
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
-		super.addCustomCommand("publish", "create", this.publishService);
 	}
 }

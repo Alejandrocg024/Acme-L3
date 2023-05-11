@@ -12,6 +12,8 @@ import acme.framework.services.AbstractService;
 @Service
 public class AnyPeepShowService extends AbstractService<Any, Peep> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected AnyPeepRepository repository;
 
@@ -46,8 +48,11 @@ public class AnyPeepShowService extends AbstractService<Any, Peep> {
 	@Override
 	public void unbind(final Peep object) {
 		assert object != null;
+
 		Tuple tuple;
+
 		tuple = super.unbind(object, "instantiationMoment", "title", "nick", "message", "email", "link");
+
 		super.getResponse().setData(tuple);
 	}
 }

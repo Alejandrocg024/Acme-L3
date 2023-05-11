@@ -18,11 +18,15 @@ import acme.roles.Student;
 @Service
 public class StudentActivityCreateService extends AbstractService<Student, Activity> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected StudentActivityRepository	repository;
 
 	@Autowired
 	protected AuxiliarService			auxiliarService;
+
+	// AbstractService interface ----------------------------------------------
 
 
 	@Override

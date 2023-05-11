@@ -3,12 +3,13 @@ student.activity.list.label.title = Title
 student.activity.list.label.endPeriod = End Date
 student.activity.list.label.startPeriod = Start Date
 
-student.activity.form.label.title = Title
-student.activity.form.label.abstract$ = Abstract
-student.activity.form.label.startPeriod = Start Date
-student.activity.form.label.endPeriod = End Date
-student.activity.form.label.nature = Nature of the Activity
-student.activity.form.label.furtherInformationLink = Link with further information
+student.enrolment.form.label.activity = Activity
+student.activity.form.label.title = Title:
+student.activity.form.label.abstract$ = Abstract:
+student.activity.form.label.startPeriod = Start Date:
+student.activity.form.label.endPeriod = End Date:
+student.activity.form.label.nature = Nature of the Activity:
+student.activity.form.label.furtherInformationLink = Further Information:
 
 student.activity.form.button.update = Update
 student.activity.form.button.delete = Delete

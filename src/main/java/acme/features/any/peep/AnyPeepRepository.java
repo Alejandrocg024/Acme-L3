@@ -14,12 +14,14 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnyPeepRepository extends AbstractRepository {
 
+	//Peep
 	@Query("select p from Peep p where p.instantiationMoment <= :date")
-	Collection<Peep> findAllPeeps(Date date);
+	Collection<Peep> findPeepBeforeDate(Date date);
 
 	@Query("select p from Peep p where p.id = :id")
 	Peep findPeepById(int id);
 
+	//User Account
 	@Query("select ua from UserAccount ua where ua.id = :id")
-	UserAccount findOneUserAccountById(int id);
+	UserAccount findUserAccountById(int id);
 }

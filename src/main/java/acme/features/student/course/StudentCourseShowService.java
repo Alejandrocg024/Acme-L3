@@ -1,26 +1,28 @@
 
-package acme.features.lecturer.course;
+package acme.features.student.course;
 
-import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.AuxiliarService;
+import acme.datatypes.Nature;
 import acme.entities.Course;
-import acme.entities.CourseLecture;
-import acme.framework.components.accounts.Principal;
+import acme.entities.Lecture;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
+import acme.roles.Student;
 
 @Service
-public class LecturerCourseDeleteService extends AbstractService<Lecturer, Course> {
+public class StudentCourseShowService extends AbstractService<Student, Course> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected LecturerCourseRepository	repository;
+	protected StudentCourseRepository	repository;
 
 	@Autowired
 	protected AuxiliarService			auxiliarService;
@@ -31,7 +33,9 @@ public class LecturerCourseDeleteService extends AbstractService<Lecturer, Cours
 	@Override
 	public void check() {
 		boolean status;
+
 		status = super.getRequest().hasData("id", int.class);
+
 		super.getResponse().setChecked(status);
 	}
 
@@ -39,11 +43,11 @@ public class LecturerCourseDeleteService extends AbstractService<Lecturer, Cours
 	public void authorise() {
 		Course object;
 		int id;
+
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findCourseById(id);
-		final Principal principal = super.getRequest().getPrincipal();
-		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getLecturer().getUserAccount().getId() == userAccountId && object.isDraftMode());
+
+		super.getResponse().setAuthorised(!object.isDraftMode());
 	}
 
 	@Override
@@ -58,31 +62,26 @@ public class LecturerCourseDeleteService extends AbstractService<Lecturer, Cours
 	}
 
 	@Override
-	public void bind(final Course object) {
-		assert object != null;
-		super.bind(object, "id", "code", "title", "abstract$", "price", "furtherInformationLink");
-	}
-
-	@Override
-	public void validate(final Course object) {
-		assert object != null;
-	}
-
-	@Override
-	public void perform(final Course object) {
-		assert object != null;
-		final Collection<CourseLecture> courseLectures = this.repository.findCourseLecturesByCourse(object);
-		for (final CourseLecture cl : courseLectures)
-			this.repository.delete(cl);
-		this.repository.delete(object);
-	}
-
-	@Override
 	public void unbind(final Course object) {
 		assert object != null;
+
 		Tuple tuple;
-		tuple = super.unbind(object, "code", "title", "abstract$", "furtherInformationLink");
+		Lecturer lecturer;
+		List<Lecture> lectures;
+		final Nature nature;
+
+		tuple = super.unbind(object, "code", "title", "abstract$", "price", "furtherInformationLink");
+		lectures = this.repository.findLecturesByCourseId(object.getId()).stream().collect(Collectors.toList());
+		nature = object.natureOfCourse(lectures);
+		tuple.put("nature", nature);
 		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
+
+		lecturer = object.getLecturer();
+		tuple.put("almaMater", lecturer.getAlmaMater());
+		tuple.put("resume", lecturer.getResume());
+		tuple.put("listOfQualifications", lecturer.getListOfQualifications());
+		tuple.put("furtherInformationLink", lecturer.getFurtherInformation());
+
 		super.getResponse().setData(tuple);
 	}
 }

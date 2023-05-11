@@ -4,6 +4,11 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
+	<div style="text-align: center;">
+		<h2>
+			<acme:message code="student.enrolment.form.label.payment"/>
+		</h2>
+	</div>
 	<acme:input-textbox code="student.enrolment.form.label.holderName" path="holderName"/>	
 	<acme:input-textbox code="student.enrolment.form.label.creditCardNumer" path="creditCardNumber" placeholder="4002516849403089"/>	
 	<acme:input-textbox code="student.enrolment.form.label.expirationDate" path="expirationDate" placeholder="student.enrolment.form.date"/>	

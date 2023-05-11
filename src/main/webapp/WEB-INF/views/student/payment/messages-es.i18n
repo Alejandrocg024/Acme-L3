@@ -1,9 +1,10 @@
 student.enrolment.form.date = MM/YY
 
-student.enrolment.form.label.holderName = Nombre del propietario
-student.enrolment.form.label.creditCardNumer = Número de la tarjeta de crédito
-student.enrolment.form.label.expirationDate = Fecha de expiración
-student.enrolment.form.label.securityCode = Código de seguridad
+student.enrolment.form.label.payment = Pago
+student.enrolment.form.label.holderName = Nombre del propietario:
+student.enrolment.form.label.creditCardNumer = Número de la tarjeta de crédito:
+student.enrolment.form.label.expirationDate = Fecha de expiración:
+student.enrolment.form.label.securityCode = Código de seguridad:
 
 student.enrolment.form.button.payment = Pagar la matrícula
 

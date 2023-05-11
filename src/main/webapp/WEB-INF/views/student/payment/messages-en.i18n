@@ -1,9 +1,10 @@
 student.enrolment.form.date = YY/MM
 
-student.enrolment.form.label.holderName = Holder Name
-student.enrolment.form.label.creditCardNumer = Credit Card Number
-student.enrolment.form.label.expirationDate = Expiration Date
-student.enrolment.form.label.securityCode = Security Code
+student.enrolment.form.label.holderName = Payment
+student.enrolment.form.label.holderName = Holder Name:
+student.enrolment.form.label.creditCardNumer = Credit Card Number:
+student.enrolment.form.label.expirationDate = Expiration Date:
+student.enrolment.form.label.securityCode = Security Code:
 
 student.enrolment.form.button.payment = Pay the enrolment
 
