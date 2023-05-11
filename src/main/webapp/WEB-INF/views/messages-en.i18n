@@ -3,3 +3,6 @@ validation.code=The code must have 1-3 capital letters, followed by 3 numbers
 validation.systemConfiguration.systemCurrency = The system currency must be 3 letters in capital letters
 validation.systemConfiguration.aceptedCurrencies = Accepted currencies must have 3 capitalized letters and are separated by commas
 validation.systemConfiguration.spamWords = Spam words must be separated by commas
+
+validation.payment.expirationDate = Date must be YY/MM
+validation.payment.securityCode = The code must have 3 numbers

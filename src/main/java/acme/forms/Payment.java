@@ -25,11 +25,11 @@ public class Payment extends AbstractForm {
 	public String				creditCardNumber;
 
 	@NotBlank
-	@Pattern(regexp = "^\\d{2}\\/\\d{2}$")
+	@Pattern(regexp = "^\\d{2}\\/\\d{2}$", message = "{validation.payment.expirationDate}")
 	public String				expirationDate;
 
 	@NotBlank
-	@Pattern(regexp = "^\\d{3}$")
+	@Pattern(regexp = "^\\d{3}$", message = "{validation.payment.securityCode}")
 	public String				securityCode;
 
 	// Response attributes ----------------------------------------------------

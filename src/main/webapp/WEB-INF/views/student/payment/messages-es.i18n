@@ -1,13 +1,13 @@
-student.enrolment.form.date = MM/YY
+student.payment.form.date = MM/YY
 
-student.enrolment.form.label.payment = Pago
-student.enrolment.form.label.holderName = Nombre del propietario:
-student.enrolment.form.label.creditCardNumer = Número de la tarjeta de crédito:
-student.enrolment.form.label.expirationDate = Fecha de expiración:
-student.enrolment.form.label.securityCode = Código de seguridad:
+student.payment.form.label.payment = Pago
+student.payment.form.label.holderName = Nombre del propietario:
+student.payment.form.label.creditCardNumer = Número de la tarjeta de crédito:
+student.payment.form.label.expirationDate = Fecha de expiración:
+student.payment.form.label.securityCode = Código de seguridad:
 
-student.enrolment.form.button.payment = Pagar la matrícula
+student.payment.form.button.payment = Pagar la matrícula
 
-student.enrolment.form.error.spam = El texto introducido se considera Spam
-student.enrolment.form.error.futureDate = La fecha introducida debe estar en el futuro
-student.enrolment.form.error.creditCardNumber = La tarjeta de credito debe tener entre 12 y 16 digitos
+student.payment.form.error.spam = El texto introducido se considera Spam
+student.payment.form.error.futureDate = La fecha introducida debe estar en el futuro
+student.payment.form.error.creditCardNumber = La tarjeta de credito debe tener entre 12 y 16 digitos
