@@ -66,25 +66,30 @@ public class StudentPaymentCreateService extends AbstractService<Student, Paymen
 	public void validate(final Payment object) {
 		assert object != null;
 		if (!super.getBuffer().getErrors().hasErrors("holderName"))
-			super.state(this.auxiliarService.validateTextImput(object.getHolderName()), "holderName", "student.enrolment.form.error.spam");
+			super.state(this.auxiliarService.validateTextImput(object.getHolderName()), "holderName", "student.payment.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("creditCardNumber")) {
 			final int cardLength = object.getCreditCardNumber().length();
-			super.state(cardLength >= 12 && cardLength <= 16, "creditCardNumber", "student.enrolment.form.error.creditCardNumber");
+			super.state(cardLength >= 12 && cardLength <= 16, "creditCardNumber", "student.payment.form.error.creditCardNumber");
 		}
 		if (!super.getBuffer().getErrors().hasErrors("expirationDate")) {
 			final String locale = super.getRequest().getLocale().getLanguage();
 			final String expDateString[] = object.getExpirationDate().split("/");
 			final Calendar calendar = Calendar.getInstance();
 
-			if (locale.equals("es"))
+			if (locale.equals("es")) {
+				super.state(Integer.parseInt(expDateString[0]) <= 12, "expirationDate", "student.payment.form.error.month");
 				calendar.set(Integer.parseInt(expDateString[1]), Integer.parseInt(expDateString[0]) - 1, 1, 23, 59, 59);
-			else
+			}
+
+			else {
+				super.state(Integer.parseInt(expDateString[1]) <= 12, "expirationDate", "student.payment.form.error.month");
 				calendar.set(Integer.parseInt(expDateString[0]), Integer.parseInt(expDateString[1]) - 1, 1, 23, 59, 59);
+			}
 
 			calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
 			calendar.add(Calendar.YEAR, 2000);
 			final Date expDate = calendar.getTime();
-			super.state(MomentHelper.isFuture(expDate), "expirationDate", "student.enrolment.form.error.futureDate");
+			super.state(MomentHelper.isFuture(expDate), "expirationDate", "student.payment.form.error.futureDate");
 		}
 	}
 

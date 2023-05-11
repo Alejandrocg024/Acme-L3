@@ -11,3 +11,4 @@ student.payment.form.button.payment = Pagar la matrícula
 student.payment.form.error.spam = El texto introducido se considera Spam
 student.payment.form.error.futureDate = La fecha introducida debe estar en el futuro
 student.payment.form.error.creditCardNumber = La tarjeta de credito debe tener entre 12 y 16 digitos
+student.payment.form.error.month = El mes debe ser un número entre 1 y 12
