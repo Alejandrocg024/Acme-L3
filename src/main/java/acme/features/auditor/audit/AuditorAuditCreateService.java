@@ -85,7 +85,7 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 		Tuple tuple;
 		Collection<Course> courses;
 		final SelectChoices choices = new SelectChoices();
-		courses = this.repository.findCoursesNotAudited();
+		courses = this.repository.findPublishedCourses();
 		if (object.getCourse() == null)
 			choices.add("0", "---", true);
 		else
