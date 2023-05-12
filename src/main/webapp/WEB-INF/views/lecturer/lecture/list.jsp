@@ -10,7 +10,10 @@
 	<acme:list-column code="lecturer.lecture.list.label.estimatedLearningTime" path="estimatedLearningTime" width="20%" />
 </acme:list>
 
-<acme:button code="lecturer.lecture.list.button.create" action="/lecturer/lecture/create"/>
+
+<jstl:if test="${masterId==null}">
+	<acme:button code="lecturer.lecture.list.button.create" action="/lecturer/lecture/create"/>
+</jstl:if>
 
 
 
