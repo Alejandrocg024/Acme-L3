@@ -20,7 +20,7 @@ student.enrolment.form.button.activities = Libro de trabajo
 student.enrolment.form.button.create = Registrar
 student.enrolment.form.button.update = Actualizar
 student.enrolment.form.button.delete = Borrar
-student.enrolment.form.button.publish = Publicar
+student.enrolment.form.button.publish = Finalizar
 
 student.enrolment.form.error.spam = El texto introducido está considerado como Spam
 student.enrolment.form.error.code = El código introducido ya está en uso
