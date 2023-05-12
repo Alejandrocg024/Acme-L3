@@ -62,6 +62,11 @@ public class LecturerCoursePublishTest extends TestHarness {
 		//param = String.format("id=%d", cursoLNP.getId());
 		super.clickOnMenu("Lecturer", "My courses");
 		super.clickOnListingRecord(27);
+		super.clickOnButton("Lectures");
+		super.clickOnListingRecord(0);
+		super.checkInputBoxHasValue("draftMode", "true");
+		super.clickOnMenu("Lecturer", "My courses");
+		super.clickOnListingRecord(27);
 		//super.request("/lecturer/course/show", param);
 		super.clickOnSubmit("Publish");
 		super.checkErrorsExist("*");
@@ -79,7 +84,12 @@ public class LecturerCoursePublishTest extends TestHarness {
 		//param = String.format("id=%d", cursoNHL.getId());
 		//super.request("/lecturer/course/show", param);
 		super.clickOnMenu("Lecturer", "My courses");
-		super.clickOnListingRecord(30);
+		super.clickOnListingRecord(34);
+		super.clickOnButton("Lectures");
+		super.clickOnListingRecord(0);
+		super.checkInputBoxHasValue("nature", "THEORETICAL");
+		super.clickOnMenu("Lecturer", "My courses");
+		super.clickOnListingRecord(34);
 		super.clickOnSubmit("Publish");
 		super.checkErrorsExist("*");
 		super.signOut();
@@ -116,21 +126,17 @@ public class LecturerCoursePublishTest extends TestHarness {
 		super.request("/lecturer/course/publish", param);
 		super.checkPanicExists();
 		super.signOut();
-
 	}
 
 	@Test
 	public void test301Hacking() {
 		//Intentamos publicar un curso sin ser lo sprofesores de este curso
-
 		final Course c = this.repository.findCourseByCode("AIA829");
 		final String param = String.format("id=%d", c.getId());
-
 		super.signIn("lecturer2", "lecturer2");
 		super.request("/lecturer/course/publish", param);
 		super.checkPanicExists();
 		super.signOut();
-
 	}
 
 	@Test
@@ -141,7 +147,6 @@ public class LecturerCoursePublishTest extends TestHarness {
 		param = String.format("id=%d", cursoYP.getId());
 		super.request("/lecturer/course/publish", param);
 		super.checkPanicExists();
-
 		super.signOut();
 	}
 

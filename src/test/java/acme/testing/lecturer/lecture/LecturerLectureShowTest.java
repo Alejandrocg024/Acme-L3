@@ -61,11 +61,6 @@ public class LecturerLectureShowTest extends TestHarness {
 			super.checkPanicExists();
 			super.signOut();
 
-			super.signIn("lecturer1", "lecturer1");
-			super.request("/lecturer/lecture/show", param);
-			super.checkPanicExists();
-			super.signOut();
-
 			super.signIn("auditor1", "auditor1");
 			super.request("/lecturer/lecture/show", param);
 			super.checkPanicExists();
@@ -82,6 +77,24 @@ public class LecturerLectureShowTest extends TestHarness {
 			super.signOut();
 
 			super.signIn("assistant1", "assistant1");
+			super.request("/lecturer/lecture/show", param);
+			super.checkPanicExists();
+			super.signOut();
+		}
+	}
+
+	@Test
+	public void test301Hacking() {
+
+		//Intentamos ver una lección sin ser los creadores de esa lección o sin ser profesores
+		Collection<Lecture> lectures;
+		String param;
+
+		lectures = this.repository.findManyLecturesByLecturerUsername("lecturer2");
+		for (final Lecture l : lectures) {
+			param = String.format("id=%d", l.getId());
+
+			super.signIn("lecturer1", "lecturer1");
 			super.request("/lecturer/lecture/show", param);
 			super.checkPanicExists();
 			super.signOut();
