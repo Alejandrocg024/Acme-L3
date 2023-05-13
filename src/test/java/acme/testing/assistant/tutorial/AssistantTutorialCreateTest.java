@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.entities.Tutorial;
 import acme.testing.TestHarness;
 
 public class AssistantTutorialCreateTest extends TestHarness {
@@ -31,10 +30,10 @@ public class AssistantTutorialCreateTest extends TestHarness {
 		super.fillInputBoxIn("course", course);
 		super.clickOnSubmit("Create");
 
-		final Tutorial a;
-		a = this.repository.findTutorialByCode(code);
-		final String param = String.format("id=%d", a.getId());
-		super.request("/assistant/tutorial/show", param);
+		super.clickOnMenu("Assistant", "My tutorials");
+		super.checkListingExists();
+		super.sortListing(0, "desc");
+		super.clickOnListingRecord(recordIndex);
 
 		super.checkFormExists();
 		super.checkInputBoxHasValue("code", code);
