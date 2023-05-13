@@ -7,12 +7,12 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class LecturerCreateLectureTest extends TestHarness {
+public class LecturerLectureCreateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/lecture/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String title, final String summary, final String estimatedLearningTime, final String body, final String nature, final String furtherInformationLink) {
-		super.signIn("lecturer1", "lecturer1");
+		super.signIn("lecturer3", "lecturer3");
 
 		super.clickOnMenu("Lecturer", "My lectures");
 		super.checkListingExists();
@@ -26,21 +26,19 @@ public class LecturerCreateLectureTest extends TestHarness {
 		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
 		super.clickOnSubmit("Create");
 
-		//		super.clickOnMenu("Lecturer", "My lectures");
-		//		super.checkListingExists();
-		//		super.sortListing(0, "asc");
-		//		super.checkColumnHasValue(recordIndex, 0, title);
-		//		super.checkColumnHasValue(recordIndex, 1, summary);
-		//		super.checkColumnHasValue(recordIndex, 2, estimatedLearningTime);
-		//		super.clickOnListingRecord(recordIndex);
-		//
-		//		super.checkFormExists();
-		//		super.checkInputBoxHasValue("title", title);
-		//		super.checkInputBoxHasValue("summary", summary);
-		//		super.checkInputBoxHasValue("estimatedLearningTime", estimatedLearningTime);
-		//		super.checkInputBoxHasValue("body", body);
-		//		super.checkInputBoxHasValue("nature", nature);
-		//		super.checkInputBoxHasValue("furtherInformationLink", furtherInformationLink);
+		super.clickOnMenu("Lecturer", "My lectures");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+
+		super.clickOnListingRecord(recordIndex);
+
+		super.checkFormExists();
+		super.checkInputBoxHasValue("title", title);
+		super.checkInputBoxHasValue("summary", summary);
+		super.checkInputBoxHasValue("estimatedLearningTime", estimatedLearningTime);
+		super.checkInputBoxHasValue("body", body);
+		super.checkInputBoxHasValue("nature", nature);
+		super.checkInputBoxHasValue("furtherInformationLink", furtherInformationLink);
 
 		super.signOut();
 

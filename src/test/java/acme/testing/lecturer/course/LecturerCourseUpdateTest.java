@@ -22,17 +22,6 @@ public class LecturerCourseUpdateTest extends TestHarness {
 	public void test100Positive(final int recordIndex, final String title, final String abstract$, final String price, final String furtherInformationLink, final String code) {
 		super.signIn("lecturer1", "lecturer1");
 
-		//		if (code.equals("ZAA909")) {//Mientras no vayamos a cambiar el código, siempre accederemos a la url del show para modificar a traves del código
-		//			final Course c;
-		//			c = this.repository.findCourseByCode("ZAA909");
-		//			final String param = String.format("id=%d", c.getId());
-		//			super.request("/lecturer/course/show", param);
-		//		} else {
-		//			super.clickOnMenu("Lecturer", "My courses");
-		//			super.checkListingExists();
-		//			super.sortListing(0, "asc");
-		//			super.clickOnListingRecord(0);
-		//		}
 		super.clickOnMenu("Lecturer", "My courses");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -44,19 +33,6 @@ public class LecturerCourseUpdateTest extends TestHarness {
 		super.fillInputBoxIn("price", price);
 		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
 		super.clickOnSubmit("Update");
-
-		//		if (code.equals("ZAA909")) {//Mientras no vayamos a cambiar el código, siempre accederemos a la url del show para modificar a traves del código
-		//			final Course c;
-		//			c = this.repository.findCourseByCode("ZAA909");
-		//			final String param = String.format("id=%d", c.getId());
-		//			super.request("/lecturer/course/show", param);
-		//			super.checkFormExists();
-		//		} else {
-		//			final Course c;
-		//			c = this.repository.findCourseByCode(code);
-		//			final String param = String.format("id=%d", c.getId());
-		//			super.request("/lecturer/course/show", param);
-		//		}
 
 		super.clickOnMenu("Lecturer", "My courses");
 		super.checkListingExists();
@@ -151,5 +127,18 @@ public class LecturerCourseUpdateTest extends TestHarness {
 			super.checkPanicExists();
 			super.signOut();
 		}
+	}
+
+	@Test
+	public void test302Negative() {
+		//Nos logueamos como lecturer1 e intentamos borrar sus cursos publicados, cosa el sistema no debe permitir
+		super.signIn("lecturer1", "lecturer1");
+		final Collection<Course> courses = this.repository.findPublishedCoursesByLecturerUsername("lecturer1");
+		for (final Course c : courses) {
+			final String param = String.format("id=%d", c.getId());
+			super.request("/lecturer/course/update", param);
+			super.checkPanicExists();
+		}
+		super.signOut();
 	}
 }
