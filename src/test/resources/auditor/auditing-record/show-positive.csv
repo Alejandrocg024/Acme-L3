@@ -1,4 +1,4 @@
-auditRecordIndex,auditRecordIndex,subject,assessment,startPeriod,endPeriod,mark,furtherInformationLink
+auditRecordIndex,auditingRecordIndex,subject,assessment,startPeriod,endPeriod,mark,furtherInformationLink
 16,0,<h1>Hola Mundo!</h1>,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02
 16,1,<script>alert("hi!")</script>,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02
 16,2,A,Assessment número 1,2020/01/01 11:20,2020/01/10 11:20,A,https://github.com/Alejandrocg024/Acme-L3-D02
