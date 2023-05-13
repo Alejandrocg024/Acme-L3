@@ -1,8 +1,9 @@
 recordIndex,code,title,abstract$,price,furtherInformationLink
 0,,,,,,,
+0,aaa111,hola,hola,EUR 5.00,,
 0,AAA999,hola,hola,EUR 5.00,,
 0,001,hola,hola,EUR 5.00,,
-0,0011,hola,hola,EUR 5.00,,
+0,AAA0011,hola,hola,EUR 5.00,,
 0,AAAA001,hola,hola,EUR 5.00,,
 0,QWE024,Cadena de setenta y seis caracteres y pasarnos de setenta y cinco en pruebas,hola,EUR 5.00,,
 0,QWE024,hola,Cadena de ciento un caracteres usada para superar cadenas que tengan como máximo 100 caracteres en dp,EUR 5.00,,
@@ -12,6 +13,6 @@ recordIndex,code,title,abstract$,price,furtherInformationLink
 0,QWE024,hola,hola,EUR -10.01,,
 0,QWE024,hola,hola,"EUR 1,000,000",,
 0,QWE024,hola,hola,"EUR 1,000,000.01",,
-0,QWE024,hola,hola,EUR 10,A,
-0,QWE024,hola,hola,EUR 10,http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2.com,
+0,QWE024,hola,hola,EUR 5.00,A,
+0,QWE024,hola,hola,EUR 5.00,http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2.com,
 
