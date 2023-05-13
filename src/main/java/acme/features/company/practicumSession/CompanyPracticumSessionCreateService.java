@@ -91,11 +91,12 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 			super.state(MomentHelper.isAfterOrEqual(object.getStartPeriod(), minimumStartDate), "startPeriod", "company.practicum-session.form.error.start-period");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("endPeriod")) {
-			Date minimumEndDate;
-			minimumEndDate = MomentHelper.deltaFromMoment(object.getStartPeriod(), 7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), minimumEndDate), "endPeriod", "company.practicum-session.form.error.end-period");
-		}
+		if (!super.getBuffer().getErrors().hasErrors("endPeriod"))
+			if (object.getStartPeriod() != null) {
+				Date minimumEndDate;
+				minimumEndDate = MomentHelper.deltaFromMoment(object.getStartPeriod(), 7, ChronoUnit.DAYS);
+				super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), minimumEndDate), "endPeriod", "company.practicum-session.form.error.end-period");
+			}
 
 		if (!super.getBuffer().getErrors().hasErrors("furtherInformationLink"))
 			super.state(this.auxiliarService.validateTextImput(object.getFurtherInformationLink()), "furtherInformationLink", "company.practicum-session.form.error.spam");
