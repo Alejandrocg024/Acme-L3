@@ -2,6 +2,7 @@
 package acme.features.auditor.auditingRecord;
 
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -82,7 +83,10 @@ public class AuditorAuditingRecordUpdateService extends AbstractService<Auditor,
 			super.state(this.auxiliarService.validateDate(object.getEndPeriod()), "endPeriod", "auditor.auditing-record.form.error.after-end");
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod"))
 			super.state(MomentHelper.isAfterOrEqual(MomentHelper.getCurrentMoment(), MomentHelper.deltaFromMoment(object.getStartPeriod(), 1, ChronoUnit.HOURS)), "startPeriod", "auditor.auditing-record.form.error.one-hour-before");
-
+		if (!super.getBuffer().getErrors().hasErrors("endPeriod")) {
+			final Date minDate = new Date(100, 0, 1, 00, 00);
+			super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), MomentHelper.deltaFromMoment(minDate, 1, ChronoUnit.HOURS)), "endPeriod", "auditor.auditing-record.form.error.min-one-hour-after");
+		}
 	}
 
 	@Override

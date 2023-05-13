@@ -21,11 +21,12 @@ auditor.auditing-record.form.error.not-enough-time = Periodo de tiempo menor de 
 auditor.auditing-record.form.error.before-ini = La fecha debe estar entre el 01/01/2000 00:00 y el 31/12/2100 23:59
 auditor.auditing-record.form.error.after-end =  La fecha debe estar entre el 01/01/2000 00:00 y el 31/12/2100 23:59
 auditor.auditing-record.form.error.one-hour-before = El registro de auditoría debe iniciarse al menos 1 hora antes de la fecha actual
+auditor.auditing-record.form.error.min-one-hour-after = El registro de auditoría debe terminar después de la fecha 01/01/2000 00:59
 
 
 auditor.auditing-record.form.button.delete = Borrar
 auditor.auditing-record.form.button.update = Actualizar
 auditor.auditing-record.form.button.create = Crear
 auditor.auditing-record.form.button.publish = Publicar
-auditor.auditing-record.form.button.confirmation = Confirmar registro excepcional
+auditor.auditing-record.form.button.confirmation = Confirmar registro excepcional (Será publicado en cuanto lo cree)
 auditor.auditing-record.form.button.create-exceptional = Crear registro excepcional
