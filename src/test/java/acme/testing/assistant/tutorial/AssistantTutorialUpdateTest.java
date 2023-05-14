@@ -55,9 +55,9 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 	public void test200Negative(final int recordIndex, final String code, final String title, final String summary, final String goal, final String course) {
 		super.signIn("assistant1", "assistant1");
 		Tutorial t;
-		t = this.repository.findTutorialByCode(code);
+		t = this.repository.findTutorialByCode("A999");
 		final String param = String.format("id=%d", t.getId());
-		super.request("assistant/tutorial/show", param);
+		super.request("/assistant/tutorial/show", param);
 		super.checkFormExists();
 
 		super.fillInputBoxIn("code", code);
@@ -132,7 +132,6 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 
 	@Test
 	public void test302Negative() {
-		//Nos logueamos como lecturer1 e intentamos borrar sus cursos publicados, cosa el sistema no debe permitir
 		super.signIn("assistant1", "assistant1");
 		final Collection<Tutorial> tutorials = this.repository.findPublishedTutorialsByAssistantUsername("assistant1");
 		for (final Tutorial t : tutorials) {

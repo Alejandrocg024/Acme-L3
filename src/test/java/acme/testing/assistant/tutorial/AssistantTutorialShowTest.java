@@ -83,7 +83,6 @@ public class AssistantTutorialShowTest extends TestHarness {
 	@Test
 	public void test301Hacking() {
 
-		//Intentamos ver los cursos de un profesor que no somos nosotros
 		Collection<Tutorial> tutorials;
 		String param;
 

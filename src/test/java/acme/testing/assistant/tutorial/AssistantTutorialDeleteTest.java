@@ -20,9 +20,8 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorial/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex) {
-		//Nos logueamos como lecturer1 y borramos todos los cursos de lecturer1 no publicados
-		//que son los que se pueden borrar
-		super.signIn("nt1", "assistant1");
+
+		super.signIn("assistant1", "assistant1");
 		super.clickOnMenu("Assistant", "My tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -34,7 +33,7 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 	}
 
 	public void test200Negative() {
-		//No hay pruebas negativas en el borrado, el caso de intentar borrar un curso publicado lo probamos en el test302Hacking
+		//No hay pruebas negativas en el borrado, el caso de intentar borrar una tutoria publicada lo probamos en el test302Hacking
 	}
 
 	@Test
@@ -78,7 +77,6 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 
 	@Test
 	public void test301Hacking() {
-		//Intentamos borrar los cursos del lecturer2, siendo lecturer1
 		final Collection<Tutorial> tutorials = this.repository.findNonPublishedTutorialsByAssistantUsername("assistant2");
 		for (final Tutorial t : tutorials) {
 
@@ -94,7 +92,6 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 
 	@Test
 	public void test302Negative() {
-		//Nos logueamos como lecturer1 e intentamos borrar sus cursos publicados, cosa el sistema no debe permitir
 		super.signIn("assistant1", "assistant1");
 		final Collection<Tutorial> tutorials = this.repository.findPublishedTutorialsByAssistantUsername("assistant1");
 		for (final Tutorial t : tutorials) {
