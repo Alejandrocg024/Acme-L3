@@ -1,14 +1,14 @@
 
 
 assistant.tutorial.list.label.title = Title
-assistant.tutorial.list.label.abstract$ = summary
-assistant.tutorial.list.label.goal = goal
+assistant.tutorial.list.label.abstract$ = Summary
+assistant.tutorial.list.label.goal = Goals
 assistant.tutorial.list.button.create = Create
 
 assistant.tutorial.form.label.code = Code
 assistant.tutorial.form.label.title = Title
 assistant.tutorial.form.label.abstract$ = Summary
-assistant.tutorial.form.label.goal = Goal
+assistant.tutorial.form.label.goal = Goals
 assistant.tutorial.form.label.course = Course
 assistant.tutorial.form.label.estimatedTotalTime = Estimated Total Time
 assistant.tutorial.form.button.update = Update
