@@ -13,8 +13,12 @@ import acme.roles.Student;
 @Controller
 public class StudentPaymentController extends AbstractController<Student, Payment> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected StudentPaymentCreateService createService;
+
+	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct

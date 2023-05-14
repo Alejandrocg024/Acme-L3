@@ -13,6 +13,8 @@ import acme.roles.Student;
 @Controller
 public class StudentEnrolmentController extends AbstractController<Student, Enrolment> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected StudentEnrolmentListService	listAllService;
 
@@ -27,6 +29,8 @@ public class StudentEnrolmentController extends AbstractController<Student, Enro
 
 	@Autowired
 	protected StudentEnrolmentUpdateService	updateService;
+
+	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct

@@ -4,3 +4,8 @@ recordIndex,title,summary,estimatedLearningTime,body,nature,furtherInformationLi
 2,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,Primera lecture,2.00,En esta lecture aprendereis mucho,THEORETICAL,,false
 3,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,Primera lecture,2.00,En esta lecture aprendereis mucho,THEORETICAL,,false
 4,L,Primera lecture,2.00,En esta lecture aprendereis mucho,THEORETICAL,,false
+5,Le,Primera lecture,2.00,En esta lecture aprendereis mucho,THEORETICAL,,false
+6,Lecture1,Pr,2.00,En esta lecture aprendereis mucho,THEORETICAL,,false
+7,Lecture1,<h1>Hola Mundo!</h1>,2.00,En esta lecture aprendereis mucho,THEORETICAL,,false
+8,Lecture1,P,2.00,En esta lecture aprendereis mucho,THEORETICAL,,false
+9,Lecture1,<script>alert("hi!")</script>,2.00,En esta lecture aprendereis mucho,THEORETICAL,,false

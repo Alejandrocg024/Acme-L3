@@ -4,22 +4,23 @@ student.enrolment.create = Create
 student.enrolment.list.label.code = Code
 student.enrolment.list.label.motivation = Motivation
 
-student.enrolment.form.label.draftModeTrue = Enrolment In Progress
-student.enrolment.form.label.draftModeFalse = Enrolment Finalised
-student.enrolment.form.label.code = Code
-student.enrolment.form.label.motivation = Motivation
-student.enrolment.form.label.goals = Goals
-student.enrolment.form.label.course = Associated Course Code
-student.enrolment.form.label.workTime = Work Time of the workbook in hours
-student.enrolment.form.label.lowerNibble = Credit Card Lower Nibble
-student.enrolment.form.label.holderName = Holder Name
+student.enrolment.form.label.draftModeTrue = Enrolment
+student.enrolment.form.label.draftModeFalse = Enrolment Published
 student.enrolment.form.label.paymentInfo = Payment Information
+
+student.enrolment.form.label.code = Code:
+student.enrolment.form.label.motivation = Motivation:
+student.enrolment.form.label.goals = Goals:
+student.enrolment.form.label.course = Associated Course Code:
+student.enrolment.form.label.workTime = Work Time of the workbook in hours:
+student.enrolment.form.label.lowerNibble = Credit Card Lower Nibble:
+student.enrolment.form.label.holderName = Holder Name:
 
 student.enrolment.form.button.activities = Workbook
 student.enrolment.form.button.create = Register
 student.enrolment.form.button.update = Update
 student.enrolment.form.button.delete = Delete
-student.enrolment.form.button.publish = Publish
+student.enrolment.form.button.publish = Finalise
 
 student.enrolment.form.error.spam = The introduced text is considered Spam
 student.enrolment.form.error.code = The introduced code is in use

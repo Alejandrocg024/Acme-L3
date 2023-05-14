@@ -36,15 +36,15 @@ public class CompanyPracticumDeleteService extends AbstractService<Company, Prac
 	@Override
 	public void authorise() {
 		boolean status;
+		int practicumId;
 		Practicum object;
 		Principal principal;
-		int practicumId;
 
 		practicumId = super.getRequest().getData("id", int.class);
 		object = this.repository.findPracticumById(practicumId);
 		principal = super.getRequest().getPrincipal();
 
-		status = object.getCompany().getId() == principal.getActiveRoleId();
+		status = object.getCompany().getUserAccount().getId() == principal.getAccountId() && object.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}

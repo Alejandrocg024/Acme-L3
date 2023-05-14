@@ -13,11 +13,15 @@ import acme.framework.controllers.AbstractController;
 @Controller
 public class AuthenticatedBulletinController extends AbstractController<Authenticated, Bulletin> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected AuthenticatedBulletinListService	listService;
 
 	@Autowired
 	protected AuthenticatedBulletinShowService	showService;
+
+	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct

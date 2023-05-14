@@ -15,6 +15,8 @@ import acme.roles.Student;
 @Service
 public class StudentEnrolmentListService extends AbstractService<Student, Enrolment> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected StudentEnrolmentRepository repository;
 

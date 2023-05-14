@@ -81,7 +81,7 @@ public class LecturerCourseDeleteService extends AbstractService<Lecturer, Cours
 	public void unbind(final Course object) {
 		assert object != null;
 		Tuple tuple;
-		tuple = super.unbind(object, "instantiationMoment", "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
+		tuple = super.unbind(object, "code", "title", "abstract$", "furtherInformationLink");
 		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}

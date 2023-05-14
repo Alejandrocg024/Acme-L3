@@ -1,0 +1,15 @@
+student.course.list.label.title = Title
+student.course.list.label.abstract$ = Summary
+student.course.list.label.price = Price
+
+student.course.form.label.course = Course
+student.course.form.label.code = Code:
+student.course.form.label.title = Title:
+student.course.form.label.abstract$ = Summary:
+student.course.form.label.price = Price:
+student.course.form.label.furtherInformationLink = Further Information:
+student.course.form.label.lecturer = Lecturer's alma mater:
+student.course.form.label.courseType = Course Type:
+student.course.form.label.money = Price in the system currency:
+
+student.course.button.lectures = Lectures list

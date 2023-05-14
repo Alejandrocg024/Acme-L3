@@ -15,6 +15,8 @@ import acme.framework.services.AbstractService;
 @Service
 public class AnyPeepListService extends AbstractService<Any, Peep> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected AnyPeepRepository repository;
 
@@ -34,8 +36,10 @@ public class AnyPeepListService extends AbstractService<Any, Peep> {
 	@Override
 	public void load() {
 		Collection<Peep> objects;
-		final Date date = new Date();
-		objects = this.repository.findAllPeeps(date);
+		Date date;
+
+		date = new Date();
+		objects = this.repository.findPeepBeforeDate(date);
 
 		super.getBuffer().setData(objects);
 	}

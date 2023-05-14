@@ -13,6 +13,8 @@ import acme.framework.controllers.AbstractController;
 @Controller
 public class AnyPeepController extends AbstractController<Any, Peep> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected AnyPeepListService	listService;
 
@@ -22,12 +24,13 @@ public class AnyPeepController extends AbstractController<Any, Peep> {
 	@Autowired
 	protected AnyPeepPublishService	publishService;
 
+	// Constructors -----------------------------------------------------------
+
 
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
-
 		super.addCustomCommand("publish", "create", this.publishService);
 	}
 }
