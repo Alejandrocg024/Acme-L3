@@ -117,12 +117,10 @@ public class AnyPeepShowTest extends TestHarness {
 		super.checkInputBoxHasValue("link", link);
 	}
 
-	@Test
 	public void test200Negative() {
 		//No hay test negativos para el listado
 	}
 
-	@Test
 	public void test300Hacking() {
 		//No hay casos de hacking
 	}

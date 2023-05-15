@@ -130,7 +130,7 @@ public class LecturerCourseUpdateTest extends TestHarness {
 	}
 
 	@Test
-	public void test302Negative() {
+	public void test302Hacking() {
 		//Nos logueamos como lecturer1 e intentamos borrar sus cursos publicados, cosa el sistema no debe permitir
 		super.signIn("lecturer1", "lecturer1");
 		final Collection<Course> courses = this.repository.findPublishedCoursesByLecturerUsername("lecturer1");
