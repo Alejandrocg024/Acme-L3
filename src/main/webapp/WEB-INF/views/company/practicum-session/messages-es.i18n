@@ -14,7 +14,7 @@ company.practicum-session.list.label.start-period = Fecha de inicio
 company.practicum-session.list.label.end-period = Fecha de fin
 
 company.practicum-session.list.button.create = Crear
-company.practicum-session.list.button.create-exceptional = Crear sesión excepcional
+company.practicum-session.list.button.create-addendum = Crear sesión adicional
 
 company.practicum-session.form.label.title = Título:
 company.practicum-session.form.label.abstract$ = Resumen:
@@ -24,7 +24,7 @@ company.practicum-session.form.label.further-information-link = Más informació
 company.practicum-session.form.label.confirmation = Confirmar sesión de práctica excepcional
 
 company.practicum-session.form.button.create = Crear
-company.practicum-session.form.button.create-exceptional = Crear sesión excepcional
+company.practicum-session.form.button.create-addendum = Crear sesión adicional
 company.practicum-session.form.button.update = Actualizar
 company.practicum-session.form.button.delete = Eliminar
 

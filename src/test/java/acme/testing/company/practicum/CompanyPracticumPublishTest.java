@@ -34,6 +34,10 @@ public class CompanyPracticumPublishTest extends TestHarness {
 		super.clickOnSubmit("Publish");
 		super.checkNotErrorsExist();
 
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.checkNotButtonExists("Publish");
+
 		super.signOut();
 	}
 

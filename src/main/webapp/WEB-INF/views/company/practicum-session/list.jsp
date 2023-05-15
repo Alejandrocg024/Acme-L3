@@ -22,4 +22,4 @@
 </acme:list>
 
 <acme:button test="${showCreate && exceptionalCreate}" code="company.practicum-session.list.button.create" action="/company/practicum-session/create?masterId=${masterId}"/>
-<acme:button test="${showCreate && !exceptionalCreate}" code="company.practicum-session.list.button.create-exceptional" action="/company/practicum-session/create?masterId=${masterId}"/>
+<acme:button test="${showCreate && !exceptionalCreate}" code="company.practicum-session.list.button.create-addendum" action="/company/practicum-session/create?masterId=${masterId}"/>
