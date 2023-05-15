@@ -86,12 +86,10 @@ public class AnyPeepListTest extends TestHarness {
 		super.checkColumnHasValue(0, 2, "Este es le primer peep del sistema");
 	}
 
-	@Test
 	public void test200Negative() {
 		//No hay test negativos para el listado
 	}
 
-	@Test
 	public void test300Hacking() {
 		//No hay casos de hacking
 	}
