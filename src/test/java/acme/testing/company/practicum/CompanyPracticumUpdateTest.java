@@ -80,7 +80,7 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 
 	@Test
 	public void test300Hacking() {
-		// This test tries to update a job with a role other than "Company", or using a company who is not the principal.
+		// This test tries to update a practicum with a role other than "Company", or using a company who is not the principal.
 
 		Collection<Practicum> practica;
 		String param;
@@ -122,6 +122,23 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 			super.request("/company/practicum/update", param);
 			super.checkPanicExists();
 			super.signOut();
+		}
+	}
+
+	@Test
+	public void test301Hacking() {
+		// This test tries to update a practicum that is published.
+
+		Collection<Practicum> practica;
+		String param;
+
+		super.signIn("company4", "company4");
+		practica = this.repository.findManyPracticaByCompanyUsername("company4");
+		for (final Practicum practicum : practica) {
+			param = String.format("id=%d", practicum.getId());
+
+			super.request("/company/practicum/update", param);
+			super.checkPanicExists();
 		}
 	}
 

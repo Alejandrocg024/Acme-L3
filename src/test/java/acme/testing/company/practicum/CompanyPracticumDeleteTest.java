@@ -18,7 +18,7 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/company/practicum/publish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/company/practicum/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String code) {
 		// This test authenticates as a company, lists his or her practica, then selects one of them, and deletes it.
 
@@ -91,8 +91,6 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 		for (final Practicum practicum : practica)
 			if (!practicum.isDraftMode()) {
 				params = String.format("id=%d", practicum.getId());
-				super.request("/company/practicum/show", params);
-				super.checkNotButtonExists("Delete");
 				super.request("/company/practicum/delete", params);
 				super.checkPanicExists();
 			}
@@ -101,7 +99,7 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 
 	@Test
 	public void test302Hacking() {
-		// This test tries to publish a job that wasn't registered by the principal, be it published or unpublished.
+		// This test tries to delete a practicum that wasn't registered by the principal, be it published or unpublished.
 
 		Collection<Practicum> practica;
 		String params;

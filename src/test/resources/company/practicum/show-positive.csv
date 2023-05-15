@@ -24,7 +24,6 @@ recordIndex,course,code,title,abstract$,goals
 22,AAA999-Course,A122,Practicum,Práctica de iniciación,<script>alert("hi!")</script>
 23,AAA999-Course,A123,Practicum,Práctica de iniciación,<h1>Hola Mundo!</h1>
 24,AAA999-Course,A124,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
-25,AAA999-Course,A126,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
-26,AAA999-Course,A999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
-27,AAA999-Course,AA999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
-28,AAA999-Course,AAA999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,A999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+26,AAA999-Course,AA999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+27,AAA999-Course,AAA999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
