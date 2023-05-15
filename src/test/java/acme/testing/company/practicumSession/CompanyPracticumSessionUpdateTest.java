@@ -25,8 +25,8 @@ public class CompanyPracticumSessionUpdateTest extends TestHarness {
 		super.signIn("company1", "company1");
 
 		super.clickOnMenu("Company", "My practica");
-		//super.checkListingExists();
-		//super.sortListing(0, "asc");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(practicumRecordIndex);
 		super.clickOnButton("Practicum sessions");
