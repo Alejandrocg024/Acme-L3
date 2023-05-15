@@ -13,6 +13,9 @@ public interface AuditorAuditTestRepository extends AbstractRepository {
 	@Query("select a from Audit a where a.draftMode=true and a.auditor.userAccount.username = :username")
 	Collection<Audit> findNonPublishedAuditsByAuditorUsername(String username);
 
+	@Query("select a from Audit a where a.draftMode=false and a.auditor.userAccount.username = :username")
+	Collection<Audit> findPublishedAuditsByAuditorUsername(String username);
+
 	@Query("select a from Audit a where a.code=:code")
 	Audit findAuditByCode(String code);
 

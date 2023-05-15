@@ -26,7 +26,7 @@ public class AuditorAuditingRecordCreateTest extends TestHarness {
 		super.signIn("auditor1", "auditor1");
 
 		super.clickOnMenu("Auditor", "My audits");
-		//super.checkListingExists();
+		super.checkListingExists();
 		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(auditRecordIndex);
@@ -41,7 +41,7 @@ public class AuditorAuditingRecordCreateTest extends TestHarness {
 		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
 		super.clickOnSubmit("Create");
 
-		//super.checkListingExists();
+		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.checkColumnHasValue(auditingRecordRecordIndex, 0, subject);
 		super.checkColumnHasValue(auditingRecordRecordIndex, 1, assessment);
@@ -55,6 +55,47 @@ public class AuditorAuditingRecordCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("furtherInformationLink", furtherInformationLink);
 
 		super.signOut();
+	}
+
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/auditing-record/create-positive2.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test101Positive(final int auditRecordIndex, final int auditingRecordRecordIndex, final String subject, final String assessment, final String startPeriod, final String endPeriod, final String mark, final String furtherInformationLink,
+		final String confirmation) {
+		// Este test autentica a un auditor, lista sus auditorías, selecciona una
+		// ya publicada para listar sus registros de auditoría y crea uno nuevo excepcional,
+		// confirmando que se ha creado de manera correcta.
+		super.signIn("auditor1", "auditor1");
+
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+
+		super.clickOnListingRecord(auditRecordIndex);
+		super.clickOnButton("Auditing records");
+
+		super.clickOnButton("Create exceptional record");
+		super.fillInputBoxIn("subject", subject);
+		super.fillInputBoxIn("assessment", assessment);
+		super.fillInputBoxIn("startPeriod", startPeriod);
+		super.fillInputBoxIn("endPeriod", endPeriod);
+		super.fillInputBoxIn("mark", mark);
+		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
+		super.fillInputBoxIn("confirmation", confirmation);
+		super.clickOnSubmit("Create exceptional record");
+
+		super.checkColumnHasValue(auditingRecordRecordIndex, 0, subject);
+		super.checkColumnHasValue(auditingRecordRecordIndex, 1, assessment);
+
+		super.clickOnListingRecord(auditingRecordRecordIndex);
+		super.checkInputBoxHasValue("subject", subject);
+		super.checkInputBoxHasValue("assessment", assessment);
+		super.checkInputBoxHasValue("startPeriod", startPeriod);
+		super.checkInputBoxHasValue("endPeriod", endPeriod);
+		super.checkInputBoxHasValue("mark", mark);
+		super.checkInputBoxHasValue("furtherInformationLink", furtherInformationLink);
+
+		super.signOut();
+
 	}
 
 	@ParameterizedTest
@@ -79,6 +120,35 @@ public class AuditorAuditingRecordCreateTest extends TestHarness {
 		super.fillInputBoxIn("mark", mark);
 		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
 		super.clickOnSubmit("Create");
+
+		super.checkErrorsExist();
+
+		super.signOut();
+	}
+
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/auditing-record/create-negative2.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test201Negative(final int auditRecordIndex, final String subject, final String assessment, final String startPeriod, final String endPeriod, final String mark, final String furtherInformationLink, final String confirmation) {
+		// Este test intenta crear un registro de auditoría excepcional sin pulsar la cconfirmación.
+
+		super.signIn("auditor1", "auditor1");
+
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+
+		super.clickOnListingRecord(auditRecordIndex);
+		super.clickOnButton("Auditing records");
+
+		super.clickOnButton("Create exceptional record");
+		super.fillInputBoxIn("subject", subject);
+		super.fillInputBoxIn("assessment", assessment);
+		super.fillInputBoxIn("startPeriod", startPeriod);
+		super.fillInputBoxIn("endPeriod", endPeriod);
+		super.fillInputBoxIn("mark", mark);
+		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
+		super.fillInputBoxIn("confirmation", confirmation);
+		super.clickOnSubmit("Create exceptional record");
 
 		super.checkErrorsExist();
 

@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.entities.Audit;
 import acme.testing.TestHarness;
 
 public class AuditorAuditCreateTest extends TestHarness {
@@ -34,10 +33,10 @@ public class AuditorAuditCreateTest extends TestHarness {
 		super.fillInputBoxIn("weakPoints", weakPoints);
 		super.clickOnSubmit("Create");
 
-		final Audit a;
-		a = this.repository.findAuditByCode(code);
-		final String param = String.format("id=%d", a.getId());
-		super.request("/auditor/audit/show", param);
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
 
 		super.checkFormExists();
 		super.checkInputBoxHasValue("course", course);
