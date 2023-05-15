@@ -17,7 +17,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 		super.signIn("company5", "company5");
 
 		super.clickOnMenu("Company", "My practica");
-		//super.checkListingExists();
+		super.checkListingExists();
 
 		super.clickOnButton("Create");
 		super.fillInputBoxIn("course", course);
@@ -28,8 +28,8 @@ public class CompanyPracticumCreateTest extends TestHarness {
 		super.clickOnSubmit("Create");
 
 		super.clickOnMenu("Company", "My practica");
-		//super.checkListingExists();
-		//super.sortListing(0, "asc");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.checkColumnHasValue(recordIndex, 1, title);
 		super.checkColumnHasValue(recordIndex, 2, course.substring(0, course.indexOf("-")));
