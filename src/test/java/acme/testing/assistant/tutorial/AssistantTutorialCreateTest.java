@@ -29,6 +29,7 @@ public class AssistantTutorialCreateTest extends TestHarness {
 		super.fillInputBoxIn("goal", goal);
 		super.fillInputBoxIn("course", course);
 		super.clickOnSubmit("Create");
+		super.checkNotErrorsExist();
 
 		super.clickOnMenu("Assistant", "My tutorials");
 		super.checkListingExists();

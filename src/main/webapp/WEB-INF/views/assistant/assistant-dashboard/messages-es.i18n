@@ -1,13 +1,9 @@
-# messages-en.i18n
-#
-# Copyright (C) 2012-2023 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
 
+
+assistant.assistant-dashboard.form.title.general-indicators= Indicadores 
+assistant.assistant-dashboard.form.label.numOfTutorials= Numero de tutorias dependiendo de su naturaleza
+assistant.assistant-dashboard.form.label.statstuts = Estadisticas de tutorias
+assistant.assistant-dashboard.form.label.statstutssesions = Estadisticas de sesiones de tutorias
 
 assistant.tutorial.list.label.title = Titulo
 assistant.tutorial.list.label.abstract$ = resumen

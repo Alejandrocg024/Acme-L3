@@ -1,2 +1,10 @@
 recordindex,code,title,summary,goal,course
-0,A938,<h1>Hola Mundo!</h1>,R,"Aprender ,concentrarse",course-02
+0,A938,<h1>Hola Mundo!</h1>,R,"Aprender ,concentrarse",AA999-Course
+1,AA926,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AA999-Course
+2,AA924,Tu,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AA999-Course
+3,A999,Tutorial de prueba,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AA999-Course
+4,A952,Tutorial de prueba,Realizado primer tutorial de prueba,"<script>alert(""hi!"")</script>",AA999-Course
+5,AAA999,Tutorial de prueba,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AA999-Course
+6,A950,Tutorial de prueba,Realizado primer tutorial de prueba,თხა,AA999-Course
+7,A948,Tutorial de prueba,Realizado primer tutorial de prueba,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,AA999-Course
+8,A942,Tutorial de prueba,თხა,"Aprender ,concentrarse",AA999-Course

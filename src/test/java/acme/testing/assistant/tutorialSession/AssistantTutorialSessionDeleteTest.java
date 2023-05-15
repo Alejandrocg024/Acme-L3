@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.TutorialSession;
@@ -17,31 +19,26 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 	AssistantTutorialSessionTestRepository repository;
 
 
-	@Test
-	public void test100Positive() {
+	@ParameterizedTest()
+	@CsvFileSource(resources = "/assistant/tutorial-session/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test100Positive(final int recordIndex) {
 		super.signIn("assistant1", "assistant1");
-		final Collection<TutorialSession> tutorialSession = this.repository.findNonPublishedTutorialSessionsByAssistantUsername("assistant1");
-		for (final TutorialSession t : tutorialSession) {
-			final String param = String.format("id=%d", t.getId());
-			super.request("/assistant/tutorial-session/show", param);
-			super.clickOnSubmit("Delete");
-			super.checkNotErrorsExist();
-		}
+		super.clickOnMenu("Assistant", "My tutorials");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(3);
+		super.clickOnButton("Tutorial sessions");
+		super.clickOnListingRecord(recordIndex);
+		super.clickOnSubmit("Delete");
+		super.checkNotErrorsExist();
+		super.checkListingExists();
+
 		super.signOut();
 	}
 
 	@Test
 	public void test200Negative() {
-		super.signIn("assistant1", "assistant1");
-		final Collection<TutorialSession> tutorialSession = this.repository.findPublishedTutorialSessionsByAssistantUsername("assistant1");
-		for (final TutorialSession t : tutorialSession) {
-			final String param = String.format("id=%d", t.getId());
-			super.request("/assistant/tutorial-session/show", param);
-			super.checkNotSubmitExists("Delete");
-			super.request("/assistant/tutorial-session/delete", param);
-			super.checkErrorsExist();
-		}
-		super.signOut();
+		//No existen casos negativos
 	}
 
 	@Test
@@ -93,6 +90,20 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 		super.checkPanicExists();
 		super.signOut();
 
+	}
+
+	@Test
+	public void test302Hacking() {
+		super.signIn("assistant1", "assistant1");
+		final Collection<TutorialSession> tutorialSession = this.repository.findPublishedTutorialSessionsByAssistantUsername("assistant1");
+		for (final TutorialSession t : tutorialSession) {
+			final String param = String.format("id=%d", t.getId());
+			super.request("/assistant/tutorial-session/show", param);
+			super.checkNotSubmitExists("Delete");
+			super.request("/assistant/tutorial-session/delete", param);
+			super.checkErrorsExist();
+		}
+		super.signOut();
 	}
 
 }

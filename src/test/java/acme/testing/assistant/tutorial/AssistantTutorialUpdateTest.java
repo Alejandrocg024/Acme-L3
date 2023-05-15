@@ -1,7 +1,9 @@
 
 package acme.testing.assistant.tutorial;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -25,7 +27,7 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 		super.clickOnMenu("Assistant", "My tutorials");
 		super.checkListingExists();
 
-		super.sortListing(0, "asc");
+		super.sortListing(0, "desc");
 		super.clickOnListingRecord(0);
 
 		super.fillInputBoxIn("code", code);
@@ -34,6 +36,7 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 		super.fillInputBoxIn("goal", goal);
 		super.fillInputBoxIn("course", course);
 		super.clickOnSubmit("Update");
+		super.checkNotErrorsExist();
 
 		super.clickOnMenu("Assistant", "My tutorials");
 		super.checkListingExists();
@@ -54,9 +57,10 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 	@CsvFileSource(resources = "/assistant/tutorial/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int recordIndex, final String code, final String title, final String summary, final String goal, final String course) {
 		super.signIn("assistant1", "assistant1");
-		Tutorial t;
-		t = this.repository.findTutorialByCode("A999");
-		final String param = String.format("id=%d", t.getId());
+		Collection<Tutorial> t;
+		t = this.repository.findNonPublishedTutorialsByAssistantUsername("assistant1");
+		final List<Tutorial> tutorials = new ArrayList<Tutorial>(t);
+		final String param = String.format("id=%d", tutorials.get(0).getId());
 		super.request("/assistant/tutorial/show", param);
 		super.checkFormExists();
 

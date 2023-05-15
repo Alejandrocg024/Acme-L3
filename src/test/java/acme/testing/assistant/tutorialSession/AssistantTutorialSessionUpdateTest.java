@@ -31,7 +31,8 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 		super.fillInputBoxIn("nature", nature);
 		super.fillInputBoxIn("startPeriod", startPeriod);
 		super.fillInputBoxIn("endPeriod", endPeriod);
-		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
+		if (furtherInformationLink != null)
+			super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
 		super.clickOnSubmit("Update");
 		super.checkNotErrorsExist();
 		super.checkListingExists();
@@ -40,7 +41,7 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorial-session/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Positive(final int recordIndex, final String title, final String abstract$, final String nature, final String startPeriod, final String endPeriod, final String furtherInformationLink) {
+	public void test200Negative(final int recordIndex, final String title, final String abstract$, final String nature, final String startPeriod, final String endPeriod, final String furtherInformationLink) {
 		super.signIn("assistant1", "assistant1");
 		super.clickOnMenu("Assistant", "My tutorials");
 		super.sortListing(0, "asc");

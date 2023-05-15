@@ -1,2 +1,22 @@
 recordIndex,title,abstract$,nature,start_period,end_period,further_information_link
-0,TITULO,RESUMEN,THEORETICAL,2022/08/01 00:00, 2022/08/01 07:00,
+0,,,THEORETICAL,,,https://github.com/Alejandrocg024/Acme-L3-D02
+0,,Primera sesion del tutorial,THEORETICAL,2022/08/01 11:20,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Z,,THEORETICAL,2022/08/01 11:20,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,Primera sesion del tutorial,THEORETICAL,,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,Primera sesion del tutorial,THEORETICAL,2022/08/01 11:20,,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Cadena de setenta y seis caracteres y pasarnos de setenta y cinco en pruebas,Primera sesion del tutorial,THEORETICAL,2022/08/01 11:20,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,"<script>alert(""hi!"")</script>",Cadena de ciento un caracteres usada para superar cadenas que tengan como máximo 100 caracteres en dp,THEORETICAL,2022/08/01 11:20,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 15,P,THEORETICAL,2022/07/30 00:00,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 14,Pr,THEORETICAL,2022/07/30 00:01,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 13,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,THEORETICAL,2022/07/30 23:59,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 12,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,THEORETICAL,2022/08/01 11:20,2022/07/30 00:01,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 11,коза,THEORETICAL,2022/05/01 11:20,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 10,"<script>alert(""hi!"")</script>",THEORETICAL,2022/08/01 11:20,2022/06/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 9,Primera sesion del tutorial,BALANCED,2022/01/01 11:20,2022/08/01 13:20,https://github.com/Alejandrocg024/Acme-L3-D02https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 8,Primera sesion del tutorial,HANDS_ON,2022/07/30 00:00,2022/07/31 03:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 7,Primera sesion del tutorial,THEORETICAL,2022/07/30 00:01,2022/07/31 03:20,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 6,Primera sesion del tutorial,THEORETICAL,2022/08/01 00:00,2022/08/01 05:01,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 5,Primera sesion del tutorial,THEORETICAL,2022/08/01 00:00,2022/08/01 05:02,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 4,Primera sesion del tutorial,THEORETICAL,2022/08/01 00:00,2022/08/05 04:59,https://github.com/Alejandrocg024/Acme-L3-D02
+0,Sesion numero 3,Primera sesion del tutorial,THEORETICAL,2022/08/01 00:00,2022/08/01 05:00,Esto no es un enlace
+0,Sesion numero 2,Primera sesion del tutorial,THEORETICAL,2022/07/30 23:59,2022/08/01 02:20,https://github.com/Alejandrocg024/Acme-L3-D02

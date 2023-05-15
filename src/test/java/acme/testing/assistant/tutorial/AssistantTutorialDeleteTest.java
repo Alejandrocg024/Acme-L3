@@ -32,6 +32,7 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 		super.signOut();
 	}
 
+	@Test
 	public void test200Negative() {
 		//No hay pruebas negativas en el borrado, el caso de intentar borrar una tutoria publicada lo probamos en el test302Hacking
 	}
