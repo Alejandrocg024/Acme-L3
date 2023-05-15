@@ -71,6 +71,7 @@ public class AuditorAuditingRecordPublishTest extends TestHarness {
 		super.signOut();
 	}
 
+	@Test
 	public void test301Hacking() {
 		//Intentamos publicar auditorías que no se pueden publicar
 		//debido a que ya lo están
