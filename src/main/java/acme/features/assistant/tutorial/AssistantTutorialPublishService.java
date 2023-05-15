@@ -46,7 +46,7 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 		object = this.repository.findTutorialById(tutorialId);
 		principal = super.getRequest().getPrincipal();
 
-		status = object.getAssistant().getUserAccount().getId() == principal.getAccountId();
+		status = object.getAssistant().getUserAccount().getId() == principal.getAccountId() && object.isDraftMode() == true;
 
 		super.getResponse().setAuthorised(status);
 	}

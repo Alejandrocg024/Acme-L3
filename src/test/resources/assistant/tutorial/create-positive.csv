@@ -1,0 +1,23 @@
+recordIndex,code,title,abstract$,goal,course
+1,AAA117,თხა,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AAA999-Course
+2,AAA101,ZY,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AAA999-Course
+3,AAA112,Z,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AAA999-Course
+4,A199,Tutorial de prueba17,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AAA999-Course
+5,AA111,Tutorial de prueba16,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AAA999-Course
+6,AAA114,Tutorial de prueba15,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AAA999-Course
+7,AAA105,Tutorial de prueba14,A,"Aprender ,concentrarse",AAA999-Course
+8,AAA106,Tutorial de prueba13,AA,"Aprender ,concentrarse",AAA999-Course
+9,AAA107,Tutorial de prueba12,Cadena de noventa y nueve caracteres usada para no pasarnos del limite en cadenas de 100 caracteres,"Aprender ,concentrarse",AAA999-Course
+10,AAA108,Tutorial de prueba11,Cadena de cien caracteres usada para probar cadenas de texto que tengan como máximo 100 caracteresok,"Aprender ,concentrarse",AAA999-Course
+11,AAA118,Tutorial de prueba10,"<script>alert(""hi!"")</script>","Aprender ,concentrarse",AAA999-Course
+4,AAA119,Tutorial de prueba9,<h1>Hola Mundo!</h1>,"Aprender ,concentrarse",AAA999-Course
+5,AAA120,Tutorial de prueba8,თხა,"Aprender ,concentrarse",AAA999-Course
+6,AAA121,Tutorial de prueba7,Realizado primer tutorial de prueba,"<script>alert(""hi!"")</script>",AAA999-Course
+7,AAA122,Tutorial de prueba6,Realizado primer tutorial de prueba,<h1>Hola Mundo!</h1>,AAA999-Course
+8,AAA123,Tutorial de prueba5,Realizado primer tutorial de prueba,თხა,AAA999-Course
+9,AAA109,Tutorial de prueba4,Realizado primer tutorial de prueba,A,AAA999-Course
+10,AAA110,Tutorial de prueba3,Realizado primer tutorial de prueba,AA,AAA999-Course
+11,AAA312,Tutorial de prueba2,Realizado primer tutorial de prueba,Cadena de noventa y nueve caracteres usada para no pasarnos del limite en cadenas de 100 caracteres,AAA999-Course
+20,AAA113,Tutorial de prueba1,Realizado primer tutorial de prueba,Cadena de cien caracteres usada para probar cadenas de texto que tengan como máximo 100 caracteresok,AAA999-Course
+32,AAA103,Cadena de setenta y cuatro caracteres usada para no pasar los 75 caractere,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AAA999-Course
+33,AAA104,Cadena de setenta y cinco caracteres usada para el testing formal en 75chch,Realizado primer tutorial de prueba,"Aprender ,concentrarse",AAA999-Course

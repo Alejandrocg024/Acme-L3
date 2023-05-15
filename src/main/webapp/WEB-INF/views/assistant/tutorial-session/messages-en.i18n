@@ -3,6 +3,7 @@
 assistant.tutorial-session.list.label.title = Title
 assistant.tutorial-session.list.label.start-period = Start date
 assistant.tutorial-session.list.label.end-period = End date
+assistant.tutorial-session.list.label.abstract = Abstract
 
 assistant.tutorial-session.list.button.create = Create
 assistant.tutorial-session.list.button.create-exceptional = Create exceptional session
@@ -12,7 +13,7 @@ assistant.tutorial-session.form.label.abstract$ = Abstract:
 assistant.tutorial-session.form.label.start-period = Start date:
 assistant.tutorial-session.form.label.end-period = End date:
 assistant.tutorial-session.form.label.nature = Nature:
-assistant.tutorial-session.form.label.nature = nature:
+
 
 assistant.tutorial-session.form.label.further-information-link = Further information: (Optional)
 
