@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.AuditingRecord;
@@ -17,40 +19,32 @@ public class AuditorAuditingRecordPublishTest extends TestHarness {
 	AuditorAuditingRecordTestRepository repository;
 
 
-	@Test
-	public void test100Positive() {
-		//Nos traemos de la base de datos los registros de auditoría sin
-		//publicar y los publicamos
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/auditing-record/publish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test100Positive(final int auditRecordIndex, final int auditingRecordRecordIndex) {
+		//Buscamos un registro de auditoría sin publicar y los publicamos
 		super.signIn("auditor1", "auditor1");
-		final Collection<AuditingRecord> ars = this.repository.findNonPublishedAuditingRecordsByAuditorUsername("auditor1");
-		for (final AuditingRecord ar : ars) {
-			final String param = String.format("id=%d", ar.getId());
-			super.request("/auditor/auditing-record/show", param);
-			super.clickOnSubmit("Publish");
-			super.checkNotErrorsExist();
-			super.request("/auditor/auditing-record/show", param);
-			super.checkNotSubmitExists("Publish");
-		}
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(auditRecordIndex);
+		super.clickOnButton("Auditing records");
+		super.clickOnListingRecord(auditingRecordRecordIndex);
+		super.clickOnSubmit("Publish");
 
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(auditRecordIndex);
+		super.clickOnButton("Auditing records");
+		super.clickOnListingRecord(auditingRecordRecordIndex);
+		super.checkNotSubmitExists("Publish");
 		super.signOut();
 	}
 
 	@Test
 	public void test200Negative() {
-		//Con el procedimiento anterior intentamos publicar auditorías que no se pueden publicar
-		//debido a que ya lo están
-		super.signIn("auditor2", "auditor2");
-		final Collection<AuditingRecord> ars = this.repository.findPublishedAuditingRecordsByAuditorUsername("auditor2");
-		for (final AuditingRecord ar : ars) {
-			final String param = String.format("id=%d", ar.getId());
-			super.request("/auditor/auditing-record/show", param);
-			super.checkNotButtonExists("Publish");
-			super.request("/auditor/auditing-record/publish", param);
-			super.checkPanicExists();
-
-		}
-
-		super.signOut();
+		//No hay casos negativos
 	}
 
 	@Test
@@ -75,7 +69,23 @@ public class AuditorAuditingRecordPublishTest extends TestHarness {
 		super.request("/auditor/audit/publish", param);
 		super.checkPanicExists();
 		super.signOut();
+	}
 
+	public void test301Hacking() {
+		//Intentamos publicar auditorías que no se pueden publicar
+		//debido a que ya lo están
+		super.signIn("auditor2", "auditor2");
+		final Collection<AuditingRecord> ars = this.repository.findPublishedAuditingRecordsByAuditorUsername("auditor2");
+		for (final AuditingRecord ar : ars) {
+			final String param = String.format("id=%d", ar.getId());
+			super.request("/auditor/auditing-record/show", param);
+			super.checkNotButtonExists("Publish");
+			super.request("/auditor/auditing-record/publish", param);
+			super.checkPanicExists();
+
+		}
+
+		super.signOut();
 	}
 
 }

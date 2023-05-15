@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.Audit;
@@ -17,33 +19,23 @@ public class AuditorAuditDeleteTest extends TestHarness {
 	AuditorAuditTestRepository repository;
 
 
-	@Test
-	public void test100Positive() {
-		//Nos logueamos como auditor1 y borramos todas las auditorias de auditor1 no publicadas
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/audit/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test100Positive(final int recordIndex) {
+		//Nos logueamos como auditor1 y borramos algunas auditorias de auditor1 no publicadas
 		super.signIn("auditor1", "auditor1");
-		final Collection<Audit> audits = this.repository.findNonPublishedAuditsByAuditorUsername("auditor1");
-		for (final Audit a : audits) {
-			final String param = String.format("id=%d", a.getId());
-			super.request("/auditor/audit/show", param);
-			super.clickOnSubmit("Delete");
-			super.checkNotErrorsExist();
-		}
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
+		super.clickOnSubmit("Delete");
+		super.checkNotErrorsExist();
 		super.signOut();
 	}
 
 	@Test
 	public void test200Negative() {
-		//Nos logueamos como auditor1 e intentamos borrar sus auditorías publicadas, cosa el sistema no debe permitir
-		super.signIn("auditor1", "auditor1");
-		final Collection<Audit> audits = this.repository.findNonPublishedAuditsByAuditorUsername("auditor1");
-		for (final Audit a : audits) {
-			final String param = String.format("id=%d", a.getId());
-			super.request("/auditor/audit/show", param);
-			super.checkNotButtonExists("Delete");
-			super.request("/auditor/audit/delete", param);
-			super.checkPanicExists();
-		}
-		super.signOut();
+		//No hay caso negativo
 	}
 
 	@Test
@@ -68,5 +60,20 @@ public class AuditorAuditDeleteTest extends TestHarness {
 		super.checkPanicExists();
 		super.signOut();
 
+	}
+
+	@Test
+	public void test301Hacking() {
+		//Nos logueamos como auditor1 e intentamos borrar sus auditorías publicadas, cosa el sistema no debe permitir
+		super.signIn("auditor1", "auditor1");
+		final Collection<Audit> audits = this.repository.findPublishedAuditsByAuditorUsername("auditor1");
+		for (final Audit a : audits) {
+			final String param = String.format("id=%d", a.getId());
+			super.request("/auditor/audit/show", param);
+			super.checkNotButtonExists("Delete");
+			super.request("/auditor/audit/delete", param);
+			super.checkPanicExists();
+		}
+		super.signOut();
 	}
 }

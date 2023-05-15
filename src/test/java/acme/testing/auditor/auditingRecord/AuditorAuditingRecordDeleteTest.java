@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.AuditingRecord;
@@ -17,33 +19,25 @@ public class AuditorAuditingRecordDeleteTest extends TestHarness {
 	AuditorAuditingRecordTestRepository repository;
 
 
-	@Test
-	public void test100Positive() {
-		//Nos logueamos como auditor1 y borramos todos los registros de auditorias de auditor1 no publicados
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/auditing-record/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test100Positive(final int auditRecordIndex, final int auditingRecordRecordIndex) {
+		//Nos logueamos como auditor1 y borramos su único registro de auditorias no publicado
 		super.signIn("auditor1", "auditor1");
-		final Collection<AuditingRecord> auditingRecords = this.repository.findNonPublishedAuditingRecordsByAuditorUsername("auditor1");
-		for (final AuditingRecord ar : auditingRecords) {
-			final String param = String.format("id=%d", ar.getId());
-			super.request("/auditor/auditing-record/show", param);
-			super.clickOnSubmit("Delete");
-			super.checkNotErrorsExist();
-		}
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(auditRecordIndex);
+		super.clickOnButton("Auditing records");
+		super.clickOnListingRecord(auditingRecordRecordIndex);
+		super.clickOnSubmit("Delete");
+		super.checkNotErrorsExist();
 		super.signOut();
 	}
 
 	@Test
 	public void test200Negative() {
-		//Nos logueamos como auditor1 e intentamos borrar sus registros de auditorías publicadas, el sistema no debe permitirlo
-		super.signIn("auditor1", "auditor1");
-		final Collection<AuditingRecord> auditingRecords = this.repository.findPublishedAuditingRecordsByAuditorUsername("auditor1");
-		for (final AuditingRecord ar : auditingRecords) {
-			final String param = String.format("id=%d", ar.getId());
-			super.request("/auditor/auditing-record/show", param);
-			super.checkNotButtonExists("Delete");
-			super.request("/auditor/auditing-record/delete", param);
-			super.checkPanicExists();
-		}
-		super.signOut();
+		//No hay caso negatvo
 	}
 
 	@Test
@@ -69,4 +63,20 @@ public class AuditorAuditingRecordDeleteTest extends TestHarness {
 		super.signOut();
 
 	}
+
+	@Test
+	public void test301Hacking() {
+		//Nos logueamos como auditor1 e intentamos borrar sus registros de auditorías publicadas, el sistema no debe permitirlo
+		super.signIn("auditor1", "auditor1");
+		final Collection<AuditingRecord> auditingRecords = this.repository.findPublishedAuditingRecordsByAuditorUsername("auditor1");
+		for (final AuditingRecord ar : auditingRecords) {
+			final String param = String.format("id=%d", ar.getId());
+			super.request("/auditor/auditing-record/show", param);
+			super.checkNotButtonExists("Delete");
+			super.request("/auditor/auditing-record/delete", param);
+			super.checkPanicExists();
+		}
+		super.signOut();
+	}
+
 }

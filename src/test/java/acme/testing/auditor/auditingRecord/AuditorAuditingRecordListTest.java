@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.entities.Audit;
 import acme.testing.TestHarness;
 
 public class AuditorAuditingRecordListTest extends TestHarness {
@@ -19,9 +18,11 @@ public class AuditorAuditingRecordListTest extends TestHarness {
 	@CsvFileSource(resources = "/auditor/auditing-record/list-all-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String subject, final String assessment) {
 		super.signIn("auditor1", "auditor1");
-		final Audit a = this.repository.findOneAuditByCode("AAA999");
-		final String param = String.format("masterId=%d", a.getId());
-		super.request("/auditor/auditing-record/list", param);
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(16);
+		super.clickOnButton("Auditing records");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 

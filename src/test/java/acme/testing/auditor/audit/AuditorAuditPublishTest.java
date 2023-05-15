@@ -2,6 +2,8 @@
 package acme.testing.auditor.audit;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.Audit;
@@ -13,37 +15,53 @@ public class AuditorAuditPublishTest extends TestHarness {
 	AuditorAuditTestRepository repository;
 
 
-	@Test
-	public void test100Positive() {
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/audit/publish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test100Positive(final int recordIndex, final String code) {
 		//Nos traemos de la base de datos una auditoría que cumpla las condiciones para ser 
-		//publicada a través de su código y la publicamos
+		//publicada y la publicamos
 		super.signIn("auditor1", "auditor1");
-		final Audit a = this.repository.findAuditByCode("A999");
-		final String param = String.format("id=%d", a.getId());
-		super.request("/auditor/audit/show", param);
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
 		super.clickOnSubmit("Publish");
 		super.checkNotErrorsExist();
-		super.request("/auditor/audit/show", param);
+
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
 		super.checkNotSubmitExists("Publish");
 		super.signOut();
 	}
 
-	@Test
-	public void test200Negative() {
-		//Con el procedimiento anterior intetamos publicar auditorías que no se pueden publicar por las siguientes razones:
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/audit/publish-negative1.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test200Negative(final int recordIndex, final String code) {
+		//Con el procedimiento anterior intentamos publicar auditorías que no se pueden publicar por las siguientes razones:
 		//No tienen registros de auditorías
-		//Todos sus registros de auditorías no están publicados
-		String param;
 		super.signIn("auditor1", "auditor1");
-		final Audit auditNotAR = this.repository.findAuditByCode("A900");
-		param = String.format("id=%d", auditNotAR.getId());
-		super.request("/auditor/audit/show", param);
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
 		super.clickOnSubmit("Publish");
 		super.checkErrorsExist("*");
 
-		final Audit auditARNotPubl = this.repository.findAuditByCode("AA999");
-		param = String.format("id=%d", auditARNotPubl.getId());
-		super.request("/auditor/audit/show", param);
+		super.signOut();
+	}
+
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/audit/publish-negative2.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test201Negative(final int recordIndex, final String code) {
+		//Con el procedimiento anterior intentamos publicar auditorías que no se pueden publicar por las siguientes razones:
+		//Todos sus registros de auditorías no están publicados
+		super.signIn("auditor1", "auditor1");
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
 		super.clickOnSubmit("Publish");
 		super.checkErrorsExist("*");
 

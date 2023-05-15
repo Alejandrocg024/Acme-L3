@@ -23,12 +23,11 @@ public class AuditorAuditUpdateTest extends TestHarness {
 		// Este test autentica a un auditor, lista sus auditorías y actualiza una existente,
 		// confirmando que se ha actualizado de manera correcta.
 
-		super.signIn("auditor1", "auditor1");
-
-		final Collection<Audit> audits = this.repository.findNonPublishedAuditsByAuditorUsername("auditor1");
-		final Audit a = audits.stream().findFirst().get();
-		final String param1 = String.format("id=%d", a.getId());
-		super.request("/auditor/audit/show", param1);
+		super.signIn("auditor2", "auditor2");
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
 
 		super.checkFormExists();
 		super.fillInputBoxIn("course", course);
@@ -38,10 +37,10 @@ public class AuditorAuditUpdateTest extends TestHarness {
 		super.fillInputBoxIn("weakPoints", weakPoints);
 		super.clickOnSubmit("Update");
 
-		final Audit a2;
-		a2 = this.repository.findAuditByCode(code);
-		final String param2 = String.format("id=%d", a2.getId());
-		super.request("/auditor/audit/show", param2);
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
 
 		super.checkFormExists();
 		super.checkInputBoxHasValue("course", course);
@@ -58,13 +57,11 @@ public class AuditorAuditUpdateTest extends TestHarness {
 	public void test200Negative(final int recordIndex, final String course, final String code, final String conclusion, final String strongPoints, final String weakPoints) {
 		// Este test intenta actualizar una auditoría con datos incorrectos.
 
-		super.signIn("auditor1", "auditor1");
-
-		//Añadir el csv
-		final Collection<Audit> audits = this.repository.findNonPublishedAuditsByAuditorUsername("auditor1");
-		final Audit a = audits.stream().findFirst().get();
-		final String param = String.format("id=%d", a.getId());
-		super.request("/auditor/audit/show", param);
+		super.signIn("auditor2", "auditor2");
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 		super.fillInputBoxIn("course", course);
 		super.fillInputBoxIn("code", code);

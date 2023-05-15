@@ -6,9 +6,9 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:list>
+	<acme:list-column code="auditor.audit.list.label.code" path="code"  width="20%"/>
 	<acme:list-column code="auditor.audit.list.label.courseCode" path="courseCode"  width="40%"/>
 	<acme:list-column code="auditor.audit.list.label.courseTitle" path="courseTitle"  width="40%"/>
-	<acme:list-column code="auditor.audit.list.label.code" path="code"  width="20%"/>
 
 
 </acme:list>
