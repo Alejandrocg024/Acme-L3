@@ -21,7 +21,7 @@ public class AuditorAuditingRecordListTest extends TestHarness {
 		super.clickOnMenu("Auditor", "My audits");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.clickOnListingRecord(16);
+		super.clickOnListingRecord(27);
 		super.clickOnButton("Auditing records");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
