@@ -34,7 +34,7 @@ public class StudentDashboardController extends AbstractController<Student, Stud
 
 	@PostConstruct
 	protected void initialise() {
-		//super.addBasicCommand("show", this.showService);
+		super.addBasicCommand("show", this.showService);
 	}
 
 }

@@ -12,6 +12,8 @@
 
 package acme.features.student.dashboard;
 
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,30 +57,43 @@ public class StudentDashboardShowService extends AbstractService<Student, Studen
 		final Integer balancedActivities;
 		final Integer theoreticalActivities;
 
-		final Statistic activitiesPeriodStats;
-		final Statistic coursesTimeStats;
+		final Statistic periodsOfActivitiesStats;
+		final Collection<Double> periodsOfActivities;
+
+		final Statistic timesOfEnrolledCoursesStats;
+		final Collection<Double> timesOfEnrolledCourses;
 
 		student = this.repository.findStudentByUserAccountId(super.getRequest().getPrincipal().getAccountId());
 
 		//numberOfActivitiesByNature
-		numberOfActivitiesByNature = this.repository.findNumOfActivitiesByType(student);
-		//numberOfActivitiesByNature = new HashMap<Nature, Integer>();
+		numberOfActivitiesByNature = new HashMap<>();
+		theoreticalActivities = this.repository.findNumOfActivitiesByStudentAndNature(student, Nature.THEORETICAL).orElse(0);
+		numberOfActivitiesByNature.put(Nature.THEORETICAL, theoreticalActivities);
+		balancedActivities = this.repository.findNumOfActivitiesByStudentAndNature(student, Nature.BALANCED).orElse(0);
+		numberOfActivitiesByNature.put(Nature.BALANCED, balancedActivities);
+		handsOnActivities = this.repository.findNumOfActivitiesByStudentAndNature(student, Nature.HANDS_ON).orElse(0);
+		numberOfActivitiesByNature.put(Nature.HANDS_ON, handsOnActivities);
 
-		//handsOnActivities = this.repository.findNumOfActivitiesByType(student, Nature.HANDS_ON).orElse(0);
-		//numberOfActivitiesByNature.put(Nature.HANDS_ON, handsOnActivities);
+		//periodsOfActivitiesStats
+		periodsOfActivitiesStats = new Statistic();
+		periodsOfActivities = this.repository.findPeriodsOfActivitiesByStudent(student);
+		periodsOfActivitiesStats.calcAverage(periodsOfActivities);
+		periodsOfActivitiesStats.calcLinDev(periodsOfActivities);
+		periodsOfActivitiesStats.calcMin(periodsOfActivities);
+		periodsOfActivitiesStats.calcMax(periodsOfActivities);
 
-		//balancedActivities = this.repository.findNumOfActivitiesByType(student, Nature.BALANCED).orElse(0);
-		//numberOfActivitiesByNature.put(Nature.BALANCED, balancedActivities);
+		//timesOfEnrolledCoursesStats
+		timesOfEnrolledCoursesStats = new Statistic();
+		timesOfEnrolledCourses = this.repository.findTimesOfEnrolledCoursesByStudent(student);
+		timesOfEnrolledCoursesStats.calcAverage(timesOfEnrolledCourses);
+		timesOfEnrolledCoursesStats.calcLinDev(timesOfEnrolledCourses);
+		timesOfEnrolledCoursesStats.calcMin(timesOfEnrolledCourses);
+		timesOfEnrolledCoursesStats.calcMax(timesOfEnrolledCourses);
 
-		//theoreticalActivities = this.repository.findNumOfActivitiesByType(student, Nature.THEORETICAL).orElse(0);
-		//numberOfActivitiesByNature.put(Nature.THEORETICAL, theoreticalActivities);
-
-		//activitiesPeriodStats
-		//coursesTimeStats
 		dashboard = new StudentDashboard();
 		dashboard.setNumberOfActivitiesByNature(numberOfActivitiesByNature);
-		//dashboard.setActivitiesPeriodStats(activitiesPeriodStats);
-		//dashboard.setCoursesTimeStats(coursesTimeStats);
+		dashboard.setPeriodsOfActivitiesStats(periodsOfActivitiesStats);
+		dashboard.setTimesOfEnrolledCoursesStats(timesOfEnrolledCoursesStats);
 
 		super.getBuffer().setData(dashboard);
 	}
@@ -87,11 +102,10 @@ public class StudentDashboardShowService extends AbstractService<Student, Studen
 	public void unbind(final StudentDashboard object) {
 		Tuple tuple;
 
-		tuple = super.unbind(object, //
-			"averageNumberOfJobsPerEmployer", "averageNumberOfApplicationsPerWorker", // 
-			"avegageNumberOfApplicationsPerEmployer", "ratioOfPendingApplications", //
-			"ratioOfRejectedApplications", "ratioOfAcceptedApplications");
-
+		tuple = super.unbind(object, "numberOfActivitiesByNature", "periodsOfActivitiesStats", "timesOfEnrolledCoursesStats");
+		tuple.put("numberOfHandsOnActivities", object.getNumberOfActivitiesByNature().get(Nature.HANDS_ON));
+		tuple.put("numberOfTheoreticalActivities", object.getNumberOfActivitiesByNature().get(Nature.THEORETICAL));
+		tuple.put("numberOfBalancedActivities", object.getNumberOfActivitiesByNature().get(Nature.BALANCED));
 		super.getResponse().setData(tuple);
 	}
 
