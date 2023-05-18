@@ -25,8 +25,8 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 		super.signIn("company1", "company1");
 
 		super.clickOnMenu("Company", "My practica");
-		//super.checkListingExists();
-		//super.sortListing(0, "asc");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(practicumRecordIndex);
 		super.clickOnButton("Practicum sessions");
@@ -40,8 +40,8 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 		super.fillInputBoxIn("furtherInformationLink", furtherInformationLink);
 		super.clickOnSubmit("Create");
 
-		//super.checkListingExists();
-		//super.sortListing(0, "asc");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
 		super.checkColumnHasValue(practicumSessionRecordIndex, 0, title);
 		super.checkColumnHasValue(practicumSessionRecordIndex, 1, startPeriod);
 		super.checkColumnHasValue(practicumSessionRecordIndex, 2, endPeriod);
@@ -65,8 +65,8 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 		super.signIn("company1", "company1");
 
 		super.clickOnMenu("Company", "My practica");
-		//super.checkListingExists();
-		//super.sortListing(0, "asc");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(practicumRecordIndex);
 		super.clickOnButton("Practicum sessions");
@@ -81,8 +81,8 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 		super.fillInputBoxIn("confirmation", confirmation);
 		super.clickOnSubmit("Create addendum session");
 
-		//super.checkListingExists();
-		//super.sortListing(0, "asc");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
 		super.checkColumnHasValue(practicumSessionRecordIndex, 0, title);
 		super.checkColumnHasValue(practicumSessionRecordIndex, 1, startPeriod);
 		super.checkColumnHasValue(practicumSessionRecordIndex, 2, endPeriod);

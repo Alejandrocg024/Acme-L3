@@ -20,8 +20,8 @@ public class StudentDashboard extends AbstractForm {
 	// Attributes -------------------------------------------------------------
 
 	Map<Nature, Integer>		numberOfActivitiesByNature;
-	Statistic					activitiesPeriodStats;
-	Statistic					coursesTimeStats;
+	Statistic					periodsOfActivitiesStats;
+	Statistic					timesOfEnrolledCoursesStats;
 
 	// Derived attributes -----------------------------------------------------
 

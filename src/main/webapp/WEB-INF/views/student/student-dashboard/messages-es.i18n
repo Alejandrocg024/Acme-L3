@@ -1,0 +1,19 @@
+student.studentDashboard.form.title.general-indicators= Panel del estudiante
+
+student.studentDashboard.form.label.numberOfActivitiesByNature = Número total de actividades por naturaleza:
+student.studentDashboard.form.label.theoretical-activities = Número de actividades teóricas:
+student.studentDashboard.form.label.balanced-activities = Número de actividades balanceadas:
+student.studentDashboard.form.label.hands-on-activities = Número de actividades prácticas:
+
+student.studentDashboard.form.label.periods-of-activities = Estadísticas del periodo de las actividades en mi cuaderno de trabajo
+student.studentDashboard.form.label.average-periods-of-activities = Periodo medio:
+student.studentDashboard.form.label.min-periods-of-activities = Periodo máximo:
+student.studentDashboard.form.label.max-periods-of-activities = Periodo mínimo:
+student.studentDashboard.form.label.lin-dev-periods-of-activities = Desviación del periodo:
+
+student.studentDashboard.form.label.times-of-enrolled-courses =  Estadísticas del tiempo de aprendizaje de los cursos en los que estoy matriculado/a.
+student.studentDashboard.form.label.average-times-of-enrolled-courses = Tiempo de aprendizaje medio:
+student.studentDashboard.form.label.min-times-of-enrolled-courses = Tiempo de aprendizaje mínimo:
+student.studentDashboard.form.label.max-times-of-enrolled-courses = Tiempo de aprendizaje máximo:
+student.studentDashboard.form.label.lin-dev-times-of-enrolled-courses = Desviación del tiempo de aprendizaje:
+

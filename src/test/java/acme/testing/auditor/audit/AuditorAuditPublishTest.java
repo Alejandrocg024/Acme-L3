@@ -72,7 +72,7 @@ public class AuditorAuditPublishTest extends TestHarness {
 	public void test300Hacking() {
 		//Intentamos publicar una auditoría sin ser los creadores de dicha auditoría
 
-		final Audit a = this.repository.findAuditByCode("AAA999");
+		final Audit a = this.repository.findAuditByCode("A903");
 		final String param = String.format("id=%d", a.getId());
 
 		super.signIn("auditor2", "auditor2");
@@ -87,6 +87,21 @@ public class AuditorAuditPublishTest extends TestHarness {
 
 		super.signIn("lecturer1", "lecturer1");
 		super.request("/auditor/audit/publish", param);
+		super.checkPanicExists();
+		super.signOut();
+
+	}
+
+	@Test
+	public void test301Hacking() {
+		//Intentamos publicar auditorías que no se pueden publicar
+		//debido a que ya lo están
+		final Audit a = this.repository.findAuditByCode("AAA999");
+		final String param = String.format("id=%d", a.getId());
+
+		super.signIn("auditor1", "auditor1");
+		super.request("/auditor/audit/publish", param);
+
 		super.checkPanicExists();
 		super.signOut();
 
