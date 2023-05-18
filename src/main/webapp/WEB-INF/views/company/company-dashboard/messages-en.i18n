@@ -14,3 +14,5 @@ company.companyDashboard.form.label.averageLengthOfAPracticum = Average length o
 
 company.companyDashboard.form.title.practicumSessionsChart = Practicum sessions statistics chart
 company.companyDashboard.form.title.practicaChart = Practicum statistics chart
+
+company.companyDashboard.form.hours = hours
