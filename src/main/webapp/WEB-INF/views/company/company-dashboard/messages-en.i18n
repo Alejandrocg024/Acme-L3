@@ -1,6 +1,6 @@
 company.companyDashboard.form.title.general-indicators = Company Dashboard
 
-company.companyDashboard.form.label.numberOfPracticaPerMonth = Number of practica for each month
+company.companyDashboard.form.label.numberOfPracticaPerMonth = Number of practica for each month last year
 
 company.companyDashboard.form.label.maxLengthOfASession = Maximum duration of a practicum session
 company.companyDashboard.form.label.minLengthOfASession = Minimum duration of a practicum session

@@ -1,6 +1,6 @@
 company.companyDashboard.form.title.general-indicators = Panel de la empresa
 
-company.companyDashboard.form.label.numberOfPracticaPerMonth = Número de prácticas por mes
+company.companyDashboard.form.label.numberOfPracticaPerMonth = Número de prácticas por mes en el último año
 
 company.companyDashboard.form.label.maxLengthOfASession = Duración máxima de una sesión de práctica
 company.companyDashboard.form.label.minLengthOfASession = Duración mínima de una sesión de práctica
