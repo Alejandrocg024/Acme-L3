@@ -73,8 +73,8 @@ public class AuditorAuditingRecordPublishTest extends TestHarness {
 
 	@Test
 	public void test301Hacking() {
-		//Intentamos publicar auditorías que no se pueden publicar
-		//debido a que ya lo están
+		//Intentamos publicar registro de auditoría que no 
+		//se pueden publicar debido a que ya lo están
 		super.signIn("auditor2", "auditor2");
 		final Collection<AuditingRecord> ars = this.repository.findPublishedAuditingRecordsByAuditorUsername("auditor2");
 		for (final AuditingRecord ar : ars) {
