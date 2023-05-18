@@ -22,6 +22,7 @@
 		</th>
 		<td>
 			<acme:print value="${periodLengthOfSessionsStats.getMax()}"/>
+			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -30,6 +31,7 @@
 		</th>
 		<td>
 			<acme:print value="${periodLengthOfSessionsStats.getMin()}"/>
+			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -38,6 +40,7 @@
 		</th>
 		<td>
 			<acme:print value="${periodLengthOfSessionsStats.getLinDev()}"/>
+			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -46,6 +49,7 @@
 		</th>
 		<td>
 			<acme:print value="${periodLengthOfSessionsStats.getAverage()}"/>
+			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -54,6 +58,7 @@
 		</th>
 		<td>
 			<acme:print value="${periodLengthOfPracticaStats.getMax()}"/>
+			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -62,6 +67,7 @@
 		</th>
 		<td>
 			<acme:print value="${periodLengthOfPracticaStats.getMin()}"/>
+			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -70,6 +76,7 @@
 		</th>
 		<td>
 			<acme:print value="${periodLengthOfPracticaStats.getLinDev()}"/>
+			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -78,126 +85,140 @@
 		</th>
 		<td>
 			<acme:print value="${periodLengthOfPracticaStats.getAverage()}"/>
+			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
 </table>
 
-<h2>
-	<acme:message code="company.companyDashboard.form.title.practicumSessionsChart"/>
-</h2>
+</br>
 
-<div>
-	<canvas id="canvas"></canvas>
-</div>
+<jstl:choose>
+	<jstl:when test="${periodLengthOfSessionsStats.getMax() != 0 || periodLengthOfSessionsStats.getMin() != 0 || periodLengthOfSessionsStats.getLinDev() != 0 || periodLengthOfSessionsStats.getAverage() != 0}">
+		<h2>
+			<acme:message code="company.companyDashboard.form.title.practicumSessionsChart"/>
+		</h2>
+		
+		<div>
+			<canvas id="canvas"></canvas>
+		</div>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		var data = {
-			labels : [
-					"MAX", "MIN", "LINEAR DEVIATION", "AVERAGE"
-			],
-			datasets : [
-				{
-					data : [
-						<jstl:out value="${periodLengthOfSessionsStats.getMax()}"/>, 
-						<jstl:out value="${periodLengthOfSessionsStats.getMin()}"/>, 
-						<jstl:out value="${periodLengthOfSessionsStats.getLinDev()}"/>,
-						<jstl:out value="${periodLengthOfSessionsStats.getAverage()}"/>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var data = {
+					labels : [
+							"MAX", "MIN", "LINEAR DEVIATION", "AVERAGE"
 					],
-					backgroundColor: [
-					      'rgb(255, 202, 58)',
-					      'rgb(25, 130, 196)',
-					      'rgb(138, 201, 38)',
-					      'rgb(255, 89, 94)'
-				    ]
-				}
-			]
-		};
-		var options = {
-			scales : {
-				yAxes : [
-					{
-						ticks : {
-							suggestedMin : 0.0,
-							suggestedMax : 100.0
+					datasets : [
+						{
+							data : [
+								<jstl:out value="${periodLengthOfSessionsStats.getMax()}"/>, 
+								<jstl:out value="${periodLengthOfSessionsStats.getMin()}"/>, 
+								<jstl:out value="${periodLengthOfSessionsStats.getLinDev()}"/>,
+								<jstl:out value="${periodLengthOfSessionsStats.getAverage()}"/>
+							],
+							backgroundColor: [
+							      'rgb(255, 202, 58)',
+							      'rgb(25, 130, 196)',
+							      'rgb(138, 201, 38)',
+							      'rgb(255, 89, 94)'
+						    ]
 						}
+					]
+				};
+				var options = {
+					scales : {
+						yAxes : [
+							{
+								ticks : {
+									suggestedMin : 0.0,
+									suggestedMax : 100.0
+								}
+							}
+						]
+					},
+					legend : {
+						display : false
 					}
-				]
-			},
-			legend : {
-				display : false
-			}
-		};
-	
-		var canvas, context;
-	
-		canvas = document.getElementById("canvas");
-		context = canvas.getContext("2d");
-		new Chart(context, {
-			type : "bar",
-			data : data,
-			options : options
-		});
-	});
-</script>
+				};
+			
+				var canvas, context;
+			
+				canvas = document.getElementById("canvas");
+				context = canvas.getContext("2d");
+				new Chart(context, {
+					type : "bar",
+					data : data,
+					options : options
+				});
+			});
+		</script>
+	</jstl:when>
+</jstl:choose>
 
-<h2>
-	<acme:message code="company.companyDashboard.form.title.practicaChart"/>
-</h2>
+</br>
+</br>
 
-<div>
-	<canvas id="canvas2"></canvas>
-</div>
+<jstl:choose>
+	<jstl:when test="${periodLengthOfPracticaStats.getMax() != 0 || periodLengthOfPracticaStats.getMin() != 0 || periodLengthOfPracticaStats.getLinDev() != 0 || periodLengthOfPracticaStats.getAverage() != 0}">
+		<h2>
+			<acme:message code="company.companyDashboard.form.title.practicaChart"/>
+		</h2>
+		
+		<div>
+			<canvas id="canvas2"></canvas>
+		</div>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		var data = {
-			labels : [
-					"MAX", "MIN", "LINEAR DEVIATION", "AVERAGE"
-			],
-			datasets : [
-				{
-					data : [
-						<jstl:out value="${periodLengthOfPracticaStats.getMax()}"/>, 
-						<jstl:out value="${periodLengthOfPracticaStats.getMin()}"/>, 
-						<jstl:out value="${periodLengthOfPracticaStats.getLinDev()}"/>,
-						<jstl:out value="${periodLengthOfPracticaStats.getAverage()}"/>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var data = {
+					labels : [
+							"MAX", "MIN", "LINEAR DEVIATION", "AVERAGE"
 					],
-					backgroundColor: [
-					      'rgb(255, 202, 58)',
-					      'rgb(25, 130, 196)',
-					      'rgb(138, 201, 38)',
-					      'rgb(255, 89, 94)'
-				    ]
-				}
-			]
-		};
-		var options = {
-			scales : {
-				yAxes : [
-					{
-						ticks : {
-							suggestedMin : 0.0,
-							suggestedMax : 100.0
+					datasets : [
+						{
+							data : [
+								<jstl:out value="${periodLengthOfPracticaStats.getMax()}"/>, 
+								<jstl:out value="${periodLengthOfPracticaStats.getMin()}"/>, 
+								<jstl:out value="${periodLengthOfPracticaStats.getLinDev()}"/>,
+								<jstl:out value="${periodLengthOfPracticaStats.getAverage()}"/>
+							],
+							backgroundColor: [
+							      'rgb(255, 202, 58)',
+							      'rgb(25, 130, 196)',
+							      'rgb(138, 201, 38)',
+							      'rgb(255, 89, 94)'
+						    ]
 						}
+					]
+				};
+				var options = {
+					scales : {
+						yAxes : [
+							{
+								ticks : {
+									suggestedMin : 0.0,
+									suggestedMax : 100.0
+								}
+							}
+						]
+					},
+					legend : {
+						display : false
 					}
-				]
-			},
-			legend : {
-				display : false
-			}
-		};
-	
-		var canvas, context;
-	
-		canvas = document.getElementById("canvas2");
-		context = canvas.getContext("2d");
-		new Chart(context, {
-			type : "bar",
-			data : data,
-			options : options
-		});
-	});
-</script>
+				};
+			
+				var canvas, context;
+			
+				canvas = document.getElementById("canvas2");
+				context = canvas.getContext("2d");
+				new Chart(context, {
+					type : "bar",
+					data : data,
+					options : options
+				});
+			});
+		</script>
+	</jstl:when>
+</jstl:choose>
 
 <acme:return/>

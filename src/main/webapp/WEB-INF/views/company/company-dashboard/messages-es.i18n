@@ -14,3 +14,5 @@ company.companyDashboard.form.label.averageLengthOfAPracticum = Media de la dura
 
 company.companyDashboard.form.title.practicumSessionsChart = Gráfico de estadísticas sobre las sesiones de práctica
 company.companyDashboard.form.title.practicaChart = Gráfico de estadísticas sobre las prácticas
+
+company.companyDashboard.form.hours = horas
