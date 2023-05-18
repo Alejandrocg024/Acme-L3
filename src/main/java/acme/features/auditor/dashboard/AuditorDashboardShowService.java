@@ -52,15 +52,15 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		final Collection<Audit> audits = this.repository.findAudits(auditor.getId());
 		auditsPerNature = this.repository.auditsPerNature(audits);
 
-		numAuditingStats.setAverage(this.repository.findAverageNumOfAuditingRecords(auditor.getId()));
-		numAuditingStats.setMax(this.repository.findMaxNumOfAuditingRecords(auditor.getId()));
-		numAuditingStats.setMin(this.repository.findMinNumOfAuditingRecords(auditor.getId()));
+		numAuditingStats.setAverage(this.repository.findAverageNumOfAuditingRecords(auditor.getId()).orElse(0.0));
+		numAuditingStats.setMax(this.repository.findMaxNumOfAuditingRecords(auditor.getId()).orElse(0.0));
+		numAuditingStats.setMin(this.repository.findMinNumOfAuditingRecords(auditor.getId()).orElse(0.0));
 		numAuditingStats.calcLinDev(numAuditingRecordsPerAudit);
 
-		periodAuditingStats.setAverage(this.repository.findAverageDurationOfAuditingRecords(auditor.getId()));
-		periodAuditingStats.setMax(this.repository.findMaxDurationOfAuditingRecords(auditor.getId()));
-		periodAuditingStats.setMin(this.repository.findMinDurationOfAuditingRecords(auditor.getId()));
-		periodAuditingStats.setLinDev(this.repository.findLinDevDurationOfAuditingRecords(auditor.getId()));
+		periodAuditingStats.setAverage(this.repository.findAverageDurationOfAuditingRecords(auditor.getId()).orElse(0.0));
+		periodAuditingStats.setMax(this.repository.findMaxDurationOfAuditingRecords(auditor.getId()).orElse(0.0));
+		periodAuditingStats.setMin(this.repository.findMinDurationOfAuditingRecords(auditor.getId()).orElse(0.0));
+		periodAuditingStats.setLinDev(this.repository.findLinDevDurationOfAuditingRecords(auditor.getId()).orElse(0.0));
 
 		dashboard.setNumOfAuditsByType(auditsPerNature);
 		dashboard.setNumOfAuditingRecordsStats(numAuditingStats);
@@ -74,6 +74,7 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		Tuple tuple;
 
 		tuple = super.unbind(object, "numOfAuditingRecordsStats", "numOfAuditsByType", "periodOfAuditingRecordStats");
+
 		tuple.put("numberOfHandsOnAudits", object.getNumOfAuditsByType().get(Nature.HANDS_ON));
 		tuple.put("numberOfTheoreticalAudits", object.getNumOfAuditsByType().get(Nature.THEORETICAL));
 		tuple.put("numberOfBalancedAudits", object.getNumOfAuditsByType().get(Nature.BALANCED));

@@ -97,14 +97,16 @@
 		</td>
 	</tr>	
 </table>
- <h2>
+ 
+<jstl:choose>
+<jstl:when test="${numberOfHandsOnAudits>0.0 || numberOfTheoreticalAudits>0.0 || numberOfBalancedAudits>0.0 }">
+<h2>
 	<acme:message code="auditor.auditorDashboard.form.title.nature-audits"/>
 </h2>
 
 <div>
 	<canvas id="canvas"></canvas>
 </div>
-
 <script type="text/javascript">
 	$(document).ready(function() {
 		var data = {
@@ -152,6 +154,8 @@
 		});
 	});
 </script>
+</jstl:when>
+</jstl:choose>
 <jstl:choose>
 <jstl:when test="${numOfAuditingRecordsStats.getMax()>0.0}">
 
