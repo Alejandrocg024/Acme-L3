@@ -222,7 +222,7 @@ public class AnyPeepCreateTest extends TestHarness {
 		super.clickOnMenu("Any", "Peeps");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.clickOnListingRecord(0);
+		super.clickOnListingRecord(6);
 		super.checkInputBoxHasValue("instantiationMoment", "2022/07/30 00:00");
 		super.checkInputBoxHasValue("title", "<f");
 		super.checkInputBoxHasValue("nick", "Juan");
