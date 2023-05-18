@@ -4,6 +4,8 @@ package acme.forms;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +21,7 @@ public class Payment extends AbstractForm {
 	// Query attributes -------------------------------------------------------
 
 	@NotBlank
+	@Length(max = 255)
 	public String				holderName;
 
 	@NotBlank

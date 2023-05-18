@@ -1,0 +1,36 @@
+recordIndex,course,code,motivation,goals
+0,AAA999-Course,A100,E,"Discover, Learn, Enjoy"
+1,AAA999-Course,A101,Es,"Discover, Learn, Enjoy"
+2,AAA999-Course,A102,Este mensaje tiene setenta y cuatro caracteres se usa para validar mensaje,"Discover, Learn, Enjoy"
+3,AAA999-Course,A103,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,"Discover, Learn, Enjoy"
+4,AAA999-Course,A104,!@#$%&/()=?¿,"Discover, Learn, Enjoy"
+5,AAA999-Course,A105,у меня желтый трактор,"Discover, Learn, Enjoy"
+6,AAA999-Course,A106,我有一輛黃色拖拉機,"Discover, Learn, Enjoy"
+7,AAA999-Course,A107,"console.log(""Hola!"")","Discover, Learn, Enjoy"
+8,AAA999-Course,A108,"<script>alert(""hi!"")</script>","Discover, Learn, Enjoy"
+9,AAA999-Course,A109,<h1>Hola Mundo!</h1>,"Discover, Learn, Enjoy"
+10,AAA999-Course,A110,Learning new things,E
+11,AAA999-Course,A111,Learning new things,Es
+12,AAA999-Course,A112,Learning new things,Este mensaje tiene cien caracteres usado para validar cadenas con cien de longitud maximo y motivate
+13,AAA999-Course,A113,Learning new things,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maximo
+14,AAA999-Course,A114,Learning new things,!@#$%&/()=?¿
+15,AAA999-Course,A115,Learning new things,у меня желтый трактор
+16,AAA999-Course,A116,Learning new things,我有一輛黃色拖拉機
+17,AAA999-Course,A117,Learning new things,"console.log(""Hola!"")"
+18,AAA999-Course,A118,Learning new things,"<script>alert(""hi!"")</script>"
+19,AAA999-Course,A119,Learning new things,<h1>Hola Mundo!</h1>
+20,AAA999-Course,AAA999,Learning new things,"Discover, Learn, Enjoy"
+21,AAA991-C,AB111,Learning new things,"Discover, Learn, Enjoy"
+22,AA999-Course,ABC123,Learning new things,"Discover, Learn, Enjoy"
+23,A999-Course,XYZ789,Learning new things,"Discover, Learn, Enjoy"
+24,AAA992-Co,Z999,Learning new things,"Discover, Learn, Enjoy"
+25,AAA999-Course,ZZZ111,Learning new things,"Discover, Learn, Enjoy"
+26,AAA999-Course,ZZZ112,Learning new things,"Discover, Learn, Enjoy"
+27,AAA999-Course,ZZZ113,Learning new things,"Discover, Learn, Enjoy"
+28,AAA999-Course,ZZZ114,Learning new things,"Discover, Learn, Enjoy"
+29,AAA999-Course,ZZZ115,Learning new things,"Discover, Learn, Enjoy"
+30,AAA999-Course,ZZZ116,Learning new things,"Discover, Learn, Enjoy"
+31,AAA999-Course,ZZZ117,Learning new things,"Discover, Learn, Enjoy"
+32,AAA999-Course,ZZZ118,Learning new things,"Discover, Learn, Enjoy"
+33,AAA999-Course,ZZZ119,Learning new things,"Discover, Learn, Enjoy"
+34,AAA999-Course,ZZZ120,Learning new things,"Discover, Learn, Enjoy"

@@ -1,8 +1,9 @@
 student.enrolment.activities = Activities
-student.enrolment.create = Create
+student.enrolment.register = Register
 
 student.enrolment.list.label.code = Code
 student.enrolment.list.label.motivation = Motivation
+student.enrolment.list.label.course-code = Course
 
 student.enrolment.form.label.draftModeTrue = Enrolment
 student.enrolment.form.label.draftModeFalse = Enrolment Published
@@ -17,7 +18,7 @@ student.enrolment.form.label.lowerNibble = Credit Card Lower Nibble:
 student.enrolment.form.label.holderName = Holder Name:
 
 student.enrolment.form.button.activities = Workbook
-student.enrolment.form.button.create = Register
+student.enrolment.form.button.register = Register
 student.enrolment.form.button.update = Update
 student.enrolment.form.button.delete = Delete
 student.enrolment.form.button.publish = Finalise
