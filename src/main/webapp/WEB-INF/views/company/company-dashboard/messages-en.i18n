@@ -4,12 +4,12 @@ company.companyDashboard.form.label.numberOfPracticaPerMonth = Number of practic
 
 company.companyDashboard.form.label.maxLengthOfASession = Maximum duration of a practicum session
 company.companyDashboard.form.label.minLengthOfASession = Minimum duration of a practicum session
-company.companyDashboard.form.label.linDevLengthOfASession = Linear deviation of the length of practicum sessions
+company.companyDashboard.form.label.linDevLengthOfASession = Standard deviation of the length of practicum sessions
 company.companyDashboard.form.label.averageLengthOfASession = Average length of practicum sessions
 
 company.companyDashboard.form.label.maxLengthOfAPracticum = Maximum duration of a practicum
 company.companyDashboard.form.label.minLengthOfAPracticum = Minimum duration of a practicum
-company.companyDashboard.form.label.linDevLengthOfAPracticum = Linear deviation of the length of practica
+company.companyDashboard.form.label.linDevLengthOfAPracticum = Standard deviation of the length of practica
 company.companyDashboard.form.label.averageLengthOfAPracticum = Average length of practica
 
 company.companyDashboard.form.title.practicumSessionsChart = Practicum sessions statistics chart

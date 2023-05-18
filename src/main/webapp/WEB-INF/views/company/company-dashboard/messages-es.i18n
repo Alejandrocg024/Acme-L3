@@ -4,12 +4,12 @@ company.companyDashboard.form.label.numberOfPracticaPerMonth = Número de práct
 
 company.companyDashboard.form.label.maxLengthOfASession = Duración máxima de una sesión de práctica
 company.companyDashboard.form.label.minLengthOfASession = Duración mínima de una sesión de práctica
-company.companyDashboard.form.label.linDevLengthOfASession = Desviación lineal de la duración de las sesiones de práctica
+company.companyDashboard.form.label.linDevLengthOfASession = Desviación estándar de la duración de las sesiones de práctica
 company.companyDashboard.form.label.averageLengthOfASession = Media de la duración de las sesiones de práctica
 
 company.companyDashboard.form.label.maxLengthOfAPracticum = Duración máxima de una práctica
 company.companyDashboard.form.label.minLengthOfAPracticum = Duración mínima de una práctica
-company.companyDashboard.form.label.linDevLengthOfAPracticum = Desviación lineal de la duración de las prácticas
+company.companyDashboard.form.label.linDevLengthOfAPracticum = Desviación estándar de la duración de las prácticas
 company.companyDashboard.form.label.averageLengthOfAPracticum = Media de la duración de las prácticas
 
 company.companyDashboard.form.title.practicumSessionsChart = Gráfico de estadísticas sobre las sesiones de práctica
