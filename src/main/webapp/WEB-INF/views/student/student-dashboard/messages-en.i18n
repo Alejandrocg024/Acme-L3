@@ -9,10 +9,10 @@ student.studentDashboard.form.label.periods-of-activities = Stats of the activit
 student.studentDashboard.form.label.average-periods-of-activities = Average period:
 student.studentDashboard.form.label.min-periods-of-activities = Minimum period:
 student.studentDashboard.form.label.max-periods-of-activities = Maximum period:
-student.studentDashboard.form.label.lin-dev-periods-of-activities = Deviation period:
+student.studentDashboard.form.label.lin-dev-periods-of-activities = Standard deviation of period:
 
 student.studentDashboard.form.label.times-of-enrolled-courses =  Stats of the course's learning time in which I am enrolled.
 student.studentDashboard.form.label.average-times-of-enrolled-courses = Average learning time:
 student.studentDashboard.form.label.min-times-of-enrolled-courses = Minimum learning time:
 student.studentDashboard.form.label.max-times-of-enrolled-courses = Maximum learning time:
-student.studentDashboard.form.label.lin-dev-times-of-enrolled-courses = Deviation learning time:
+student.studentDashboard.form.label.lin-dev-times-of-enrolled-courses = Standard deviation of learning time:

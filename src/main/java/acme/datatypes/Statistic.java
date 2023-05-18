@@ -1,6 +1,7 @@
 
 package acme.datatypes;
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 
 import lombok.Getter;
@@ -56,7 +57,8 @@ public class Statistic {
 
 	@Override
 	public String toString() {
-		return "Statistic [count=" + this.count + ", average=" + this.average + ", max=" + this.max + ", min=" + this.min + ", linDev=" + this.linDev + "]";
+		final DecimalFormat df = new DecimalFormat("#.00");
+		return "Statistic [count=" + df.format(this.count) + ", average=" + df.format(this.average) + ", max=" + df.format(this.max) + ", min=" + df.format(this.min) + ", stdDev=" + df.format(this.linDev) + "]";
 	}
 
 }

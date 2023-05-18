@@ -25,7 +25,7 @@
 		<th scope="row"><acme:message
 				code="administrator.dashboard.form.label.ratio-peeps" /></th>
 
-		<td><jstl:out value="${peepsRatioWithLinkAndEmail}"></jstl:out></td>
+		<td><acme:print value="${peepsRatioWithLinkAndEmail}"/></td>
 
 
 	</tr>
@@ -33,9 +33,17 @@
 		<th scope="row"><acme:message
 				code="administrator.dashboard.form.label.ratio-bulletin" /></th>
 <td>
-		<jstl:forEach items="${ratioOfBulletinsByCriticality}" var="bulletin">
-			<jstl:out value="${bulletin}"></jstl:out>
-		</jstl:forEach>
+			<acme:print value="${ratioOfBulletinsByCriticality.get(true)}"/>
+	
+		</td>
+
+	</tr>
+	
+	<th scope="row"><acme:message
+				code="administrator.dashboard.form.label.ratio-bulletin2" /></th>
+<td>
+			<acme:print value="${ratioOfBulletinsByCriticality.get(false)}"/>
+	
 		</td>
 
 	</tr>
