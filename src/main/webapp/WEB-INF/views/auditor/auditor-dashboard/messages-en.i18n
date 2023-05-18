@@ -1,4 +1,5 @@
 auditor.auditorDashboard.form.title.general-indicators= Auditor Dashboard
+auditor.auditorDashboard.form.label.num-audits.information = Graphic about num of auditing records
 
 auditor.auditorDashboard.form.label.average-num-auditing-records = Average num of auditing records:
 auditor.auditorDashboard.form.label.max-num-auditing-records = Max num of auditing records:
