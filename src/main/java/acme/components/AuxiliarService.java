@@ -14,6 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import SpamFilter.SpamFilter;
 import acme.entities.SystemConfiguration;
 import acme.framework.components.datatypes.Money;
+import acme.framework.helpers.MomentHelper;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -44,7 +45,7 @@ public class AuxiliarService {
 	public boolean validateDate(final Date date) {
 		final Date maxDate = new Date(200, 11, 31, 23, 59);
 		final Date minDate = new Date(100, 0, 1, 00, 00);
-		return minDate.before(date) && maxDate.after(date);
+		return MomentHelper.isAfterOrEqual(date, minDate) && MomentHelper.isBeforeOrEqual(date, maxDate);
 	}
 
 	public String translateMoney(final Money money, final String lang) {
