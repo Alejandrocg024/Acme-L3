@@ -1,4 +1,5 @@
 auditor.auditorDashboard.form.title.general-indicators= Panel del auditor
+auditor.auditorDashboard.form.label.num-audits.information = Gráfica sobre el número de registros de auditoría
 
 auditor.auditorDashboard.form.label.average-num-auditing-records = Número medio de registros de auditoría:
 auditor.auditorDashboard.form.label.max-num-auditing-records = Número máximo de registros de auditoría:
