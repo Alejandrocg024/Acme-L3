@@ -35,3 +35,6 @@ enrolment-33,ZZZ118,Learning new things,"Discover, Learn, Enjoy","console.log(""
 enrolment-34,ZZZ119,Learning new things,"Discover, Learn, Enjoy","<script>alert(""""hi!"""")</script>",1234,false,student-01,course-01
 enrolment-35,ZZZ120,Learning new things,"Discover, Learn, Enjoy",<h1>Hola Mundo!</h1>,1234,false,student-01,course-01
 enrolment-36,AAA998,Learning new things,"Discover, Learn, Enjoy",Mauro,1234,false,student-02,course-01
+enrolment-37,AAA997,Learning new things,"Discover, Learn, Enjoy",null,null,true,student-02,course-01
+enrolment-38,AAA996,Learning,"Discover, Learn, Enjoy",null,null,true,student-02,course-01
+enrolment-39,AAA995,Learning new things,"Discover, Learn, Enjoy",Paco,1234,false,student-03,course-01

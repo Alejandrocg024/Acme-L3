@@ -1,8 +1,9 @@
 student.enrolment.activities = Actividades
-student.enrolment.create = Crear
+student.enrolment.register = Registrar
 
 student.enrolment.list.label.code = Código
 student.enrolment.list.label.motivation = Motivación
+student.enrolment.list.label.course-code = Curso
 
 student.enrolment.form.label.draftModeTrue = Matrícula
 student.enrolment.form.label.draftModeFalse = Matrícula Publicada
@@ -17,7 +18,7 @@ student.enrolment.form.label.lowerNibble = Cuatro últimos dígitos de la tarjet
 student.enrolment.form.label.holderName = Nombre del propietario:
 
 student.enrolment.form.button.activities = Libro de trabajo
-student.enrolment.form.button.create = Registrar
+student.enrolment.form.button.register = Registrar
 student.enrolment.form.button.update = Actualizar
 student.enrolment.form.button.delete = Borrar
 student.enrolment.form.button.publish = Finalizar

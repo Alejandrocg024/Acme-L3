@@ -40,7 +40,7 @@
 			<acme:button code="student.enrolment.form.button.publish" action="/student/payment/create?enrolmentId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="student.enrolment.form.button.create" action="/student/enrolment/create"/>
+			<acme:submit code="student.enrolment.form.button.register" action="/student/enrolment/create"/>
 		</jstl:when>			
 	</jstl:choose>
 </acme:form>

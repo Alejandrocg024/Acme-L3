@@ -1,0 +1,12 @@
+recordIndex,course,code,motivation,goals,holderName,lowerNibble
+0,AAA999-Course,AAA999,Learning new things,"Discover, Learn, Enjoy",Mauro,1234
+25,AAA999-Course,ZZZ111,Learning new things,"Discover, Learn, Enjoy",E,1234
+26,AAA999-Course,ZZZ112,Learning new things,"Discover, Learn, Enjoy",Es,1234
+27,AAA999-Course,ZZZ113,Learning new things,"Discover, Learn, Enjoy",Este mensaje se ha realizado con el objetivo de comprobar el limite superior de este atributo que se trata de una cadena de texto que no sobrepase los 255 caracteres. Entonces buscamos que funcione este texto teniendo 255 caracteres y comprobando que vabn,1234
+28,AAA999-Course,ZZZ114,Learning new things,"Discover, Learn, Enjoy",Este mensaje se ha realizado con el objetivo de comprobar el limite superior de este atributo que se trata de una cadena de texto que no sobrepase los 255 caracteres. Entonces buscamos que funcione este texto teniendo 254 caracteres y comprobando que vab,1234
+29,AAA999-Course,ZZZ115,Learning new things,"Discover, Learn, Enjoy",Код красивий,1234
+30,AAA999-Course,ZZZ116,Learning new things,"Discover, Learn, Enjoy",у меня желтый трактор,1234
+31,AAA999-Course,ZZZ117,Learning new things,"Discover, Learn, Enjoy",我有一輛黃色拖拉機,1234
+32,AAA999-Course,ZZZ118,Learning new things,"Discover, Learn, Enjoy","console.log(""""Hola!"""")",1234
+33,AAA999-Course,ZZZ119,Learning new things,"Discover, Learn, Enjoy","<script>alert(""""hi!"""")</script>",1234
+34,AAA999-Course,ZZZ120,Learning new things,"Discover, Learn, Enjoy",<h1>Hola Mundo!</h1>,1234

@@ -1,0 +1,18 @@
+enrolmentRecordIndex,activitiesRecordIndex,title,abstract$,nature,startPeriod,endPeriod,furtherInformationLink
+0,0,,,---,,,
+0,0,,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,
+0,0,Cadena de setenta y seis caracteres y pasarnos de setenta y cinco en pruebas,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,
+0,0,sex,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,
+0,0,Activity number 01,,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,
+0,0,Activity number 01,Cadena de ciento un caracteres usada para superar cadenas que tengan como máximo 100 caracteres en dp,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,
+0,0,Activity number 01,sex,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,
+0,0,Activity number 01,Summary of the activity,,2022/01/01 10:00,2022/02/02 10:00,
+0,0,Activity number 01,Summary of the activity,THEORETICAL,,2022/02/02 10:00,
+0,0,Activity number 01,Summary of the activity,THEORETICAL,prueba,2022/02/02 10:00,
+0,0,Activity number 01,Summary of the activity,THEORETICAL,1999/12/31 23:59,2022/02/02 10:00,
+0,0,Activity number 01,Summary of the activity,THEORETICAL,2022/01/01 10:00,
+0,0,Activity number 01,Summary of the activity,THEORETICAL,2022/01/01 10:00,prueba,
+0,0,Activity number 01,Summary of the activity,THEORETICAL,2022/01/01 10:00,2020/02/02 10:00,
+0,0,Activity number 01,Summary of the activity,THEORETICAL,2022/01/01 10:00,2101/01/01 00:00,
+0,0,Activity number 01,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,sex
+0,0,Activity number 01,Summary of the activity,THEORETICAL,2022/01/01 10:00,2022/02/02 10:00,https://acme.com/estoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255caracteresestoesunadirecciondepruebaparacomprobarellimitede255.
