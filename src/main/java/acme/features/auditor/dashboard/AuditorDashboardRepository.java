@@ -4,6 +4,7 @@ package acme.features.auditor.dashboard;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -24,13 +25,13 @@ public interface AuditorDashboardRepository extends AbstractRepository {
 	Collection<Double> findNumOfAuditingRecords(int id);
 
 	@Query("select avg(select count(ar) from AuditingRecord ar where ar.audit.id = a.id) from Audit a where a.auditor.id = :id")
-	Double findAverageNumOfAuditingRecords(int id);
+	Optional<Double> findAverageNumOfAuditingRecords(int id);
 
 	@Query("select max(select count(ar) from AuditingRecord ar where ar.audit.id = a.id) from Audit a where a.auditor.id = :id")
-	Double findMaxNumOfAuditingRecords(int id);
+	Optional<Double> findMaxNumOfAuditingRecords(int id);
 
 	@Query("select min(select count(ar) from AuditingRecord ar where ar.audit.id = a.id) from Audit a where a.auditor.id = :id")
-	Double findMinNumOfAuditingRecords(int id);
+	Optional<Double> findMinNumOfAuditingRecords(int id);
 
 	@Query("select a from Auditor a where a.userAccount.id = :id")
 	Auditor findOneAuditorByUserAccountId(int id);
@@ -39,19 +40,19 @@ public interface AuditorDashboardRepository extends AbstractRepository {
 	UserAccount findOneUserAccountById(int id);
 
 	@Query("select avg(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
-	Double findAverageDurationOfAuditingRecords(int id);
+	Optional<Double> findAverageDurationOfAuditingRecords(int id);
 
 	@Query("select max(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
-	Double findMaxDurationOfAuditingRecords(int id);
+	Optional<Double> findMaxDurationOfAuditingRecords(int id);
 
 	@Query("select min(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
-	Double findMinDurationOfAuditingRecords(int id);
+	Optional<Double> findMinDurationOfAuditingRecords(int id);
 
 	@Query("select stddev(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
-	Double findLinDevDurationOfAuditingRecords(int id);
+	Optional<Double> findLinDevDurationOfAuditingRecords(int id);
 
 	@Query("select count(cl) from CourseLecture cl where cl.course.id = :courseId and cl.lecture.nature = :nature")
-	Integer findNumLecturesByCourseNature(int courseId, Nature nature);
+	Optional<Integer> findNumLecturesByCourseNature(int courseId, Nature nature);
 
 	default Nature auditNature(final Integer courseId, final int handonLect, final int theoreticalLect) {
 		if (theoreticalLect > handonLect)
@@ -66,8 +67,8 @@ public interface AuditorDashboardRepository extends AbstractRepository {
 		final Map<Nature, Integer> res = new HashMap<>();
 		for (final Audit a : audits) {
 			final int courseId = a.getCourse().getId();
-			final int handonLect = this.findNumLecturesByCourseNature(courseId, Nature.HANDS_ON);
-			final int theoreticalLect = this.findNumLecturesByCourseNature(courseId, Nature.THEORETICAL);
+			final int handonLect = this.findNumLecturesByCourseNature(courseId, Nature.HANDS_ON).get();
+			final int theoreticalLect = this.findNumLecturesByCourseNature(courseId, Nature.THEORETICAL).get();
 			final Nature n = this.auditNature(courseId, handonLect, theoreticalLect);
 			if (!res.containsKey(n))
 				res.put(n, 1);
