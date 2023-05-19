@@ -13,8 +13,8 @@
 			<acme:message code="assistant.assistant-dashboard.form.label.numOfTutorials.theory"/>
 		</th>
 		<td>
-		<jstl:out value="${numOfTutorialsByType.get(Nature.THEORETICAL)}">		
-			</jstl:out>
+		<acme:print value="${numOfTutorialsByType.get('THEORETICAL')}"/>		
+			
 		</td>
 	</tr>
 	<tr>
@@ -41,7 +41,7 @@
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstuts.linDev" /></th>
 
-		<td><jstl:out value="${timeOfTutorialsStats.getLinDev()}"></jstl:out></td>
+		<td><acme:print value="${timeOfTutorialsStats.getLinDev()}"/></td>
 
 
 	</tr>
@@ -49,7 +49,7 @@
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstuts.average" /></th>
 
-		<td><jstl:out value="${timeOfTutorialsStats.getAverage()}"></jstl:out></td>
+		<td><acme:print value="${timeOfTutorialsStats.getAverage()}"/></td>
 
 
 	</tr>
@@ -57,7 +57,7 @@
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstuts.max" /></th>
 
-		<td><jstl:out value="${timeOfTutorialsStats.getMax()}"></jstl:out></td>
+		<td><acme:print value="${timeOfTutorialsStats.getMax()}"/></td>
 
 
 	</tr>
@@ -65,7 +65,7 @@
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstuts.min" /></th>
 
-		<td><jstl:out value="${timeOfTutorialsStats.getMin()}"></jstl:out></td>
+		<td><acme:print value="${timeOfTutorialsStats.getMin()}"/></td>
 
 
 	</tr>
@@ -73,27 +73,26 @@
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstutssesions.lindev" /></th>
 
-		<td><jstl:out value="${timeOfSessionsStats.getLinDev()}"></jstl:out></td>
+		<td><acme:print value="${timeOfSessionsStats.getLinDev()}"/></td>
 
 
 	</tr>
 	
-	</tr>
+	
 		<tr >
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstutssesions.average" /></th>
 
-		<td><jstl:out value="${timeOfSessionsStats.getAverage()}"></jstl:out></td>
+		<td><acme:print value="${timeOfSessionsStats.getAverage()}"/></td>
 
 
 	</tr>
 	
-	</tr>
 		<tr >
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstutssesions.max" /></th>
 
-		<td><jstl:out value="${timeOfSessionsStats.getMax()}"></jstl:out></td>
+		<td><acme:print value="${timeOfSessionsStats.getMax()}"/></td>
 
 
 
@@ -103,7 +102,7 @@
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstutssesions.min" /></th>
 
-		<td><jstl:out value="${timeOfSessionsStats.getMin()}"></jstl:out></td>
+		<td><acme:print value="${timeOfSessionsStats.getMin()}"/></td>
 
 
 	</tr>
