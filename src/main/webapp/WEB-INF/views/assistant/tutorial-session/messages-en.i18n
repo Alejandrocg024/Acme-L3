@@ -20,7 +20,7 @@ assistant.tutorial-session.form.label.further-information-link = Further informa
 assistant.tutorial-session.form.button.create = Create
 assistant.tutorial-session.form.button.update = Update
 assistant.tutorial-session.form.button.delete = Delete
-
+assistant.tutorial-session.form.error.dates = Date must be in the period 2000/01/01 00:00 to 2100/12/31 23:59
 assistant.tutorial-session.form.error.spam = The introduced text contains words that are considered spam
 assistant.tutorial-session.form.error.start-period = The start date must be at least one day ahead from the current date
 assistant.tutorial-session.form.error.end-period = The end date must be at least one hour ahead of the start date
