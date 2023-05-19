@@ -1,8 +1,8 @@
 
 authenticated.assistant.form.label.almaMater = Supervisor
 authenticated.assistant.form.label.resume = Resumen
-authenticated.assistant.form.label.listOfQualifications = Lista de campos de especializacion
-authenticated.assistant.form.label.furtherInformation = Enlace con infomación adicional
+authenticated.assistant.form.label.expertiseFields = Lista de campos de especializacion
+authenticated.assistant.form.label.furtherInformationLink = Enlace con infomación adicional
 
 authenticated.assistant.form.button.create=Crear
 authenticated.assistant.form.button.update = Actualizar

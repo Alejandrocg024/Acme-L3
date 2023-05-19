@@ -10,30 +10,105 @@
 <table class="table table-sm">
 	<tr>
 		<th scope="row">
-			<acme:message code="assistant.assistant-dashboard.form.label.numOfTutorials"/>
+			<acme:message code="assistant.assistant-dashboard.form.label.numOfTutorials.theory"/>
 		</th>
 		<td>
-		<jstl:forEach items="${numOfTutorialsByType}" var="tutorials">
-			<jstl:out value="${tutorials}"></jstl:out>
-		</jstl:forEach>
+		<jstl:out value="${numOfTutorialsByType.get(Nature.THEORETICAL)}">		
+			</jstl:out>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="assistant.assistant-dashboard.form.label.numOfTutorials.hands_on"/>
+		</th>
+		<td>
+		<jstl:out value='${numOfTutorialsByType.get("HANDS_ON")}'>
+			</jstl:out>
+
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="assistant.assistant-dashboard.form.label.numOfTutorials.balanced"/>
+		</th>
+		<td>
+		<jstl:out value='${numOfTutorialsByType.get("BALANCED")}'>
+			</jstl:out>
+
 		</td>
 	</tr>
 	<tr >
 		<th scope="row"><acme:message
-				code="assistant.assistant-dashboard.form.label.statstuts" /></th>
+				code="assistant.assistant-dashboard.form.label.statstuts.linDev" /></th>
 
-		<td><jstl:out value="${timeOfTutorialsStats}"></jstl:out></td>
+		<td><jstl:out value="${timeOfTutorialsStats.getLinDev()}"></jstl:out></td>
+
+
+	</tr>
+	<tr >
+		<th scope="row"><acme:message
+				code="assistant.assistant-dashboard.form.label.statstuts.average" /></th>
+
+		<td><jstl:out value="${timeOfTutorialsStats.getAverage()}"></jstl:out></td>
 
 
 	</tr>
 		<tr >
 		<th scope="row"><acme:message
-				code="assistant.assistant-dashboard.form.label.statstutssesions" /></th>
+				code="assistant.assistant-dashboard.form.label.statstuts.max" /></th>
 
-		<td><jstl:out value="${timeOfSessionsStats}"></jstl:out></td>
+		<td><jstl:out value="${timeOfTutorialsStats.getMax()}"></jstl:out></td>
 
 
 	</tr>
+			<tr >
+		<th scope="row"><acme:message
+				code="assistant.assistant-dashboard.form.label.statstuts.min" /></th>
+
+		<td><jstl:out value="${timeOfTutorialsStats.getMin()}"></jstl:out></td>
+
+
+	</tr>
+		<tr >
+		<th scope="row"><acme:message
+				code="assistant.assistant-dashboard.form.label.statstutssesions.lindev" /></th>
+
+		<td><jstl:out value="${timeOfSessionsStats.getLinDev()}"></jstl:out></td>
+
+
+	</tr>
+	
+	</tr>
+		<tr >
+		<th scope="row"><acme:message
+				code="assistant.assistant-dashboard.form.label.statstutssesions.average" /></th>
+
+		<td><jstl:out value="${timeOfSessionsStats.getAverage()}"></jstl:out></td>
+
+
+	</tr>
+	
+	</tr>
+		<tr >
+		<th scope="row"><acme:message
+				code="assistant.assistant-dashboard.form.label.statstutssesions.max" /></th>
+
+		<td><jstl:out value="${timeOfSessionsStats.getMax()}"></jstl:out></td>
+
+
+
+	
+	</tr>
+		<tr >
+		<th scope="row"><acme:message
+				code="assistant.assistant-dashboard.form.label.statstutssesions.min" /></th>
+
+		<td><jstl:out value="${timeOfSessionsStats.getMin()}"></jstl:out></td>
+
+
+	</tr>
+	
+
 </table>
 
 <acme:return/>
