@@ -80,7 +80,6 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 			minimumStartDate = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
 			super.state(MomentHelper.isAfterOrEqual(object.getStartPeriod(), minimumStartDate), "startPeriod", "assistant.tutorial-session.form.error.start-period");
 			super.state(this.auxiliarService.validateDate(object.getStartPeriod()), "startPeriod", "assistant.tutorial-session.form.error.end-period.error");
-			super.state(this.auxiliarService.validateDate(object.getStartPeriod()), "startPeriod", "assistant.tutorial-session.form.error.dates");
 
 		}
 
