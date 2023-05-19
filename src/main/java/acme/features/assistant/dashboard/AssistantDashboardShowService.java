@@ -50,6 +50,9 @@ public class AssistantDashboardShowService extends AbstractService<Assistant, As
 		final Map<Nature, Integer> aux = this.repository.tutorialPerNature(tutorialPerAssistant);
 		final Map<String, Integer> tutorialPerNature = new HashMap<>();
 		for (final Nature a : aux.keySet()) {
+			tutorialPerNature.put("THEORETICAL", 0);
+			tutorialPerNature.put("HANDS_ON", 0);
+			tutorialPerNature.put("BALANCED", 0);
 			if (a.equals(Nature.THEORETICAL))
 				tutorialPerNature.put("THEORETICAL", aux.get(Nature.THEORETICAL));
 			if (a.equals(Nature.HANDS_ON))

@@ -4,27 +4,17 @@ assistant.assistant-dashboard.form.title.general-indicators= Indicadores
 assistant.assistant-dashboard.form.label.numOfTutorials= Numero de tutorias dependiendo de su naturaleza
 assistant.assistant-dashboard.form.label.statstuts = Estadisticas de tutorias
 assistant.assistant-dashboard.form.label.statstutssesions = Estadisticas de sesiones de tutorias
-
-assistant.tutorial.list.label.title = Titulo
-assistant.tutorial.list.label.abstract$ = resumen
-assistant.tutorial.list.label.goal = objetivo
-assistant.tutorial.list.button.create = Crear
-
-assistant.tutorial.form.label.code = Codigo
-assistant.tutorial.form.label.title = Titulo
-assistant.tutorial.form.label.abstract$ = Resumen
-assistant.tutorial.form.label.goal = Objetivo
-assistant.tutorial.form.label.course = Curso
-assistant.tutorial.form.label.estimatedTotalTime = Tiempo Total Estimado
-assistant.tutorial.form.button.update = Actualizar
-assistant.tutorial.form.button.create = Crear
-assistant.tutorial.form.button.delete = Borrar
-assistant.tutorial.form.button.publish = Publicar
-assistant.tutorial.form.error.spam = El texto introducido esta considerado como Spam
-
-assistant.tutorial.form.button.tutorial-sessions = Sessiones del Tutorial
-
-
-assistant.tutorial.form.error.estimatedTotalTime = No puedes publicar un tutorial sin sesiones
-assistant.tutorial.form.error.code = El codig debe ser unico para cada tutorial
-assistant.tutorial-session.form.error.end-period.max = El periodo debe durar como maximo 5 horas
+assistant.assistant-dashboard.form.label.numOfTutorials.theory = Numero de tutorias teoricas
+assistant.assistant-dashboard.form.label.numOfTutorials.hands_on = Numero de tutorias practicas
+assistant.assistant-dashboard.form.label.numOfTutorials.balanced= Numero de tutorias balanceadas
+assistant.assistant-dashboard.form.label.statstuts.linDev = Desviacion estandar del tiempo de las tutorias
+assistant.assistant-dashboard.form.label.statstuts.average = Media del tiempo de las tutorias
+assistant.assistant-dashboard.form.label.statstuts.max = Maximo tiempo de las tutorias
+assistant.assistant-dashboard.form.label.statstuts.min = Minimo tiempo de las tutorias
+assistant.assistant-dashboard.form.label.statstutssesions.lindev = Desviacion estandar del tiempo de las sesiones de tutoria
+assistant.assistant-dashboard.form.label.statstutssesions.average = Media de tiempo de las sesiones de tutoria
+assistant.assistant-dashboard.form.label.statstutssesions.max = Maximo tiempo de las sesiones de tutoria
+assistant.assistant-dashboard.form.label.statstutssesions.min = Minimo tiempo de las sesiones de tutoria
+assistant.dashboard.form.label.sessions.information = Grafico sobre el tiempo de las tutorias
+assistant.dashboard.form.label.tutorials.information = Grafico sobre el tiempo de las sesiones de tutoira
+assistant.dashboard.form.label.tutorials.type.information = Grafico sobre el tipo de tutorias
