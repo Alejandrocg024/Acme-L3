@@ -13,7 +13,7 @@
 			<acme:message code="assistant.assistant-dashboard.form.label.numOfTutorials.theory"/>
 		</th>
 		<td>
-		<acme:print value="${numOfTutorialsByType.get('THEORETICAL')}"/>		
+		<acme:print value='${numOfTutorialsByType.get("THEORETICAL")}'/>		
 			
 		</td>
 	</tr>
