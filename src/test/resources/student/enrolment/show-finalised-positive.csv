@@ -1,5 +1,5 @@
 recordIndex,course,code,motivation,goals,holderName,lowerNibble
-0,AAA999-Course,AAA999,Learning new things,"Discover, Learn, Enjoy",Mauro,1234
+20,AAA999-Course,AAA999,Learning new things,"Discover, Learn, Enjoy",Mauro,1234
 25,AAA999-Course,ZZZ111,Learning new things,"Discover, Learn, Enjoy",E,1234
 26,AAA999-Course,ZZZ112,Learning new things,"Discover, Learn, Enjoy",Es,1234
 27,AAA999-Course,ZZZ113,Learning new things,"Discover, Learn, Enjoy",Este mensaje se ha realizado con el objetivo de comprobar el limite superior de este atributo que se trata de una cadena de texto que no sobrepase los 255 caracteres. Entonces buscamos que funcione este texto teniendo 255 caracteres y comprobando que vabn,1234

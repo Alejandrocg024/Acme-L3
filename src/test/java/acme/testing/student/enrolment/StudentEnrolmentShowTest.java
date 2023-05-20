@@ -43,7 +43,7 @@ public class StudentEnrolmentShowTest extends TestHarness {
 	}
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/student/enrolment/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/student/enrolment/show-finalised-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test101Positive(final int recordIndex, final String course, final String code, final String motivation, final String goals, final String holderName, final String lowerNibble) {
 		// HINT: this test signs in as an student, lists all of the enrolments, click on  
 		// HINT+ one pusblished enrolment, and checks that the form has the expected data.
@@ -78,7 +78,7 @@ public class StudentEnrolmentShowTest extends TestHarness {
 		Collection<Enrolment> enrolments;
 		String param;
 
-		enrolments = this.repository.findManyEnrolmentsByStudentUsername("student1");
+		enrolments = this.repository.findManyEnrolmentsByStudentUsername("student2");
 		for (final Enrolment enrolment : enrolments) {
 			param = String.format("id=%d", enrolment.getId());
 
@@ -96,7 +96,7 @@ public class StudentEnrolmentShowTest extends TestHarness {
 			super.checkPanicExists();
 			super.signOut();
 
-			super.signIn("student2", "student2");
+			super.signIn("student1", "student1");
 			super.request("/company/practicum/show", param);
 			super.checkPanicExists();
 			super.signOut();
