@@ -56,6 +56,7 @@ public class AdministratorBannerUpdateService extends AbstractService<Administra
 	@Override
 	public void validate(final Banner object) {
 		assert object != null;
+		object.setInstantiationMoment(MomentHelper.getCurrentMoment());
 		if (!super.getBuffer().getErrors().hasErrors("displayPeriodBegin"))
 			super.state(MomentHelper.isAfter(object.getDisplayPeriodBegin(), object.getInstantiationMoment()), "displayPeriodBegin", "administrator.banner.form.error.displayPeriodBegin");
 
@@ -73,6 +74,7 @@ public class AdministratorBannerUpdateService extends AbstractService<Administra
 	@Override
 	public void perform(final Banner object) {
 		assert object != null;
+		object.setInstantiationMoment(MomentHelper.getCurrentMoment());
 		this.repository.save(object);
 	}
 
