@@ -4,6 +4,7 @@ package acme.features.authenticated.auditor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.accounts.UserAccount;
@@ -18,7 +19,10 @@ public class AuthenticatedAuditorCreateService extends AbstractService<Authentic
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedAuditorRepository repository;
+	protected AuthenticatedAuditorRepository	repository;
+
+	@Autowired
+	protected AuxiliarService					auxiliarService;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -66,6 +70,15 @@ public class AuthenticatedAuditorCreateService extends AbstractService<Authentic
 		assert object != null;
 		if (!super.getBuffer().getErrors().hasErrors("professionalId"))
 			super.state(this.repository.findAuditorByProfId(object.getProfessionalId()) == null, "professionalId", "authenticated.auditor.form.error.professionalId");
+
+		if (!super.getBuffer().getErrors().hasErrors("firm"))
+			super.state(this.auxiliarService.validateTextImput(object.getFirm()), "firm", "authenticated.auditor.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("professionalId"))
+			super.state(this.auxiliarService.validateTextImput(object.getProfessionalId()), "professionalId", "authenticated.auditor.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("certifications"))
+			super.state(this.auxiliarService.validateTextImput(object.getCertifications()), "certifications", "authenticated.auditor.form.error.spam");
 
 	}
 
