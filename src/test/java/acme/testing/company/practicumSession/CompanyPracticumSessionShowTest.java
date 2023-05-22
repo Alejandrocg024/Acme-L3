@@ -49,7 +49,7 @@ public class CompanyPracticumSessionShowTest extends TestHarness {
 
 	@Test
 	public void test300Hacking() {
-		// This test tries to show a practicum session of a practicum that is in draft mode or not available, but wasn't published by the principal;
+		// This test tries to show a practicum session of a practicum that is not published or not available, but wasn't published by the principal;
 
 		Collection<PracticumSession> practicumSessions;
 		String param;

@@ -81,8 +81,6 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 		super.fillInputBoxIn("confirmation", confirmation);
 		super.clickOnSubmit("Create addendum session");
 
-		super.checkListingExists();
-		super.sortListing(0, "asc");
 		super.checkColumnHasValue(practicumSessionRecordIndex, 0, title);
 		super.checkColumnHasValue(practicumSessionRecordIndex, 1, startPeriod);
 		super.checkColumnHasValue(practicumSessionRecordIndex, 2, endPeriod);
