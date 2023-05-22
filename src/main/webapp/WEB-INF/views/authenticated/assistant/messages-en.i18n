@@ -7,4 +7,4 @@ authenticated.assistant.form.label.furtherInformationLink = Further information 
 authenticated.assistant.form.button.create = Create
 authenticated.assistant.form.button.update = Update
 
-authenticated.lecturer.form.error.spam = The introduced text is considered Spam
+authenticated.assistant.form.error.spam = The introduced text is considered Spam

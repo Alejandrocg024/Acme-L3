@@ -1,5 +1,5 @@
 
-authenticated.assistant.form.label.almaMater = Supervisor
+authenticated.assistant.form.label.supervisor = Supervisor
 authenticated.assistant.form.label.resume = Resumen
 authenticated.assistant.form.label.expertiseFields = Lista de campos de especializacion
 authenticated.assistant.form.label.furtherInformationLink = Enlace con infomación adicional
@@ -7,4 +7,4 @@ authenticated.assistant.form.label.furtherInformationLink = Enlace con infomaci�
 authenticated.assistant.form.button.create=Crear
 authenticated.assistant.form.button.update = Actualizar
 
-authenticated.lecturer.form.error.spam = El texto introducido está considerado como Spam
+authenticated.assistant.form.error.spam = El texto introducido está considerado como Spam
