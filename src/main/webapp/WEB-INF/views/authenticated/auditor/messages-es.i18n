@@ -7,3 +7,5 @@ authenticated.auditor.form.label.furtherInformationLink = Link información extr
 authenticated.auditor.form.button.create = Crear
 authenticated.auditor.form.button.update = Actualizar
 authenticated.auditor.form.error.professionalId = Id profesional duplicado
+
+authenticated.auditor.form.error.spam = Las palabras introducidas son consideradas spam

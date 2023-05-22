@@ -7,3 +7,5 @@ authenticated.company.form.label.furtherInformationLink = Further information: (
 
 authenticated.company.form.button.create = Create
 authenticated.company.form.button.update = Update
+
+authenticated.company.form.error.spam = The introduced text contains words that are considered spam

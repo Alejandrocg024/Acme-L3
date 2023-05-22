@@ -8,3 +8,5 @@ authenticated.auditor.form.label.furtherInformationLink = Further Information Li
 authenticated.auditor.form.button.create = Create
 authenticated.auditor.form.button.update = Update
 authenticated.auditor.form.error.professionalId = Professional Id Duplicated
+
+authenticated.auditor.form.error.spam = The introduced text contains words that are considered spam
