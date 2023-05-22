@@ -13,9 +13,17 @@ import lombok.Setter;
 @Setter
 public class StudentDashboard extends AbstractForm {
 
+	// Serialisation identifier -----------------------------------------------
+
 	protected static final long	serialVersionUID	= 1L;
 
-	Map<Nature, Integer>		numOfActivitiesByNature;
-	Statistic					activitiesPeriodStats;
-	Statistic					coursesTimeStats;
+	// Attributes -------------------------------------------------------------
+
+	Map<Nature, Integer>		numberOfActivitiesByNature;
+	Statistic					periodsOfActivitiesStats;
+	Statistic					timesOfEnrolledCoursesStats;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 }

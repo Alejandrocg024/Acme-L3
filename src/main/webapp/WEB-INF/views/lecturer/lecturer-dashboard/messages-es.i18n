@@ -1,24 +1,16 @@
-# messages-es.i18n
-#
-# Copyright (C) 2012-2023 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
+
 
 lecturer.lecturerDashboard.form.title.general-indicators= Panel del profesor
 
 lecturer.lecturerDashboard.form.label.average-lecture-learning-time = Tiempo de aprendizaje medio de las lecciones:
 lecturer.lecturerDashboard.form.label.max-lecture-learning-time = Máximo tiempo de aprendizaje de las lecciones:
 lecturer.lecturerDashboard.form.label.min-lecture-learning-time = Mínimo tiempo de aprendizaje de las lecciones:
-lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time = Desviación lineal del tiempo de aprendizaje de las lecciones:
+lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time = Desviación estándar del tiempo de aprendizaje de las lecciones:
 
 lecturer.lecturerDashboard.form.label.average-course-learning-time = Tiempo de aprendizaje medio de los cursos:
 lecturer.lecturerDashboard.form.label.max-course-learning-time = Máximo tiempo de aprendizaje de los cursos:
 lecturer.lecturerDashboard.form.label.min-course-learning-time = Mínimo tiempo de aprendizaje de los cursos:
-lecturer.lecturerDashboard.form.label.lin-dev-course-learning-time = Desviación lineal del tiempo de aprendizaje de los cursos:
+lecturer.lecturerDashboard.form.label.lin-dev-course-learning-time = Desviación estándar del tiempo de aprendizaje de los cursos:
 
 lecturer.lecturerDashboard.form.label.lectures.information = Gráfica sobre los tiempos de aprendizaje de las lecciones
 lecturer.lecturerDashboard.form.label.courses.information = Gráfica sobre los tiempos de aprendizaje de los cursos

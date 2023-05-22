@@ -1,0 +1,29 @@
+recordIndex,course,code,conclusion,strongPoints,weakPoints
+1,AAA999-Course,BBB999,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información
+1,AAA991-C,BBB998,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información
+1,AAA999-Course,BB999,Auditoría finalizada,"Completa, clara, sencilla",Demasiado general poca información
+1,AAA999-Course,B999,Auditoría finalizada,"Completa, clara, sencilla","General,poca información"
+1,AAA999-Course,B900,A,"Completa, clara, sencilla","General,poca información"
+1,AAA999-Course,B901,Au,"Completa, clara, sencilla","General,poca información"
+1,AAA999-Course,B902,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima.,"Completa, clara, sencilla",Demasiado general poca información
+1,AAA999-Course,B903,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,"Completa, clara, sencilla",Demasiado general poca información
+1,AAA999-Course,B904,თხა,"Completa, clara, sencilla","General,poca información"
+1,AAA999-Course,B905,коза,"Completa, clara, sencilla","General,poca información"
+1,AAA999-Course,B906,"<script>alert(""hi!"")</script>","Completa, clara, sencilla","General,poca información"
+1,AAA999-Course,B907,<h1>Hola Mundo!</h1>,"Completa, clara, sencilla","General,poca información"
+1,AAA999-Course,B908,Auditoría finalizada,A,Demasiado general poca información
+1,AAA999-Course,B909,Auditoría finalizada,Au,Demasiado general poca información
+1,AAA999-Course,B910,Auditoría finalizada,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima.,Demasiado general poca información
+1,AAA999-Course,B911,Auditoría finalizada,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima,Demasiado general poca información
+1,AAA999-Course,B912,Auditoría finalizada,თხა,Demasiado general poca información
+1,AAA999-Course,B913,Auditoría finalizada,коза,Demasiado general poca información
+1,AAA999-Course,B914,Auditoría finalizada,"<script>alert(""hi!"")</script>",Demasiado general poca información
+1,AAA999-Course,B915,Auditoría finalizada,<h1>Hola Mundo!</h1>,Demasiado general poca información
+1,AAA999-Course,B916,Auditoría finalizada,"Completa, clara, sencilla",A
+1,AAA999-Course,B917,Auditoría finalizada,"Completa, clara, sencilla",Au
+1,AAA999-Course,B918,Auditoría finalizada,"Completa, clara, sencilla",Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima.
+1,AAA999-Course,B919,Auditoría finalizada,"Completa, clara, sencilla",Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con 100 de longitud maxima
+1,AAA999-Course,B920,Auditoría finalizada,"Completa, clara, sencilla",თხა
+1,AAA999-Course,B921,Auditoría finalizada,"Completa, clara, sencilla",коза
+1,AAA999-Course,B922,Auditoría finalizada,"Completa, clara, sencilla","<script>alert(""hi!"")</script>"
+1,AAA999-Course,B923,Auditoría finalizada,"Completa, clara, sencilla",<h1>Hola Mundo!</h1>

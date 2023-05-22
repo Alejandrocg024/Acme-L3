@@ -24,7 +24,11 @@ import lombok.Setter;
 @Setter
 public class Activity extends AbstractEntity {
 
+	// Serialisation identifier -----------------------------------------------
+
 	protected static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------
 
 	@NotBlank
 	@Length(max = 75)
@@ -41,13 +45,17 @@ public class Activity extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				startPeriod;
 
-	//startPeriod must be before the endPeriod
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				endPeriod;
 
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformationLink;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid

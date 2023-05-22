@@ -12,8 +12,12 @@ import acme.framework.services.AbstractService;
 @Service
 public class AdministratorSystemConfigurationShowService extends AbstractService<Administrator, SystemConfiguration> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected AdministratorSystemConfigurationRepository repository;
+
+	// AbstractService interface ----------------------------------------------
 
 
 	@Override

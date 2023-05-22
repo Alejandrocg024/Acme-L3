@@ -1,14 +1,11 @@
 
 package acme.features.lecturer.lecture;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.AuxiliarService;
 import acme.datatypes.Nature;
-import acme.entities.Course;
 import acme.entities.Lecture;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
@@ -41,11 +38,9 @@ public class LecturerLectureUpdateService extends AbstractService<Lecturer, Lect
 		int id;
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findLectureById(id);
-		final Collection<Course> courses = this.repository.getCourseByLecture(object);
-		final Course course = courses.stream().findFirst().orElse(null);
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(course.getLecturer().getUserAccount().getId() == userAccountId && object.isDraftMode());
+		super.getResponse().setAuthorised(object.getLecturer().getUserAccount().getId() == userAccountId && object.isDraftMode());
 	}
 
 	@Override
@@ -74,8 +69,8 @@ public class LecturerLectureUpdateService extends AbstractService<Lecturer, Lect
 			super.state(this.auxiliarService.validateTextImput(object.getSummary()), "summary", "lecturer.lecture.form.error.spam");
 		if (!super.getBuffer().getErrors().hasErrors("body"))
 			super.state(this.auxiliarService.validateTextImput(object.getBody()), "body", "lecturer.lecture.form.error.spam");
-		if (!super.getBuffer().getErrors().hasErrors("nature"))
-			super.state(!object.getNature().equals(Nature.BALANCED), "nature", "lecturer.lecture.form.error.nature");
+		//if (!super.getBuffer().getErrors().hasErrors("nature"))
+		//	super.state(!object.getNature().equals(Nature.BALANCED), "nature", "lecturer.lecture.form.error.nature");
 	}
 
 	@Override
@@ -93,7 +88,6 @@ public class LecturerLectureUpdateService extends AbstractService<Lecturer, Lect
 		choices = SelectChoices.from(Nature.class, object.getNature());
 		tuple.put("nature", choices.getSelected().getKey());
 		tuple.put("natures", choices);
-		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
 		super.getResponse().setData(tuple);
 	}
 

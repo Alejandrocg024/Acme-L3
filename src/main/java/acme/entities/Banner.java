@@ -22,7 +22,11 @@ import lombok.Setter;
 @Setter
 public class Banner extends AbstractEntity {
 
-	private static final long	serialVersionUID	= 1L;
+	// Serialisation identifier -----------------------------------------------
+
+	protected static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------
 
 	@NotNull
 	@Temporal(value = TemporalType.TIMESTAMP)
@@ -39,6 +43,7 @@ public class Banner extends AbstractEntity {
 
 	@URL
 	@NotBlank
+	@Length(max = 255)
 	protected String			pictureLink;
 
 	@Length(max = 75)
@@ -47,5 +52,11 @@ public class Banner extends AbstractEntity {
 
 	@URL
 	@NotBlank
+	@Length(max = 255)
 	protected String			webLink;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
+
 }

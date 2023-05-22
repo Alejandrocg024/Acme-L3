@@ -19,16 +19,16 @@ public class SystemConfiguration extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	@Pattern(regexp = "^[A-Z]{3}$")
+	@Pattern(regexp = "^[A-Z]{3}$", message = "{validation.systemConfiguration.systemCurrency}")
 	@NotNull
 	protected String			systemCurrency;
 
-	@Pattern(regexp = "^([A-Z]{3},)*[A-Z]{3}$")
+	@Pattern(regexp = "^([A-Z]{3},)*[A-Z]{3}$", message = "{validation.systemConfiguration.aceptedCurrencies}")
 	@NotNull
 	protected String			aceptedCurrencies;
 
 	@NotBlank
-	@Pattern(regexp = "^(\"[^\"]*\"|[^\",]+)(,(\"[^\"]*\"|[^\",]+))*$")
+	@Pattern(regexp = "^(\"[^\"]*\"|[^\",]+)(,(\"[^\"]*\"|[^\",]+))*$", message = "{validation.systemConfiguration.spamWords}")
 	protected String			spamWords;
 
 	@Range(min = 0, max = 1)

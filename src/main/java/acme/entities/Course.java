@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -32,7 +33,7 @@ public class Course extends AbstractEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{1,3}\\d{3}$")
+	@Pattern(regexp = "^[A-Z]{1,3}\\d{3}$", message = "{validation.code}")
 	protected String			code;
 
 	@NotBlank
@@ -47,6 +48,7 @@ public class Course extends AbstractEntity {
 	protected Money				price;
 
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformationLink;
 
 	@ManyToOne(optional = false)
@@ -57,6 +59,7 @@ public class Course extends AbstractEntity {
 	protected boolean			draftMode;
 
 
+	@Transient
 	public Nature natureOfCourse(final List<Lecture> lectures) {
 		Nature res;
 		res = Nature.BALANCED;

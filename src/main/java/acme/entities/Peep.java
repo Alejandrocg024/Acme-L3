@@ -23,7 +23,11 @@ import lombok.Setter;
 @Setter
 public class Peep extends AbstractEntity {
 
+	// Serialisation identifier -----------------------------------------------
+
 	protected static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@PastOrPresent
@@ -43,8 +47,15 @@ public class Peep extends AbstractEntity {
 	protected String			message;
 
 	@Email
+	@Length(max = 255)
 	protected String			email;
 
 	@URL
+	@Length(max = 255)
 	protected String			link;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
+
 }

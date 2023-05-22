@@ -23,7 +23,11 @@ import lombok.Setter;
 @Setter
 public class Note extends AbstractEntity {
 
+	// Serialisation identifier -----------------------------------------------
+
 	protected static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@PastOrPresent
@@ -34,7 +38,7 @@ public class Note extends AbstractEntity {
 	@Length(max = 75)
 	protected String			title;
 
-	//El author se debe guardar así <username-surname,name> y una vez guardado no se podrá editar
+	//〈username〉 - 〈surname, name〉
 	@NotBlank
 	@Length(max = 75)
 	protected String			author;
@@ -44,9 +48,15 @@ public class Note extends AbstractEntity {
 	protected String			message;
 
 	@Email
+	@Length(max = 255)
 	protected String			email;
 
 	@URL
+	@Length(max = 255)
 	protected String			furtherInformationLink;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 }

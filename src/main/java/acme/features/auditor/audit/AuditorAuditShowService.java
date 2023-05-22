@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.datatypes.Mark;
 import acme.entities.Audit;
 import acme.entities.Course;
 import acme.framework.components.accounts.Principal;
@@ -60,12 +61,30 @@ public class AuditorAuditShowService extends AbstractService<Auditor, Audit> {
 
 		Tuple tuple;
 		Collection<Course> courses;
-		SelectChoices choice;
-		courses = this.repository.findCoursesNotAudited();
-		choice = SelectChoices.from(courses, "code", object.getCourse());
+		Collection<Mark> marks;
+		String mark;
+		final SelectChoices choices = new SelectChoices();
+		courses = this.repository.findPublishedCourses();
+		if (object.getCourse() == null)
+			choices.add("0", "---", true);
+		else
+			choices.add("0", "---", false);
+
+		for (final Course c : courses)
+			if (object.getCourse() != null && object.getCourse().getId() == c.getId())
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
+			else
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+
+		marks = this.repository.findMarksByAuditId(object.getId());
+		if (marks.isEmpty())
+			mark = "N/A";
+		else
+			mark = marks.toString().replace("[", "").replace("]", "");
 		tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
-		tuple.put("course", choice.getSelected().getKey());
-		tuple.put("courses", choice);
+		tuple.put("course", choices.getSelected().getKey());
+		tuple.put("courses", choices);
+		tuple.put("mark", mark);
 		super.getResponse().setData(tuple);
 
 	}

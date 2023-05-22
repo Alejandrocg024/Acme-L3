@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.datatypes.Nature;
 import acme.entities.Course;
 import acme.entities.Lecture;
@@ -22,7 +23,10 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected LecturerCourseRepository repository;
+	protected LecturerCourseRepository	repository;
+
+	@Autowired
+	protected AuxiliarService			auxiliarService;
 
 	// AbstractService<Employer, Job> -------------------------------------
 
@@ -64,14 +68,14 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 	public void validate(final Course object) {
 		assert object != null;
 		final Collection<Lecture> lectures = this.repository.findLecturesByCourse(object.getId());
-		super.state(!lectures.isEmpty(), "nature", "lecturer.course.form.error.nolecture");
+		super.state(!lectures.isEmpty(), "*", "lecturer.course.form.error.nolecture");
 		if (!lectures.isEmpty()) {
 			boolean handOnLectureInCourse;
 			handOnLectureInCourse = lectures.stream().anyMatch(x -> x.getNature().equals(Nature.HANDS_ON));
-			super.state(handOnLectureInCourse, "nature", "lecturer.course.form.error.nohandson");
+			super.state(handOnLectureInCourse, "*", "lecturer.course.form.error.nohandson");
 			boolean publishedLectures;
 			publishedLectures = lectures.stream().allMatch(x -> x.isDraftMode() == false);
-			super.state(publishedLectures, "nature", "lecturer.course.form.error.lecturenp");
+			super.state(publishedLectures, "*", "lecturer.course.form.error.lecturenp");
 		}
 	}
 
@@ -88,7 +92,9 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 		tuple = super.unbind(object, "code", "title", "abstract$", "price", "furtherInformationLink", "draftMode");
 		final List<Lecture> lectures = this.repository.findLecturesByCourse(object.getId()).stream().collect(Collectors.toList());
 		final Nature nature = object.natureOfCourse(lectures);
+		tuple.put("hasLectures", lectures.size() > 0);
 		tuple.put("nature", nature);
+		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}
 }

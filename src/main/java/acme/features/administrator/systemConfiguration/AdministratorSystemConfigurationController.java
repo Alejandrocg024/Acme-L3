@@ -13,11 +13,15 @@ import acme.framework.controllers.AbstractController;
 @Controller
 public class AdministratorSystemConfigurationController extends AbstractController<Administrator, SystemConfiguration> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	protected AdministratorSystemConfigurationShowService	showService;
 
 	@Autowired
 	protected AdministratorSystemConfigurationUpdateService	updateService;
+
+	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct

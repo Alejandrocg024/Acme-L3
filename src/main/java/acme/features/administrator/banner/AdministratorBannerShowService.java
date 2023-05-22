@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Banner;
 import acme.framework.components.accounts.Administrator;
-import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
@@ -48,12 +48,15 @@ public class AdministratorBannerShowService extends AbstractService<Administrato
 	public void unbind(final Banner object) {
 		assert object != null;
 
-		final SelectChoices choices;
 		Tuple tuple;
 
 		tuple = super.unbind(object, "instantiationMoment", "slogan", "displayPeriodBegin", "displayPeriodFinish", "pictureLink", "pictureLink", "webLink");
 		tuple.put("confirmation", false);
-
+		final Banner banner = this.repository.findBannerById(object.getId());
+		final boolean readonly = !(MomentHelper.getCurrentMoment().before(banner.getDisplayPeriodBegin()) && MomentHelper.getCurrentMoment().before(banner.getDisplayPeriodFinish()) || MomentHelper.getCurrentMoment().after(banner.getDisplayPeriodFinish()));
+		tuple.put("readonly", readonly);
+		final boolean boton = !readonly;
+		tuple.put("boton", !boton);
 		super.getResponse().setData(tuple);
 	}
 }

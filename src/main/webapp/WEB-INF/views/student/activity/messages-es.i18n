@@ -1,0 +1,21 @@
+student.activity.list.label.title = Título
+student.activity.list.label.endPeriod = Fecha de fin
+student.activity.list.label.startPeriod = Fecha de inicio
+
+student.enrolment.form.label.activity = Actividad
+student.activity.form.label.title = Título:
+student.activity.form.label.abstract$ = Resumen:
+student.activity.form.label.startPeriod = Fecha de fin:
+student.activity.form.label.endPeriod = Fecha de inicio:
+student.activity.form.label.nature = Naturaleza de la actividad:
+student.activity.form.label.furtherInformationLink = Enlace con más información:
+
+student.activity.form.button.update = Actualizar
+student.activity.form.button.delete = Borrar
+student.activity.form.button.create = Crear
+
+student.activity.form.error.dates = La fecha debe estar en el periodo desde 01/01/2000 00:00 hasta el 31/12/2100 23:59
+student.activity.form.error.period = La fecha de fin debe ser posterior a la fecha inicial
+student.activity.form.error.spam = El texto introducido se considera Spam
+
+student.activity.create = Crear actividad

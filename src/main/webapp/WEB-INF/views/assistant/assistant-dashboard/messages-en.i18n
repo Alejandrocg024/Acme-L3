@@ -1,0 +1,20 @@
+
+
+assistant.assistant-dashboard.form.title.general-indicators= Indicators
+assistant.assistant-dashboard.form.label.numOfTutorials= Number of Tutorials regarding nature
+assistant.assistant-dashboard.form.label.statstuts = Stats of Tutorials
+assistant.assistant-dashboard.form.label.statstutssesions = Stats of Tutorial sessions
+assistant.assistant-dashboard.form.label.numOfTutorials.theory = Number of theoretical tutorials
+assistant.assistant-dashboard.form.label.numOfTutorials.hands_on = Number of hands on tutorials
+assistant.assistant-dashboard.form.label.numOfTutorials.balanced= Number of balanced tutorials
+assistant.assistant-dashboard.form.label.statstuts.linDev = Standard deviation of time of the tutorials
+assistant.assistant-dashboard.form.label.statstuts.average = Average of time of tutorials
+assistant.assistant-dashboard.form.label.statstuts.max = Max time of tutorials
+assistant.assistant-dashboard.form.label.statstuts.min = Min time of tutorials
+assistant.assistant-dashboard.form.label.statstutssesions.lindev = Standard deviation of time of tutorial sessions
+assistant.assistant-dashboard.form.label.statstutssesions.average = Average time of tutorial sessions
+assistant.assistant-dashboard.form.label.statstutssesions.max = Max time of tutorial sessions
+assistant.assistant-dashboard.form.label.statstutssesions.min = Min time of tutorial sessions
+assistant.dashboard.form.label.sessions.information = Grafic about tutorial sesisons time
+assistant.dashboard.form.label.tutorials.information = Grafic about tutorial time
+assistant.dashboard.form.label.tutorials.type.information = Grafic about tutorial types

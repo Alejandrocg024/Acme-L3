@@ -1,34 +1,37 @@
-key,title,summary,estimated_learning_time,body,nature,further_information_link,draft_mode
-lecture-01,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-02,L,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-03,Le,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-04,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-05,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-06,коза,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-07,თხა,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-26,<script>alert("hi!")</script>,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-27,<h1>Hola Mundo!</h1>,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-08,Lecture1,P,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-09,Lecture1,Pr,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-10,Lecture1,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-11,Lecture1,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-12,Lecture1,коза,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-13,Lecture1,თხა,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-28,Lecture1,<script>alert("hi!")</script>,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-29,Lecture1,<h1>Hola Mundo!</h1>,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-14,Lecture1,Primera lecture,1.01,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-15,Lecture1,Primera lecture,0.99,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-16,Lecture1,Primera lecture,99.00,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-17,Lecture1,Primera lecture,99.99,E,THEORETICAL,null,false
-lecture-18,Lecture1,Primera lecture,2.0,En,THEORETICAL,null,false
-lecture-19,Lecture1,Primera lecture,2.0,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,THEORETICAL,null,false
-lecture-20,Lecture1,Primera lecture,2.0,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,THEORETICAL,null,false
-lecture-21,Lecture1,Primera lecture,2.0,коза,THEORETICAL,null,false
-lecture-22,Lecture1,Primera lecture,2.0,თხა,THEORETICAL,null,false
-lecture-30,Lecture1,Primera lecture,2.0,<script>alert("hi!")</script>,THEORETICAL,null,false
-lecture-31,Lecture1,Primera lecture,2.0,<h1>Hola Mundo!</h1>,THEORETICAL,null,false
-lecture-23,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,HANDS_ON,null,false
-lecture-24,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false
-lecture-25,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,https://github.com/Alejandrocg024/Acme-L3-D02,false
-lecture-32,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,ftp://user:pass@acme.org,false
-lecture-33,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,true
+key,title,summary,estimated_learning_time,body,nature,further_information_link,draft_mode,key:lecturer
+lecture-01,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-02,L,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-03,Le,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-04,El mensaje tiene setenta y cuatro caracteres valida cadenas de longitud75.,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-05,Este mensaje tiene setenta y cinco caracteres se usa para validar mensajes.,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-06,коза,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-07,თხა,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-26,<script>alert("hi!")</script>,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-27,<h1>Hola Mundo!</h1>,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-08,Lecture1,P,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-09,Lecture1,Pr,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-10,Lecture1,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-11,Lecture1,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-12,Lecture1,коза,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-13,Lecture1,თხა,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-28,Lecture1,<script>alert("hi!")</script>,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-29,Lecture1,<h1>Hola Mundo!</h1>,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-14,Lecture1,Primera lecture,0.01,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-15,Lecture1,Primera lecture,0.99,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-16,Lecture1,Primera lecture,999.00,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-01
+lecture-17,Lecture1,Primera lecture,999.99,E,THEORETICAL,null,false,lecturer-01
+lecture-18,Lecture1,Primera lecture,2.0,En,THEORETICAL,null,false,lecturer-01
+lecture-19,Lecture1,Primera lecture,2.0,Este mensaje tiene noventa y nueve caracteres usado para validar cadenas con maximo 100 caracteres.,THEORETICAL,null,false,lecturer-01
+lecture-20,Lecture1,Primera lecture,2.0,Este mensaje tiene cien caracteres usado para validar cadenas de cien caracteres de longitud maxima.,THEORETICAL,null,false,lecturer-01
+lecture-21,Lecture1,Primera lecture,2.0,коза,THEORETICAL,null,false,lecturer-01
+lecture-22,Lecture1,Primera lecture,2.0,თხა,THEORETICAL,null,false,lecturer-01
+lecture-30,Lecture1,Primera lecture,2.0,<script>alert("hi!")</script>,THEORETICAL,null,false,lecturer-01
+lecture-31,Lecture1,Primera lecture,2.0,<h1>Hola Mundo!</h1>,THEORETICAL,null,false,lecturer-01
+lecture-23,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,HANDS_ON,null,false,lecturer-01
+lecture-25,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,https://github.com/Alejandrocg024/Acme-L3-D02,false,lecturer-01
+lecture-32,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,ftp://user:pass@acme.org,false,lecturer-01
+lecture-33,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,true,lecturer-01
+lecture-34,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-02
+lecture-35,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,false,lecturer-02
+lecture-36,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,true,lecturer-02
+lecture-37,Lecture1,Primera lecture,2.0,En esta lecture aprendereis mucho,THEORETICAL,null,true,lecturer-07

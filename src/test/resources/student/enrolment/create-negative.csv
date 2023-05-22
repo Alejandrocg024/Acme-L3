@@ -1,0 +1,16 @@
+recordIndex,course,code,motivation,goals
+0,---,,,
+0,AAA999-Course,,Learning new things,"Discover, Learn, Enjoy"
+0,AAA999-Course,A,Learning new things,"Discover, Learn, Enjoy"
+0,AAA999-Course,A1,Learning new things,"Discover, Learn, Enjoy"
+0,AAA999-Course,A11,Learning new things,"Discover, Learn, Enjoy"
+0,AAA999-Course,11,Learning new things,"Discover, Learn, Enjoy"
+0,AAA999-Course,12345,Learning new things,"Discover, Learn, Enjoy"
+0,AAA999-Course,AAAA5555,Learning new things,"Discover, Learn, Enjoy"
+0,AAA999-Course,AAA999,Learning new things,"Discover, Learn, Enjoy"
+0,AAA999-Course,BBB001,,"Discover, Learn, Enjoy"
+0,AAA999-Course,BBB001,sex,"Discover, Learn, Enjoy"
+0,AAA999-Course,BBB001,Cadena de setenta y seis caracteres y pasarnos de setenta y cinco en pruebas,"Discover, Learn, Enjoy"
+0,AAA999-Course,BBB001,Learning new things,
+0,AAA999-Course,BBB001,Learning new things,sex
+0,AAA999-Course,BBB001,Learning new things,Cadena de ciento un caracteres usada para superar cadenas que tengan como máximo 100 caracteres en dp

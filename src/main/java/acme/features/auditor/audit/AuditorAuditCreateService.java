@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.entities.Audit;
 import acme.entities.Course;
 import acme.framework.components.jsp.SelectChoices;
@@ -19,7 +20,10 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuditorAuditRepository repository;
+	protected AuditorAuditRepository	repository;
+
+	@Autowired
+	protected AuxiliarService			auxiliarService;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -60,6 +64,12 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 		assert object != null;
 		if (!super.getBuffer().getErrors().hasErrors("code"))
 			super.state(this.repository.findAuditByCode(object.getCode()) == null, "code", "auditor.audit.form.error.code");
+		if (!super.getBuffer().getErrors().hasErrors("conclusion"))
+			super.state(this.auxiliarService.validateTextImput(object.getConclusion()), "conclusion", "auditor.audit.form.error.spam");
+		if (!super.getBuffer().getErrors().hasErrors("strongPoints"))
+			super.state(this.auxiliarService.validateTextImput(object.getStrongPoints()), "strongPoints", "auditor.audit.form.error.spam");
+		if (!super.getBuffer().getErrors().hasErrors("weakPoints"))
+			super.state(this.auxiliarService.validateTextImput(object.getWeakPoints()), "weakPoints", "auditor.audit.form.error.spam");
 
 	}
 
@@ -74,9 +84,18 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 		assert object != null;
 		Tuple tuple;
 		Collection<Course> courses;
-		SelectChoices choices;
-		courses = this.repository.findCoursesNotAudited();
-		choices = SelectChoices.from(courses, "code", object.getCourse());
+		final SelectChoices choices = new SelectChoices();
+		courses = this.repository.findPublishedCourses();
+		if (object.getCourse() == null)
+			choices.add("0", "---", true);
+		else
+			choices.add("0", "---", false);
+
+		for (final Course c : courses)
+			if (object.getCourse() != null && object.getCourse().getId() == c.getId())
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
+			else
+				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
 		tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
 		tuple.put("courses", choices);
 		tuple.put("course", choices.getSelected().getKey());

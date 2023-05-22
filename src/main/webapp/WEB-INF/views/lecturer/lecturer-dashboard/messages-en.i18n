@@ -1,24 +1,16 @@
-# messages-en.i18n
-#
-# Copyright (C) 2012-2023 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
+
 
 lecturer.lecturerDashboard.form.title.general-indicators= Lecturer Dashboard
 
 lecturer.lecturerDashboard.form.label.average-lecture-learning-time = Average learning time of the lectures:
 lecturer.lecturerDashboard.form.label.max-lecture-learning-time = Max learning time of the lectures:
 lecturer.lecturerDashboard.form.label.min-lecture-learning-time = Min learning time of the lectures:
-lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time = Lineal deviation of learning time of the lectures:
+lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time = Standard deviation of learning time of the lectures:
 
 lecturer.lecturerDashboard.form.label.average-course-learning-time = Average learning time of the courses:
 lecturer.lecturerDashboard.form.label.max-course-learning-time = Max learning time of the courses:
 lecturer.lecturerDashboard.form.label.min-course-learning-time = Min learning time of the courses:
-lecturer.lecturerDashboard.form.label.lin-dev-course-learning-time = Lineal deviation of learning time of the courses:
+lecturer.lecturerDashboard.form.label.lin-dev-course-learning-time = Standard deviation of learning time of the courses:
 
 lecturer.lecturerDashboard.form.label.lectures.information = Grafic about lectures leasning times
 lecturer.lecturerDashboard.form.label.courses.information = Grafic about courses learning times

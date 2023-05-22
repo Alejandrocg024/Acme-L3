@@ -4,6 +4,7 @@ package acme.features.administrator.offer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
@@ -15,7 +16,10 @@ public class AdministratorOfferDeleteService extends AbstractService<Administrat
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AdministratorOfferRepository repository;
+	protected AdministratorOfferRepository	repository;
+
+	@Autowired
+	protected AuxiliarService				auxiliarService;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -31,7 +35,7 @@ public class AdministratorOfferDeleteService extends AbstractService<Administrat
 	public void authorise() {
 		final int id = super.getRequest().getData("id", int.class);
 		final Offer object = this.repository.findOfferById(id);
-		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().before(object.getStartPeriod()));
+		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().before(object.getStartPeriod()) && MomentHelper.getCurrentMoment().before(object.getEndPeriod()) || MomentHelper.getCurrentMoment().after(object.getEndPeriod()));
 	}
 
 	@Override
@@ -68,8 +72,12 @@ public class AdministratorOfferDeleteService extends AbstractService<Administrat
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "instantiationMoment", "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
-		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getStartPeriod());
+		final Offer offer = this.repository.findOfferById(object.getId());
+		final boolean readonly = !(MomentHelper.getCurrentMoment().before(offer.getStartPeriod()) && MomentHelper.getCurrentMoment().before(offer.getEndPeriod()) || MomentHelper.getCurrentMoment().after(offer.getEndPeriod()));
 		tuple.put("readonly", readonly);
+		final boolean boton = !readonly;
+		tuple.put("boton", !boton);
+		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}
 }

@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.entities.Note;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
@@ -18,7 +19,10 @@ import acme.framework.services.AbstractService;
 public class AuthenticatedNoteCreateService extends AbstractService<Authenticated, Note> {
 
 	@Autowired
-	protected AuthenticatedNoteRepository repository;
+	protected AuthenticatedNoteRepository	repository;
+
+	@Autowired
+	protected AuxiliarService				auxiliarService;
 
 
 	@Override
@@ -56,7 +60,7 @@ public class AuthenticatedNoteCreateService extends AbstractService<Authenticate
 	public void bind(final Note object) {
 		assert object != null;
 
-		super.bind(object, "instantiationMoment", "title", "author", "message", "email", "furtherInformationLink");
+		super.bind(object, "title", "author", "message", "email", "furtherInformationLink");
 	}
 
 	@Override
@@ -67,6 +71,21 @@ public class AuthenticatedNoteCreateService extends AbstractService<Authenticate
 
 		confirmation = super.getRequest().getData("confirmation", boolean.class);
 		super.state(confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+
+		if (!super.getBuffer().getErrors().hasErrors("title"))
+			super.state(this.auxiliarService.validateTextImput(object.getTitle()), "title", "authenticated.note.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("author"))
+			super.state(this.auxiliarService.validateTextImput(object.getAuthor()), "author", "authenticated.note.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("message"))
+			super.state(this.auxiliarService.validateTextImput(object.getMessage()), "message", "authenticated.note.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("email"))
+			super.state(this.auxiliarService.validateTextImput(object.getEmail()), "email", "authenticated.note.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("furtherInformationLink"))
+			super.state(this.auxiliarService.validateTextImput(object.getFurtherInformationLink()), "furtherInformationLink", "authenticated.note.form.error.spam");
 	}
 
 	@Override
@@ -86,7 +105,7 @@ public class AuthenticatedNoteCreateService extends AbstractService<Authenticate
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "instantiationMoment", "title", "author", "message", "email", "furtherInformationLink");
+		tuple = super.unbind(object, "title", "author", "message", "email", "furtherInformationLink");
 		tuple.put("confirmation", false);
 
 		super.getResponse().setData(tuple);

@@ -1,0 +1,22 @@
+
+
+assistant.tutorial.list.label.title = Title
+assistant.tutorial.list.label.abstract$ = Summary
+assistant.tutorial.list.label.goal = Goals
+assistant.tutorial.list.button.create = Create
+
+assistant.tutorial.form.label.code = Code
+assistant.tutorial.form.label.title = Title
+assistant.tutorial.form.label.abstract$ = Summary
+assistant.tutorial.form.label.goal = Goals
+assistant.tutorial.form.label.course = Course
+assistant.tutorial.form.label.estimatedTotalTime = Estimated Total Time
+assistant.tutorial.form.button.update = Update
+assistant.tutorial.form.button.create = Create
+assistant.tutorial.form.button.delete = Delete
+assistant.tutorial.form.button.publish = Publish
+assistant.tutorial.form.button.tutorial-sessions = Tutorial sessions
+assistant.tutorial.form.error.spam = The introduced text is considered Spam
+assistant.tutorial.form.error.estimatedTotalTime = Cannot publish a tutorial without sessions
+assistant.tutorial.form.error.code = Code must be unique for each tutorial
+assistant.tutorial-session.form.error.end-period.max = The the period must last maximum 5 hours

@@ -43,7 +43,6 @@ master.menu.authenticated.note.list = Ver notas
 master.menu.authenticated.offer.list= Ver ofertas
 master.menu.authenticated.bulletin.list = Ver boletines
 
-
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
@@ -71,7 +70,10 @@ master.menu.authenticated.company.update = Datos de empresa
 master.menu.authenticated.company.create = Convertirme en empresa
 master.menu.authenticated.auditor.create = Convertirme en auditor
 master.menu.authenticated.auditor.update = Datos del auditor
-
+master.menu.authenticated.assistant.create = Convertirme en asistente
+master.menu.authenticated.assistant.update = Datos del asistente
+master.menu.authenticated.student.create = Convertirme en estudiante
+master.menu.authenticated.student.update = Datos del estudiante
 
 # master.menu.lecturer ####################################################
 master.menu.lecturer = Profesor
@@ -79,10 +81,29 @@ master.menu.lecturer.course = Mis cursos
 master.menu.lecturer.lecturer-dashboard= Panel de profesor
 master.menu.lecturer.lecture = Mis lecciones
 
+# master.menu.company #######################################################
+
+master.menu.company = Empresa
+master.menu.company.my-practica = Mis prácticas
+master.menu.company.company-dashboard = Panel de empresa
+
 # master.menu.auditor ####################################################
 master.menu.auditor = Auditor
 master.menu.auditor.audit = Mis auditorías
+master.menu.auditor.auditor-dashboard = Panel del auditor
 
 # master.menu.any ####################################################
 master.menu.any.course = Cursos
+master.menu.any.peep = Personas
 master.menu.any= Cualquiera
+
+# master.menu.assistant ####################################################
+master.menu.assistant.tutorial = Mis tutorias
+master.menu.assistant= Asistente
+master.menu.assistant.dashboard = Panel de asistente
+
+# master.menu.lecturer ####################################################
+master.menu.student = Estudiante
+master.menu.student.enrolment = Mis matriculas
+master.menu.student.dashboard = Panel del estudiante
+master.menu.student.course = Cursos

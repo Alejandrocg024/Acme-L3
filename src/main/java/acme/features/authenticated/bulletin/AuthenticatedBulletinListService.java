@@ -2,7 +2,6 @@
 package acme.features.authenticated.bulletin;
 
 import java.util.Collection;
-import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,8 +35,7 @@ public class AuthenticatedBulletinListService extends AbstractService<Authentica
 	@Override
 	public void load() {
 		Collection<Bulletin> objects;
-		final Date date = new Date();
-		objects = this.repository.findAllBulletins(date);
+		objects = this.repository.findAllBulletins();
 		super.getBuffer().setData(objects);
 	}
 
@@ -45,7 +43,7 @@ public class AuthenticatedBulletinListService extends AbstractService<Authentica
 	public void unbind(final Bulletin object) {
 		assert object != null;
 		Tuple tuple;
-		tuple = super.unbind(object, "title", "message", "critical");
+		tuple = super.unbind(object, "title", "message");
 		super.getResponse().setData(tuple);
 	}
 

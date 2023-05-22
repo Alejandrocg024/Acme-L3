@@ -1,0 +1,12 @@
+
+
+
+authenticated.practicum.form.label.code = Código:
+authenticated.practicum.form.label.title = Título:
+authenticated.practicum.form.label.abstract$ = Resumen:
+authenticated.practicum.form.label.goals = Objetivos:
+authenticated.practicum.form.label.company = Empresa:
+authenticated.practicum.form.label.estimatedTotalTime = Tiempo total estimado:
+
+authenticated.practicum.list.label.code = Código
+authenticated.practicum.list.label.title = Título

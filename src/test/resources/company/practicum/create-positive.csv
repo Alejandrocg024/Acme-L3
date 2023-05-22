@@ -1,0 +1,29 @@
+recordIndex,course,code,title,abstract$,goals
+0,AAA999-Course,BBB100,Práctica,Primera práctica,"Leer, gestionar, programar"
+1,AA999-Course,BBB101,Práctica,Primera práctica,"Leer, gestionar, programar"
+2,AAA999-Course,C100,Práctica,Primera práctica,"Leer, gestionar, programar"
+3,AAA999-Course,CC100,Práctica,Primera práctica,"Leer, gestionar, programar"
+4,AAA999-Course,DDD102,P,Primera práctica,"Leer, gestionar, programar"
+5,AAA999-Course,DDD103,Pr,Primera práctica,"Leer, gestionar, programar"
+6,AAA999-Course,DDD104,Título de setenta y cinco caracteres exactos para esta práctica profesional,Primera práctica,"Leer, gestionar, programar"
+7,AAA999-Course,DDD105,Soy un título de setenta y cuatro caracteres para la práctica profesional.,Primera práctica,"Leer, gestionar, programar"
+8,AAA999-Course,DDD106,練習題目,Primera práctica,"Leer, gestionar, programar"
+9,AAA999-Course,DDD107,τίτλος πρακτικής,Primera práctica,"Leer, gestionar, programar"
+10,AAA999-Course,DDD108,"<script>alert(""hi!"")</script>",Primera práctica,"Leer, gestionar, programar"
+11,AAA999-Course,DDD109,<h1>Hola Mundo!</h1>,Primera práctica,"Leer, gestionar, programar"
+12,AAA999-Course,DDD110,Práctica,P,"Leer, gestionar, programar"
+13,AAA999-Course,DDD111,Práctica,Pr,"Leer, gestionar, programar"
+14,AAA999-Course,DDD112,Práctica,Nos encontramos frente a resumen de exactamente cien caracteres para la actual práctica profesional.,"Leer, gestionar, programar"
+15,AAA999-Course,DDD113,Práctica,Nos encontramos delante de un resumen de exactamente noventa y nueve caracteres para esta práctica.,"Leer, gestionar, programar"
+16,AAA999-Course,DDD114,Práctica,專業實踐,"Leer, gestionar, programar"
+17,AAA999-Course,DDD115,Práctica,περίληψη πρακτικής,"Leer, gestionar, programar"
+18,AAA999-Course,DDD116,Práctica,"<script>alert(""hi!"")</script>","Leer, gestionar, programar"
+19,AAA999-Course,DDD117,Práctica,<h1>Hola Mundo!</h1>,"Leer, gestionar, programar"
+20,AAA999-Course,DDD118,Práctica,Primera práctica,O
+21,AAA999-Course,DDD119,Práctica,Primera práctica,Ob
+22,AAA999-Course,DDD120,Práctica,Primera práctica,Nos encontramos delante de un texto de cien caracteres relacionado con los objetivos de la práctica.
+23,AAA999-Course,DDD121,Práctica,Primera práctica,Esto es un texto de noventa y nueve caracteres asociado a los objetivos de la práctica profesional.
+24,AAA999-Course,DDD122,Práctica,Primera práctica,練習目標
+25,AAA999-Course,DDD123,Práctica,Primera práctica,στόχους εξάσκησης
+26,AAA999-Course,DDD124,Práctica,Primera práctica,"<script>alert(""hi!"")</script>"
+27,AAA999-Course,DDD125,Práctica,Primera práctica,<h1>Hola Mundo!</h1>

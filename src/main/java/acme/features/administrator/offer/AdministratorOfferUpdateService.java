@@ -37,7 +37,7 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 	public void authorise() {
 		final int id = super.getRequest().getData("id", int.class);
 		final Offer object = this.repository.findOfferById(id);
-		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().before(object.getStartPeriod()));
+		super.getResponse().setAuthorised(MomentHelper.getCurrentMoment().before(object.getStartPeriod()) && MomentHelper.getCurrentMoment().before(object.getEndPeriod()) || MomentHelper.getCurrentMoment().after(object.getEndPeriod()));
 	}
 
 	@Override
@@ -65,13 +65,16 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			Date minimumStartDate;
 			minimumStartDate = MomentHelper.deltaFromMoment(object.getInstantiationMoment(), 1, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfter(object.getStartPeriod(), minimumStartDate), "startPeriod", "administrator.offer.form.error.startPeriod");
+			super.state(MomentHelper.isAfterOrEqual(object.getStartPeriod(), minimumStartDate), "startPeriod", "administrator.offer.form.error.startPeriod");
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("endPeriod") && !super.getBuffer().getErrors().hasErrors("startPeriod")) {
-			Date maximumPeriod;
-			maximumPeriod = MomentHelper.deltaFromMoment(object.getStartPeriod(), 7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfter(object.getEndPeriod(), maximumPeriod) && object.getEndPeriod().after(object.getStartPeriod()), "endPeriod", "administrator.offer.form.error.endPeriod");
+			Date minimumPeriod;
+			minimumPeriod = MomentHelper.deltaFromMoment(object.getStartPeriod(), 7, ChronoUnit.DAYS);
+			super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), minimumPeriod) && object.getEndPeriod().after(object.getStartPeriod()), "endPeriod", "administrator.offer.form.error.endPeriod");
+			super.state(this.auxiliarService.validateDate(object.getEndPeriod()), "endPeriod", "administrator.offer.form.error.endPeriod.oor");
+			super.state(this.auxiliarService.validateDate(object.getStartPeriod()), "startPeriod", "administrator.offer.form.error.startPeriod.oor");
+
 		}
 		if (!super.getBuffer().getErrors().hasErrors("heading"))
 			super.state(this.auxiliarService.validateTextImput(object.getHeading()), "heading", "administrator.offer.form.spam");
@@ -90,8 +93,12 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "instantiationMoment", "endPeriod", "heading", "summary", "startPeriod", "price", "furtherInformationLink");
-		final boolean readonly = MomentHelper.getCurrentMoment().after(object.getStartPeriod());
+		final Offer offer = this.repository.findOfferById(object.getId());
+		final boolean readonly = !(MomentHelper.getCurrentMoment().before(offer.getStartPeriod()) && MomentHelper.getCurrentMoment().before(offer.getEndPeriod()) || MomentHelper.getCurrentMoment().after(offer.getEndPeriod()));
 		tuple.put("readonly", readonly);
+		final boolean boton = !readonly;
+		tuple.put("boton", !boton);
+		tuple.put("money", this.auxiliarService.changeCurrency(object.getPrice()));
 		super.getResponse().setData(tuple);
 	}
 
