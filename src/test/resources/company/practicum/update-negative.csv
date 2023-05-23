@@ -1,6 +1,19 @@
 recordIndex,course,code,title,abstract$,goals
-26,---,A999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
-26,AAA999-Course,,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
-26,AAA999-Course,A999,,Práctica de iniciación,"Conocer, entender, aprender"
-26,AAA999-Course,A999,Practicum,,"Conocer, entender, aprender"
-26,AAA999-Course,A999,Practicum,Práctica de iniciación,
+25,---,A999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,A,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,AA,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,AAA,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,AAA9,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,AAA99,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,AAA9999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,AAA999,Practicum,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,A999,,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,A999,Esto es un título de setenta y seis caracteres para la práctica profesional.,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,A999,sex,Práctica de iniciación,"Conocer, entender, aprender"
+25,AAA999-Course,A999,Practicum,,"Conocer, entender, aprender"
+25,AAA999-Course,A999,Practicum,Nos encontramos frente a un resumen de exactamente ciento un caracteres para la práctica profesional.,"Conocer, entender, aprender"
+25,AAA999-Course,A999,Practicum,sex,"Conocer, entender, aprender"
+25,AAA999-Course,A999,Practicum,Práctica de iniciación,
+25,AAA999-Course,A999,Practicum,Práctica de iniciación,Nos encontramos ante un texto de ciento un caracteres sobre los objetivos de la práctica profesional.
+25,AAA999-Course,A999,Practicum,Práctica de iniciación,sex

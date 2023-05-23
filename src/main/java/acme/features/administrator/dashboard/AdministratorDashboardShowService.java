@@ -41,6 +41,7 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 	@Override
 	public void load() {
 		AdministratorDashboard dashboard;
+
 		final Map<String, Integer> principalsByRole = new HashMap();
 		final Map<Boolean, Double> ratioOfBulletinsByCriticality = new HashMap();
 		final Map<String, Statistic> offersByCurrencyStats = new HashMap();

@@ -1,0 +1,14 @@
+recordIndex,code,title,abstract$,goal,course
+0,,,,,AAA999-Course
+0,,prueba,prueba,prueba,AAA999-Course
+0,III111,,prueba,prueba,AAA999-Course
+0,III111,prueba,,prueba,AAA999-Course
+0,III111,prueba,prueba,,AAA999-Course
+0,AAA999,prueba,prueba,prueba,AAA999-Course
+0,III111,Cadena de setenta y seis caracteres y pasarnos de setenta y cinco en pruebas,prueba,prueba,AAA999-Course
+0,III111,prueba,Cadena de ciento un caracteres usada para superar cadenas que tengan como máximo 100 caracteres en dp,prueba,AAA999-Course
+0,III111,prueba,prueba,Cadena de ciento un caracteres usada para superar cadenas que tengan como máximo 100 caracteres en dp,AAA999-Course
+0,IIII111,prueba,prueba,prueba,AAA999-Course
+0,III1111,prueba,prueba,prueba,AAA999-Course
+0,III1,prueba,prueba,prueba,AAA999-Course
+0,III11,prueba,prueba,prueba,AAA999-Course

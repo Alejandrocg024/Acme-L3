@@ -4,6 +4,7 @@ package acme.features.authenticated.company;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.AuxiliarService;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.accounts.UserAccount;
@@ -17,7 +18,10 @@ import acme.roles.Company;
 public class AuthenticatedCompanyCreateService extends AbstractService<Authenticated, Company> {
 
 	@Autowired
-	protected AuthenticatedCompanyRepository repository;
+	protected AuthenticatedCompanyRepository	repository;
+
+	@Autowired
+	protected AuxiliarService					auxiliarService;
 
 
 	@Override
@@ -61,6 +65,15 @@ public class AuthenticatedCompanyCreateService extends AbstractService<Authentic
 	@Override
 	public void validate(final Company object) {
 		assert object != null;
+
+		if (!super.getBuffer().getErrors().hasErrors("title"))
+			super.state(this.auxiliarService.validateTextImput(object.getName()), "name", "authenticated.company.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("abstract$"))
+			super.state(this.auxiliarService.validateTextImput(object.getVAT()), "VAT", "authenticated.company.form.error.spam");
+
+		if (!super.getBuffer().getErrors().hasErrors("goals"))
+			super.state(this.auxiliarService.validateTextImput(object.getSummary()), "summary", "authenticated.company.form.error.spam");
 	}
 
 	@Override

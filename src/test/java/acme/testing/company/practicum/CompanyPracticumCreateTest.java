@@ -14,7 +14,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 	public void test100Positive(final int recordIndex, final String course, final String code, final String title, final String abstract$, final String goals) {
 		// This test authenticates as a company and then lists his or her practica, creates a new practicum, and check that it's been created properly.
 
-		super.signIn("company3", "company3");
+		super.signIn("company5", "company5");
 
 		super.clickOnMenu("Company", "My practica");
 		super.checkListingExists();
@@ -54,7 +54,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 	public void test200Negative(final int recordIndex, final String course, final String code, final String title, final String abstract$, final String goals) {
 		// This test attempts to create practica with incorrect data.
 
-		super.signIn("company3", "company3");
+		super.signIn("company5", "company5");
 
 		super.clickOnMenu("Company", "My practica");
 		super.clickOnButton("Create");

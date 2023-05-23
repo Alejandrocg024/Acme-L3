@@ -52,10 +52,10 @@ public class CompanyDashboardShowService extends AbstractService<Company, Compan
 
 		numberOfPracticaPerMonth = this.repository.getNumberOfPracticaPerMonth(companyId);
 
-		averageLengthOfPracticumSessionsPerCompany = this.repository.averageLengthOfPracticumSessionsPerCompany(companyId);
-		deviationLengthOfPracticumSessionsPerCompany = this.repository.deviationLengthOfPracticumSessionsPerCompany(companyId);
-		minimumLengthOfPracticumSessionsPerCompany = this.repository.minimumLengthOfPracticumSessionsPerCompany(companyId);
-		maximunLengthOfPracticumSessionsPerCompany = this.repository.maximumLengthOfPracticumSessionsPerCompany(companyId);
+		averageLengthOfPracticumSessionsPerCompany = this.repository.averageLengthOfPracticumSessionsPerCompany(companyId).orElse(0.0);
+		deviationLengthOfPracticumSessionsPerCompany = this.repository.deviationLengthOfPracticumSessionsPerCompany(companyId).orElse(0.0);
+		minimumLengthOfPracticumSessionsPerCompany = this.repository.minimumLengthOfPracticumSessionsPerCompany(companyId).orElse(0.0);
+		maximunLengthOfPracticumSessionsPerCompany = this.repository.maximumLengthOfPracticumSessionsPerCompany(companyId).orElse(0.0);
 
 		periodLengthOfSessionsStats = new Statistic();
 		periodLengthOfSessionsStats.setAverage(averageLengthOfPracticumSessionsPerCompany);
@@ -63,9 +63,9 @@ public class CompanyDashboardShowService extends AbstractService<Company, Compan
 		periodLengthOfSessionsStats.setMin(minimumLengthOfPracticumSessionsPerCompany);
 		periodLengthOfSessionsStats.setMax(maximunLengthOfPracticumSessionsPerCompany);
 
-		averageLengthOfPracticumPerCompany = this.repository.averageLengthOfPracticumPerCompany(companyId);
-		minimumLengthOfPracticumPerCompany = this.repository.minimumLengthOfPracticumPerCompany(companyId);
-		maximumLengthOfPracticumPerCompany = this.repository.maximumLengthOfPracticumPerCompany(companyId);
+		averageLengthOfPracticumPerCompany = this.repository.averageLengthOfPracticumPerCompany(companyId).orElse(0.0);
+		minimumLengthOfPracticumPerCompany = this.repository.minimumLengthOfPracticumPerCompany(companyId).orElse(0.0);
+		maximumLengthOfPracticumPerCompany = this.repository.maximumLengthOfPracticumPerCompany(companyId).orElse(0.0);
 
 		periodLengthOfPracticaStats = new Statistic();
 		periodLengthOfPracticaStats.setAverage(averageLengthOfPracticumPerCompany);

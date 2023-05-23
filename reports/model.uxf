@@ -5,9 +5,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>1530</x>
-      <y>738</y>
+      <y>729</y>
       <w>450</w>
-      <h>117</h>
+      <h>135</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Audit
@@ -16,6 +16,7 @@ Audit
 + conclusion: String {NotBlank, Length(max = 100)}
 + strongPoints: String {NotBlank, Length(max = 100)}
 + weakPoints: String {NotBlank, Length(max = 100)}
++ draftMode: boolean
 + / mark: String
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -24,19 +25,21 @@ bg=green</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>2124</x>
-      <y>729</y>
+      <y>711</y>
       <w>450</w>
-      <h>135</h>
+      <h>162</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 AuditingRecord
 --
 + subject: String {NotBlank, Length(max = 75)}
 + assessment: String {NotBlank, Length(max = 100)}
-+ startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
-+ endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
++ startPeriod: Date {NotNull, Temporal(TIMESTAMP), Past}
++ endPeriod: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
 + mark: Mark {NotNull}
-+ furtherInformationLink: String {URL}
++ draftMode: boolean
++ furtherInformationLink: String {URL, Length(max = 255)}
++ exceptional: boolean
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -52,11 +55,11 @@ bg=green</panel_attributes>
 Banner
 --
 + instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
-+ startPeriod: Date {NotNull, Temporal{TIMESTAMP}}
-+ endPeriod: Date {NotNull, Temporal{TIMESTAMP}}
-+ pictureLink: String {URL, NotBlank}
++ displayPeriodBegin: Date {NotNull, Temporal{TIMESTAMP}}
++ displayPeriodFinish: Date {NotNull, Temporal{TIMESTAMP}}
++ pictureLink: String {URL, NotBlank, Length(max = 255)}
 + slogan: String {NotBlank, Length(max = 75)}
-+ webLink: String {URL, NotBlank}
++ webLink: String {URL, NotBlank, Length(max = 255)}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -75,7 +78,7 @@ Bulletin
 + title: String {NotBlank, Length(max = 75)}
 + message: String {NotBlank, Length(max = 100)}
 + critical: boolean
-+ furtherInformationLink: String {URL}
++ furtherInformationLink: String {URL, Length(max = 255)}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -92,11 +95,11 @@ Course
 --
 + code: String {Unique, NotBlank, Pattern("^[A-Z]{1,3}\\d{3}$")}
 + title: String {NotBlank, Length(max = 75)}
-+ summary: String {NotBlank, Length(max = 100)}
++ abstract$: String {NotBlank, Length(max = 100)}
 + price: Money {NotNull}
-+ furtherInformationLink: String {URL}
++ furtherInformationLink: String {URL, Length(max = 255)}
 + draftMode: boolean
-+ / courseType: Nature
++ / natureOfCourse: Nature
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -129,8 +132,8 @@ Lecture
 + summary: String {NotBlank, Length(max = 100)}
 + estimatedLearningTime: double {Digits(integer = 3, fraction = 2)}
 + body: String {NotBlank, Length(max = 100)}
-+ lectureType: Nature {NotNull}
-+ furtherInformationLink: String {URL}
++ nature: Nature {NotNull}
++ furtherInformationLink: String {URL, Length(max = 255)}
 + draftMode: boolean
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -150,8 +153,8 @@ Note
 + title: String {NotBlank, Length(max = 75)}
 + author: String {NotBlank, Length(max = 75)}
 + message: String {NotBlank, Length(max = 100)}
-+ email: String {Email}
-+ furtherInformationLink: String {URL}
++ email: String {Email, Length(max = 255)}
++ furtherInformationLink: String {URL, Length(max = 255)}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -172,7 +175,7 @@ Offer
 + startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + price: Money {NotNull}
-+ furtherInformationLink: String {URL}
++ furtherInformationLink: String {URL, Length(max = 255)}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -191,8 +194,8 @@ Peep
 + title: String {NotBlank, Length(max = 75)}
 + nick: String {NotBlank, Length(max = 75)}
 + message: String {NotBlank, Length(max = 100)}
-+ email: String {Email}
-+ furtherInformationLink: String {URL}
++ email: String {Email, Length(max = 255)}
++ furtherInformationLink: String {URL, Length(max = 255)}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -212,7 +215,7 @@ TutorialSession
 + nature: Nature {NotNull}
 + startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
-+ furtherInformationLink: String {URL}
++ furtherInformationLink: String {URL, Length(max = 255)}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -277,7 +280,7 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>513</x>
       <y>0</y>
-      <w>333</w>
+      <w>351</w>
       <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
@@ -286,7 +289,7 @@ AdministratorDashboard
 + principalsByRole: Map&lt;String, Integer&gt;
 + peepsRatioWithLinkAndEmail: Double
 + ratioOfBulletinsByCriticality: Map&lt;Boolean, Double&gt;
-+ currentsOffersStats: Statistic
++ offersByCurrencyStats: Map&lt;String, Statistic&gt;
 + notesInLast10WeeksStats: Statistic
 bg=pink</panel_attributes>
     <additional_attributes/>
@@ -296,15 +299,15 @@ bg=pink</panel_attributes>
     <coordinates>
       <x>513</x>
       <y>423</y>
-      <w>333</w>
+      <w>351</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 LecturerDashboard
 --
-+ numOfLecturesByType: Map&lt;Nature, Integer&gt;
-+ metricsOfLectures: Statistic
-+ metricsOfCourses: Statistic
++ numOfLecturesByType: Map&lt;String, Integer&gt;
++ lecturesStats: Statistic
++ coursesStats: Statistic
 bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
@@ -322,7 +325,7 @@ Assistant
 + supervisor: String {NotBlank, Length(max = 75)}
 + expertiseFields: String {NotBlank, Length(max = 100)}
 + resume: String {NotBlank, Length(max = 100)}
-+ link: String {URL}
++ link: String {URL, Length(max = 255)}
 bg=#E0B0FF</panel_attributes>
     <additional_attributes/>
   </element>
@@ -338,9 +341,9 @@ bg=#E0B0FF</panel_attributes>
 Auditor
 --
 + firm: String {NotBlank, Length(max = 75)}
-+ professionalId: String {NotBlank, Length(max = 25)}
++ professionalId: String {Unique, NotBlank, Length(max = 25)}
 + certifications: String {NotBlank, Length(max = 100)}
-+ link: String {URL}
++ link: String {URL, Length(max = 255)}
 bg=#E0B0FF</panel_attributes>
     <additional_attributes/>
   </element>
@@ -358,7 +361,7 @@ Company
 + name: String {NotBlank, Length(max = 75)}
 + VAT: String {NotBlank, Length(max = 25)}
 + summary: String {NotBlank, Length(max = 100)}
-+ link: String {URL}
++ link: String {URL, Length(max = 255)}
 bg=#E0B0FF</panel_attributes>
     <additional_attributes/>
   </element>
@@ -376,7 +379,7 @@ Lecturer
 + almaMater: String {NotBlank, Length(max = 75)}
 + resume: String {NotBlank, Length(max = 100)}
 + listOfQualifications: String {NotBlank, Length(max = 100)}
-+ furtherInformation: String {URL}
++ furtherInformation: String {URL, Length(max = 255)}
 bg=#E0B0FF</panel_attributes>
     <additional_attributes/>
   </element>
@@ -406,7 +409,7 @@ bg=green</panel_attributes>
       <x>2124</x>
       <y>1377</y>
       <w>450</w>
-      <h>117</h>
+      <h>135</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 PracticumSession
@@ -415,7 +418,8 @@ PracticumSession
 + abstract$: String {NotBlank, Length(max = 100)}
 + startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
-+ furtherInformationLink: String {URL}
++ furtherInformationLink: String {URL, Length(max = 255)}
++ addendum: boolean
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -444,7 +448,7 @@ bg=green</panel_attributes>
     <coordinates>
       <x>513</x>
       <y>225</y>
-      <w>333</w>
+      <w>351</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
@@ -461,13 +465,13 @@ bg=pink</panel_attributes>
     <coordinates>
       <x>513</x>
       <y>324</y>
-      <w>333</w>
+      <w>351</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 CompanyDashboard
 --
-+ practicaPerCourseLastYear: int[]
++ numberOfPracticaPerMonth: int[]
 + periodLengthOfSessionsStats: Statistic
 + periodLengthOfPracticaStats: Statistic
 bg=pink</panel_attributes>
@@ -477,7 +481,7 @@ bg=pink</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1971</x>
-      <y>792</y>
+      <y>783</y>
       <w>171</w>
       <h>36</h>
     </coordinates>
@@ -492,27 +496,27 @@ bg=black</panel_attributes>
       <x>1746</x>
       <y>567</y>
       <w>99</w>
-      <h>189</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 audited by ^</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1566</x>
-      <y>846</y>
+      <y>855</y>
       <w>225</w>
-      <h>234</h>
+      <h>225</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 &lt; belongs to</panel_attributes>
-    <additional_attributes>10.0;240.0;10.0;120.0;210.0;120.0;210.0;10.0</additional_attributes>
+    <additional_attributes>10.0;230.0;10.0;110.0;210.0;110.0;210.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -650,7 +654,7 @@ Student
 + statement: String {NotBlank, Length(max = 75)}
 + strongFeatures: String {NotBlank, Length(max = 100)}
 + weakFeatures: String {NotBlank, Length(max = 100)}
-+ link: String {URL}
++ link: String {URL, Length(max = 255)}
 bg=#E0B0FF</panel_attributes>
     <additional_attributes/>
   </element>
@@ -658,9 +662,9 @@ bg=#E0B0FF</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>963</x>
-      <y>747</y>
+      <y>729</y>
       <w>450</w>
-      <h>108</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Enrolment
@@ -668,6 +672,9 @@ Enrolment
 + code: String {Unique, NotBlank, Pattern("^[A-Z]{1,3}\\d{3}$")}
 + motivation: String {NotBlank, Length(max = 75)}
 + goals: String {NotBlank, Length(max = 100)}
++ draftMode: boolean
++ holderName: String {Length(max = 255)}
++ lowerNibble: String {Pattern("^\\d{4}$")}
 + / workTime: Double
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -676,15 +683,15 @@ bg=green</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1179</x>
-      <y>846</y>
+      <y>864</y>
       <w>216</w>
-      <h>234</h>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 related to &gt;</panel_attributes>
-    <additional_attributes>210.0;240.0;210.0;120.0;10.0;120.0;10.0;10.0</additional_attributes>
+    <additional_attributes>210.0;220.0;210.0;100.0;10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -692,19 +699,19 @@ related to &gt;</panel_attributes>
       <x>1179</x>
       <y>567</y>
       <w>90</w>
-      <h>198</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 made by ^</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>369</x>
-      <y>729</y>
+      <y>738</y>
       <w>450</w>
       <h>135</h>
     </coordinates>
@@ -716,7 +723,7 @@ Activity
 + nature: Nature {NotNull}
 + startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
-+ furtherInformationLink: String {URL}
++ furtherInformationLink: String {URL, Length(max = 255)}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -724,7 +731,7 @@ bg=green</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>810</x>
-      <y>801</y>
+      <y>810</y>
       <w>171</w>
       <h>36</h>
     </coordinates>
@@ -736,9 +743,9 @@ bg=black</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>900</x>
+      <x>891</x>
       <y>243</y>
-      <w>261</w>
+      <w>270</w>
       <h>99</h>
     </coordinates>
     <panel_attributes>period is computed using startPeriod and
@@ -764,9 +771,9 @@ bg=#FFD444</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>900</x>
+      <x>891</x>
       <y>0</y>
-      <w>261</w>
+      <w>270</w>
       <h>99</h>
     </coordinates>
     <panel_attributes>author must be computed 
@@ -792,15 +799,15 @@ bg=#FFD444</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>900</x>
+      <x>891</x>
       <y>126</y>
-      <w>261</w>
+      <w>270</w>
       <h>99</h>
     </coordinates>
-    <panel_attributes>period is computed using startPeriod and
-endPeriod attributes and they must
-accomplish the following statement: period
-must start at any moment after the 
+    <panel_attributes>period is computed using displayPeriodBegin 
+and displayPeriodFinish attributes and they 
+must accomplish the following statement: 
+period must start at any moment after the 
 instantiation/update moment and must last 
 for at least one week
 bg=#FFD444</panel_attributes>
@@ -834,10 +841,10 @@ bg=#FFD444</panel_attributes>
       <x>2565</x>
       <y>729</y>
       <w>108</w>
-      <h>90</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;80.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -893,12 +900,12 @@ bg=#FFD444</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1458</x>
-      <y>1476</y>
+      <y>1485</y>
       <w>90</w>
-      <h>81</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;70.0;80.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;80.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -964,16 +971,18 @@ bg=#FFD444</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1710</x>
-      <y>270</y>
+      <x>2187</x>
+      <y>0</y>
       <w>459</w>
-      <h>81</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 SystemConfiguration
 --
-+ systemCurrency: String
-+ acceptedCurrencies: String
++ systemCurrency: String {Pattern("^[A-Z]{3}$")}
++ aceptedCurrencies: String {Pattern("^([A-Z]{3},)*[A-Z]{3}$")}
++ spamWords: String {Pattern("^(\"[^\"]*\"|[^\",]+)(,(\"[^\"]*\"|[^\",]+))*$")}
++ spamThreshold: double {Range(min = 0, max = 1)}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -982,15 +991,15 @@ bg=green</panel_attributes>
     <coordinates>
       <x>513</x>
       <y>522</y>
-      <w>333</w>
+      <w>351</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 StudentDashboard
 --
-+ numOfActivitiesByType: Map&lt;Nature,Integer&gt;
-+ activitiesPeriodStats: Statistic
-+ coursesTimeStats: Statistic
++ numberOfActivitiesByNature: Map&lt;Nature,Integer&gt;
++ periodsOfActivitiesStats: Statistic
++ timesOfEnrolledCoursesStats: Statistic
 bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
@@ -999,13 +1008,13 @@ bg=pink</panel_attributes>
     <coordinates>
       <x>513</x>
       <y>126</y>
-      <w>333</w>
+      <w>351</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 AssistantDashboard
 --
-+ numOfTutorialsByType: Map&lt;Nature,Integer&gt;
++ numOfTutorialsByType: Map&lt;String,Integer&gt;
 + timeOfSessionsStats: Statistic
 + timeOfTutorialsStats: Statistic
 bg=pink</panel_attributes>
@@ -1032,10 +1041,10 @@ bg=#FFD444</panel_attributes>
       <x>252</x>
       <y>738</y>
       <w>135</w>
-      <h>99</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;10.0;130.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;130.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -1055,12 +1064,12 @@ bg=#FFD444</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>819</x>
-      <y>828</y>
+      <y>855</y>
       <w>162</w>
-      <h>117</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>160.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>160.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -1082,10 +1091,10 @@ bg=#FFD444</panel_attributes>
       <x>1458</x>
       <y>675</y>
       <w>90</w>
-      <h>180</h>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>80.0;180.0;10.0;10.0</additional_attributes>
+    <additional_attributes>80.0;190.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -1110,7 +1119,7 @@ bg=#FFD444</panel_attributes>
       <w>252</w>
       <h>45</h>
     </coordinates>
-    <panel_attributes>courseType is a derived attribute that
+    <panel_attributes>natureOfCourse is a derived attribute that
 depends on the lecturers that it aggregates
 bg=#FFD444</panel_attributes>
     <additional_attributes/>
@@ -1221,5 +1230,41 @@ bg=#FFD444</panel_attributes>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
     <additional_attributes>10.0;70.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1710</x>
+      <y>270</y>
+      <w>459</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+CurrencyCache
+--
++ date: Date
++ ratio: double
++ origenCurrency: String
++ destinationCurrency: String
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>621</y>
+      <w>351</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Payment
+--
++ holderName: String {NotBlank, Length(max = 255)}
++ creditCardNumber: String {NotBlank}
++ expirationDate: String {NotBlank, Pattern("^\\d{2}\\/\\d{2}$")}
++ securityCode: String {NotBlank, Pattern("^\\d{3}$")}
+bg=pink</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

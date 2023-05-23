@@ -11,7 +11,7 @@ public class AnyPeepCreateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/peep/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String title, final String nick, final String message, final String email, final String link) {
+	public void test100Positive(final int recordIndex, final String title, final String nick, final String message, final String link, final String email) {
 		super.checkLinkExists("Sign in");
 		super.clickOnMenu("Any", "Peeps");
 		super.checkListingExists();
@@ -222,7 +222,7 @@ public class AnyPeepCreateTest extends TestHarness {
 		super.clickOnMenu("Any", "Peeps");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.clickOnListingRecord(0);
+		super.clickOnListingRecord(6);
 		super.checkInputBoxHasValue("instantiationMoment", "2022/07/30 00:00");
 		super.checkInputBoxHasValue("title", "<f");
 		super.checkInputBoxHasValue("nick", "Juan");

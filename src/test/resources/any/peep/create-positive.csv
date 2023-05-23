@@ -1,4 +1,4 @@
-recordIndex,title,nick,message,email,link
+recordIndex,title,nick,message,link,email
 41,ჰ,hola,hola,,,
 42,ჰ<h1>Hola Mundo!</h1>,hola,hola,,,
 43,ჰ<script>alert("hi!")</script>,hola,hola,,,
@@ -24,10 +24,10 @@ recordIndex,title,nick,message,email,link
 68,ჰt,hola,<script>alert("hi!")</script>,,,
 69,ჰu,hola,Cadena de cien caracteres usada para probar cadenas de texto que tengan como máximo 100 caracteresok,,,
 70,ჰv,hola,Cadena de noventa y nueve caracteres usada para no pasarnos del limite en cadenas de 100 caracteres,,,
-71,ჰx,hola,hola,http://hola.com,,
-72,ჰy,hola,hola,http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com,,
-73,ჰz,hola,hola,http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com,,
-74,ჰza,hola,hola,ftp://usuario@telefonica.net,,
-75,ჰzb,hola,hola,,hola@gamil.com,
+71,ჰx,hola,hola,https://www.google.com/,,
+72,ჰy,hola,hola,http://www.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com,,
+73,ჰz,hola,hola,http://www.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com,,
+74,ჰza,hola,hola,ftp://user:pass@acme.org,,
+75,ჰzb,hola,hola,,hola@gmail.com,
 76,ჰzc,hola,hola,,hola@hotmail.com,
 77,ჰzd,hola,hola,,hola@us.es,

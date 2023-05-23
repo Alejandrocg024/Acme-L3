@@ -6,8 +6,9 @@
 <acme:list>
 	<acme:list-column code="student.enrolment.list.label.code" path="code" />
 	<acme:list-column code="student.enrolment.list.label.motivation" path="motivation"/>
+	<acme:list-column code="student.enrolment.list.label.course-code" path="course"/>
 </acme:list>
 
-<acme:button code="student.enrolment.create" action="/student/enrolment/create"/>
+<acme:button code="student.enrolment.register" action="/student/enrolment/create"/>
 
 

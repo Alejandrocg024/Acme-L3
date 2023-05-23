@@ -4,12 +4,12 @@ auditor.auditorDashboard.form.label.num-audits.information = Gráfica sobre el n
 auditor.auditorDashboard.form.label.average-num-auditing-records = Número medio de registros de auditoría:
 auditor.auditorDashboard.form.label.max-num-auditing-records = Número máximo de registros de auditoría:
 auditor.auditorDashboard.form.label.min-num-auditing-records = Número mínimo de registros de auditoría:
-auditor.auditorDashboard.form.label.lin-dev-num-auditing-records = Desviación lineal del numero de registros de auditoría:
+auditor.auditorDashboard.form.label.lin-dev-num-auditing-records = Desviación estándar del numero de registros de auditoría:
 
 auditor.auditorDashboard.form.label.average-time-period = Media de la longitud del periodo de los registros de auditoría:
 auditor.auditorDashboard.form.label.max-time-period = Máximo de la longitud del periodo de los registros de auditoría:
 auditor.auditorDashboard.form.label.min-time-period = Mínimo de la longitud del periodo de los registros de auditoría:
-auditor.auditorDashboard.form.label.lin-dev-time-period = Desviación lineal de la longitud del periodo de los registros de auditoría:
+auditor.auditorDashboard.form.label.lin-dev-time-period = Desviación estándar de la longitud del periodo de los registros de auditoría:
 
 auditor.auditorDashboard.form.label.hands-on-audits = Número de auditorías prácticas
 auditor.auditorDashboard.form.label.theoretical-audits = Número de auditorías teóricas

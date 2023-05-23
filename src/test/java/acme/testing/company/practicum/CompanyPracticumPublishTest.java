@@ -34,13 +34,17 @@ public class CompanyPracticumPublishTest extends TestHarness {
 		super.clickOnSubmit("Publish");
 		super.checkNotErrorsExist();
 
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.checkNotButtonExists("Publish");
+
 		super.signOut();
 	}
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/company/practicum/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int recordIndex, final String code) {
-		// This test attempts to publish a job that cannot be published, yet.
+		// This test attempts to publish a practicum that cannot be published, yet.
 
 		super.signIn("company1", "company1");
 

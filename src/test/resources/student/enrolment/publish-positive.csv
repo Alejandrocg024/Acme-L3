@@ -1,0 +1,13 @@
+recordIndex,code,holderName,creditCardNumber,expirationDate,securityCode
+0,A100,E,12345678901234,23/05,123,
+1,A101,Es,12345678901234,23/05,123,
+2,A102,Este mensaje se ha realizado con el objetivo de comprobar el limite superior de este atributo que se trata de una cadena de texto que no sobrepase los 255 caracteres. Entonces buscamos que funcione este texto teniendo 255 caracteres y comprobando que vabn,12345678901234,23/05,123,
+3,A103,Este mensaje se ha realizado con el objetivo de comprobar el limite superior de este atributo que se trata de una cadena de texto que no sobrepase los 255 caracteres. Entonces buscamos que funcione este texto teniendo 254 caracteres y comprobando que vab,12345678901234,23/05,123,
+4,A104,Код красивий,12345678901234,23/05,123,
+5,A105,у меня желтый трактор,12345678901234,23/05,123,
+6,A106,我有一輛黃色拖拉機,12345678901234,23/05,123,
+7,A107,"console.log(""""Hola!"""")",12345678901234,23/05,123,
+8,A108,"<script>alert(""""hi!"""")</script>",12345678901234,23/05,123,
+9,A109,<h1>Hola Mundo!</h1>,12345678901234,23/05,123,
+10,A110,Mauro,12345678901234,23/05,123,
+11,A111,Mauro,12345678901234,22/07,123,
