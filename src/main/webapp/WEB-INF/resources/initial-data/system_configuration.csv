@@ -1,0 +1,2 @@
+key,system_currency,acepted_currencies,spam_words,spam_threshold
+system_configuration-01,EUR,"EUR,USD,GBP","sex, viagra, cialis,one million, you've won, nigeria, sexo, ganaste, un millón, has ganado",0.1

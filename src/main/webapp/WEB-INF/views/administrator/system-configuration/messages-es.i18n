@@ -1,0 +1,10 @@
+
+
+administrator.system-configuration.form.label.systemCurrency = Divisa del sistema:
+administrator.system-configuration.form.label.aceptedCurrencies = Divisas aceptadas:
+administrator.system-configuration.form.label.spamWords = Palabras consideradas spam:
+administrator.system-configuration.form.label.spamThreshold = Umbral de palabras spam:
+
+administrator.system-configuration.form.button.update = Actualizar
+
+administrator.system-configuration.form.error.system-currency = La divisa introducida no es aceptada por el sistema

@@ -12,8 +12,8 @@ public class CompanyDashboard extends AbstractForm {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	protected int[]				practicaPerCourseLastYear;
-	protected Statistic			periodLengthOfSessionsStat;
-	protected Statistic			periodLengthOfPracticaStat;
+	protected int[]				numberOfPracticaPerMonth;
+	protected Statistic			periodLengthOfSessionsStats;
+	protected Statistic			periodLengthOfPracticaStats;
 
 }

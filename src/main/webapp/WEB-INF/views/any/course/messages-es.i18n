@@ -1,0 +1,17 @@
+
+authenticated.course.list.label.title = Título
+authenticated.course.list.label.abstract$ = Resumen
+authenticated.course.list.label.price = Precio
+
+any.course.form.label.code = Código
+any.course.form.label.title = Título
+any.course.form.label.abstract$ = Resumen
+any.course.form.label.price = Precio
+any.course.form.label.furtherInformationLink = Información adicional
+any.course.form.label.lecturer = Alma mater del profesor
+
+lecturer.course.form.label.money = Precio en la divisa del sistema
+
+any.practicum.form.button.list = Lista de prácticas
+any.audit.form.button.list = Lista de auditorías
+any.tutorial.form.button.list = Lista de tutorías

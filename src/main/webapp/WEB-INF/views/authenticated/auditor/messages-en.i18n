@@ -1,0 +1,10 @@
+authenticated.auditor.form.label.firm = Firm
+authenticated.auditor.form.label.professionalId = Professional Id
+authenticated.auditor.form.label.certifications = Certifications
+authenticated.auditor.form.label.furtherInformationLink = Further Information Link (Optional)
+	
+authenticated.auditor.form.button.create = Create
+authenticated.auditor.form.button.update = Update
+authenticated.auditor.form.error.professionalId = Professional Id Duplicated
+
+authenticated.auditor.form.error.spam = The introduced text contains words that are considered spam

@@ -1,0 +1,23 @@
+Cadena de cien caracteres usada para probar cadenas de texto que tengan como máximo 100 caracteresok
+Cadena de ciento un caracteres usada para superar cadenas que tengan como máximo 100 caracteres en dp
+Cadena de noventa y nueve caracteres usada para no pasarnos del limite en cadenas de 100 caracteres
+Cadena de setenta y cinco caracteres usada para el testing formal en 75chch
+Cadena de setenta y cuatro caracteres usada para no pasar los 75 caractere
+Cadena de setenta y seis caracteres y pasarnos de setenta y cinco en pruebas
+Estoesuntextoquesepasade255caracteresEstoesuntextoquesepasade255caracteresEstoesuntextoquesepasade255caracteresEstoesuntextoquesepasade255caracteresEstoesuntextoquesepasade255caracteresEstoesuntextoquesepasade255caracteresEstoesuntextoquesepasade255caracte
+
+Precio negativo: EUR -0.01
+Precio minimo: EUR 0.01
+Precio de máximo: EUR 999999.99
+
+<script>alert("hi!")</script>
+<h1>Hola Mundo!</h1>
+თხა
+коза
+
+//URL DE 255 caracteres
+http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com
+//URL DE 254 caracteres
+http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com
+//URL DE 255 caracteres
+http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2.com

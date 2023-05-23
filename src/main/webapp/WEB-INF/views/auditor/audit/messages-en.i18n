@@ -1,0 +1,24 @@
+auditor.audit.list.label.courseCode = Course code
+auditor.audit.list.label.courseTitle = Course Title
+auditor.audit.list.label.code = Audit code
+
+
+auditor.audit.form.label.course = Course
+auditor.audit.form.label.code = Code
+auditor.audit.form.label.conclusion = Conclusion
+auditor.audit.form.label.strongPoints = Strong points
+auditor.audit.form.label.weakPoints = Weak Points
+auditor.audit.form.label.mark = Auditing Records' marks
+
+auditor.audit.form.error.spam = The introduced text contains words that are considered spam
+auditor.audit.form.error.code = Code already exists
+auditor.audit.form.error.records = Can't publish an audit without auditing records
+auditor.audit.form.error.records-published = Can't publish an audit with auditing records not published
+auditor.audit.form.button.auditing-records = Auditing records
+
+
+auditor.audit.create = Create
+auditor.audit.form.button.delete = Delete
+auditor.audit.form.button.update = Update
+auditor.audit.form.button.publish = Publish
+auditor.audit.form.button.create = Create

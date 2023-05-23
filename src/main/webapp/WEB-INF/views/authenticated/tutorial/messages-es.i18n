@@ -1,0 +1,12 @@
+
+
+authenticated.tutorial.form.label.code = Codigo:
+authenticated.tutorial.form.label.title = Titulo:
+authenticated.tutorial.form.label.abstract$ = Resumen:
+authenticated.tutorial.form.label.goal = Objetivo:
+authenticated.tutorial.form.label.assistant = Asistente:
+authenticated.tutorial.form.label.estimatedTotalTime = Tiempo total estimado:
+
+authenticated.tutorial.list.label.code = Codigo
+authenticated.tutorial.list.label.title = Titulo
+authenticated.tutorial.form.label.assistant = Asistente

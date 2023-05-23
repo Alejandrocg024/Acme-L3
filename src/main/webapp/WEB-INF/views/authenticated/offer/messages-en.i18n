@@ -1,0 +1,15 @@
+
+
+authenticated.offer.list.label.heading = Heading
+authenticated.offer.list.label.summary = Summary
+authenticated.offer.list.label.price = Price
+
+authenticated.offer.form.label.instantiationMoment = Instantation Moment
+authenticated.offer.form.label.heading = Heading
+authenticated.offer.form.label.summary = Summary
+authenticated.offer.form.label.startPeriod = Start Date
+authenticated.offer.form.label.endPeriod = End Date
+authenticated.offer.form.label.price = Price
+authenticated.offer.form.label.furtherInformationLink = Further Information
+
+authenticated.offer.form.label.money= Price in the system currency

@@ -1,0 +1,9 @@
+
+authenticated.student.form.label.statement =Statement
+authenticated.student.form.label.strongFeatures =List of strong features
+authenticated.student.form.label.weakFeatures = List of weak features 
+authenticated.student.form.label.furtherInformationLink = Further information link
+
+authenticated.student.form.button.create = Create
+authenticated.student.form.button.update = Update
+authenticated.student.form.error.spam = The introduced text is considered Spam

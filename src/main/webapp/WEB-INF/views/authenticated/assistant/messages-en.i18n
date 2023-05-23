@@ -1,0 +1,10 @@
+
+authenticated.assistant.form.label.supervisor = Supervisor
+authenticated.assistant.form.label.resume = Resume
+authenticated.assistant.form.label.expertiseFields = List of expertise Fields
+authenticated.assistant.form.label.furtherInformationLink = Further information link
+
+authenticated.assistant.form.button.create = Create
+authenticated.assistant.form.button.update = Update
+
+authenticated.assistant.form.error.spam = The introduced text is considered Spam

@@ -1,0 +1,31 @@
+
+administrator.offer.list.label.heading = Cabecera
+administrator.offer.list.label.summary = Resumen
+administrator.offer.list.label.price = Precio
+
+administrator.offer.form.label.instantiationMoment = Momento de creación
+administrator.offer.form.label.heading = Cabecera
+administrator.offer.form.label.summary = Resumen
+administrator.offer.form.label.startPeriod = Fecha de inicio
+administrator.offer.form.label.endPeriod = Fecha de fin
+administrator.offer.form.label.price = Precio
+administrator.offer.form.label.furtherInformationLink = Información adicional
+
+
+administrator.offer.form.button.create = Crear
+administrator.offer.form.button.update = Actualizar
+administrator.offer.form.button.delete = Borrar
+
+administrator.offer.form.error.price = El precio debe ser positivo y menor que 1000000
+
+administrator.offer.form.error.price2 = La moneda introducida no es aceptada por el sistema
+administrator.offer.form.error.startPeriod = La fecha de inicio debe ser mínimo un día posterior a la fecha de creación
+administrator.offer.form.error.endPeriod = La fecha de fin debe ser como mínimo una semana despues de la fecha de inicio
+
+administrator.offer.form.spam = El texto introducido está considerado como Spam
+
+administrator.offer.form.error.endPeriod.oor = La fecha debe estar entre el 01/01/2000 00:00 y el 31/12/2100 23:59
+administrator.offer.form.error.startPeriod.oor = La fecha debe estar entre el 01/01/2000 00:00 y el 31/12/2100 23:59
+administrator.offer.create=Crear oferta
+
+administrator.offer.form.label.money = Precio en la divisa del sistema

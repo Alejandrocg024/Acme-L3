@@ -1,11 +1,12 @@
 
 package acme.entities;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
-import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -13,6 +14,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.framework.data.AbstractEntity;
+import acme.framework.helpers.MomentHelper;
 import acme.roles.Company;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,7 +28,7 @@ public class Practicum extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}[0-9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}\\d{3}$", message = "{validation.code}")
 	protected String			code;
 
 	@NotBlank
@@ -35,14 +37,13 @@ public class Practicum extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			abstractInfo;
+	protected String			abstract$;
 
 	@NotBlank
 	@Length(max = 100)
 	protected String			goals;
 
-	@Digits(integer = 3, fraction = 2)
-	protected Double			estimatedTotalTime;
+	protected boolean			draftMode;
 
 	@NotNull
 	@Valid
@@ -53,5 +54,15 @@ public class Practicum extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	protected Course			course;
+
+
+	public String estimatedTotalTime(final Collection<PracticumSession> practicumSessions) {
+		double exactHours = 0.0;
+		String estimatedTotalTime;
+		for (final PracticumSession ps : practicumSessions)
+			exactHours += MomentHelper.computeDuration(ps.getStartPeriod(), ps.getEndPeriod()).getSeconds() / 3600.0;
+		estimatedTotalTime = String.format("%.2f horas ± %.2f horas", exactHours, exactHours * 0.1);
+		return estimatedTotalTime;
+	}
 
 }

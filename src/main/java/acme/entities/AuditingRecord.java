@@ -37,20 +37,25 @@ public class AuditingRecord extends AbstractEntity {
 	protected String			assessment;
 
 	@Temporal(value = TemporalType.TIMESTAMP)
-	@Past
 	@NotNull
-	protected Date				auditedPeriodBegin;
+	@Past
+	protected Date				startPeriod;
 
 	@Temporal(value = TemporalType.TIMESTAMP)
-	@PastOrPresent
 	@NotNull
-	protected Date				auditedPreriodFinish;
+	@PastOrPresent
+	protected Date				endPeriod;
 
 	@NotNull
 	protected Mark				mark;
 
+	protected boolean			draftMode;
+
 	@URL
-	protected String			link;
+	@Length(max = 255)
+	protected String			furtherInformationLink;
+
+	protected boolean			exceptional;
 
 	@ManyToOne(optional = false)
 	@NotNull

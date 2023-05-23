@@ -1,0 +1,15 @@
+
+administrator.bulletin.list.label.title = Title
+administrator.bulletin.list.label.message = Message
+administrator.bulletin.list.label.critical = Critical
+
+administrator.bulletin.form.label.instantiationMoment = Instantiation Moment
+administrator.bulletin.form.label.title = Title
+administrator.bulletin.form.label.message = Message
+administrator.bulletin.form.label.critical = Critical
+administrator.bulletin.form.label.furtherInformationLink = Further Information Link
+administrator.bulletin.form.label.confirmation = Confirm Bulletin
+administrator.bulletin.form.button.create = Post Bulletin
+
+
+administrator.bulletin.form.spam = The introduced text is considered Spam

@@ -14,7 +14,7 @@
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
-<%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
+<%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:footer-panel>
 	<acme:footer-subpanel code="master.footer.title.about">
@@ -40,3 +40,12 @@
 
 </acme:footer-panel>
 
+<jstl:if test="${banner != null}">
+	<div style="text-align:center;margin:1em 0em 0em 0em;">
+	
+		<a href="${banner.webLink}" target ="_blank">
+			<img src="${banner.pictureLink}" alt="<acme:message code='${banner.slogan}'/>"class="img-fluid rounded" style="width: 800px; height: 100px;"/>
+		</a>
+			
+	</div>
+</jstl:if>

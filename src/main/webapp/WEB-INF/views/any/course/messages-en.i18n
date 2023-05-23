@@ -1,0 +1,19 @@
+
+
+
+authenticated.course.list.label.title = Title
+authenticated.course.list.label.abstract$ = summary
+authenticated.course.list.label.price = price
+
+
+any.course.form.label.code = Code
+any.course.form.label.title = Title
+any.course.form.label.abstract$ = Summary
+any.course.form.label.price = Price
+any.course.form.label.furtherInformationLink = Further Information
+any.course.form.label.lecturer = Lecturer's alma mater
+lecturer.course.form.label.money = Price in the system currency
+
+any.practicum.form.button.list = Practicum list
+any.audit.form.button.list = Audit list
+any.tutorial.form.button.list = Tutorial list

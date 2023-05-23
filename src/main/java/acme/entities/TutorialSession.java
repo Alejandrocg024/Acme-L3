@@ -31,22 +31,22 @@ public class TutorialSession extends AbstractEntity {
 	protected String			title;
 
 	@NotBlank
-	@Length(max = 75)
-	protected String			abstractElement;
+	@Length(max = 100)
+	protected String			abstract$;
 
 	@NotNull
-	protected Nature			typeSession;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				startTimePeriod;
+	protected Nature			nature;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				endTimePeriod;
+	protected Date				startPeriod;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				endPeriod;
 
 	@URL
-	protected String			link;
+	protected String			furtherInformationLink;
 
 	@NotNull
 	@Valid

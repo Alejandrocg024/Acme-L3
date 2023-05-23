@@ -1,0 +1,15 @@
+
+administrator.bulletin.list.label.title = Título
+administrator.bulletin.list.label.message = Mensaje
+administrator.bulletin.list.label.critical = Crítico
+
+administrator.bulletin.form.label.instantiationMoment = Momento de instanciación
+administrator.bulletin.form.label.title = Título
+administrator.bulletin.form.label.message = Mensaje
+administrator.bulletin.form.label.critical = Crítico
+administrator.bulletin.form.label.furtherInformationLink = Link con información adicional
+administrator.bulletin.form.label.confirmation = Confirmar boletín
+administrator.bulletin.form.button.create = Crear boletín
+
+administrator.bulletin.form.spam = El texto es considerado como spam.
+		

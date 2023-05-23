@@ -31,18 +31,20 @@ public class PracticumSession extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			abstractInfo;
+	protected String			abstract$;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				timePeriodBegin;
+	protected Date				startPeriod;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				timePeriodFinish;
+	protected Date				endPeriod;
 
 	@URL
 	protected String			furtherInformationLink;
+
+	protected boolean			addendum;
 
 	@NotNull
 	@Valid

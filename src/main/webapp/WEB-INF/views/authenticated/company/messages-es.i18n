@@ -1,0 +1,9 @@
+authenticated.company.form.label.name = Nombre:
+authenticated.company.form.label.VAT = Número VAT:
+authenticated.company.form.label.summary = Resumen:
+authenticated.company.form.label.furtherInformationLink = Más información: (Opcional)
+
+authenticated.company.form.button.create = Crear
+authenticated.company.form.button.update = Actualizar
+
+authenticated.company.form.error.spam = Las palabras introducidas son consideradas spam

@@ -23,7 +23,11 @@ import lombok.Setter;
 @Setter
 public class Offer extends AbstractEntity {
 
+	// Serialisation identifier -----------------------------------------------
+
 	protected static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@PastOrPresent
@@ -40,15 +44,21 @@ public class Offer extends AbstractEntity {
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				availabilityPeriodBegin;
+	protected Date				startPeriod;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				availabilityPeriodFinish;
+	protected Date				endPeriod;
 
+	@NotNull
 	protected Money				price;
 
 	@URL
-	protected String			link;
+	@Length(max = 255)
+	protected String			furtherInformationLink;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 }
