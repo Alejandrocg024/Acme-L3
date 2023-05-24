@@ -29,6 +29,8 @@ public class AuditorAuditingRecordDeleteTest extends TestHarness {
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(auditRecordIndex);
 		super.clickOnButton("Auditing records");
+		super.sortListing(0, "asc");
+
 		super.clickOnListingRecord(auditingRecordRecordIndex);
 		super.clickOnSubmit("Delete");
 		super.checkNotErrorsExist();

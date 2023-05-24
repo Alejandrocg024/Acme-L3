@@ -18,8 +18,8 @@ public class AuditorAuditPublishTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/auditor/audit/publish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String code) {
-		//Nos traemos de la base de datos una auditoría que cumpla las condiciones para ser 
-		//publicada y la publicamos
+		//Buscamos en la lista de auditorías de auditor1 una auditoría que cumpla 
+		//las condiciones para ser publicada y la publicamos
 		super.signIn("auditor1", "auditor1");
 		super.clickOnMenu("Auditor", "My audits");
 		super.checkListingExists();
