@@ -29,6 +29,8 @@ public class AuditorAuditingRecordPublishTest extends TestHarness {
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(auditRecordIndex);
 		super.clickOnButton("Auditing records");
+		super.sortListing(0, "asc");
+
 		super.clickOnListingRecord(auditingRecordRecordIndex);
 		super.clickOnSubmit("Publish");
 
@@ -37,6 +39,8 @@ public class AuditorAuditingRecordPublishTest extends TestHarness {
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(auditRecordIndex);
 		super.clickOnButton("Auditing records");
+		super.sortListing(0, "asc");
+
 		super.clickOnListingRecord(auditingRecordRecordIndex);
 		super.checkNotSubmitExists("Publish");
 		super.signOut();

@@ -27,6 +27,8 @@ public class AuditorAuditingRecordShowTest extends TestHarness {
 		super.clickOnListingRecord(auditRecordIndex);
 		super.clickOnButton("Auditing records");
 		super.checkListingExists();
+		super.sortListing(0, "asc");
+
 		super.clickOnListingRecord(auditingRecordRecordIndex);
 		super.checkFormExists();
 
@@ -69,7 +71,7 @@ public class AuditorAuditingRecordShowTest extends TestHarness {
 			super.checkPanicExists();
 			super.signOut();
 
-			super.signIn("lecturer1", "lecturer1");
+			super.signIn("auditor1", "auditor1");
 			super.request("/auditor/auditing-record/show", param);
 			super.checkPanicExists();
 			super.signOut();
