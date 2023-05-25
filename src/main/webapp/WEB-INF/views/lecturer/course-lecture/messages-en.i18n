@@ -18,3 +18,5 @@ lecturer.courseLecture.form.lecture.summary = Summary of the lecture
 lecturer.courseLecture.form.lecture.info = Add the lecture with the following info to a course
 
 lecturer.courseLecture.form.lecture.delete.info = Delete lecture with the following info from a course
+
+lecturer.lectureCourse.form.error.courseNotNull = You must select a course

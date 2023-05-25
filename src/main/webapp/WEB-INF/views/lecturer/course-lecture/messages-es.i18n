@@ -18,3 +18,5 @@ lecturer.courseLecture.form.lecture.summary = Resumen de la lección
 lecturer.courseLecture.form.lecture.info = Añadir la lección con la siguiente información a un curso
 
 lecturer.courseLecture.form.lecture.delete.info = Elimimar la lección con la siguiente información a un curso
+
+lecturer.lectureCourse.form.error.courseNotNull = Tienes que seleccionar un curso
