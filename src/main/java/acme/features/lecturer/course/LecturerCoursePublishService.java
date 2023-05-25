@@ -71,7 +71,7 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 		super.state(!lectures.isEmpty(), "*", "lecturer.course.form.error.nolecture");
 		if (!lectures.isEmpty()) {
 			boolean handOnLectureInCourse;
-			handOnLectureInCourse = lectures.stream().anyMatch(x -> x.getNature().equals(Nature.HANDS_ON));
+			handOnLectureInCourse = lectures.stream().anyMatch(x -> x.getNature().equals(Nature.HANDS_ON) || x.getNature().equals(Nature.BALANCED));
 			super.state(handOnLectureInCourse, "*", "lecturer.course.form.error.nohandson");
 			boolean publishedLectures;
 			publishedLectures = lectures.stream().allMatch(x -> x.isDraftMode() == false);
