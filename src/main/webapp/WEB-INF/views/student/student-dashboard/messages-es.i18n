@@ -7,8 +7,8 @@ student.studentDashboard.form.label.hands-on-activities = Número de actividades
 
 student.studentDashboard.form.label.periods-of-activities = Estadísticas del periodo de las actividades en mi cuaderno de trabajo
 student.studentDashboard.form.label.average-periods-of-activities = Periodo medio (horas):
-student.studentDashboard.form.label.min-periods-of-activities = Periodo máximo (horas):
-student.studentDashboard.form.label.max-periods-of-activities = Periodo mínimo (horas):
+student.studentDashboard.form.label.min-periods-of-activities = Periodo mínimo (horas):
+student.studentDashboard.form.label.max-periods-of-activities = Periodo máximo (horas): 
 student.studentDashboard.form.label.lin-dev-periods-of-activities = Desviación estándar del periodo (horas):
 
 student.studentDashboard.form.label.times-of-enrolled-courses =  Estadísticas del tiempo de aprendizaje de los cursos en los que estoy matriculado/a.
