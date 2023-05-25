@@ -1,18 +1,9 @@
-# CHANGELOG.txt
-#
-# Copyright (C) 2012-2023 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
 
 En español:
 
 Acme-L3-D01 (17/02/2023)
 
-	Se han añadido todos los requisitos relacionados con el primer entregable del proyecto.
+	Se han cumplimentado todos los requisitos relacionados con el primer entregable del proyecto.
 	
 	NUEVAS CARACTERÍSTICAS:
 	 - Se ha subido el proyecto a un repositorio en GitHub y se ha personalizado con los datos del grupo
@@ -26,19 +17,15 @@ Acme-L3-D01 (17/02/2023)
 	 - Se ha elaborado un informe sobre la arquitectura WIS.
 	 - Se ha elaborado un informe sobre el testeo de un sistema con arquitectura WIS.
 	 (*) Todos estos informes mencionados se encuentran disponibles en la carpeta /reports/Group.
-	 - Individualmente, cada miembro del grupo ha implementado un nuevo botón en el menú de anónimo el cual
-	   redirige al usuario a la página principal del sitio web elegido por cada estudiante.
-	 - Individualmente, cada miembro ha elaborado un informe sobre el análisis relacionado con cada uno de
-	   los requisitos que tenían que abordar individualmente.
-	 - Individualmente, cada miembro ha elaborado un informe sobre la planificación relacionado con cada uno
-	   de los requisitos que tenían que abordar individualmente.
-	 (*) Todos estos informes individuales se encuentran disponibles en las carpetas /reports/Student #X,
-	 donde X denota el número de estudiante.
+	 - Individualmente, cada miembro del grupo ha implementado un nuevo botón en el menú de anónimo el cual redirige al usuario a la página principal del sitio web elegido por cada estudiante.
+	 - Individualmente, cada miembro ha elaborado un informe sobre el análisis relacionado con cada uno de los requisitos que tenían que abordar individualmente.
+	 - Individualmente, cada miembro ha elaborado un informe sobre la planificación relacionado con cada uno de los requisitos que tenían que abordar individualmente.
+	 (*) Todos estos informes individuales se encuentran disponibles en las carpetas /reports/Student #X, donde X denota el número de estudiante.
 	 
 
 Acme-L3-D02 (17/03/2023)
 
-	Se han añadido todos los requisitos relcionados con el segundo entregable del proyecto.
+	Se han cumplimentado todos los requisitos relacionados con el segundo entregable del proyecto.
 	
 	NUEVAS CARACTERÍSTICAS:
 	 - Se han creado las siguientes entidades relacionadas con los requisitos grupales, las cuales
@@ -49,37 +36,148 @@ Acme-L3-D02 (17/03/2023)
 	    • Offer
 	    • Note
 	    • Banner
-	 - Se ha creado el dashboard relacionado con uno de los requisitos grupales: AdministratorDashboard.
-	   Lo podemos encontrar en la carpeta /src/main/java/acme/forms.
-	 - Se han creado datos de ejemplo en diversos ficheros con formato CSV para cada una de las entidades 
-	   anteriormente mencionadas. Dichos datos los podemos encontrar en la carpeta: /src/main/webapp/WEB-INF/resources/sample-data.
+	 - Se ha creado el dashboard relacionado con uno de los requisitos grupales: AdministratorDashboard. Lo podemos encontrar en la carpeta /src/main/java/acme/forms.
+	 - Se han creado datos de ejemplo en diversos ficheros con formato CSV para cada una de las entidades anteriormente mencionadas. Dichos datos los podemos encontrar en la carpeta: /src/main/webapp/WEB-INF/resources/sample-data.
 	 - Se ha elaborado un informe sobre el análisis para la segunda entrega.
 	 - Se ha elaborado un informe sobre la planificación para la segunda entrega.
 	 (*) Estos dos informes mencionados se encuentran disponibles en la carpeta /reports/Group.
 	 - Se ha elaborado un modelo UML de dominio. Lo encontramos en la carpeta /reports.
-	 - Individualmente, cada miembro del grupo ha creado un rol. Estos son los siguientes: Lecturer, Student, Assistant,
-	   Company y Auditor. Todos se pueden encontrar en la carpeta: /src/main/java/acme/roles.
-	 - Individualmente, cada miembro del grupo ha creado una serie de entidades con sus correspondientes relaciones 
-	   de acuerdo a sus respectivos requisitos individuales. Las entidades las podemos encontrar en la carpeta:
-	   /src/main/java/acme/entities. A continuación se muestran las entidades agrupadas según las que haya elaborado 
-	   cada estudiante:
+	 - Individualmente, cada miembro del grupo ha creado un rol. Estos son los siguientes: Lecturer, Student, Assistant, Company y Auditor. Todos se pueden encontrar en la carpeta: /src/main/java/acme/roles.
+	 - Individualmente, cada miembro del grupo ha creado una serie de entidades con sus correspondientes relaciones de acuerdo a sus respectivos requisitos individuales. Las entidades las podemos encontrar en la carpeta:
+	   /src/main/java/acme/entities. A continuación se muestran las entidades agrupadas según las que haya elaborado cada estudiante:
 	    • Course, CourseLecture, Lecture
 	    • Enrolment, Activity
 	    • Tutorial, TutorialSession
 	    • Practicum, PracticumSession
 	    • Audit, AuditingRecord
-	 - Individualmente, cada miembro del grupo ha creado un dashboard. Estos son los siguientes: LecturerDashboard,
-	   StudentDashboard, AssistantDashboard, CompanyDashboard y AuditorDashboard. Todos se pueden encontrar en la
-	   carpeta /src/main/java/acme/forms.
-	 - Individualmente, cada miembro ha generado datos de prueba para las diferentes entidades y roles previamente
-	   mencionados. Todos estos datos se pueden encontrar en la carpeta /src/main/webapp/WEB-INF/resources/sample-data.
-	 - Individualmente, cada miembro ha elaborado un informe sobre el análisis relacionado con cada uno de
-	   los requisitos que tenían que abordar individualmente.
-	 - Individualmente, cada miembro ha elaborado un informe sobre la planificación relacionado con cada uno
-	   de los requisitos que tenían que abordar individualmente.
-	 (*) Todos estos informes individuales se encuentran disponibles en las carpetas /reports/Student #X,
-	 donde X denota el número de estudiante.
+	 - Individualmente, cada miembro del grupo ha creado un dashboard. Estos son los siguientes: LecturerDashboard, StudentDashboard, AssistantDashboard, CompanyDashboard y AuditorDashboard. Todos se pueden encontrar en la carpeta /src/main/java/acme/forms.
+	 - Individualmente, cada miembro ha generado datos de prueba para las diferentes entidades y roles previamente mencionados. Todos estos datos se pueden encontrar en la carpeta /src/main/webapp/WEB-INF/resources/sample-data.
+	 - Individualmente, cada miembro ha elaborado un informe sobre el análisis relacionado con cada uno de los requisitos que tenían que abordar individualmente.
+	 - Individualmente, cada miembro ha elaborado un informe sobre la planificación relacionado con cada uno de los requisitos que tenían que abordar individualmente.
+	 (*) Todos estos informes individuales se encuentran disponibles en las carpetas /reports/Student #X, donde X denota el número de estudiante.
+
+
+Acme-L3-D03 (21/04/2023)
+
+	Se han cumplimentado todos los requisitos relacionados con el tercer entregable del proyecto.
+	
+	NUEVAS CARACTERÍSTICAS:
+	 - Implementadas operaciones para los administradores sobre la configuración del sistema (muestra y actualización).
+	 - Implementadas operaciones para cualquier usuario sobre las personas (listado, muestra y publicación).
+	 - Implementadas operaciones para los usuarios autenticados sobre los boletines (listado y muestra).
+	 - Implementadas operaciones para los administradores sobre los boletines (creación).
+	 - Implementadas operaciones para los usuarios autenticados sobre las ofertas (listado y muestra).
+	 - Implementadas operaciones para los administradores sobre las ofertas (listado, muestra, creación, actualización y eliminación).
+	 - Implementadas operaciones para los usuarios autenticados sobre las notas (listado, muestra y creación).
+	 - Implementadas operaciones para cualquier usuario sobre los carteles (muestra).
+	 - Implementadas operaciones para los administradores sobre los carteles (listado, muestra, creación, actualización y eliminación).
+	 (*) Todas estas funcionalidades se encuentran disponibles en la carpeta /src/main/java/acme/features.
+	 - Se han internacionalizado las fechas, las cantidades monetarias y los Booleans cuando se muestran.
+	 - Implementado intercambio de moneda para las cantidades monetarias introducidas por los usuarios.
+	 - Implementado filtro anti-spam para prevenir que los usuarios puedan introducir datos que sean considerados spam.
+	 - Se ha elaborado un informe sobre el análisis para la tercera entrega.
+	 - Se ha elaborado un informe sobre la planificación para la tercera entrega.
+	 (*) Estos dos informes mencionados se encuentran disponibles en la carpeta /reports/Group.
 	 
+	 Individualmente, el estudiante #1 ha implementado las siguientes funcionalidades:
+	  - Implementadas operaciones para usuarios anónimos sobre las cuentas de usuario (registro y hacerse profesor).
+	  - Implementadas operaciones para los profesores sobre las cuentas de usuario (actualización del perfil).
+	  - Implementadas operaciones para cualquier usuario sobre los cursos (listado y muestra de cursos publicados).
+	  - Implementadas operaciones para los profesores sobre sus cursos (listado, muestra, creación, actualización, eliminación y publicación).
+	  - Implementadas operaciones para los profesores sobre sus clases (listado, muestra, creación, publicación, actualización y eliminación).
+	  - Implementadas operaciones para los profesores sobre su panel de profesor (muestra).
+	 
+	 Individualmente, el estudiante #2 ha implementado las siguientes funcionalidades:
+	  - Implementadas operaciones para usuarios anónimos sobre las cuentas de usuario (registro y hacerse estudiante).
+	  - Implementadas operaciones para los estudiantes sobre las cuentas de usuario (actualización de perfil).
+	  - Implementadas operaciones para cualquier estudiante sobre los cursos (listado y muestra de cursos publicados).
+	  - Implementadas operaciones para los estudiantes sobre sus matrículas (listado, muestra, registro, actualización, eliminación y finalización).
+	  - Implementadas operaciones para los estudiantes sobre sus actividades (listado, muestra, creación, actualización y eliminación).
+	  - Implementadas operaciones para los estudiantes sobre su panel de estudiante (muestra).
+	  
+	 Individualmente, el estudiante #3 ha implementado las siguientes funcionalidades:
+	  - Implementadas operaciones para usuarios anónimos sobre las cuentas de usuario (registro y hacerse asistente).
+	  - Implementadas operaciones para los asistentes sobre las cuentas de usuario (actualización del perfil).
+	  - Implementadas operaciones para los usuarios autenticados sobre los tutoriales (listado y muestra para los cursos que pueden listar).
+	  - Implementadas operaciones para los asistentes sobre sus tutoriales (listado, muestra, creación, actualización, eliminación y publicación).
+	  - Implementadas operaciones para los asistentes sobre sus sesiones de tutorial (listado, muestra, creación, actualización y eliminación).
+	  - Implementadas operaciones para los asistentes sobre su panel de asistente (muestra).
+	 
+	 Individualmente, el estudiante #4 ha implementado las siguientes funcionalidades:
+	  - Implementadas operaciones para usuarios anónimos sobre las cuentras de usuario (registro y hacerse empresa).
+	  - Implementadas operaciones para las empresas sobre las cuentas de usuarios (actualización del perfil).
+	  - Implementadas operaciones para los usuarios autenticados sobre las prácticas (listado y muestra para los cursos que pueden listar).
+	  - Implementadas operaciones para las empresas sobre sus prácticas (listado, muestra, creación, actualización, eliminación y publicación).
+	  - Implementadas operaciones para las empresas sobre sus sesiones de práctica (listado, muestra, creación, actualización y eliminación).
+	  - Implementadas operaciones para las empresas sobre su panel de estudiante (muestra).
+	 
+	 Individualmente, el estudiante #5 ha implementado las siguientes funcionalidades:
+	  - Implementadas operaciones para usuarios anónimos sobre las cuentas de usuario (registro y hacerse auditor).
+	  - Implementadas operaciones para los auditores sobre las cuentas de usuario (actualización del perfil).
+	  - Implementadas operaciones para los usuarios autenticados sobre las auditorías (listado y muestra para los cursos que pueden listar).
+	  - Implementadas operaciones para los auditores sobre sus auditorías (listado, muestra, creación, actualización, eliminación y publicación).
+	  - Implementadas operaciones para los auditores sobre sus registros de auditoría (listado, muestra, creación, actualización, eliminación y publicación).
+	  - Implementadas operaciones para los auditores sobre su panel de auditor (muestra).
+	 
+	 (*) Todas estas funcionalidades se encuentran disponibles en la carpeta /src/main/java/acme/features.
+	 
+	 - Individualmente, cada miembro ha elaborado un informe sobre el análisis relacionado con cada uno de los requisitos que tenían que abordar individualmente.
+	 - Individualmente, cada miembro ha elaborado un informe sobre la planificación relacionado con cada uno de los requisitos que tenían que abordar individualmente.
+	 (*) Todos estos informes individuales se encuentran disponibles en las carpetas /reports/Student #X, donde X denota el número de estudiante.
+
+
+Acme-L3-D04 (26/05/2023)
+	 
+	 Se han cumplimentado todos los requisitos relacionados con el cuarto entregable del proyecto.
+	 
+	 NUEVAS CARACTERÍSTICAS:
+	  - Se ha creado un conjunto de pruebas para las operaciones para cualquier usuario sobre las personas.
+	  (*) Este conjunto de pruebas se puede encontrar en la carpeta /src/test/java/acme/testing/any/peep.
+	  - Se ha creado datos de prueba para el conjunto de pruebas.
+	  (*) Estos datos de prueba se pueden encontrar en la carpeta /src/test/resources/any/peep.
+	  - Se ha unificado todos los informes de análisis.
+	  - Se ha unificado todos los informes sobre la planificación y se ha incluido la planificación de la cuarta entrega.
+	  - Se ha elaborado un informe de pruebas.
+	  (*) Estos tres informes mencionados se encuentran disponibles en la carpeta /reports/Group.
+	  
+	  Individualmente, el estudiante #1 ha implementado lo siguiente:
+	   - Se ha creado un conjunto de pruebas para las operaciones para los profesores sobre los cursos y las clases.
+	   (*) Este conjunto de pruebas se puede encontrar en la carpeta /src/test/java/acme/testing/lecturer.
+	   - Se ha creado datos de prueba para el conjunto de pruebas.
+	   (*) Estos datos de prueba se pueden encontrar en la carpeta /src/test/resources/lecturer.
+	  
+	  Individualmente, el estudiante #2 ha implementado lo siguiente:
+	   - Se ha creado un conjunto de pruebas para las operaciones para los estudiantes sobre las matrículas y las actividades.
+	   (*) Este conjunto de pruebas se puede encontrar en la carpeta /src/test/java/acme/testing/student.
+	   - Se ha creado datos de prueba para el conjunto de pruebas.
+	   (*) Estos datos de prueba se pueden encontrar en la carpeta /src/test/resources/student.
+	  
+	  Individualmente, el estudiante #3 ha implementado lo siguiente:
+	   - Se ha creado un conjunto de pruebas para las operaciones para los asistentes sobre los tutoriales y las sesiones de tutorial.
+	   (*) Este conjunto de pruebas se puede encontrar en la carpeta src/test/java/acme/testing/assistant.
+	   - Se ha creado datos de prueba para el conjunto de pruebas.
+	   (*) Estos datos de prueba se pueden encontrar en la carpeta /src/test/resources/assistant.
+	  
+	  Individualmente, el estudiante #4 ha implementado lo siguiente:
+	   - Se ha creado un conjunto de pruebas para las operaciones para las empresas sobre las prácticas y las sesiones de práctica.
+	   (*) Este conjunto de pruebas se puede encontrar en la carpeta src/test/java/acme/testing/company.
+	   - Se ha creado datos de prueba para el conjunto de pruebas.
+	   (*) Estos datos de prueba se pueden encontrar en la carpeta /src/test/resources/company.
+	  
+	  Individualmente, el estudiante #5 ha implementado lo siguiente:
+	   - Se ha creado un conjunto de pruebas para las operaciones para los auditores sobre las auditorías y los registros de auditoría.
+	   (*) Este conjunto de pruebas se puede encontrar en la carpeta /src/test/java/acme/testing/auditor.
+	   - Se ha creado datos de prueba para el conjunto de pruebas.
+	   (*) Estos datos de prueba se pueden encontrar en la carpeta /src/test/resources/auditor.
+	  
+	  - Individualmente, cada estudiante ha unificado todos sus informes de análisis.
+	  - Individualmente, cada estudiante ha unificado todos sus informes sobre la planificación y ha incluido la planificación de la cuarta entrega.
+	  - Individualmente, cada estudiante ha elaborado un informe de pruebas.
+	  (*) Todos estos informes individuales se encuentran disponibles en las carpetas /reports/Student #X, donde X denota el número de estudiante.  
+
+
+	
+	
 	 
 In English:
 
@@ -112,44 +210,151 @@ Acme-L3-D01 (17/02/2023)
 	 
 Acme-L3-D02 (17/03/2023)
 
-	All the requirements related with the second deliverable of the project have been completed and uploaded 
-	to the repository.
+	All the requirements related with the second deliverable of the project have been completed and uploaded to the repository.
 	
 	NEW FEATURES:
-	 - It has been created new entities related to group requirements. These entities can be found in the folder:
-	   /src/main/java/acme/entities. These are the entities that we mention:
+	 - It has been created new entities related to group requirements. These entities can be found in the folder: /src/main/java/acme/entities. These are the entities that we mention:
 	    • SystemConfiguration
 	    • Peep
 	    • Bulletin
 	    • Offer
 	    • Note
 	    • Banner
-	 - It has been created a new dashboard according to one of the group requirements: AdministratorDashboard.
-	   It can be found in the folder: /src/main/java/acme/forms.
-	 - It has been created sample data files for each entity mentioned before. These data files can be found in the
-	   folder: /src/main/webapp/WEB-INF/resources/sample-data.
+	 - It has been created a new dashboard according to one of the group requirements: AdministratorDashboard. It can be found in the folder: /src/main/java/acme/forms.
+	 - It has been created sample data files for each entity mentioned before. These data files can be found in the folder: /src/main/webapp/WEB-INF/resources/sample-data.
 	 - An analysis report has been produced for the second deliverable.
 	 - A planning report has been produced for the second deliverable.
 	 (*) Both reports can be found in the folder: /reports/Group.
 	 - An UML domain model has been created. It can be found in the folder: /reports.
-	 - Individually, each member of the group has created a new role. These roles are the following ones: Lecturer, 
-	   Student, Assistant, Company and Auditor. They can be found in the folder: /src/main/java/acme/roles.
-	 - Individually, each member of the group has created new entities with their corresponding relationships 
-	   according to individual requirements. These entities can be found in the folder: /src/main/java/acme/entities. 
+	 - Individually, each member of the group has created a new role. These roles are the following ones: Lecturer, Student, Assistant, Company and Auditor. They can be found in the folder: /src/main/java/acme/roles.
+	 - Individually, each member of the group has created new entities with their corresponding relationships according to individual requirements. These entities can be found in the folder: /src/main/java/acme/entities. 
 	   These entities are the following ones grouped according to those produced by each student:
 	    • Course, CourseLecture, Lecture
 	    • Enrolment, Activity
 	    • Tutorial, TutorialSession
 	    • Practicum, PracticumSession
 	    • Audit, AuditingRecord
-	 - Individually, each member of the group has created a dashboard. These are the following ones: LecturerDashboard,
-	   StudentDashboard, AssistantDashboard, CompanyDashboard y AuditorDashboard. They can be found in the folder:
-	   /src/main/java/acme/forms.
-	 - Individually, each member of the group has pruduced sample data files for the entities and roles that have been
-	   mentioned before. These files can be found in the folder: /src/main/webapp/WEB-INF/resources/sample-data.
-	 - Individually, each member of the group has produced an analysis report related to their personal tasks
-	   they had to complete for the second deliverable.
-	 - Individually, each member of the group has produced a planning report related to their personal tasks
-	   they had to complete for the second deliverable.
-	 (*) All of these individual reports can be found in the folder /reports/Student #X, where X means the
-	 number of the student.
+	 - Individually, each member of the group has created a dashboard. These are the following ones: LecturerDashboard, StudentDashboard, AssistantDashboard, CompanyDashboard y AuditorDashboard. They can be found in the folder: /src/main/java/acme/forms.
+	 - Individually, each member of the group has pruduced sample data files for the entities and roles that have been mentioned before. These files can be found in the folder: /src/main/webapp/WEB-INF/resources/sample-data.
+	 - Individually, each member of the group has produced an analysis report related to their personal tasks they had to complete for the second deliverable.
+	 - Individually, each member of the group has produced a planning report related to their personal tasks they had to complete for the second deliverable.
+	 (*) All of these individual reports can be found in the folder /reports/Student #X, where X means the number of the student.
+	 
+
+Acme-L3-D03 (21/04/2023)
+
+	All the requirements related with the third deliverable of the project have been completed and uploaded to the repository.
+	
+	NEW FEATURES:
+	 - Implemented operations by administrators on the system configuration (show and update).
+	 - Implemented operations by any principals on peeps (list, show and publish).
+	 - Implemented operations by authenticated principals on bulletins (list and show).
+	 - Implemented operations by administrators on bulletins (post).
+	 - Implemented operations by authenticated principals on offers (list and show).
+	 - Implemented operations by administrators on offers (list, show, post, update and delete).
+	 - Implemented operations by authenticated principals on notes (list, show and post).
+	 - Implemented operations by any principals on banners (display).
+	 - Implemented operations by administrators on banners (list, show, create, update and delete).
+	 (*) All of these features can be found in the folder /src/main/java/acme/features.
+	 - Internationalization of moments, money amounts an Booleans.
+	 - Implemented money exchange for money amounts entered by users.
+	 - Implemented an anti-spam filter in order to prevent users from introducing data considered as spam.
+	 - An analysis report has been produced for the third deliverable.
+	 - A planning report has been produced for the third deliverable.
+	 (*) Both reports can be found in the folder: /reports/Group.
+	
+	 Individually, student #1 has implemented the following features:
+	  - Implemented operations by anonumous principals on user accounts (sign up and become a lecturer).
+	  - Implemented operations by lecturers on user accounts (update profile).
+	  - Implemented operations by any principals on courses (list and show published courses).
+	  - Implemented operations by lecturers on courses (list, show, create, update, delete and publish).
+	  - Implemented operations by lecturers on lectures (list, show, create, publish, update and delete).
+	  - Implemented operations by lecturers on lecturer dashboards (show).
+	
+	 Individually, student #2 has implemented the following features:
+	  - Implemented operations by anonymous principals on user accounts (sign up and become a student).
+	  - Implemented operations by students on user accounts (update profile).
+	  - Implemented operations by any students on courses (list and show published courses).
+	  - Implemented operations by students on enrolments (list, show, register, update, delete and finalise).
+	  - Implemented operations by students on activities (list, show, create, update and delete).
+	  - Implemented operations by students on student dashboards (show).
+	
+	 Individually, student #3 has implemented the following features:
+	  - Implemented operations by anonymous principals on user accounts (sign up and become an assistant).
+	  - Implemented operations by assistants on user accounts (update profile).
+	  - Implemented operations by any authenticated principals on tutorials (list and show for the courses they can list).
+	  - Implemented operations by assistants on tutorials (list, show, create, update, delete and publish).
+	  - Implemented operations by assistants on tutorial sessions (list, show, create, update and delete).
+	  - Implemented operations by assistants on assistant dashboards (show).
+	
+	 Individually, student #4 has implemented the following features:
+	  - Implemented operations by anonymous principals on user accounts (sign up and become a company).
+	  - Implemented operations by companies on user accounts (update profile).
+	  - Implemented operations by any authenticated principals on practica (list and show for the courses they can list).
+	  - Implemented operations by companies on practica (list, show, create, update, delete and publish).
+	  - Implemented operations by companies on practicum sessions (list, show, create, update and delete).
+	  - Implemented operations by companies on company dashboards (show).
+	
+	 Individually, student #5 has implemented the following features:
+	  - Implemented operations by anonymous principals on user accounts (sign up and become an auditor).
+	  - Implemented operations by auditors on user accounts (update profile).
+	  - Implemented operations by any authenticated principals on audits (list and show for the courses they can list).
+	  - Implemented operations by auditors on audits (list, show, create, update, delete and publish).
+	  - Implemented operations by auditors on auditing records (list, show, create, update, delete and publish).
+	  - Implemented operations by auditors on auditor dashboards (show).
+	  
+	 (*) All of these features can be found in the folder /src/main/java/acme/features.
+	
+	 - Individually, each member of the group has produced an analysis report related to their personal tasks they had to complete for the third deliverable.
+	 - Individually, each member of the group has produced a planning report related to their personal tasks they had to complete for the third deliverable.
+	 (*) All of these individual reports can be found in the folder /reports/Student #X, where X means the number of the student.
+	 
+	 
+Acme-L3-D04 (26/05/2023)
+	 
+	 All the requirements related with the fourth deliverable of the project have been completed and uploaded to the repository.
+	 
+	 NEW FEATURES:
+	  - A test suite for the operations by any principals on peeps has been produced.
+	  (*) This test suite can be found in the folder /src/test/java/acme/testing/any/peep.
+	  - Testing data for the test suite has been produced.
+	  (*) This testing data can be found in the folder /src/test/resources/any/peep.
+	  - All analysis reports have been unified.
+	  - All planning reports have been unified and planning for the fourth deliverable has been included.
+	  - A testing report has been produced.
+	  (*) These reports can be found in the folder: /reports/Group.
+	  
+	  Individually, student #1 has implemented the following things:
+	   - A test suite for the operations by lecturers on courses and lectures has been produced.
+	   (*) This test suite can be found in the folder /src/test/resources/lecturer.
+	   - Testing data for the test suite has been produced.
+	   (*) This testing data can be found in the folder /src/test/resources/lecturer.
+	  
+	  Individually, student #2 has implemented the following things:
+	   - A test suite for the operations by students on enrolments and activities has been produced.
+	   (*) This test suite can be found in the folder /src/test/resources/student.
+	   - Testing data for the test suite has been produced.
+	   (*) This testing data can be found in the folder /src/test/resources/student.
+	  
+	  Individually, student #3 has implemented the following things:
+	   - A test suite for the operations by assistants on tutorials and tutorial sessions has been produced.
+	   (*) This test suite can be found in the folder /src/test/resources/assistant.
+	   - Testing data for the test suite has been produced.
+	   (*) This testing data can be found in the folder /src/test/resources/assistant.
+	  
+	  Individually, student #4 has implemented the following things:
+	   - A test suite for the operations by companies on practica and practicum sessions has been produced.
+	   (*) This test suite can be found in the folder /src/test/resources/company.
+	   - Testing data for the test suite has been produced.
+	   (*) This testing data can be found in the folder /src/test/resources/company.
+	  
+	  Individually, student #5 has implemented the following things:
+	   - A test suite for the operations by auditors on audits and auditing records has been produced.
+	   (*) This test suite can be found in the folder /src/test/resources/auditor.
+	   - Testing data for the test suite has been produced.
+	   (*) This testing data can be found in the folder /src/test/resources/auditor.
+	  
+	  - Individually, each student has unified all of his analysis reports.
+	  - Individually, each student has unified all of his planning reports and has included the planning for the fourth deliverable.
+	  - Individually, each student has produced a testing report.
+	  (*) All of these individual reports can be found in the folder /reports/Student #X, where X means the number of the student.

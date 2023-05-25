@@ -64,7 +64,7 @@ public class AuditorAuditDeleteTest extends TestHarness {
 
 	@Test
 	public void test301Hacking() {
-		//Nos logueamos como auditor1 e intentamos borrar sus auditorías publicadas, cosa el sistema no debe permitir
+		//Nos logueamos como auditor1 e intentamos borrar sus auditorías publicadas, cosa que el sistema no debe permitir
 		super.signIn("auditor1", "auditor1");
 		final Collection<Audit> audits = this.repository.findPublishedAuditsByAuditorUsername("auditor1");
 		for (final Audit a : audits) {

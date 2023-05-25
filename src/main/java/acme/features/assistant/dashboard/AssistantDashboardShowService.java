@@ -50,9 +50,6 @@ public class AssistantDashboardShowService extends AbstractService<Assistant, As
 		final Map<Nature, Integer> aux = this.repository.tutorialPerNature(tutorialPerAssistant);
 		final Map<String, Integer> tutorialPerNature = new HashMap<>();
 		for (final Nature a : aux.keySet()) {
-			tutorialPerNature.put("THEORETICAL", 0);
-			tutorialPerNature.put("HANDS_ON", 0);
-			tutorialPerNature.put("BALANCED", 0);
 			if (a.equals(Nature.THEORETICAL))
 				tutorialPerNature.put("THEORETICAL", aux.get(Nature.THEORETICAL));
 			if (a.equals(Nature.HANDS_ON))
@@ -74,7 +71,7 @@ public class AssistantDashboardShowService extends AbstractService<Assistant, As
 		statsOfTutorial.calcAverage(this.durationOfTutorials);
 		statsOfTutorial.calcMax(this.durationOfTutorials);
 		statsOfTutorial.calcMin(this.durationOfTutorials);
-		statsOfTutorial.calcLinDev(this.durationOfTutorials);
+		statsOfTutorial.calcDev(this.durationOfTutorials);
 		statsOfTutorial.setCount(this.durationOfTutorials.size());
 		dashboard.setTimeOfTutorialsStats(statsOfTutorial);
 		final Statistic statsOfTutorialSessions = new Statistic();
@@ -88,7 +85,7 @@ public class AssistantDashboardShowService extends AbstractService<Assistant, As
 		statsOfTutorialSessions.calcAverage(this.durationOfTutorialSessions);
 		statsOfTutorialSessions.calcMax(this.durationOfTutorialSessions);
 		statsOfTutorialSessions.calcMin(this.durationOfTutorialSessions);
-		statsOfTutorialSessions.calcLinDev(this.durationOfTutorialSessions);
+		statsOfTutorialSessions.calcDev(this.durationOfTutorialSessions);
 		statsOfTutorialSessions.setCount(this.durationOfTutorialSessions.size());
 		dashboard.setTimeOfSessionsStats(statsOfTutorialSessions);
 		super.getBuffer().setData(dashboard);

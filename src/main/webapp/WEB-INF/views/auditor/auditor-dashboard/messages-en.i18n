@@ -6,10 +6,10 @@ auditor.auditorDashboard.form.label.max-num-auditing-records = Max num of auditi
 auditor.auditorDashboard.form.label.min-num-auditing-records = Min num of auditing records:
 auditor.auditorDashboard.form.label.lin-dev-num-auditing-records = Standard deviation of num of auditing records:
 
-auditor.auditorDashboard.form.label.average-time-period = Average period length of auditing records:
-auditor.auditorDashboard.form.label.max-time-period = Max period length of auditing records:
-auditor.auditorDashboard.form.label.min-time-period = Min period length of auditing records:
-auditor.auditorDashboard.form.label.lin-dev-time-period = Standard deviation of period length of auditing records:
+auditor.auditorDashboard.form.label.average-time-period = Average period length of auditing records (hours):
+auditor.auditorDashboard.form.label.max-time-period = Max period length of auditing records (hours):
+auditor.auditorDashboard.form.label.min-time-period = Min period length of auditing records (hours):
+auditor.auditorDashboard.form.label.lin-dev-time-period = Standard deviation of period length of auditing records (hours):
 
 auditor.auditorDashboard.form.label.hands-on-audits = Number of hand-on audits
 auditor.auditorDashboard.form.label.theoretical-audits = Number of theoretical audits

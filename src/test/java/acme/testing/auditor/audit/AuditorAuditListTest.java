@@ -12,6 +12,8 @@ public class AuditorAuditListTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/auditor/audit/list-all-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String code, final String courseCode, final String courseTitle) {
+		//Entramos como auditor1 y listamos todas sus audditorías, comprobando
+		//que los campos que se muestran tienen los valores esperados.
 		super.signIn("auditor1", "auditor1");
 		super.clickOnMenu("Auditor", "My audits");
 		super.checkListingExists();

@@ -12,7 +12,7 @@ public class CompanyPracticumListTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/company/practicum/list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String code, final String title, final String course) {
-		// This test authenticates as a company, lists his or her jobs, and then checks that the listing has the expected data.
+		// This test authenticates as a company, lists his or her practica, and then checks that the listing has the expected data.
 
 		super.signIn("company1", "company1");
 

@@ -17,7 +17,7 @@ lecturer.course.form.label.courseType= Course Type
 lecturer.course.form.label.money = Price in the system currency
 
 lecturer.course.form.error.nolecture = This course has no lectures
-lecturer.course.form.error.nohandson = This course has no hands-on lectures
+lecturer.course.form.error.nohandson = This course is purely theoretical 
 lecturer.course.form.error.lecturenp = Some lecture of this course is not published
 
 lecturer.course.form.error.spam = The introduced text is considered Spam

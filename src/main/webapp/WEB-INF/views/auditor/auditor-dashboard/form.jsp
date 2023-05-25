@@ -37,7 +37,7 @@
 			<acme:message code="auditor.auditorDashboard.form.label.lin-dev-num-auditing-records"/>
 		</th>
 		<td>
-			<acme:print value="${numOfAuditingRecordsStats.getLinDev()}"/>
+			<acme:print value="${numOfAuditingRecordsStats.getDev()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -69,7 +69,7 @@
 			<acme:message code="auditor.auditorDashboard.form.label.lin-dev-time-period"/>
 		</th>
 		<td>
-			<acme:print value="${periodOfAuditingRecordStats.getLinDev()}"/>
+			<acme:print value="${periodOfAuditingRecordStats.getDev()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -176,7 +176,7 @@
 							<jstl:out value="${numOfAuditingRecordsStats.getAverage()}"/>, 
 							<jstl:out value="${numOfAuditingRecordsStats.getMax()}"/>, 
 							<jstl:out value="${numOfAuditingRecordsStats.getMin()}"/>,
-							<jstl:out value="${numOfAuditingRecordsStats.getLinDev()}"/>
+							<jstl:out value="${numOfAuditingRecordsStats.getDev()}"/>
 						],
 						backgroundColor: [
 							'rgb(250, 235, 215)',
