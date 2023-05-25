@@ -30,7 +30,6 @@
 		<acme:menu-option code="master.menu.any">
 			<acme:menu-suboption code="master.menu.any.course" action="/any/course/list"/>
 			<acme:menu-suboption code="master.menu.any.peep" action="/any/peep/list"/>
-			<acme:menu-separator/>
 			
 		</acme:menu-option>
 		
@@ -55,9 +54,6 @@
 			<acme:menu-suboption code="master.menu.authenticated.bulletin.create" action="/administrator/bulletin/create" access="isAuthenticated()"/>
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
-		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.lecturer" access="hasRole('Lecturer')">
 			<acme:menu-suboption code="master.menu.lecturer.course" action="/lecturer/course/list"/>
@@ -75,9 +71,6 @@
 			<acme:menu-suboption code="master.menu.auditor.auditor-dashboard" action="/auditor/auditor-dashboard/show"/>
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
-		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.assistant" access="hasRole('Assistant')">
 			<acme:menu-suboption code="master.menu.assistant.tutorial" action="/assistant/tutorial/list"/>
