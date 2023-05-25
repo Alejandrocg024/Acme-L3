@@ -1,13 +1,19 @@
 
 package acme.features.company.dashboard;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.datatypes.Statistic;
+import acme.entities.Practicum;
+import acme.entities.PracticumSession;
 import acme.forms.CompanyDashboard;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Company;
 
@@ -35,14 +41,8 @@ public class CompanyDashboardShowService extends AbstractService<Company, Compan
 		Statistic periodLengthOfSessionsStats;
 		Statistic periodLengthOfPracticaStats;
 
-		Double averageLengthOfPracticumSessionsPerCompany;
-		Double deviationLengthOfPracticumSessionsPerCompany;
-		Double minimumLengthOfPracticumSessionsPerCompany;
-		Double maximunLengthOfPracticumSessionsPerCompany;
-
-		Double averageLengthOfPracticumPerCompany;
-		Double minimumLengthOfPracticumPerCompany;
-		Double maximumLengthOfPracticumPerCompany;
+		final Collection<Double> durationOfPractica;
+		final Collection<Double> durationOfPracticumSessions;
 
 		Principal principal;
 		int companyId;
@@ -52,26 +52,33 @@ public class CompanyDashboardShowService extends AbstractService<Company, Compan
 
 		numberOfPracticaPerMonth = this.repository.getNumberOfPracticaPerMonth(companyId);
 
-		averageLengthOfPracticumSessionsPerCompany = this.repository.averageLengthOfPracticumSessionsPerCompany(companyId).orElse(0.0);
-		deviationLengthOfPracticumSessionsPerCompany = this.repository.deviationLengthOfPracticumSessionsPerCompany(companyId).orElse(0.0);
-		minimumLengthOfPracticumSessionsPerCompany = this.repository.minimumLengthOfPracticumSessionsPerCompany(companyId).orElse(0.0);
-		maximunLengthOfPracticumSessionsPerCompany = this.repository.maximumLengthOfPracticumSessionsPerCompany(companyId).orElse(0.0);
-
-		periodLengthOfSessionsStats = new Statistic();
-		periodLengthOfSessionsStats.setAverage(averageLengthOfPracticumSessionsPerCompany);
-		periodLengthOfSessionsStats.setLinDev(deviationLengthOfPracticumSessionsPerCompany);
-		periodLengthOfSessionsStats.setMin(minimumLengthOfPracticumSessionsPerCompany);
-		periodLengthOfSessionsStats.setMax(maximunLengthOfPracticumSessionsPerCompany);
-
-		averageLengthOfPracticumPerCompany = this.repository.averageLengthOfPracticumPerCompany(companyId).orElse(0.0);
-		minimumLengthOfPracticumPerCompany = this.repository.minimumLengthOfPracticumPerCompany(companyId).orElse(0.0);
-		maximumLengthOfPracticumPerCompany = this.repository.maximumLengthOfPracticumPerCompany(companyId).orElse(0.0);
+		durationOfPractica = new ArrayList<Double>();
+		for (final Practicum p : this.repository.findPracticaByCompanyId(companyId)) {
+			final Collection<PracticumSession> practicumSessions = this.repository.findPracticumSessionsByPracticumId(p.getId());
+			Double exactHours = 0.0;
+			if (practicumSessions != null)
+				for (final PracticumSession ps : practicumSessions)
+					exactHours += MomentHelper.computeDuration(ps.getStartPeriod(), ps.getEndPeriod()).getSeconds() / 3600.0;
+			durationOfPractica.add(exactHours);
+		}
 
 		periodLengthOfPracticaStats = new Statistic();
-		periodLengthOfPracticaStats.setAverage(averageLengthOfPracticumPerCompany);
-		periodLengthOfPracticaStats.calcLinDev(this.repository.deviationLengthOfPracticumPerCompany(companyId));
-		periodLengthOfPracticaStats.setMin(minimumLengthOfPracticumPerCompany);
-		periodLengthOfPracticaStats.setMax(maximumLengthOfPracticumPerCompany);
+		periodLengthOfPracticaStats.calcAverage(durationOfPractica);
+		periodLengthOfPracticaStats.calcDev(durationOfPractica);
+		periodLengthOfPracticaStats.calcMin(durationOfPractica);
+		periodLengthOfPracticaStats.calcMax(durationOfPractica);
+
+		durationOfPracticumSessions = new ArrayList<Double>();
+		for (final PracticumSession ps : this.repository.findPracticumSessionsByCompanyId(companyId)) {
+			final Double duration = MomentHelper.computeDuration(ps.getStartPeriod(), ps.getEndPeriod()).getSeconds() / 3600.0;
+			durationOfPracticumSessions.add(duration);
+		}
+
+		periodLengthOfSessionsStats = new Statistic();
+		periodLengthOfSessionsStats.calcAverage(durationOfPracticumSessions);
+		periodLengthOfSessionsStats.calcDev(durationOfPracticumSessions);
+		periodLengthOfSessionsStats.calcMin(durationOfPracticumSessions);
+		periodLengthOfSessionsStats.calcMax(durationOfPracticumSessions);
 
 		dashboard = new CompanyDashboard();
 		dashboard.setNumberOfPracticaPerMonth(numberOfPracticaPerMonth);
