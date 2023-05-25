@@ -48,7 +48,7 @@ public class Statistic {
 		if (!values.isEmpty()) {
 			aux = 0.0;
 			for (final Double value : values)
-				aux += Math.pow(value + this.average, 2);
+				aux += Math.pow(value - this.average, 2);
 			res = Math.sqrt(aux / values.size());
 		}
 		this.linDev = res;
