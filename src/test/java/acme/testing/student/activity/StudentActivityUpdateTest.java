@@ -131,7 +131,7 @@ public class StudentActivityUpdateTest extends TestHarness {
 			super.signOut();
 
 			super.signIn("auditor1", "auditor1");
-			super.request("/company/practicum-session/update", param);
+			super.request("/student/activity/update", param);
 			super.checkPanicExists();
 			super.signOut();
 		}
