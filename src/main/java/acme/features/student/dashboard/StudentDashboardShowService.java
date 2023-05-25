@@ -12,6 +12,7 @@
 
 package acme.features.student.dashboard;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -21,8 +22,10 @@ import org.springframework.stereotype.Service;
 
 import acme.datatypes.Nature;
 import acme.datatypes.Statistic;
+import acme.entities.Activity;
 import acme.forms.StudentDashboard;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Student;
 
@@ -49,7 +52,7 @@ public class StudentDashboardShowService extends AbstractService<Student, Studen
 
 	@Override
 	public void load() {
-		StudentDashboard dashboard;
+		final StudentDashboard dashboard;
 		final Student student;
 
 		final Map<Nature, Integer> numberOfActivitiesByNature;
@@ -58,6 +61,7 @@ public class StudentDashboardShowService extends AbstractService<Student, Studen
 		final Integer theoreticalActivities;
 
 		final Statistic periodsOfActivitiesStats;
+		final Collection<Activity> activities;
 		final Collection<Double> periodsOfActivities;
 
 		final Statistic timesOfEnrolledCoursesStats;
@@ -76,7 +80,10 @@ public class StudentDashboardShowService extends AbstractService<Student, Studen
 
 		//periodsOfActivitiesStats
 		periodsOfActivitiesStats = new Statistic();
-		periodsOfActivities = this.repository.findPeriodsOfActivitiesByStudent(student);
+		activities = this.repository.findActivitiesByStudent(student);
+		periodsOfActivities = new ArrayList<>();
+		for (final Activity a : activities)
+			periodsOfActivities.add(MomentHelper.computeDuration(a.getStartPeriod(), a.getEndPeriod()).getSeconds() / 3600.0);
 		periodsOfActivitiesStats.calcAverage(periodsOfActivities);
 		periodsOfActivitiesStats.calcDev(periodsOfActivities);
 		periodsOfActivitiesStats.calcMin(periodsOfActivities);
