@@ -4,7 +4,6 @@ package acme.features.company.dashboard;
 import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 import java.util.Date;
-import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -27,29 +26,8 @@ public interface CompanyDashboardRepository extends AbstractRepository {
 	@Query("select ps from PracticumSession ps where ps.practicum.id = :practicumId")
 	Collection<PracticumSession> findPracticumSessionsByPracticumId(int practicumId);
 
-	@Query("select avg(datediff(ps.endPeriod, ps.startPeriod)) * 24 from PracticumSession ps where ps.practicum.company.id = :companyId")
-	Optional<Double> averageLengthOfPracticumSessionsPerCompany(int companyId);
-
-	@Query("select stddev(datediff(ps.endPeriod, ps.startPeriod)) * 24 from PracticumSession ps where ps.practicum.company.id = :companyId")
-	Optional<Double> deviationLengthOfPracticumSessionsPerCompany(int companyId);
-
-	@Query("select min(datediff(ps.endPeriod, ps.startPeriod)) * 24 from PracticumSession ps where ps.practicum.company.id = :companyId")
-	Optional<Double> minimumLengthOfPracticumSessionsPerCompany(int companyId);
-
-	@Query("select max(datediff(ps.endPeriod, ps.startPeriod)) * 24 from PracticumSession ps where ps.practicum.company.id = :companyId")
-	Optional<Double> maximumLengthOfPracticumSessionsPerCompany(int companyId);
-
-	@Query("select avg(select sum(datediff(ps.endPeriod, ps.startPeriod) * 24) from PracticumSession ps where ps.practicum.company.id = :companyId and ps.practicum.id = p.id) from Practicum p")
-	Optional<Double> averageLengthOfPracticumPerCompany(int companyId);
-
-	@Query("select sum(datediff(ps.endPeriod, ps.startPeriod) * 24) from PracticumSession ps where ps.practicum.company.id = :companyId group by ps.practicum.id")
-	Collection<Double> deviationLengthOfPracticumPerCompany(int companyId);
-
-	@Query("select min(select sum(datediff(ps.endPeriod, ps.startPeriod) * 24) from PracticumSession ps where ps.practicum.company.id = :companyId and ps.practicum.id = p.id) from Practicum p")
-	Optional<Double> minimumLengthOfPracticumPerCompany(int companyId);
-
-	@Query("select max(select sum(datediff(ps.endPeriod, ps.startPeriod) * 24) from PracticumSession ps where ps.practicum.company.id = :companyId and ps.practicum.id = p.id) from Practicum p")
-	Optional<Double> maximumLengthOfPracticumPerCompany(int companyId);
+	@Query("select ps from PracticumSession ps where ps.practicum.company.id = :companyId")
+	Collection<PracticumSession> findPracticumSessionsByCompanyId(int companyId);
 
 	default int[] countMonthsPerPracticum(final Collection<PracticumSession> practicumSessions) {
 		final int[] monthsPerPracticum = new int[12];
