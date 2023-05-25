@@ -19,7 +19,7 @@ public class Statistic {
 
 	Double	min;
 
-	Double	linDev;
+	Double	dev;
 
 
 	public void calcAverage(final Collection<Double> values) {
@@ -41,7 +41,7 @@ public class Statistic {
 		final Double min = values.stream().mapToDouble(Double::doubleValue).min().orElse(0.0);
 		this.min = min;
 	}
-	public void calcLinDev(final Collection<Double> values) {
+	public void calcDev(final Collection<Double> values) {
 		Double res;
 		Double aux;
 		res = 0.0;
@@ -51,14 +51,14 @@ public class Statistic {
 				aux += Math.pow(value - this.average, 2);
 			res = Math.sqrt(aux / values.size());
 		}
-		this.linDev = res;
+		this.dev = res;
 
 	}
 
 	@Override
 	public String toString() {
 		final DecimalFormat df = new DecimalFormat("#.00");
-		return "Statistic [count=" + df.format(this.count) + ", average=" + df.format(this.average) + ", max=" + df.format(this.max) + ", min=" + df.format(this.min) + ", stdDev=" + df.format(this.linDev) + "]";
+		return "Statistic [count=" + df.format(this.count) + ", average=" + df.format(this.average) + ", max=" + df.format(this.max) + ", min=" + df.format(this.min) + ", stdDev=" + df.format(this.dev) + "]";
 	}
 
 }

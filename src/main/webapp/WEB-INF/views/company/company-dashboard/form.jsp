@@ -39,7 +39,7 @@
 			<acme:message code="company.companyDashboard.form.label.linDevLengthOfASession"/>
 		</th>
 		<td>
-			<acme:print value="${periodLengthOfSessionsStats.getLinDev()}"/>
+			<acme:print value="${periodLengthOfSessionsStats.getDev()}"/>
 			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
@@ -75,7 +75,7 @@
 			<acme:message code="company.companyDashboard.form.label.linDevLengthOfAPracticum"/>
 		</th>
 		<td>
-			<acme:print value="${periodLengthOfPracticaStats.getLinDev()}"/>
+			<acme:print value="${periodLengthOfPracticaStats.getDev()}"/>
 			<acme:message code="company.companyDashboard.form.hours"/>
 		</td>
 	</tr>
@@ -106,14 +106,14 @@
 			$(document).ready(function() {
 				var data = {
 					labels : [
-							"MAX", "MIN", "LINEAR DEVIATION", "AVERAGE"
+							"MAX", "MIN", "DEVIATION", "AVERAGE"
 					],
 					datasets : [
 						{
 							data : [
 								<jstl:out value="${periodLengthOfSessionsStats.getMax()}"/>, 
 								<jstl:out value="${periodLengthOfSessionsStats.getMin()}"/>, 
-								<jstl:out value="${periodLengthOfSessionsStats.getLinDev()}"/>,
+								<jstl:out value="${periodLengthOfSessionsStats.getDev()}"/>,
 								<jstl:out value="${periodLengthOfSessionsStats.getAverage()}"/>
 							],
 							backgroundColor: [
@@ -172,14 +172,14 @@
 			$(document).ready(function() {
 				var data = {
 					labels : [
-							"MAX", "MIN", "LINEAR DEVIATION", "AVERAGE"
+							"MAX", "MIN", "DEVIATION", "AVERAGE"
 					],
 					datasets : [
 						{
 							data : [
 								<jstl:out value="${periodLengthOfPracticaStats.getMax()}"/>, 
 								<jstl:out value="${periodLengthOfPracticaStats.getMin()}"/>, 
-								<jstl:out value="${periodLengthOfPracticaStats.getLinDev()}"/>,
+								<jstl:out value="${periodLengthOfPracticaStats.getDev()}"/>,
 								<jstl:out value="${periodLengthOfPracticaStats.getAverage()}"/>
 							],
 							backgroundColor: [

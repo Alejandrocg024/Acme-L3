@@ -78,7 +78,7 @@ public class StudentDashboardShowService extends AbstractService<Student, Studen
 		periodsOfActivitiesStats = new Statistic();
 		periodsOfActivities = this.repository.findPeriodsOfActivitiesByStudent(student);
 		periodsOfActivitiesStats.calcAverage(periodsOfActivities);
-		periodsOfActivitiesStats.calcLinDev(periodsOfActivities);
+		periodsOfActivitiesStats.calcDev(periodsOfActivities);
 		periodsOfActivitiesStats.calcMin(periodsOfActivities);
 		periodsOfActivitiesStats.calcMax(periodsOfActivities);
 
@@ -86,7 +86,7 @@ public class StudentDashboardShowService extends AbstractService<Student, Studen
 		timesOfEnrolledCoursesStats = new Statistic();
 		timesOfEnrolledCourses = this.repository.findTimesOfEnrolledCoursesByStudent(student);
 		timesOfEnrolledCoursesStats.calcAverage(timesOfEnrolledCourses);
-		timesOfEnrolledCoursesStats.calcLinDev(timesOfEnrolledCourses);
+		timesOfEnrolledCoursesStats.calcDev(timesOfEnrolledCourses);
 		timesOfEnrolledCoursesStats.calcMin(timesOfEnrolledCourses);
 		timesOfEnrolledCoursesStats.calcMax(timesOfEnrolledCourses);
 

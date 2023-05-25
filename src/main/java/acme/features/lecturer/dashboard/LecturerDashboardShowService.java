@@ -54,7 +54,7 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 		lectureStats.setAverage(averageLectureLearningTime);
 		lectureStats.setMin(minLectureLearningTime);
 		lectureStats.setMax(maxLectureLearningTime);
-		lectureStats.setLinDev(devLectureLearningTime);
+		lectureStats.setDev(devLectureLearningTime);
 		dashboard.setLecturesStats(lectureStats);
 
 		//coursesStats
@@ -64,7 +64,7 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 		coursesStats.calcAverage(courseEstimatedLearningTime);
 		coursesStats.calcMax(courseEstimatedLearningTime);
 		coursesStats.calcMin(courseEstimatedLearningTime);
-		coursesStats.calcLinDev(courseEstimatedLearningTime);
+		coursesStats.calcDev(courseEstimatedLearningTime);
 		dashboard.setCoursesStats(coursesStats);
 
 		//numOfLecturesByType
