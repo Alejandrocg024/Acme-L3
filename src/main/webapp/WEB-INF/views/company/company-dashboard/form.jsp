@@ -93,7 +93,7 @@
 </br>
 
 <jstl:choose>
-	<jstl:when test="${periodLengthOfSessionsStats.getMax() != 0 || periodLengthOfSessionsStats.getMin() != 0 || periodLengthOfSessionsStats.getLinDev() != 0 || periodLengthOfSessionsStats.getAverage() != 0}">
+	<jstl:when test="${periodLengthOfSessionsStats.getMax() != 0 || periodLengthOfSessionsStats.getMin() != 0 || periodLengthOfSessionsStats.getDev() != 0 || periodLengthOfSessionsStats.getAverage() != 0}">
 		<h2>
 			<acme:message code="company.companyDashboard.form.title.practicumSessionsChart"/>
 		</h2>
@@ -159,7 +159,7 @@
 </br>
 
 <jstl:choose>
-	<jstl:when test="${periodLengthOfPracticaStats.getMax() != 0 || periodLengthOfPracticaStats.getMin() != 0 || periodLengthOfPracticaStats.getLinDev() != 0 || periodLengthOfPracticaStats.getAverage() != 0}">
+	<jstl:when test="${periodLengthOfPracticaStats.getMax() != 0 || periodLengthOfPracticaStats.getMin() != 0 || periodLengthOfPracticaStats.getDev() != 0 || periodLengthOfPracticaStats.getAverage() != 0}">
 		<h2>
 			<acme:message code="company.companyDashboard.form.title.practicaChart"/>
 		</h2>
