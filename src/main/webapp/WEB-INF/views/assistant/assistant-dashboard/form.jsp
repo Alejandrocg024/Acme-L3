@@ -41,7 +41,7 @@
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstuts.linDev" /></th>
 
-		<td><acme:print value="${timeOfTutorialsStats.getLinDev()}"/></td>
+		<td><acme:print value="${timeOfTutorialsStats.getDev()}"/></td>
 
 
 	</tr>
@@ -73,7 +73,7 @@
 		<th scope="row"><acme:message
 				code="assistant.assistant-dashboard.form.label.statstutssesions.lindev" /></th>
 
-		<td><acme:print value="${timeOfSessionsStats.getLinDev()}"/></td>
+		<td><acme:print value="${timeOfSessionsStats.getDev()}"/></td>
 
 
 	</tr>
@@ -130,7 +130,7 @@
 							<jstl:out value="${timeOfSessionsStats.getAverage()}"/>, 
 							<jstl:out value="${timeOfSessionsStats.getMax()}"/>, 
 							<jstl:out value="${timeOfSessionsStats.getMin()}"/>,
-							<jstl:out value="${timeOfSessionsStats.getLinDev()}"/>
+							<jstl:out value="${timeOfSessionsStats.getDev()}"/>
 						],
 						backgroundColor: [
 						      'rgb(40, 180, 99)',
@@ -146,8 +146,7 @@
 					yAxes : [
 						{
 							ticks : {
-								suggestedMin : 0.0,
-								suggestedMax : 100.0
+								suggestedMin : 0.0
 							}
 						}
 					]
@@ -183,7 +182,7 @@
 		$(document).ready(function() {
 			var data = {
 				labels : [
-						"AVERAGE", "MAX", "MIN","LINEAL DEVIATION"
+						"AVERAGE", "MAX", "MIN","DEVIATION"
 				],
 				datasets : [
 					{
@@ -191,7 +190,7 @@
 							<jstl:out value="${timeOfTutorialsStats.getAverage()}"/>, 
 							<jstl:out value="${timeOfTutorialsStats.getMax()}"/>, 
 							<jstl:out value="${timeOfTutorialsStats.getMin()}"/>,
-							<jstl:out value="${timeOfTutorialsStats.getLinDev()}"/>
+							<jstl:out value="${timeOfTutorialsStats.getDev()}"/>
 						],
 						backgroundColor: [
 						      'rgb(40, 180, 99)',
@@ -209,8 +208,7 @@
 						yAxes : [
 							{
 								ticks : {
-									suggestedMin : 0.0,
-									suggestedMax : 100.0
+									suggestedMin : 0.0
 								}
 							}
 						]

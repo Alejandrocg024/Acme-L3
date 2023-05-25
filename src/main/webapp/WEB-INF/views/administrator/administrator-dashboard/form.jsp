@@ -76,7 +76,7 @@
 		$(document).ready(function() {
 			var data = {
 				labels : [
-						"AVERAGE", "MAX", "MIN","LINEAL DEVIATION"
+						"AVERAGE", "MAX", "MIN","DEVIATION"
 				],
 				datasets : [
 					{
@@ -84,7 +84,7 @@
 							<jstl:out value="${offersByCurrencyStats.get('EUR').getAverage()}"/>, 
 							<jstl:out value="${offersByCurrencyStats.get('EUR').getMax()}"/>, 
 							<jstl:out value="${offersByCurrencyStats.get('EUR').getMin()}"/>,
-							<jstl:out value="${offersByCurrencyStats.get('EUR').getLinDev()}"/>
+							<jstl:out value="${offersByCurrencyStats.get('EUR').getDev()}"/>
 						],
 						backgroundColor: [
 						      'rgb(40, 180, 99)',
@@ -134,7 +134,7 @@
 		$(document).ready(function() {
 			var data = {
 				labels : [
-						"AVERAGE", "MAX", "MIN","LINEAL DEVIATION"
+						"AVERAGE", "MAX", "MIN","DEVIATION"
 				],
 				datasets : [
 					{
@@ -142,7 +142,7 @@
 							<jstl:out value="${offersByCurrencyStats.get('USD').getAverage()}"/>, 
 							<jstl:out value="${offersByCurrencyStats.get('USD').getMax()}"/>, 
 							<jstl:out value="${offersByCurrencyStats.get('USD').getMin()}"/>,
-							<jstl:out value="${offersByCurrencyStats.get('USD').getLinDev()}"/>
+							<jstl:out value="${offersByCurrencyStats.get('USD').getDev()}"/>
 						],
 						backgroundColor: [
 						      'rgb(40, 180, 99)',
@@ -193,7 +193,7 @@
 		$(document).ready(function() {
 			var data = {
 				labels : [
-						"AVERAGE", "MAX", "MIN","LINEAL DEVIATION"
+						"AVERAGE", "MAX", "MIN","DEVIATION"
 				],
 				datasets : [
 					{
@@ -201,7 +201,7 @@
 							<jstl:out value="${offersByCurrencyStats.get('GBP').getAverage()}"/>, 
 							<jstl:out value="${offersByCurrencyStats.get('GBP').getMax()}"/>, 
 							<jstl:out value="${offersByCurrencyStats.get('GBP').getMin()}"/>,
-							<jstl:out value="${offersByCurrencyStats.get('GBP').getLinDev()}"/>
+							<jstl:out value="${offersByCurrencyStats.get('GBP').getDev()}"/>
 						],
 						backgroundColor: [
 						      'rgb(40, 180, 99)',

@@ -93,7 +93,7 @@
 			<acme:message code="student.studentDashboard.form.label.min-periods-of-activities"/>
 		</th>
 		<td>
-			<acme:print value="${periodsOfActivitiesStats.getMin()} h."/>
+			<acme:print value="${periodsOfActivitiesStats.getMin()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -101,7 +101,7 @@
 			<acme:message code="student.studentDashboard.form.label.average-periods-of-activities"/>
 		</th>
 		<td>
-			<acme:print value="${periodsOfActivitiesStats.getAverage()} h."/>
+			<acme:print value="${periodsOfActivitiesStats.getAverage()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -109,7 +109,7 @@
 			<acme:message code="student.studentDashboard.form.label.max-periods-of-activities"/>
 		</th>
 		<td>
-			<acme:print value="${periodsOfActivitiesStats.getMax()} h."/>
+			<acme:print value="${periodsOfActivitiesStats.getMax()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -117,7 +117,7 @@
 			<acme:message code="student.studentDashboard.form.label.lin-dev-periods-of-activities"/>
 		</th>
 		<td>
-			<acme:print value="${periodsOfActivitiesStats.getLinDev()} h."/>
+			<acme:print value="${periodsOfActivitiesStats.getDev()}"/>
 		</td>
 	</tr>
 </table>
@@ -133,7 +133,7 @@
 		$(document).ready(function() {
 			var data = {
 				labels : [
-						"MIN","AVERAGE", "MAX", "LINEAL DEVIATION"
+						"MIN","AVERAGE", "MAX", "DEVIATION"
 				],
 				datasets : [
 					{
@@ -141,7 +141,7 @@
 							<jstl:out value="${periodsOfActivitiesStats.getMin()}"/>,
 							<jstl:out value="${periodsOfActivitiesStats.getAverage()}"/>, 
 							<jstl:out value="${periodsOfActivitiesStats.getMax()}"/>, 
-							<jstl:out value="${periodsOfActivitiesStats.getLinDev()}"/>
+							<jstl:out value="${periodsOfActivitiesStats.getDev()}"/>
 						],
 						backgroundColor: [
 						      'rgb(40, 180, 99)',
@@ -157,8 +157,7 @@
 					yAxes : [
 						{
 							ticks : {
-								suggestedMin : 0.0,
-								suggestedMax : 1600.0
+								suggestedMin : 0.0
 							}
 						}
 					]
@@ -196,15 +195,15 @@
 			<acme:message code="student.studentDashboard.form.label.min-times-of-enrolled-courses"/>
 		</th>
 		<td>
-			<acme:print value="${timesOfEnrolledCoursesStats.getMin()} h."/>
+			<acme:print value="${timesOfEnrolledCoursesStats.getMin()}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="student.studentDashboard.form.label.times-of-enrolled-courses"/>
+			<acme:message code="student.studentDashboard.form.label.average-times-of-enrolled-courses"/>
 		</th>
 		<td>
-			<acme:print value="${timesOfEnrolledCoursesStats.getAverage()} h."/>
+			<acme:print value="${timesOfEnrolledCoursesStats.getAverage()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -212,7 +211,7 @@
 			<acme:message code="student.studentDashboard.form.label.max-times-of-enrolled-courses"/>
 		</th>
 		<td>
-			<acme:print value="${timesOfEnrolledCoursesStats.getMax()} h."/>
+			<acme:print value="${timesOfEnrolledCoursesStats.getMax()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -220,7 +219,7 @@
 			<acme:message code="student.studentDashboard.form.label.lin-dev-times-of-enrolled-courses"/>
 		</th>
 		<td>
-			<acme:print value="${timesOfEnrolledCoursesStats.getLinDev()} h."/>
+			<acme:print value="${timesOfEnrolledCoursesStats.getDev()}"/>
 		</td>
 	</tr>
 </table>
@@ -234,7 +233,7 @@
 		$(document).ready(function() {
 			var data = {
 				labels : [
-					"MIN", "AVERAGE", "MAX" ,"LINEAL DEVIATION"
+					"MIN", "AVERAGE", "MAX" ,"DEVIATION"
 				],
 				datasets : [
 					{
@@ -242,7 +241,7 @@
 							<jstl:out value="${timesOfEnrolledCoursesStats.getMin()}"/>,
 							<jstl:out value="${timesOfEnrolledCoursesStats.getAverage()}"/>, 
 							<jstl:out value="${timesOfEnrolledCoursesStats.getMax()}"/>, 
-							<jstl:out value="${timesOfEnrolledCoursesStats.getLinDev()}"/>
+							<jstl:out value="${timesOfEnrolledCoursesStats.getDev()}"/>
 						],
 						backgroundColor: [
 						      'rgb(40, 180, 99)',
@@ -260,8 +259,7 @@
 						yAxes : [
 							{
 								ticks : {
-									suggestedMin : 0.0,
-									suggestedMax : 2200.0
+									suggestedMin : 0.0
 								}
 							}
 						]

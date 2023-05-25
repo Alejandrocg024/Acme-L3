@@ -32,7 +32,7 @@ public class AdministratorDashboard extends AbstractForm {
 		stats.calcAverage(values);
 		stats.calcMax(values);
 		stats.calcMin(values);
-		stats.calcLinDev(values);
+		stats.calcDev(values);
 		return stats;
 	}
 }

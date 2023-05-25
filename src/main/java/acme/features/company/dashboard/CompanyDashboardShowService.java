@@ -59,7 +59,7 @@ public class CompanyDashboardShowService extends AbstractService<Company, Compan
 
 		periodLengthOfSessionsStats = new Statistic();
 		periodLengthOfSessionsStats.setAverage(averageLengthOfPracticumSessionsPerCompany);
-		periodLengthOfSessionsStats.setLinDev(deviationLengthOfPracticumSessionsPerCompany);
+		periodLengthOfSessionsStats.setDev(deviationLengthOfPracticumSessionsPerCompany);
 		periodLengthOfSessionsStats.setMin(minimumLengthOfPracticumSessionsPerCompany);
 		periodLengthOfSessionsStats.setMax(maximunLengthOfPracticumSessionsPerCompany);
 
@@ -69,7 +69,7 @@ public class CompanyDashboardShowService extends AbstractService<Company, Compan
 
 		periodLengthOfPracticaStats = new Statistic();
 		periodLengthOfPracticaStats.setAverage(averageLengthOfPracticumPerCompany);
-		periodLengthOfPracticaStats.calcLinDev(this.repository.deviationLengthOfPracticumPerCompany(companyId));
+		periodLengthOfPracticaStats.calcDev(this.repository.deviationLengthOfPracticumPerCompany(companyId));
 		periodLengthOfPracticaStats.setMin(minimumLengthOfPracticumPerCompany);
 		periodLengthOfPracticaStats.setMax(maximumLengthOfPracticumPerCompany);
 

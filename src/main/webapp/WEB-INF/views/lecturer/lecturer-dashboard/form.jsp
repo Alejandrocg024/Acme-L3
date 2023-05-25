@@ -39,7 +39,7 @@
 			<acme:message code="lecturer.lecturerDashboard.form.label.lin-dev-lecture-learning-time"/>
 		</th>
 		<td>
-			<acme:print value="${lecturesStats.getLinDev()}"/>
+			<acme:print value="${lecturesStats.getDev()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -71,7 +71,7 @@
 			<acme:message code="lecturer.lecturerDashboard.form.label.lin-dev-course-learning-time"/>
 		</th>
 		<td>
-			<acme:print value="${coursesStats.getLinDev()}"/>
+			<acme:print value="${coursesStats.getDev()}"/>
 		</td>
 	</tr>
 	<tr>
@@ -105,7 +105,7 @@
 		$(document).ready(function() {
 			var data = {
 				labels : [
-						"AVERAGE", "MAX", "MIN","LINEAL DEVIATION"
+						"AVERAGE", "MAX", "MIN","DEVIATION"
 				],
 				datasets : [
 					{
@@ -113,7 +113,7 @@
 							<jstl:out value="${lecturesStats.getAverage()}"/>, 
 							<jstl:out value="${lecturesStats.getMax()}"/>, 
 							<jstl:out value="${lecturesStats.getMin()}"/>,
-							<jstl:out value="${lecturesStats.getLinDev()}"/>
+							<jstl:out value="${lecturesStats.getDev()}"/>
 						],
 						backgroundColor: [
 						      'rgb(40, 180, 99)',
@@ -167,7 +167,7 @@
 		$(document).ready(function() {
 			var data = {
 				labels : [
-						"AVERAGE", "MAX", "MIN","LINEAL DEVIATION"
+						"AVERAGE", "MAX", "MIN","DEVIATION"
 				],
 				datasets : [
 					{
@@ -175,7 +175,7 @@
 							<jstl:out value="${coursesStats.getAverage()}"/>, 
 							<jstl:out value="${coursesStats.getMax()}"/>, 
 							<jstl:out value="${coursesStats.getMin()}"/>,
-							<jstl:out value="${coursesStats.getLinDev()}"/>
+							<jstl:out value="${coursesStats.getDev()}"/>
 						],
 						backgroundColor: [
 						      'rgb(40, 180, 99)',
