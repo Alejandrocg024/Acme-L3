@@ -66,6 +66,9 @@ public class Course extends AbstractEntity {
 		if (!lectures.isEmpty()) {
 			Map<Nature, Integer> lecturesByType;
 			lecturesByType = new HashMap<>();
+			lecturesByType.put(Nature.BALANCED, 0);
+			lecturesByType.put(Nature.HANDS_ON, 0);
+			lecturesByType.put(Nature.THEORETICAL, 0);
 			for (final Lecture l : lectures) {
 				final Nature nature = l.getNature();
 				if (lecturesByType.containsKey(nature))
@@ -74,16 +77,13 @@ public class Course extends AbstractEntity {
 					lecturesByType.put(nature, 1);
 			}
 
-			if (lecturesByType.containsKey(Nature.HANDS_ON) && lecturesByType.containsKey(Nature.THEORETICAL)) {
-				if (lecturesByType.get(Nature.HANDS_ON) > lecturesByType.get(Nature.THEORETICAL))
-					res = Nature.HANDS_ON;
-				else if (lecturesByType.get(Nature.HANDS_ON) < lecturesByType.get(Nature.THEORETICAL))
-					res = Nature.THEORETICAL;
-			} else if (lecturesByType.containsKey(Nature.HANDS_ON))
+			if (lecturesByType.get(Nature.HANDS_ON) > lecturesByType.get(Nature.THEORETICAL) && lecturesByType.get(Nature.HANDS_ON) > lecturesByType.get(Nature.BALANCED))
 				res = Nature.HANDS_ON;
-			else if (lecturesByType.containsKey(Nature.THEORETICAL))
+			else if (lecturesByType.get(Nature.HANDS_ON) < lecturesByType.get(Nature.THEORETICAL) && lecturesByType.get(Nature.BALANCED) < lecturesByType.get(Nature.THEORETICAL))
 				res = Nature.THEORETICAL;
+
 		}
 		return res;
 	}
+
 }
