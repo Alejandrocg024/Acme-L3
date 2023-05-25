@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.datatypes.Nature;
 import acme.entities.Audit;
+import acme.entities.AuditingRecord;
 import acme.framework.components.accounts.UserAccount;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Auditor;
@@ -39,17 +40,8 @@ public interface AuditorDashboardRepository extends AbstractRepository {
 	@Query("select ua from UserAccount ua where ua.id = :id")
 	UserAccount findOneUserAccountById(int id);
 
-	@Query("select avg(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
-	Optional<Double> findAverageDurationOfAuditingRecords(int id);
-
-	@Query("select max(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
-	Optional<Double> findMaxDurationOfAuditingRecords(int id);
-
-	@Query("select min(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
-	Optional<Double> findMinDurationOfAuditingRecords(int id);
-
-	@Query("select stddev(time_to_sec(timediff(ar.endPeriod, ar.startPeriod)) / 3600) from AuditingRecord ar where ar.audit.auditor.id = :id")
-	Optional<Double> findLinDevDurationOfAuditingRecords(int id);
+	@Query("select ar from AuditingRecord ar where ar.audit.auditor.id = :id")
+	Collection<AuditingRecord> findAuditingRecords(int id);
 
 	@Query("select count(cl) from CourseLecture cl where cl.course.id = :courseId and cl.lecture.nature = :nature")
 	Optional<Integer> findNumLecturesByCourseNature(int courseId, Nature nature);

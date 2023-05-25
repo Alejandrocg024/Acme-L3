@@ -1,6 +1,7 @@
 
 package acme.features.auditor.dashboard;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
@@ -10,9 +11,11 @@ import org.springframework.stereotype.Service;
 import acme.datatypes.Nature;
 import acme.datatypes.Statistic;
 import acme.entities.Audit;
+import acme.entities.AuditingRecord;
 import acme.forms.AuditorDashboard;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Auditor;
 
@@ -48,6 +51,8 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		final Collection<Double> numAuditingRecordsPerAudit = this.repository.findNumOfAuditingRecords(auditor.getId());
 		final Statistic numAuditingStats = new Statistic();
 		final Statistic periodAuditingStats = new Statistic();
+		final Collection<AuditingRecord> auditingRecords;
+		final Collection<Double> periodsOfAuditingRecords;
 
 		final Collection<Audit> audits = this.repository.findAudits(auditor.getId());
 		auditsPerNature = this.repository.auditsPerNature(audits);
@@ -57,10 +62,15 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		numAuditingStats.setMin(this.repository.findMinNumOfAuditingRecords(auditor.getId()).orElse(0.0));
 		numAuditingStats.calcDev(numAuditingRecordsPerAudit);
 
-		periodAuditingStats.setAverage(this.repository.findAverageDurationOfAuditingRecords(auditor.getId()).orElse(0.0));
-		periodAuditingStats.setMax(this.repository.findMaxDurationOfAuditingRecords(auditor.getId()).orElse(0.0));
-		periodAuditingStats.setMin(this.repository.findMinDurationOfAuditingRecords(auditor.getId()).orElse(0.0));
-		periodAuditingStats.setDev(this.repository.findLinDevDurationOfAuditingRecords(auditor.getId()).orElse(0.0));
+		auditingRecords = this.repository.findAuditingRecords(auditor.getId());
+		periodsOfAuditingRecords = new ArrayList<>();
+		for (final AuditingRecord ar : auditingRecords)
+			periodsOfAuditingRecords.add(MomentHelper.computeDuration(ar.getStartPeriod(), ar.getEndPeriod()).getSeconds() / 3600.0);
+
+		periodAuditingStats.calcAverage(periodsOfAuditingRecords);
+		periodAuditingStats.calcDev(periodsOfAuditingRecords);
+		periodAuditingStats.calcMin(periodsOfAuditingRecords);
+		periodAuditingStats.calcMax(periodsOfAuditingRecords);
 
 		dashboard.setNumOfAuditsByType(auditsPerNature);
 		dashboard.setNumOfAuditingRecordsStats(numAuditingStats);

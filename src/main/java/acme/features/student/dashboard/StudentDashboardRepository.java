@@ -19,6 +19,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.datatypes.Nature;
+import acme.entities.Activity;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Student;
 
@@ -34,7 +35,7 @@ public interface StudentDashboardRepository extends AbstractRepository {
 	@Query("select sum(l.estimatedLearningTime) from Enrolment e join Course c on c = e.course join CourseLecture cl on c = cl.course join Lecture l on cl.lecture = l where e.student = :student group by c")
 	Collection<Double> findTimesOfEnrolledCoursesByStudent(Student student);
 
-	@Query("select sum(time_to_sec(timediff(a.endPeriod, a.startPeriod)) / 3600) from Activity a where a.enrolment.student = :student group by a")
-	Collection<Double> findPeriodsOfActivitiesByStudent(Student student);
+	@Query("select a from Activity a where a.enrolment.student = :student group by a")
+	Collection<Activity> findActivitiesByStudent(Student student);
 
 }
